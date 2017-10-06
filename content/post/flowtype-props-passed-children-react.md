@@ -102,7 +102,7 @@ const RadioOption = (props: Props) =>
   // ...
 ```
 
-Now we have no Flow errors!
+Now we have [no Flow errors](https://flow.org/try/#0PQKgBAAgZgNg9gdzCYAoVBLAtgBzgJwBcwAlAUwEMBjYqfOLMAcn0pqfUIE8cywAFejgDOYALxgA3qjBgYFAEZkYALjDDC+DADsA5gBoZYbRSxkA-Go1a9h2QDcKMAK5krmnbtQBfdFGfaNBhw2qQUACbBAPI4hMHaABQ4QsJqgnAiAJRSRqyEzvihCUayADzySjAAfCWyYKU6OM7E3LxiAET4EcHtYI4uZGKSyRnCAHT9rt7GpoPDKWMmZtPANXV186NjFcq+66XAO9VGmT5+AUEhYZFwAOL0zjhJKdnSsnkFRbWlkfZgVPJhMIOl0bgBaXQPHDtNbrKTkaiEMYAYQAFhgYOFWNoxlgKE8RiIxlR0Zjsfp-qTwuJYXDKRjwmNWnwxKzrtFYvEwLU6eZSGwkQCQmQAKIwMhmbSEBIkhkUt50xVLNxgQnjZU8xXeU6KupqWWYzWZPZ1A6-WGnXyofyBOJXADqqLIrAAklgAKrCTwkbp3KHCBKvXJkfKFMDFfY+m73OCPGZmDoKGAYABeKYo+HCENmwhhmtKUY5dtCRw69ozVC6UGIACZepNBu0EFQ62BVvnC3AYsW5IplGWK1XiABmetOVwdZujtu002d7tc0vtADKhEHFGrYAAjGOBh1hFQdzOO76F1cl6v15vWw39y3eu39sBOzHHhazkA)!
 
 The `name` prop type is specified as `name?` to indicate it's an _optional_ object property. This is required, or we reverse our problem, confusing Flow as to why the `name` is not included when `<RadioOption label="Starcraft 2" value="sc2" />` is called initially.
 
