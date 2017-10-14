@@ -50,7 +50,7 @@ And add a script to `package.json`:
 
 ```json
 "scripts": {
-  "commitmsg": "commitlint -e",
+  "commitmsg": "commitlint -e $GIT_PARAMS",
 }
 ```
 
