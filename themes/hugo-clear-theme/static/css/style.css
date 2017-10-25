@@ -343,6 +343,14 @@ a {
 .markdown-content ol {
   list-style-position: inside; 
 }
+.markdown-content blockquote {
+  margin: 0;
+  padding: 4px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #ccc;
+  color: #fff;
+}
 .markdown-content h1 code,
 .markdown-content h2 code,
 .markdown-content h3 code,
