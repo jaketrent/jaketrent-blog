@@ -3,14 +3,13 @@ categories:
 - "Leadership"
 comments: true
 date: 2017-10-25T07:48:53-06:00
-description: "Solo coding can be done so-as not to be "in a corner" and produce high quality code."
+description: "Solo coding can be done so-as not to be \"in a corner\" and produce high quality code."
 draft: false
 image: "https://i.imgur.com/heM4XBj.jpg"
 layout: post
-metaKeywords: "solo coding, coding in a corner, social coding, code quality, wisdom of crowds, code reviews"
+metaKeywords: "solo coding, coding in a corner, social coding, code quality, wisdom of crowds, code review"
 tags:
 - "pair-programming"
-- "code-reviews"
 - "code-quality"
 title: "Not Done in a Corner"
 ---
