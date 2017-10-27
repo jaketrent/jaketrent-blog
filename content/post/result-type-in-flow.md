@@ -17,6 +17,8 @@ Here's an example of a Result type in Flow.
 
 <!--more-->
 
+*Updated* 27 Oct 2017 per [Harish's](https://twitter.com/TrakBit) suggestion for using exact object types.
+
 ## Result Type
 
 In functional programming, a Result type can be useful for representing things that might fail.  It becomes a common interface that you can return from these potentially-failed processes.  
@@ -68,12 +70,12 @@ This might be enough in some cases, but not in the general case.  In the general
 So let's add a `value` on the `Ok` side and an `error` member on the `Err` side:
 
 ```js
-type Ok<T> = { ok: true, value: T }
-type Err = { ok: false, error: Error }
+type Ok<T> = {| ok: true, value: T |}
+type Err = {| ok: false, error: Error |}
 type Result<T> = Ok<T> | Err
 ```
 
-I've made the value of generic type `T` and have genericized the `Result` and ~`Ok` types to pass that generic type through.  We'll need to adjust our usage of the `Result` type too (We'll pretend that our success value is of type `string` in this case):
+A couple changes:  Now that we have all object fields in place, I've changed `Ok` and `Err` to exact object types, disallowing additional fields from type checking. I've made the value of generic type `T` and have genericized the `Result` and ~`Ok` types to pass that generic type through.  We'll need to adjust our usage of the `Result` type too (We'll pretend that our success value is of type `string` in this case):
 
 ```js
 const someFn = (): Result<string> => { /* ... */ }
