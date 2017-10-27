@@ -11,7 +11,7 @@ metaKeywords: "prop-types, PropTypes.oneOf, PropTypes.oneOfType, difference, enu
 tags:
 - "js"
 - "react"
-title: react oneof vs oneoftype
+title: "React OneOf vs. OneOfType"
 ---
 
 Here's the difference between React `PropTypes.oneOf` and `PropTypes.oneOfType`.
