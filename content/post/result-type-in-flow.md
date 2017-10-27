@@ -75,7 +75,7 @@ type Err = {| ok: false, error: Error |}
 type Result<T> = Ok<T> | Err
 ```
 
-A couple changes:  Now that we have all object fields in place, I've changed `Ok` and `Err` to exact object types, disallowing additional fields from type checking. I've made the value of generic type `T` and have genericized the `Result` and ~`Ok` types to pass that generic type through.  We'll need to adjust our usage of the `Result` type too (We'll pretend that our success value is of type `string` in this case):
+A couple changes:  Now that we have all object fields in place, I've changed `Ok` and `Err` to exact object types (via `{| |}`), disallowing additional fields from type checking. I've made the value of generic type `T` and have genericized the `Result` and ~`Ok` types to pass that generic type through.  We'll need to adjust our usage of the `Result` type too (We'll pretend that our success value is of type `string` in this case):
 
 ```js
 const someFn = (): Result<string> => { /* ... */ }
