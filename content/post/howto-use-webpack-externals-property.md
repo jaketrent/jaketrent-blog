@@ -55,7 +55,7 @@ That's what Webpack's `externals` is for.  This is a collection of variables tha
 
 In our case, we can simply point Webpack to `window.XMLHttpRequest` for the desired `xmlhttprequest` package.  We create a key-value mapping for that pair inside our `webpack.config.js`:
 
-```
+```js
 externals: [
   {
     xmlhttprequest: 'XMLHttpRequest'
