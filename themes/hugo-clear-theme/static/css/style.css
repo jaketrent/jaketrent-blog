@@ -640,6 +640,42 @@ a {
   }
 }
 
+
+.home-talks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  max-width: 100%;
+  margin: 96px -16px -16px -16px;
+}
+.home-talk {
+  margin: 16px;
+}
+.home-talk-img {
+  width: 100%;
+  max-width: 200px;
+  border: 8px solid #fff;
+  box-shadow: 1px 1px 0 #000;
+  border-radius: 2px;
+  margin: 0 auto 8px auto;
+}
+.home-talks-link {
+  margin: 12px 0 96px 0;
+}
+.home-talks-link .read-more {
+  color: white;
+}
+@media screen and (min-width: 969px) {
+  .home-talks {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .home-talk + .home-talk {
+    margin-left: 16px;
+  }
+}
+
+
 /* page: books */
 .books {
   display: flex;

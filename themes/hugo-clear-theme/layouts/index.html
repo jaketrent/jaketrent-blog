@@ -49,6 +49,21 @@
     <a href="/book" class="read-more">All books</a>
   </div>
   
+  <div class="home-talks">
+
+    {{ range first 3 (where .Data.Pages "Section" "talk") }}
+      <article class="home-talk">
+        <a class="home-talk-link" href="{{ .URL }}">
+          <img class="home-talk-img" src="{{ .Params.image }}">
+        </a>
+      </article>
+    {{ end  }}
+
+  </div>
+
+  <div class="home-talks-link">
+    <a href="/talk" class="read-more">All talks</a>
+  </div>
 </div>
 
 {{ partial "footer2" . }}

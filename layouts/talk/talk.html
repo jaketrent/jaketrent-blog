@@ -1,0 +1,36 @@
+{{ partial "head.html" . }}
+
+<body class="home-body">
+
+{{ partial "header2" . }}
+
+<div class="content">
+  <main class="main">
+    <article class="book">
+      <div class="page-spacer">
+        <header class="book-header">
+          <h1 class="book-title">{{ .Title }}</h1>
+          {{ partial "meta.html" . }}
+        </header>
+      </div>
+      <div class="markdown-content">
+        <div class="book-words">
+          {{ .Content }}
+        </div>
+      </div>
+      <div class="page-spacer">
+        <footer class="book-footer">
+          {{ partial "twitter" . }}
+        </footem>
+      </div>
+    </article>
+    <div class="page-spacer">
+      <div class="comments">
+        {{ partial "comments.html" . }}
+      </div>
+    </div>
+  </main>
+</div>
+{{ partial "footer2.html" . }}
+
+{{ partial "foot.html" . }}
