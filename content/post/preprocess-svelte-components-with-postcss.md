@@ -135,7 +135,7 @@ module.exports = {
     ]
   }
 }
-````
+```
 
 You'll also notice that the config for preprocessing doesn't exist in the `svelte-loader` options any more.  It has moved and changed a bit.
 
