@@ -30,7 +30,7 @@ There are many plugins to be found.  Find one that suits some need you have.
 
 Once you have a plugin in mind, you just need put it in a specific place.
 
-A place like `~/.vim/pack/bundle/asdf/start` will work.  What is special and specific about this path?
+A place like `~/.vim/pack/bundle/start` will work.  What is special and specific about this path?
 
 - `.vim/` is where you put all vim-related stuff
 - `pack/` means packages
