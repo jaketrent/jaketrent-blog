@@ -59,7 +59,7 @@ function handleInteraction(evt) {
   console.log('interacted')
 }
 el.addEventListener('touchstart', handleInteraction)
-el.addEventListener('click, handleInteraction)
+el.addEventListener('click', handleInteraction)
 ```
 
 The touch events, according to spec, fire first.  But it doesn't really matter which goes first if both a click and a touch are handled in the same function.  You just handle it once, prevent the subsequent rehandles, and you're done. 
