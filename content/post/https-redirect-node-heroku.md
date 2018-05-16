@@ -44,7 +44,7 @@ Then you can use the `app.use` functionality to specify a middleware.  Since I o
 ```js
 app.configure('production', => {
   app.use((req, res, next) => {
-    if (req.header 'x-forwarded-proto' !== 'https')
+    if (req.header('x-forwarded-proto') !== 'https')
       res.redirect(`https://${req.header('host')}${req.url}`)
     else
       next()
