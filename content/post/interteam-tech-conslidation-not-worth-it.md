@@ -33,7 +33,7 @@ Consolidation is sometimes motivated by the feeling that we have too much to sup
 
 We can only support what we have capacity for, true.  But if we start consolidating, how much do we consolidate?  And to what?  And when do we then expand?  If we lock in our support to only a certain set of things, which is surely a subset of the universe of tech choices, what happens when that universe changes (tomorrow)?  
 
-We need to make sure not to shut the door completely and permanently to tech in our zeal to consolidate.  We might even accidentally shut out some tech that makes our support easier by it's _addition_.
+We need to make sure not to shut the door completely and permanently to tech in our zeal to consolidate.  We might even accidentally shut out some tech that makes our support easier by its _addition_.
 ,
 ## Easier to Learn?
 
