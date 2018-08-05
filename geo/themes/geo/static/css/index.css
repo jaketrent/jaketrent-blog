@@ -111,20 +111,28 @@ textarea {
   display: flex;
 }
 .home-list__title {
+  position: relative;
   width: 25vw;
 }
 .home-list__title__text {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-family: var(--fontHeader);
-  transform: translateY(3.5em) rotate(-90deg);
+  text-align: right;
+  transform-origin: right bottom;
+  transform: translateY(-100%) rotate(-90deg);
   color: var(--colorWhite);
   text-shadow: 2px 2px 0 var(--colorPink);
   white-space: nowrap;
   font-size: 1.5em;
+  margin-right: 16px;
 }
 .home-list__title__text svg {
   position: relative;
   bottom: -0.3em;
   height: 1.25em;
+  width: 1.25em;
   margin-right: 0.25em;
 }
 .home-list__items {
