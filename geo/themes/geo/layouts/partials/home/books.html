@@ -1,15 +1,15 @@
-<div class="home-articles">
-  <div class="home-articles__title">
-    <h2 class="home-articles__title__text">
+<div class="home-list">
+  <div class="home-list__title">
+    <h2 class="home-list__title__text">
       {{ partial "deco/bee" }}<span>Books</span>
     </h2>
   </div>
-  <div class="home-articles__articles">
+  <div class="home-list__items">
     {{ range first 4 (where .Data.Pages "Section" "book") }}
-    <a class="home-articles__art" href="{{ .URL }}" aria-label="{{ .Title }}">
+    <a class="home-list__item" href="{{ .URL }}" aria-label="{{ .Title }}">
       <article>
-        <div class="home-articles__art__title">{{ .Title }}</div>
-        <img class="home-articles__art__img" src="{{ .Params.image }}" />
+        <div class="home-list__item__title">{{ .Title }}</div>
+        <img class="home-list__item__img" src="{{ .Params.image }}" />
       </article>
     </a>
     {{ end  }}

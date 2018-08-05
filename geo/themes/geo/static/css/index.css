@@ -107,13 +107,13 @@ textarea {
   max-width: 90vw;
 }
 
-.home-articles {
+.home-list {
   display: flex;
 }
-.home-articles__title {
+.home-list__title {
   width: 25vw;
 }
-.home-articles__title__text {
+.home-list__title__text {
   font-family: var(--fontHeader);
   transform: translateY(3.5em) rotate(-90deg);
   color: var(--colorWhite);
@@ -121,20 +121,20 @@ textarea {
   white-space: nowrap;
   font-size: 1.5em;
 }
-.home-articles__title__text svg {
+.home-list__title__text svg {
   position: relative;
   bottom: -0.3em;
   height: 1.25em;
   margin-right: 0.25em;
 }
-.home-articles__articles {
+.home-list__items {
   width: 75vw;
 }
-.home-articles__art {
+.home-list__item {
   position: relative;
   outline: none;
 }
-@keyframes home-articles__rotate {
+@keyframes home-list__rotate {
   90% {
     transform: rotate(-12deg);
   }
@@ -142,7 +142,7 @@ textarea {
     transform: rotate(-10deg);
   }
 }
-.home-articles__art__title {
+.home-list__item__title {
   display: none;
   align-items: center;
   position: absolute;
@@ -156,17 +156,17 @@ textarea {
   font-size: 1.5em;
   white-space: nowrap;
   background: linear-gradient(to right, var(--colorPink), var(--colorPurple) 22%, var(--colorBlue) 55%, var(--colorTurquoise));
-  animation: home-articles__rotate 100ms ease-out forwards;
+  animation: home-list__rotate 100ms ease-out forwards;
 }
-.home-articles__art:hover .home-articles__art__title,
-.home-articles__art:focus .home-articles__art__title {
+.home-list__item:hover .home-list__item__title,
+.home-list__item:focus .home-list__item__title {
   display: flex;
 }
-.home-articles__art__img {
+.home-list__item__img {
   max-width: 75%;
   max-height: 50vh;
 }
-.home-articles__art:hover .home-articles__art__img,
-.home-articles__art:focus .home-articles__art__img {
+.home-list__item:hover .home-list__item__img,
+.home-list__item:focus .home-list__item__img {
   visibility: hidden;
 }
