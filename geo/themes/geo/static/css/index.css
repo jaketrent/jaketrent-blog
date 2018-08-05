@@ -170,3 +170,6 @@ textarea {
 .home-list__item:focus .home-list__item__img {
   visibility: hidden;
 }
+.home-list__book__img {
+  max-width: 50%;
+}
