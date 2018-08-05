@@ -9,7 +9,9 @@
     <a class="home-list__item" href="{{ .URL }}" aria-label="{{ .Title }}">
       <article>
         <div class="home-list__item__title">{{ .Title }}</div>
-        <img class="home-list__item__img home-list__book__img" src="{{ .Params.image }}" />
+        <div class="home-list__item__img home-list__item__img--book">
+          <img src="{{ .Params.image }}" />
+        </div>
       </article>
     </a>
     {{ end  }}
