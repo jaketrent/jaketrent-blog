@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-US" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta charset="utf-8" />
+    {{ if eq .Title .Site.Title }}
+      <title>{{ .Title }}</title>
+    {{ else }}
+      <title>{{ .Title | default "Welcome" }} | {{ .Site.Title }}</title>
+    {{ end }}
+    {{ if .IsPage }}
+      <meta name="description" content="{{ .Description }}" />
+    {{ else }}
+      <meta name="description" content="{{ .Site.Params.description }}" />
+    {{ end }}
+    {{ if .IsPage }}
+      {{ if .Params.metaKeywords }}
+        <meta name="keywords" content="{{ .Params.metaKeywords }}" />
+      {{ else if .Params.tags }}
+        <meta name="keywords" content="{{ delimit .Params.tags "," }}" />
+      {{ end }}
+    {{ else }}
+      <meta name="keywords" content="{{ .Site.Params.keywords }}" />
+    {{ end }}
+    {{ if .Site.Params.googleAuthor }}
+      <meta name="author" content="{{ .Site.Params.googleAuthor }}" />
+    {{ end }}
+    {{ if .Site.Params.copyright }}
+      <meta name="copyright" content="{{ .Site.Params.copyright }}" />
+    {{ end }}
+    <meta name="google-site-verification" content="uvx7BhaUTNz29nQgydsFPRsErfqYBhPEV_svnHvW7H0" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/png" href="{{ .Site.BaseURL }}/img/favicon.png" />
+
+    {{ .Hugo.Generator }}
+
+    {{ if .IsPage }}
+      <meta property="og:title" content="{{ .Title }}" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="{{ .Permalink }}" />
+      <meta property="og:description" content="{{ .Description }}" />
+      {{ if .Params.image }}
+        <meta property="og:image" content="{{ .Params.image }}" />
+      {{ end }}
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="{{ .Title }}" />
+      <meta name="twitter:description" content="{{ .Description }}" />
+      <meta name="twitter:site" content="@jaketrent">
+      <meta name="twitter:creator" content="@jaketrent">
+      {{ if .Params.image }}
+        <meta name="twitter:image" content="{{ .Params.image }}" />
+      {{ end }}
+
+    {{ end }}
+
+    {{ if .IsPage }}
+      <link href="{{ .Site.BaseURL }}/{{ .Section }}/index.xml" rel="alternate" title="{{ .Site.Title }} {{ .Section | pluralize | title }}" type="application/rss+xml" />
+    {{ else }}
+      <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" title="{{ .Site.Title }}" type="application/rss+xml" />
+    {{ end }}
+
+    <link rel=“preload” href=“{{ .Site.BaseURL }}/type/gobold-regular.otf” as=“font”>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/index.css" type="text/css" media="all" />
+
+  </head>
