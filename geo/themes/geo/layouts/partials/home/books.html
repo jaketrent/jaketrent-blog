@@ -4,7 +4,7 @@
       {{ partial "deco/bee" }}<span>Books</span>
     </h2>
   </div>
-  <div class="home-list__items">
+  <div class="home-list__items home-list__items--book">
     {{ range first 4 (where .Data.Pages "Section" "book") }}
     <a class="home-list__item" href="{{ .URL }}" aria-label="{{ .Title }}">
       <article>
