@@ -219,6 +219,7 @@ textarea {
 .home-list__item__article--book,
 .home-list__item__article--talk {
   display: flex;
+  align-items: center;
 }
 .home-list__item__bg {
   position: absolute;
