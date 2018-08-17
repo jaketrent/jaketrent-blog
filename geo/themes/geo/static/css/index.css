@@ -107,7 +107,7 @@ textarea {
 .header__logo {
   margin: 0 auto;
   padding: 1em 0 2em 0;
-  max-width: 90vw;
+  max-width: 500px;
 }
 
 .home-list {
