@@ -1,17 +1,27 @@
+
 <div class="home-list">
   <div class="home-list__title">
     <h2 class="home-list__title__text">
-      {{ partial "deco/triangle" }}<span>Talks</span>
+      {{ partial "deco/triangle" }}
+      <span>Talks</span>
     </h2>
   </div>
   <div class="home-list__items">
     {{ range first 4 (where .Data.Pages "Section" "talk") }}
-    <a class="home-list__item" href="{{ .URL }}" aria-label="{{ .Title }}">
-      <article>
-        <div class="home-list__item__title">{{ .Title }}</div>
-        <img class="home-list__item__img" src="{{ .Params.image }}" />
-      </article>
-    </a>
-    {{ end  }}
+    <div>
+      <div class="home-list__item home-list__item--book">
+        <a href="{{ .URL }}" class="home-list__item__link" aria-label="{{ .Title }}">
+          <article class="home-list__item__article--book">
+            <div class="home-list__item__img-container--book">
+              <div class="home-list__item__bg"></div>
+              <div class="home-list__item__outline"></div>
+              <img class="home-list__item__img" src="{{ .Params.image }}">
+            </div>
+            <div class="home-list__item__title">{{ .Title }}</div>
+          </article>
+        </a>
+      </div>
+    </div>
+    {{ end }}
   </div>
 </div>

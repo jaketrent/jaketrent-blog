@@ -1,20 +1,20 @@
 /* config */
 @font-face {
-  font-family: 'cyberpnuk2';
-  src: url('/type/cybrpnuk2-webfont.woff2') format('woff2'),
-  url('/type/cybrpnuk2-webfont.woff') format('woff');
+  font-family: "cyberpnuk2";
+  src: url("/type/cybrpnuk2-webfont.woff2") format("woff2"),
+    url("/type/cybrpnuk2-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 :root {
   --colorBg: #040028;
-  --colorBlue: rgb(90,144,225);
+  --colorBlue: rgb(90, 144, 225);
   --colorFg: #fff;
-  --colorPink: rgb(255,0,214);
-  --colorPurple: rgb(200,41,224);
-  --colorTurquoise: rgb(0,237,189);
+  --colorPink: rgb(255, 0, 214);
+  --colorPurple: rgb(200, 41, 224);
+  --colorTurquoise: rgb(0, 237, 189);
   --colorWhite: #fff;
-  --fontHeader: 'cyberpnuk2', sans-serif;
+  --fontHeader: "cyberpnuk2", sans-serif;
   --spacingSmall: 8px;
 }
 
@@ -23,8 +23,12 @@
   box-sizing: content-box;
 }
 html {
+  font-size: 16px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+}
+@media (min-width: 641px) {
+  font-size: 18px;
 }
 body {
   margin: 0;
@@ -38,7 +42,7 @@ h1 {
 }
 hr {
   height: 0;
-  overflow: visible; 
+  overflow: visible;
 }
 pre {
   font-family: monospace, monospace;
@@ -51,7 +55,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; 
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 small {
@@ -98,8 +102,6 @@ textarea {
   overflow: auto;
 }
 
-
-
 .header {
 }
 .header__logo {
@@ -109,25 +111,16 @@ textarea {
 }
 
 .home-list {
-  display: flex;
+  margin-bottom: 64px;
 }
 .home-list__title {
-  position: relative;
-  width: 25vw;
 }
 .home-list__title__text {
-  position: absolute;
-  top: 0;
-  right: 0;
   font-family: var(--fontHeader);
-  text-align: right;
-  transform-origin: right bottom;
-  transform: translateY(-100%) rotate(-90deg);
   color: var(--colorWhite);
   text-shadow: 2px 2px 0 var(--colorPink);
   white-space: nowrap;
   font-size: 1.5em;
-  margin-right: 16px;
 }
 .home-list__title__text svg {
   position: relative;
@@ -137,72 +130,149 @@ textarea {
   margin-right: 0.25em;
 }
 .home-list__items {
-  width: 75vw;
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
 }
-.home-list__items {
-  width: 75vw;
+.home-list__items:before,
+.home-list__items:after {
+  content: " ";
+  position: absolute;
+  height: calc(100% + 52px);
+  width: 11%;
+  z-index: 1;
+  background: var(--colorBg);
+}
+.home-list__items:before {
+  top: 0;
+  left: -11%;
+}
+.home-list__items:after {
+  bottom: 0;
+  right: -11%;
 }
 .home-list__item {
   position: relative;
-  outline: none;
+  left: -7%;
+  display: inline-block;
+  width: 114%;
+  line-height: 0;
+  margin-bottom: 8px;
+  transition: all 200ms;
+  transform: rotate(-8deg);
+  overflow: hidden;
 }
-@keyframes home-list__rotate {
-  90% {
-    transform: rotate(-12deg);
-  }
-  100% {
-    transform: rotate(-10deg);
-  }
+.home-list__item:hover {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
 }
-.home-list__item__title {
-  display: none;
-  align-items: center;
-  position: absolute;
-  left: calc(-25vw - 1em);
-  top: 0;
-  width: 100vw;
-  padding: 0 1.25em;
-  height: 100%;
-  color: var(--colorFg);
-  font-family: var(--fontHeader);
-  font-size: 1.5em;
-  white-space: nowrap;
-  background: linear-gradient(to right, var(--colorPink), var(--colorPurple) 22%, var(--colorBlue) 55%, var(--colorTurquoise));
-  animation: home-list__rotate 100ms ease-out forwards;
+.home-list__item__link {
+  overflow: hidden;
+  text-decoration: none;
 }
-.home-list__item:hover .home-list__item__title,
-.home-list__item:focus .home-list__item__title {
+.home-list__item__article--book,
+.home-list__item__article--talk {
   display: flex;
 }
-.home-list__item__img {
-  max-width: 75%;
-  max-height: 50vh;
+.home-list__item__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--colorPink),
+    var(--colorTurquoise)
+  );
+  pointer-events: none;
 }
-.home-list__item:hover .home-list__item__img,
-.home-list__item:focus .home-list__item__img {
-  visibility: hidden;
+.home-list__item:hover .home-list__item__bg {
+  transition: all 200ms;
+  transform: scale(1.15, 1.2);
 }
-
-.home-list__item__img--book {
+@keyframes home-list__item__outline--explode {
+  25% {
+    transform: scale(1.5) rotate(15deg);
+    border: 5px solid var(--colorBlue);
+  }
+  26% {
+    transform: scale(1.5) rotate(-15deg);
+  }
+  50% {
+    transform: scale(1.5) rotate(-15deg);
+    border: 3px solid var(--colorPink);
+  }
+  51% {
+    transform: scale(1.5) rotate(5deg);
+    border: 3px solid var(--colorPink);
+  }
+  99% {
+    opacity: 1;
+    transform: scale(1.5) rotate(8deg);
+    border: 2px solid var(--colorWhite);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.home-list__item__outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--colorPink);
+  opacity: 1;
+  pointer-events: none;
+}
+.home-list__item:hover .home-list__item__outline {
+  animation: home-list__item__outline--explode 400ms ease-in forwards;
+}
+.home-list__item__img-container--book,
+.home-list__item__img-container--talk {
+  display: inline-block;
   position: relative;
-  height: 0;
-  padding-bottom: 33%;
-  overflow: hidden;
-  margin-bottom: 4px;
 }
-.home-list__item__img--book img {
-  max-width: 200px;
+.home-list__item__img {
+  position: relative;
   width: 100%;
 }
-@media (min-width: 637px) {
-  .home-list__items--book {
-    display: grid;
-    gap: var(--spacingSmall);
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-  }
-  .home-list__item__img--book {
-    height: auto;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
+.home-list__item:hover .home-list__item__img {
+  transition: all 200ms;
+  transform: scale(1.1);
+}
+.home-list__item--book .home-list__item__img {
+  max-width: 200px;
+}
+.home-list__item--talk .home-list__item__img {
+  max-width: 210px;
+}
+.home-list__item__title {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 6rem);
+  padding: 1rem 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.85);
+  color: var(--colorWhite);
+  text-shadow: 3px 3px 0 var(--colorBlue), -2px -2px 10px #000,
+    2px 2px 10px #000;
+  font-size: 2rem;
+  font-family: var(--fontHeader);
+  line-height: 3rem;
+}
+.home-list__item:hover .home-list__item__title {
+  transition: all 100ms 100ms;
+  opacity: 1;
+  transform: scale(1.05);
+}
+.home-list__item--book .home-list__item__title,
+.home-list__item--talk .home-list__item__title {
+  position: static;
+  opacity: 1;
 }

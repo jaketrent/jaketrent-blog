@@ -1,27 +1,23 @@
 <div class="home-list">
   <div class="home-list__title">
     <h2 class="home-list__title__text">
-      {{ partial "deco/triangle" }}<span>Courses</span>
+      {{ partial "deco/triangle" }}
+      <span>Courses</span>
     </h2>
   </div>
   <div class="home-list__items">
-    <a class="home-list__item" href="https://gowiththeflowtype.com" aria-label="Go With the Flowtype Course">
-      <article>
-        <div class="home-list__item__title">Go With the Flowtype</div>
-        <img class="home-list__item__img" src="/img/flowtypeadvert.jpg" />
-      </article>
-    </a>
-    <a class="home-list__item" href="https://electroncourse.com" aria-label="Electron Fundamentals Course">
-      <article>
-        <div class="home-list__item__title">Electron Fundamentals</div>
-        <img class="home-list__item__img" src="/img/electroncourseadvert.jpg" />
-      </article>
-    </a>
-    <a class="home-list__item" href="https://stylingreact.com" aria-label="Styling React Components Course">
-      <article>
-        <div class="home-list__item__title">Styling React Components</div>
-        <img class="home-list__item__img" src="/img/stylingreactadvert.jpg" />
-      </article>
-    </a>
+    {{ range first 4 (where .Data.Pages "Section" "course") }}
+    <div>
+      <div class="home-list__item">
+        <div class="home-list__item__bg"></div>
+        <div class="home-list__item__outline"></div>
+        <a href="{{ .URL }}" class="home-list__item__link" aria-label="{{ .Title }}">
+          <article>
+            <img class="home-list__item__img" src="{{ .Params.image }}">
+          </article>
+        </a>
+      </div>
+    </div>
+    {{ end }}
   </div>
 </div>
