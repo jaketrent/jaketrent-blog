@@ -109,6 +109,11 @@ textarea {
   padding: 1em 0 2em 0;
   max-width: 500px;
 }
+@media (min-width: 1000px) {
+  .header__logo {
+    margin: 0 0 5vh 12.5%;
+  }
+}
 
 .home-list {
   margin-bottom: 64px;
