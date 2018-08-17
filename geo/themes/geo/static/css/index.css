@@ -113,7 +113,19 @@ textarea {
 .home-list {
   margin-bottom: 64px;
 }
+@media (min-width: 641px) {
+  .home-list {
+    display: flex;
+    max-width: 90vw;
+  }
+}
 .home-list__title {
+}
+@media (min-width: 641px) {
+  .home-list__title {
+    position: relative;
+    width: 25%;
+  }
 }
 .home-list__title__text {
   font-family: var(--fontHeader);
@@ -121,6 +133,18 @@ textarea {
   text-shadow: 2px 2px 0 var(--colorPink);
   white-space: nowrap;
   font-size: 1.5em;
+}
+@media (min-width: 641px) {
+  .home-list__title__text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    transform-origin: right bottom;
+    transform: rotate(-90deg) translateY(-100%);
+    margin-right: 16px;
+    z-index: 2;
+  }
 }
 .home-list__title__text svg {
   position: relative;
@@ -133,6 +157,11 @@ textarea {
   position: relative;
   max-width: 640px;
   margin: 0 auto;
+}
+@media (min-width: 641px) {
+  .home-list__items {
+    width: 75%;
+  }
 }
 .home-list__items:before,
 .home-list__items:after {
