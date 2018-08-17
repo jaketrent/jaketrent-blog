@@ -132,7 +132,14 @@ textarea {
   color: var(--colorWhite);
   text-shadow: 2px 2px 0 var(--colorPink);
   white-space: nowrap;
-  font-size: 1.5em;
+  font-size: 18px;
+  margin: 0;
+}
+@media (min-width: 320px) {
+  .home-list__title__text {
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1200 - 320)));
+  }
 }
 @media (min-width: 641px) {
   .home-list__title__text {
@@ -142,8 +149,12 @@ textarea {
     text-align: right;
     transform-origin: right bottom;
     transform: rotate(-90deg) translateY(-100%);
-    margin-right: 16px;
     z-index: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .home-list__title__text {
+    font-size: 36px;
   }
 }
 .home-list__title__text svg {
