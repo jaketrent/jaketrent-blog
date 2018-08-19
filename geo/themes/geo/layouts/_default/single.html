@@ -1,0 +1,38 @@
+{{- define "header" -}} {{ partial "single/header.html" . }} {{- end -}} {{- define "main" -}}
+<article class="single-article">
+  <header class="single-article__header">
+    <h1 class="single-article__title">{{ .Title }}</h1>
+    <div class="padded-content single-article__meta">
+      <time class="single-article__meta__date" pubdate datetime="{{ .Date }}">
+        {{- dateFormat "2 Jan 2006" .Date -}}
+      </time>
+    </div>
+  </header>
+
+  <div class="centered-content">
+    <div class="padded-content single-article__description">
+      {{ .Description }}
+    </div>
+
+    <img src="{{ .Params.image }}" class="padded-content single-article__image" />
+
+    <div class="single-article__content markdown-content">
+      {{ .Content }}
+    </div>
+  </div>
+
+  <footer>
+    {{ if .Params.tags }}
+    <nav>
+      {{ $baseUrl := .Site.BaseURL }} {{ range .Params.tags }}
+      <a href="{{ $baseUrl }}/tags/{{ . | urlize }}">{{ . }}</a>
+      {{ end }}
+    </nav>
+    {{ end }}
+  </footer>
+
+</article>
+
+{{ if in .Params.categories "Code" }}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> {{ end }} {{- end -}}

@@ -15,26 +15,32 @@
   --colorTurquoise: rgb(0, 237, 189);
   --colorWhite: #fff;
   --fontHeader: "cyberpnuk2", sans-serif;
+  --fontRegular: sans-serif;
   --spacingSmall: 8px;
 }
 
 /* reset & baseline -- adapted normalize.css v8.0.0 | MIT */
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 html {
+  font-family: var(--fontRegular);
   font-size: 16px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
 @media (min-width: 641px) {
-  font-size: 18px;
+  font-size: 20px;
+}
+@media (min-width: 1000px) {
+  font-size: 24px;
 }
 body {
   margin: 0;
   background: var(--colorBg);
   color: var(--colorFg);
   font-size: 18px;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 2em;
@@ -331,4 +337,348 @@ textarea {
 .home-list__item--talk .home-list__item__title {
   position: static;
   opacity: 1;
+}
+
+.centered-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.padded-content {
+  padding: 0 16px;
+}
+@media screen and (min-width: 701px) {
+  .padded-content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1130px) {
+  .padded-content {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.single__header {
+  margin-top: 3vw;
+}
+.single__header svg {
+  width: 164px;
+}
+
+.single-article {
+}
+.single-article__title {
+  font-family: var(--fontHeader);
+  font-size: 18px;
+  background: linear-gradient(
+    to right,
+    var(--colorPink),
+    var(--colorTurquoise)
+  );
+  transform: rotate(-8deg);
+  position: relative;
+  top: 0;
+  left: -7%;
+  width: 114%;
+  padding: 1em 8% 1em 10%;
+  margin: 0;
+}
+@media (min-width: 320px) {
+  .single-article__title {
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(18px + (64 - 18) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+@media (min-width: 1000px) {
+  .single-article__title {
+    font-size: 64px;
+  }
+}
+.single-article__meta {
+  text-align: right;
+  margin-top: -4vw;
+}
+.single-article__meta__date {
+  position: relative;
+  display: inline-block;
+  background: var(--colorTurquoise);
+  padding: 0.5em 1em;
+  color: var(--colorWhite);
+  text-shadow: 1px 1px 0 #000;
+  font-weight: 600;
+  border-top: 6px solid var(--colorBlue);
+}
+.single-article__meta__date:before,
+.single-article__meta__date:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+.single-article__meta__date:after {
+  top: -12px;
+  background: var(--colorPurple);
+}
+.single-article__meta__date:before {
+  top: -18px;
+  background: var(--colorPink);
+}
+.single-article__read {
+}
+.single-article__header {
+  margin-bottom: 7vw;
+}
+.single-article__description {
+  font-size: 16px;
+  margin: 1em 0;
+  font-weight: 600;
+  text-shadow: 2px 0px 0 var(--colorPink);
+}
+@media (min-width: 320px) {
+  .single-article__description {
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(16px + (48 - 16) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+@media screen and (min-width: 621px) {
+  .single-article__description {
+    max-width: 620px;
+  }
+}
+@media (min-width: 1000px) {
+  .single-article__description {
+    font-size: 48px;
+  }
+}
+.single-article__image {
+  margin: 16px 0 36px 0;
+  max-width: 100%;
+}
+.single-article__content {
+  font-size: 16px;
+  line-height: 1.275em;
+}
+@media (min-width: 320px) {
+  .single-article__content {
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+@media (min-width: 769px) {
+  .single-article__content {
+    font-size: 24px;
+  }
+}
+
+.markdown-content a {
+  color: var(--colorTurquoise);
+}
+.markdown-content img,
+.markdown-content object {
+  display: block;
+  max-width: calc(100% - 1em);
+  border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 1px 4px;
+  border: #fff 0.5em solid;
+}
+.markdown-content iframe {
+  max-width: 100%;
+}
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  line-height: 1.1em;
+  font-family: var(--fontHeader);
+  font-weight: 100;
+  color: var(--colorPink);
+  margin: 0;
+}
+.markdown-content h1,
+.markdown-content h2 {
+  padding: 28px 0 12px 0;
+}
+.markdown-content ul,
+.markdown-content ol {
+  list-style-position: inside;
+}
+.markdown-content blockquote {
+  margin: 0;
+  padding: 4px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #ccc;
+  color: #fff;
+}
+.markdown-content h1 code,
+.markdown-content h2 code,
+.markdown-content h3 code,
+.markdown-content h4 code,
+.markdown-content h5 code,
+.markdown-content h6 code,
+.markdown-content ul code,
+.markdown-content ol code,
+.markdown-content p code {
+  display: inline-block;
+  white-space: nowrap;
+  background: #1e194e;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  color: var(--colorWhite);
+  padding: 0 0.3em;
+  margin: -1px 0;
+  border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px;
+  border: #ababab 0.1em solid;
+}
+.markdown-content pre code {
+  position: relative;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New",
+    monospace;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: block;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  overflow-x: auto;
+  line-height: 1.45em;
+  margin: 0;
+  background: rgb(40, 44, 52);
+  color: var(--colorWhite);
+  box-shadow: rgba(0, 0, 0, 0.45) 0 1px 4px;
+}
+.markdown-content > :not(pre), /* page-spacer */ 
+.markdown-content pre code {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.markdown-content pre code::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--colorPink);
+  color: white;
+  padding: 0 0.5em 0.125em 0.5em;
+  font-size: 0.875em;
+  text-shadow: 1px 1px 0 #000;
+}
+.markdown-content pre code.language-css::after,
+.markdown-content pre code.css::after {
+  content: "css";
+}
+.markdown-content pre code.language-javascript::after,
+.markdown-content pre code.javascript::after {
+  content: "js";
+}
+.markdown-content pre code.language-json::after,
+.markdown-content pre code.json::after {
+  content: "json";
+}
+.markdown-content pre code.language-html::after,
+.markdown-content pre code.html::after {
+  content: "html";
+}
+.markdown-content pre code.language-bash::after {
+  content: "bash";
+}
+@media screen and (min-width: 621px) {
+  .markdown-content p,
+  .markdown-content ul,
+  .markdown-content ol {
+    max-width: 620px;
+  }
+}
+@media screen and (min-width: 701px) {
+  .markdown-content > :not(pre), /* page-spacer */ 
+  .markdown-content pre code {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .markdown-content pre {
+    margin: 2em 0;
+  }
+}
+@media screen and (min-width: 1130px) {
+  .markdown-content > :not(pre), /* page-spacer */
+  .markdown-content pre code {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* hightlight.js atom-one-dark theme, downloaded from */
+/* https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atom-one-dark.min.css */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #abb2bf;
+  background: #282c34;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #c678dd;
+}
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e06c75;
+}
+.hljs-literal {
+  color: #56b6c2;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #98c379;
+}
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e6c07b;
+}
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #d19a66;
+}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #61aeee;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-link {
+  text-decoration: underline;
 }

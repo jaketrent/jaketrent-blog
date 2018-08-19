@@ -1,12 +1,6 @@
-{{ partial "head" . }}
-
-{{ partial "header" . }}
-
-{{ partial "home/courses" . }}
-{{ partial "home/articles" . }}
-{{ partial "home/books" . }}
-{{ partial "home/talks" . }}
-
-{{ partial "footer" . }}
-
-{{ partial "foot" . }}
+{{ define "main" }}
+  {{ partial "home/courses" . }}
+  {{ partial "home/articles" . }}
+  {{ partial "home/books" . }}
+  {{ partial "home/talks" . }}
+{{ end }}

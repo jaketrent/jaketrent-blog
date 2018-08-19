@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{- partial "head.html" . -}}
+
+{{- block "header" . -}}
+  {{- partial "header.html" -}}
+{{- end -}}
+
+<main>
+  {{- block "main" . -}}default main block{{- end -}}
+</main>
+
+{{- partial "footer.html" . -}}
+{{- partial "foot.html" . -}}
