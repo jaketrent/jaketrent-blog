@@ -371,7 +371,7 @@ textarea {
   --singleBorderWidth: 5vw;
   --singleTitleLeftMargin: 10vw;
 }
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   :root {
     --singleTitleLeftMargin: 20vw;
   }
@@ -481,7 +481,6 @@ textarea {
     var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
   );
   max-width: 100%;
-  min-height: 138px; /* TODO: make a vw calc */
 }
 .single-article__content {
   font-size: 16px;
@@ -580,7 +579,9 @@ textarea {
 }
 .markdown-content > :not(pre), /* page-spacer */ 
 .markdown-content pre code {
-  padding-left: calc(25vw + 16px);
+  padding-left: calc(
+    var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
+  );
   padding-right: 16px;
 }
 .markdown-content pre code::after {
@@ -617,13 +618,14 @@ textarea {
   .markdown-content p,
   .markdown-content ul,
   .markdown-content ol {
-    max-width: calc(620px + 25vw);
+    max-width: calc(
+      620px + var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
+    );
   }
 }
 @media screen and (min-width: 701px) {
   .markdown-content > :not(pre), /* page-spacer */ 
   .markdown-content pre code {
-    padding-left: calc(25vw + 32px);
     padding-right: 32px;
   }
 }
@@ -635,7 +637,6 @@ textarea {
 @media screen and (min-width: 1130px) {
   .markdown-content > :not(pre), /* page-spacer */
   .markdown-content pre code {
-    padding-left: 48px;
     padding-right: 48px;
   }
 }
