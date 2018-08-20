@@ -369,8 +369,12 @@ textarea {
 
 :root {
   --singleBorderWidth: 5vw;
-  --singleContentLeftMargin: 15vw;
-  --singleTitleLeftMargin: 15vw;
+  --singleTitleLeftMargin: 10vw;
+}
+@media (min-width: 400px) {
+  :root {
+    --singleTitleLeftMargin: 20vw;
+  }
 }
 .single__header {
 }
@@ -394,7 +398,7 @@ textarea {
   top: bottom;
   left: 0;
   width: 100%;
-  height: 5vw;
+  height: var(--singleBorderWidth);
   background: var(--colorPurple);
 }
 @media (min-width: 320px) {
@@ -418,16 +422,16 @@ textarea {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
-  padding-left: 20vw;
+  padding-left: var(--singleTitleLeftMargin);
 }
 .single-article__header:after {
   content: "";
   display: block;
   position: absolute;
   top: 0;
-  left: 10vw;
-  width: 5vw;
-  height: calc(100% + (2 * 5vw));
+  left: calc(var(--singleTitleLeftMargin) - 2 * var(--singleBorderWidth));
+  width: var(--singleBorderWidth);
+  height: calc(100% + (2 * var(--singleBorderWidth)));
   background: var(--colorBlue);
 }
 .single-article__read {
@@ -437,15 +441,15 @@ textarea {
   content: "";
   position: absolute;
   top: 0;
-  left: 20vw;
+  left: var(--singleTitleLeftMargin);
   height: 100%;
-  width: 5vw;
+  width: var(--singleBorderWidth);
   background: var(--colorPurple);
 }
 .single-article__image {
   position: relative;
   width: 100%;
-  padding-top: 10vw;
+  padding-top: calc(2 * var(--singleBorderWidth));
 }
 .single-article__image:before {
   content: "";
@@ -453,8 +457,8 @@ textarea {
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 10vw;
-  width: 5vw;
+  left: calc(var(--singleTitleLeftMargin) - 2 * var(--singleBorderWidth));
+  width: var(--singleBorderWidth);
   height: 50%;
   background: var(--colorBlue);
 }
@@ -465,13 +469,17 @@ textarea {
   z-index: -1;
   top: 50%;
   right: 0;
-  width: calc(100% - (2 * 5vw));
-  height: 5vw;
+  width: calc(
+    100% - var(--singleTitleLeftMargin) + (2 * var(--singleBorderWidth))
+  );
+  height: var(--singleBorderWidth);
   background: var(--colorBlue);
   transform: translateY(-50%);
 }
 .single-article__image__img {
-  margin-left: 30vw;
+  padding-left: calc(
+    var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
+  );
   max-width: 100%;
   min-height: 138px; /* TODO: make a vw calc */
 }
