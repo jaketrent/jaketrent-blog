@@ -6,6 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "koliko";
+  src: url("/type/koliko-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 :root {
   --colorBg: #040028;
   --colorBlue: rgb(90, 144, 225);
@@ -14,7 +20,7 @@
   --colorPurple: rgb(200, 41, 224);
   --colorTurquoise: rgb(0, 237, 189);
   --colorWhite: #fff;
-  --fontHeader: "cyberpnuk2", sans-serif;
+  --fontHeader: "koliko", "cyberpnuk2", sans-serif;
   --fontRegular: sans-serif;
   --spacingSmall: 8px;
 }
@@ -361,8 +367,12 @@ textarea {
   }
 }
 
+:root {
+  --singleBorderWidth: 5vw;
+  --singleContentLeftMargin: 15vw;
+  --singleTitleLeftMargin: 15vw;
+}
 .single__header {
-  margin-top: 3vw;
 }
 .single__header svg {
   width: 164px;
@@ -371,20 +381,21 @@ textarea {
 .single-article {
 }
 .single-article__title {
+  position: relative;
+  margin: 0;
   font-family: var(--fontHeader);
   font-size: 18px;
-  background: linear-gradient(
-    to right,
-    var(--colorPink),
-    var(--colorTurquoise)
-  );
-  transform: rotate(-8deg);
-  position: relative;
-  top: 0;
-  left: -7%;
-  width: 114%;
-  padding: 1em 8% 1em 10%;
-  margin: 0;
+  text-transform: uppercase;
+}
+.single-article__title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: bottom;
+  left: 0;
+  width: 100%;
+  height: 5vw;
+  background: var(--colorPurple);
 }
 @media (min-width: 320px) {
   .single-article__title {
@@ -398,65 +409,71 @@ textarea {
   }
 }
 .single-article__meta {
-  text-align: right;
-  margin-top: -4vw;
 }
 .single-article__meta__date {
-  position: relative;
-  display: inline-block;
-  background: var(--colorTurquoise);
-  padding: 0.5em 1em;
-  color: var(--colorWhite);
-  text-shadow: 1px 1px 0 #000;
-  font-weight: 600;
-  border-top: 6px solid var(--colorBlue);
-}
-.single-article__meta__date:before,
-.single-article__meta__date:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 6px;
-}
-.single-article__meta__date:after {
-  top: -12px;
-  background: var(--colorPurple);
-}
-.single-article__meta__date:before {
-  top: -18px;
-  background: var(--colorPink);
 }
 .single-article__read {
 }
 .single-article__header {
-  margin-bottom: 7vw;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-left: 20vw;
 }
-.single-article__description {
-  font-size: 16px;
-  margin: 1em 0;
-  font-weight: 600;
-  text-shadow: 2px 0px 0 var(--colorPink);
+.single-article__header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  width: 5vw;
+  height: calc(100% + (2 * 5vw));
+  background: var(--colorBlue);
 }
-@media (min-width: 320px) {
-  .single-article__description {
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(16px + (48 - 16) * ((100vw - 320px) / (1200 - 320)));
-  }
+.single-article__read {
+  position: relative;
 }
-@media screen and (min-width: 621px) {
-  .single-article__description {
-    max-width: 620px;
-  }
-}
-@media (min-width: 1000px) {
-  .single-article__description {
-    font-size: 48px;
-  }
+.single-article__read:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20vw;
+  height: 100%;
+  width: 5vw;
+  background: var(--colorPurple);
 }
 .single-article__image {
-  margin: 16px 0 36px 0;
+  position: relative;
+  width: 100%;
+  padding-top: 10vw;
+}
+.single-article__image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 10vw;
+  width: 5vw;
+  height: 50%;
+  background: var(--colorBlue);
+}
+.single-article__image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 0;
+  width: calc(100% - (2 * 5vw));
+  height: 5vw;
+  background: var(--colorBlue);
+  transform: translateY(-50%);
+}
+.single-article__image__img {
+  margin-left: 30vw;
   max-width: 100%;
+  min-height: 138px; /* TODO: make a vw calc */
 }
 .single-article__content {
   font-size: 16px;
@@ -555,8 +572,8 @@ textarea {
 }
 .markdown-content > :not(pre), /* page-spacer */ 
 .markdown-content pre code {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: calc(25vw + 16px);
+  padding-right: 16px;
 }
 .markdown-content pre code::after {
   display: block;
@@ -592,13 +609,13 @@ textarea {
   .markdown-content p,
   .markdown-content ul,
   .markdown-content ol {
-    max-width: 620px;
+    max-width: calc(620px + 25vw);
   }
 }
 @media screen and (min-width: 701px) {
   .markdown-content > :not(pre), /* page-spacer */ 
   .markdown-content pre code {
-    padding-left: 32px;
+    padding-left: calc(25vw + 32px);
     padding-right: 32px;
   }
 }
