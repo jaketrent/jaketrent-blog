@@ -378,9 +378,34 @@ textarea {
   }
 }
 .single__header {
+  position: relative;
+  margin: 0;
+  padding: 0.5em 0;
+}
+.single__header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(var(--singleTitleLeftMargin) - 2 * var(--singleBorderWidth));
+  height: 100%;
+  width: var(--singleBorderWidth);
+  background: var(--colorBlue);
 }
 .single__header svg {
+  position: relative;
+  left: var(--singleTitleLeftMargin);
+  z-index: 1;
   width: 164px;
+}
+@media (min-width: 850px) {
+  .single__header svg {
+    height: var(--singleBorderWidth);
+    position: absolute;
+    top: 0;
+    left: calc(var(--singleTitleLeftMargin) - 2 * var(--singleBorderWidth));
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(calc(-100% - 0.5em));
+  }
 }
 
 .single-article {
@@ -391,9 +416,14 @@ textarea {
   grid-auto-flow: row;
   max-width: calc(620px + 2 * var(--singleBorderWidth));
   margin-bottom: 18px;
-  font-size: 0.75em;
+  font-size: 0.65em;
   line-height: 1.5em;
   color: var(--colorBgSubtle);
+}
+@media (min-width: 640px) {
+  .single-article__meta {
+    font-size: 0.75em;
+  }
 }
 .single-article__meta a {
   color: var(--colorBgSubtle);
@@ -404,8 +434,9 @@ textarea {
 .single-article__title {
   position: relative;
   margin: 0;
+  padding-bottom: 0.5em;
   font-family: var(--fontHeader);
-  font-size: 22px;
+  font-size: 28px;
   letter-spacing: 0.0175em;
   text-transform: uppercase;
   text-shadow: 3px 3px 0 var(--colorPink);
@@ -414,16 +445,21 @@ textarea {
   content: "";
   display: block;
   position: absolute;
-  top: bottom;
   left: 0;
   width: 100%;
   height: var(--singleBorderWidth);
   background: var(--colorPurple);
+  transform: translateY(0.5em);
 }
 @media (min-width: 320px) {
   .single-article__title {
     /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(22px + (72 - 22) * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(28px + (72 - 28) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+@media (min-width: 640px) {
+  .single-article__title:after {
+    transform: translateY(0);
   }
 }
 @media (min-width: 1000px) {
@@ -564,6 +600,7 @@ textarea {
   letter-spacing: 0.0275em;
   font-family: var(--fontHeader);
   color: var(--colorPink);
+  text-shadow: 1px 1px 0 var(--colorBlue);
   margin: 0;
 }
 .markdown-content h1,
