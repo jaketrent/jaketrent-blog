@@ -406,6 +406,7 @@ textarea {
   margin: 0;
   font-family: var(--fontHeader);
   font-size: 22px;
+  letter-spacing: 0.0175em;
   text-transform: uppercase;
   text-shadow: 3px 3px 0 var(--colorPink);
 }
@@ -535,6 +536,9 @@ textarea {
   }
 }
 
+.markdown-content {
+  line-height: 1.5em;
+}
 .markdown-content a {
   color: var(--colorTurquoise);
 }
@@ -555,9 +559,10 @@ textarea {
 .markdown-content h4,
 .markdown-content h5,
 .markdown-content h6 {
+  font-size: 2em;
   line-height: 1.1em;
+  letter-spacing: 0.0275em;
   font-family: var(--fontHeader);
-  font-weight: 100;
   color: var(--colorPink);
   margin: 0;
 }
@@ -598,6 +603,10 @@ textarea {
   box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px;
   border: #ababab 0.1em solid;
 }
+.markdown-content pre {
+  padding-left: calc(var(--singleTitleLeftMargin) + var(--singleBorderWidth));
+  background: rgb(40, 44, 52);
+}
 .markdown-content pre code {
   position: relative;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New",
@@ -605,17 +614,28 @@ textarea {
   overflow: scroll;
   overflow-y: hidden;
   display: block;
-  padding-top: 1.5em;
+  padding-top: 1.875em;
   padding-bottom: 1.5em;
+  padding-left: var(--singleBorderWidth);
+  padding-right: 16px;
   overflow-x: auto;
   line-height: 1.45em;
   margin: 0;
-  background: rgb(40, 44, 52);
   color: var(--colorWhite);
   box-shadow: rgba(0, 0, 0, 0.45) 0 1px 4px;
 }
-.markdown-content > :not(pre), /* page-spacer */ 
-.markdown-content pre code {
+.markdown-content pre code::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+.markdown-content pre code::-webkit-scrollbar-thumb {
+  background: var(--colorBgSubtle);
+}
+.markdown-content pre code::-webkit-scrollbar-track-piece {
+  background: none;
+}
+.markdown-content > :not(pre) {
   padding-left: calc(
     var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
   );
@@ -625,8 +645,8 @@ textarea {
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
-  background: var(--colorPink);
+  left: 0;
+  background: var(--colorPurple);
   color: white;
   padding: 0 0.5em 0.125em 0.5em;
   font-size: 0.875em;
