@@ -14,6 +14,7 @@
 }
 :root {
   --colorBg: #040028;
+  --colorBgSubtle: #9896b6;
   --colorBlue: rgb(90, 144, 225);
   --colorFg: #fff;
   --colorPink: rgb(255, 0, 214);
@@ -384,12 +385,29 @@ textarea {
 
 .single-article {
 }
+.single-article__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  max-width: calc(620px + 2 * var(--singleBorderWidth));
+  margin-bottom: 18px;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  color: var(--colorBgSubtle);
+}
+.single-article__meta a {
+  color: var(--colorBgSubtle);
+}
+.single-article__meta--tags {
+  grid-column: span 2;
+}
 .single-article__title {
   position: relative;
   margin: 0;
   font-family: var(--fontHeader);
-  font-size: 18px;
+  font-size: 22px;
   text-transform: uppercase;
+  text-shadow: 3px 3px 0 var(--colorPink);
 }
 .single-article__title:after {
   content: "";
@@ -404,12 +422,12 @@ textarea {
 @media (min-width: 320px) {
   .single-article__title {
     /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(18px + (64 - 18) * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(22px + (72 - 22) * ((100vw - 320px) / (1200 - 320)));
   }
 }
 @media (min-width: 1000px) {
   .single-article__title {
-    font-size: 64px;
+    font-size: 72px;
   }
 }
 .single-article__meta {
@@ -476,13 +494,32 @@ textarea {
   background: var(--colorBlue);
   transform: translateY(-50%);
 }
-.single-article__image__img {
-  padding-left: calc(
+.single-article__image__container {
+  position: relative;
+  display: inline-block;
+  margin-left: calc(
     var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
   );
+  line-height: 0;
+  background: var(--colorBlue);
+  min-height: var(--singleBorderWidth);
+  border: 8px solid var(--colorWhite);
+}
+.single-article__image__container:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 11px;
+  left: 9px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--colorPink);
+}
+.single-article__image__img {
   max-width: 100%;
 }
 .single-article__content {
+  margin-top: calc(var(--singleBorderWidth) * 2);
   font-size: 16px;
   line-height: 1.275em;
 }

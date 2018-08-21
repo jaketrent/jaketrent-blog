@@ -3,17 +3,17 @@
   <header class="single-article__header">
     <h1 class="single-article__title">{{ .Title }}</h1>
     <div class="single-article__meta">
-      <time class="single-article__meta__date" pubdate datetime="{{ .Date }}">
+      <time class="single-article__meta--date" pubdate datetime="{{ .Date }}">
         {{- dateFormat "2 Jan 2006" .Date -}}
       </time>
       <div>
-        By Jake Trent
-      </div>
-      <div>
         29 min read
       </div>
-      <div>In Code</div>
       <div>
+        By Jake Trent
+      </div>
+      <div>In Code</div>
+      <div class="single-article__meta--tags">
         {{ if .Params.tags }}
         <nav>
           {{ $baseUrl := .Site.BaseURL }} {{ range .Params.tags }}
@@ -28,7 +28,10 @@
   <div class="single-article__read">
 
     <div class="single-article__image">
-      <img src="{{ .Params.image }}" class="single-article__image__img" />
+      <div class="single-article__image__container">
+        <img src="{{ .Params.image }}" class="single-article__image__img" />
+
+      </div>
     </div>
 
     <div class="single-article__content markdown-content">
