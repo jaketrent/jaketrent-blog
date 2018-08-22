@@ -557,6 +557,7 @@ textarea {
 }
 .single-article__content {
   margin-top: calc(var(--singleBorderWidth) * 2);
+  padding-bottom: 16px;
   font-size: 16px;
   line-height: 1.275em;
 }
@@ -601,6 +602,7 @@ textarea {
   font-family: var(--fontHeader);
   color: var(--colorPink);
   text-shadow: 1px 1px 0 var(--colorBlue);
+  text-transform: uppercase;
   margin: 0;
 }
 .markdown-content h1,
@@ -801,4 +803,35 @@ textarea {
 }
 .hljs-link {
   text-decoration: underline;
+}
+
+.footer {
+  position: relative;
+  padding-left: calc(var(--singleTitleLeftMargin) - 2.5vw);
+}
+.footer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--singleTitleLeftMargin);
+  height: 60%;
+  width: var(--singleBorderWidth);
+  background: var(--colorPurple);
+}
+.footer__sun {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+.footer__sun:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 2.5vw;
+  width: var(--singleBorderWidth);
+  height: 20%;
+  background: linear-gradient(to bottom, var(--colorPurple), transparent);
+}
+.footer__sun__img {
+  width: calc(var(--singleBorderWidth) + 5vw);
 }
