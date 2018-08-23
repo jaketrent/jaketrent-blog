@@ -395,14 +395,14 @@ textarea {
   position: relative;
   left: var(--singleTitleLeftMargin);
   z-index: 1;
-  width: 164px;
+  height: 64px;
 }
 @media (min-width: 850px) {
   .single__header svg {
-    height: var(--singleBorderWidth);
+    height: calc(var(--singleBorderWidth) + var(--singleTitleLeftMargin) / 3);
     position: absolute;
     top: 0;
-    left: calc(var(--singleTitleLeftMargin) - 2 * var(--singleBorderWidth));
+    left: calc(var(--singleTitleLeftMargin) - (calc(var(--singleBorderWidth) + var(--singleTitleLeftMargin) / 1.75)));
     transform-origin: top left;
     transform: rotate(-90deg) translateX(calc(-100% - 0.5em));
   }
