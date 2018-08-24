@@ -1,0 +1,73 @@
+<div class="single-footer">
+
+  <div class="single-footer__sky">
+    <div class="single-footer__sun">
+      <img class="single-footer__sun__img" src="/img/sun.png" alt="Sun graphic" />
+    </div>
+  </div>
+  <div class="single-footer__horizon"></div>
+  <div class="single-footer__deck">
+    <div class="grid-plane">
+      <div class="grid">
+        <div class="vertical">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="horizontal">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-footer__content">
+      <ul class="single-footer__list">
+        <li class="single-footer__list__item">
+          if (!noted) { prose.licensed = '<a href="https://creativecommons.org/licenses/by/3.0/us/">CC 3.0 Attr</a>'; code.license
+          = '<a href="https://opensource.org/licenses/MIT">MIT</a>' }
+        </li>
+        <li class="single-footer__list__item">
+          articles.map(a => ({ ...a, author: '<a href="https://keybase.io/jaketrent">Jake Trent</a>' }))
+        </li>
+        <li class="single-footer__list__item">
+          on('contentLike', _ => <a href="http://twitter.com/jaketrent">Follow</a> || <a href="{{ .Site.BaseURL }}/index.xml">Feed</a>)
+        </li>
+        <li class="single-footer__list__item">
+          on('bugFound', _ => <a href="https://github.com/jaketrent/jaketrent-blog/issues/new">Report</a>)
+        </li>
+        <li class="single-footer__list__item">
+          if (agent.isRobot) follow(<a href="{{ .Site.BaseURL }}/sitemap.xml">Sitemap</a>)
+        </li>
+        <li class="single-footer__list__item">
+          console.log(process.env.ENGINE) // "<a href="https://gohugo.io/">Hugo</a>"
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

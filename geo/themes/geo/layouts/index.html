@@ -1,6 +1,13 @@
-{{ define "main" }}
+{{- partial "head.html" . -}}
+
+{{- partial "header.html" -}}
+
+<main>
   {{ partial "home/courses" . }}
   {{ partial "home/articles" . }}
   {{ partial "home/books" . }}
   {{ partial "home/talks" . }}
-{{ end }}
+</main>
+
+{{- partial "footer.html" . -}}
+{{- partial "foot.html" . -}}
