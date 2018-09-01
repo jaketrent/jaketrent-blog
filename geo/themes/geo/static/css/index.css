@@ -500,7 +500,7 @@ textarea {
   position: absolute;
   top: 0;
   left: var(--singleTitleLeftMargin);
-  height: 100%;
+  height: calc(100% + var(--footerMarginTop));
   width: var(--singleBorderWidth);
   background: var(--colorPurple);
 }
@@ -815,22 +815,34 @@ textarea {
   position: relative;
   padding-left: calc(var(--singleTitleLeftMargin) - 2.5vw);
   height: 25vw;
-  overflow: hidden;
+  margin-top: calc(-25vw + var(--footerMarginTop));
 }
 .single-footer__sky:after {
   content: "";
   position: absolute;
-  bottom: -50%;
+  z-index: -2;
+  bottom: -150%;
   left: 50%;
   transform: translateX(-50%);
-  height: 25vw;
-  width: 80vw;
+  height: 75vw;
+  width: 100vw;
   background: radial-gradient(
-    var(--colorPink),
-    var(--colorPurple),
-    var(--colorBg) 50%
+    rgba(255, 255, 255, 0.9),
+    #ee9617 15%,
+    #fe5858,
+    transparent 60%
   );
   opacity: 0.7;
+}
+.single-footer__sky:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: calc(75vw / -2);
+  left: 0;
+  height: calc(75vw / 2);
+  width: 100vw;
+  background: var(--colorBg);
 }
 .single-footer__sun {
   position: relative;
@@ -925,6 +937,7 @@ textarea {
   overflow: hidden;
 }
 :root {
+  --footerMarginTop: 4vw;
   --footerGridLineVertical: 12px;
   --footerGridLineHorizontal: 6px;
 }
