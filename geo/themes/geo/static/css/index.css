@@ -877,7 +877,7 @@ textarea {
 }
 .single-footer__deck {
   position: relative;
-  height: 300px;
+  height: 25vw;
   overflow: hidden;
 }
 .single-footer__deck:after {
@@ -890,19 +890,19 @@ textarea {
   background: radial-gradient(transparent 50%, var(--colorBg) 70%);
 }
 .single-footer__content {
-  padding: 64px 16px;
+  padding: 5vw 16px;
   display: flex;
   justify-content: center;
 }
 @media screen and (min-width: 701px) {
   .single-footer__content {
     margin: 0 auto;
-    padding: 64px 32px;
+    padding: 5vw 32px;
   }
 }
 @media screen and (min-width: 1130px) {
   .single-footer__content {
-    padding: 64px 48px;
+    padding: 5vw 48px;
   }
 }
 .single-footer__list {
@@ -952,7 +952,7 @@ textarea {
 }
 .grid {
   position: absolute;
-  top: -72px;
+  top: -6vw;
   left: 0;
   right: 0;
   bottom: 0;
@@ -967,9 +967,9 @@ textarea {
   -webkit-backface-visibility: hidden;
 }
 .vertical .line {
-  top: -120px;
+  top: -10vw;
   left: 0;
-  bottom: -50px;
+  bottom: -4vw;
   width: var(--footerGridLineVertical);
   /* background: linear-gradient(
     to bottom,
