@@ -903,8 +903,13 @@ textarea {
 }
 .single-footer__content {
   padding: 5vw 16px;
-  display: flex;
-  justify-content: center;
+}
+@media screen and (min-width: 621px) {
+  .single-footer__content {
+    max-width: calc(
+      620px + var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
+    );
+  }
 }
 @media screen and (min-width: 701px) {
   .single-footer__content {
@@ -919,13 +924,23 @@ textarea {
 }
 .single-footer__list {
   list-style: none;
-  margin: 0;
+  margin: 48px 0 0 0;
   padding-left: 0;
   color: var(--colorBgSubtle);
   text-shadow: 0 0 12px var(--colorPink);
-  font-size: 1em;
+  font-size: 10px;
   line-height: 1.75em;
   font-weight: 600;
+}
+@media (min-width: 320px) {
+  .single-footer__list {
+    font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+@media (min-width: 1200px) {
+  .single-footer__list {
+    font-size: 18px;
+  }
 }
 .single-footer__list span {
   animation: blink linear infinite 2s;

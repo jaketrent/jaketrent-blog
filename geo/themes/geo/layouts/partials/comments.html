@@ -1,0 +1,6 @@
+{{ if .Site.Params.disqusShortname }}
+<div id="disqus_thread"></div>
+<script src="{{ .Site.BaseURL }}/js/disqusloader.js"></script>
+<script>
+  disqusLoader('#disqus_thread', { scriptUrl: '//{{ .Site.Params.disqusShortname }}.disqus.com/embed.js' })
+</script> {{ end }}
