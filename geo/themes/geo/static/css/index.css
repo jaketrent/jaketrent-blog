@@ -889,7 +889,7 @@ textarea {
 }
 .single-footer__deck {
   position: relative;
-  height: 25vw;
+  height: 20vw;
   overflow: hidden;
 }
 .single-footer__deck:after {
