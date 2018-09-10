@@ -116,11 +116,11 @@ textarea {
 }
 
 :root {
-  --gridDeckHeight: 20vw;
-  --gridGridVerticalLineBottom: -4vw;
-  --gridGridVerticalLineTop: -10vw;
+  --gridDeckHeight: 20vh;
+  --gridGridVerticalLineBottom: -4vh;
+  --gridGridVerticalLineTop: -10vh;
   --gridGridRotateX: 30deg;
-  --gridGridTop: -6vw;
+  --gridGridTop: -6vh;
   --gridPlanePerspective: 116px;
   --gridLineVerticalWidth: 12px;
   --gridLineHorizontalHeight: 6px;
