@@ -116,8 +116,14 @@ textarea {
 }
 
 :root {
-  --gridLineVertical: 12px;
-  --gridLineHorizontal: 6px;
+  --gridDeckHeight: 20vw;
+  --gridGridVerticalLineBottom: -4vw;
+  --gridGridVerticalLineTop: -10vw;
+  --gridGridRotateX: 30deg;
+  --gridGridTop: -6vw;
+  --gridPlanePerspective: 116px;
+  --gridLineVerticalWidth: 12px;
+  --gridLineHorizontalHeight: 6px;
 }
 .grid__horizon {
   position: relative;
@@ -146,7 +152,7 @@ textarea {
 }
 .grid__deck {
   position: relative;
-  height: 20vw;
+  height: var(--gridDeckHeight);
   overflow: hidden;
 }
 .grid__deck:after {
@@ -164,7 +170,7 @@ textarea {
   height: 100%;
   left: 0;
   bottom: 0px;
-  perspective: 116px;
+  perspective: var(--gridPlanePerspective);
 }
 .grid__grid-plane:after {
   content: "";
@@ -182,23 +188,23 @@ textarea {
 }
 .grid__grid {
   position: absolute;
-  top: -6vw;
+  top: var(--gridGridTop);
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  transform: rotateX(30deg);
+  transform: rotateX(var(--gridGridRotateX));
 }
 .grid__grid__line {
   position: absolute;
   -webkit-backface-visibility: hidden;
 }
 .grid__grid--vertical .grid__grid__line {
-  top: -10vw;
+  top: var(--gridGridVerticalLineTop);
   left: 0;
-  bottom: -4vw;
-  width: var(--gridLineVertical);
+  bottom: var(--gridGridVerticalLineBottom);
+  width: var(--gridLineVerticalWidth);
   background: linear-gradient(
     to left,
     transparent,
@@ -245,7 +251,7 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  height: var(--gridLineHorizontal);
+  height: var(--gridLineHorizontalHeight);
   z-index: 2;
   background: linear-gradient(
     to bottom,
@@ -300,11 +306,11 @@ textarea {
 .grid__dots__dot {
   position: absolute;
   background: linear-gradient(to bottom, var(--colorWhite), transparent);
-  width: calc(var(--gridLineVertical) / 4);
-  height: var(--gridLineVertical);
+  width: calc(var(--gridLineVerticalWidth) / 4);
+  height: var(--gridLineVerticalWidth);
   top: 100%;
   transform: translateX(150%);
-  border-radius: var(--gridLineVertical);
+  border-radius: var(--gridLineVerticalWidth);
   box-shadow: 0 0 3px #fff;
   -webkit-backface-visibility: hidden;
 }
