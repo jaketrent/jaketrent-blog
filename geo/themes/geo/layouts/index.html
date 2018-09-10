@@ -1,13 +1,26 @@
 {{- partial "head.html" . -}}
 
-{{- partial "header.html" -}}
-
-<main>
-  {{ partial "home/courses" . }}
-  {{ partial "home/articles" . }}
-  {{ partial "home/books" . }}
-  {{ partial "home/talks" . }}
+<main class="home-main">
+  <div class="home-sky">
+    <div class="home-channel home-channel--course">
+      {{ partial "home/courses" . }}
+    </div>
+    <div class="home-channel home-channel--book">
+      {{ partial "home/books" . }}
+    </div>
+    <div class="home-channel home-channel--article">
+      {{ partial "home/articles" . }}
+    </div>
+    <div class="home-channel home-channel--talk">
+      {{ partial "home/talks" . }}
+    </div>
+    <div class="home-logo">
+      {{ partial "logo" . }}
+    </div>
+  </div>
+  <div class="home-grid">
+    {{ partial "grid" . }}
+  </div>
 </main>
 
-{{- partial "footer.html" . -}}
-{{- partial "foot.html" . -}}
+{{- partial "footer.html" . -}} {{- partial "foot.html" . -}}
