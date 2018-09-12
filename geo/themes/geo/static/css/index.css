@@ -360,6 +360,7 @@ textarea {
   position: relative;
   display: flex;
   height: 75vh;
+  overflow: hidden;
 }
 .home-grid {
   height: 25vh;
@@ -431,9 +432,117 @@ textarea {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(0);
   width: 50vw;
   max-width: 800px;
+  animation-name: home-logo--flicker, home-logo--rise;
+  animation-duration: 2s, 3s;
+  animation-delay: 0.5s, 1s;
+  animation-fill-mode: both, both;
+  animation-timing-function: linear, ease-out;
+}
+@keyframes home-logo--rise {
+  0% {
+    transform: translateX(-50%) translateY(100%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+@keyframes home-logo--flicker {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .centered-content {
@@ -1003,4 +1112,114 @@ textarea {
 }
 .single-footer__grid {
   overflow: hidden;
+}
+
+:root {
+  --metaListBorderWidth: 5vw;
+}
+.meta-list {
+  min-height: 100vh;
+  padding-left: calc(
+    var(--metaListBorderWidth) + (var(--metaListBorderWidth) / 2)
+  );
+}
+.meta-list:after,
+.meta-list__links:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: var(--metaListBorderWidth);
+  height: 100%;
+  min-height: 100vh;
+  background: var(--colorBlue);
+}
+.meta-list:after {
+  left: 0;
+}
+@media (min-width: 769px) {
+  .meta-list {
+    margin-left: 30vw;
+  }
+  .meta-list:after {
+    content: none;
+  }
+}
+.meta-list__logo {
+  display: block;
+  padding: 2vh 0;
+  max-width: 50vw;
+}
+@media (min-width: 769px) {
+  .meta-list__logo {
+    position: absolute;
+    top: 2.5vw;
+    left: 5vw;
+    width: 20vw;
+  }
+}
+.meta-list__title {
+  font-family: var(--fontHeader);
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 32px;
+  text-shadow: 2px 2px 0 var(--colorTurquoise);
+  letter-spacing: 0.1ch;
+  white-space: nowrap;
+}
+@media (min-width: 320px) {
+  .meta-list__title {
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(32px + (56 - 32) * ((100vw - 320px) / (769 - 320)));
+  }
+}
+@media (min-width: 769px) {
+  .meta-list__title {
+    position: absolute;
+    top: 15vw;
+    left: calc(30vw - var(--metaListBorderWidth));
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(calc(-100% - 0.5em));
+    font-size: var(--metaListBorderWidth);
+  }
+}
+.meta-list__count {
+  color: var(--colorBgSubtle);
+  padding: 1em 0 0.25em 0;
+  font-style: italic;
+}
+.meta-list__links {
+  position: relative;
+  padding-right: var(--metaListBorderWidth);
+}
+.meta-list__links:after {
+  left: calc(
+    -1 * var(--metaListBorderWidth) - (var(--metaListBorderWidth) / 2)
+  );
+}
+.meta-list__links a {
+  display: block;
+  color: var(--colorTurquoise);
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2ch;
+  font-size: 18px;
+}
+.meta-list__links a::first-letter {
+  margin-left: -2ch;
+}
+.meta-list__links a:hover,
+.meta-list__links a:focus {
+  outline: none;
+  color: var(--colorPink);
+  text-decoration: none;
+}
+@media (min-width: 320px) {
+  .meta-list__links a {
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1000 - 320)));
+  }
+}
+@media (min-width: 1000px) {
+  .meta-list__links a {
+    font-size: 36px;
+  }
 }

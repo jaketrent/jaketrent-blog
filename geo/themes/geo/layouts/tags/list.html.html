@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+
+<div class="content">
+  <main class="main">
+    <div class="page-spacer">
+      <div class="list list--tag">
+        <header class="list-header">
+          <h2 class="list-title">All {{ .Title }}</h2>
+        </header>
+        <div class="list-content list-content--tag">
+          {{ $data := .Data }}
+          {{ range $key, $value := .Data.Terms }}
+            <div class="list-item list-item--tag">
+              <a class="list-link list-link--tag" href="/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{{ partial "foot.html" . }}
