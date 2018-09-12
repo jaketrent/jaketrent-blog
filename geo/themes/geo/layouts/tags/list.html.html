@@ -1,23 +1,17 @@
 {{ partial "head.html" . }}
 
-<div class="content">
-  <main class="main">
-    <div class="page-spacer">
-      <div class="list list--tag">
-        <header class="list-header">
-          <h2 class="list-title">All {{ .Title }}</h2>
-        </header>
-        <div class="list-content list-content--tag">
-          {{ $data := .Data }}
-          {{ range $key, $value := .Data.Terms }}
-            <div class="list-item list-item--tag">
-              <a class="list-link list-link--tag" href="/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}
-            </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </main>
-</div>
+<main class="meta-list">
+  <a class="meta-list__logo" href="/">
+    {{ partial "logo" . }}
+  </a>
+  <h1 class="meta-list__title">{{ .Title }}</h1>
+  <div class="meta-list__links">
+    <div class="meta-list__count">{{ len .Data.Terms }} items</div>
+    {{ $data := .Data }}
+    {{ range $key, $value := .Data.Terms }}
+    <a href="/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a>
+    {{ end }}
+  </div>
+</main>
 
 {{ partial "foot.html" . }}
