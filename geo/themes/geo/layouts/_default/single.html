@@ -7,12 +7,14 @@
         {{- dateFormat "2 Jan 2006" .Date -}}
       </time>
       <div>
-        29 min read
+        {{ .ReadingTime }} min read
       </div>
       <div>
         By Jake Trent
       </div>
-      <div>In Code</div>
+      {{ if .Params.categories }}
+      <div>In {{ index .Params.categories 0 }}</div>
+      {{ end }}
       <div class="single-article__meta--tags">
         {{ if .Params.tags }}
         <nav>
