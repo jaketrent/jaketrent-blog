@@ -30,9 +30,9 @@
   <div class="single-article__read">
 
     <div class="single-article__image">
-      {{ with .Params.image }}
+      {{ if and .Params.image (not (eq .Params.layout "talk")) }}
         <div class="single-article__image__container">
-          <img src="{{ . }}" class="single-article__image__img" />
+          <img src="{{ .Params.image }}" class="single-article__image__img" />
         </div>
       {{ else }}
         <div class="single-article__image__placeholder"></div>

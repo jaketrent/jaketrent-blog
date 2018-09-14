@@ -1,5 +1,5 @@
 {{ range first 3 (where .Data.Pages "Section" "course") }}
-<a href="{{ .URL }}" class="home-item__link home-item__link--course">
+<a href="{{ .Params.landingPage }}" class="home-item__link home-item__link--course">
   <img class="home-item__img" src="{{ .Params.image }}">
   <div class="home-item__title">{{ .Title }}</div>
 </a>

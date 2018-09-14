@@ -761,7 +761,7 @@ textarea {
   max-width: 100%;
 }
 .single-article__content {
-  margin-top: calc(var(--singleBorderWidth) * 2);
+  margin-top: 2em;
   padding-bottom: 16px;
   font-size: 16px;
   line-height: 1.275em;
