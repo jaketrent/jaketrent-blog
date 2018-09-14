@@ -28,10 +28,13 @@
   <div class="single-article__read">
 
     <div class="single-article__image">
-      <div class="single-article__image__container">
-        <img src="{{ .Params.image }}" class="single-article__image__img" />
-
-      </div>
+      {{ with .Params.image }}
+        <div class="single-article__image__container">
+          <img src="{{ . }}" class="single-article__image__img" />
+        </div>
+      {{ else }}
+        <div class="single-article__image__placeholder"></div>
+      {{ end }}
     </div>
 
     <div class="single-article__content markdown-content">
