@@ -435,7 +435,7 @@ textarea {
 .home-channel--book:before {
   height: 45vh;
   background: var(--colorPurple);
-  animation-delay: 100ms;
+    animation-delay: 100ms;
 }
 .home-channel--book:after {
   height: 44vh;
@@ -473,6 +473,30 @@ textarea {
   margin-bottom: 2vh;
   max-width: 100%;
   max-height: 8vh;
+  transition: all 200ms linear;
+}
+.home-item__link:hover,
+.home-item__link:focus {
+  outline: none;
+  transform: scale(1.1);
+}
+.home-item__border {
+  max-height: inherit;
+  max-width: inherit;
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+.home-item__link:hover .home-item__border:after,
+.home-item__link:focus .home-item__border:after {
+  content: "";
+  position: absolute;
+  top: -0.5vh;
+  left: -0.5vh;
+  height: calc(100% + 1vh);
+  width: calc(100% + 1vh);
+  background: var(--colorWhite);
+  z-index: -1;
 }
 @media (min-width: var(--homeDesktopWidth)) {
   .home-item__link {
@@ -484,9 +508,6 @@ textarea {
 .home-item__img {
   max-height: inherit;
   max-width: inherit;
-}
-.home-item__title {
-  display: none;
 }
 .home-logo {
   position: absolute;

@@ -1,6 +1,7 @@
 {{ range first 3 (where .Data.Pages "Section" "talk") }}
 <a href="{{ .URL }}" class="home-item__link home-item__link--talk">
-  <img class="home-item__img" src="{{ .Params.image }}">
-  <div class="home-item__title">{{ .Title }}</div>
+  <span class="home-item__border">
+    <img alt="{{ .Title }}" class="home-item__img" src="{{ .Params.image }}">
+  </span>
 </a>
 {{ end }}
