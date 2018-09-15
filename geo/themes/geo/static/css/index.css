@@ -1197,6 +1197,13 @@ textarea {
 .single-footer__grid {
   overflow: hidden;
 }
+.single-footer__disclosures {
+  color: var(--colorBgSubtle);
+  font-size: 0.75em;
+}
+.single-footer__disclosures a {
+  color: var(--colorBgSubtle);
+}
 
 :root {
   --metaListBorderWidth: 5vw;

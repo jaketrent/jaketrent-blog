@@ -1,0 +1,25 @@
+<div class="single-footer__disclosures">
+  {{ if in . "no-connection" }}
+    <p>
+      Disclosure of Material Connection: I have not received any compensation for writing this post. I have no material connection to the brands, products, or services that I have mentioned. I am disclosing this in accordance with the Federal Trade Commission’s <a href="http://www.access.gpo.gov/nara/cfr/waisidx_03/16cfr255_03.html" target="_blank">16 CFR, Part 255</a>: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+    </p>
+  {{ end  }}
+  {{ if in . "affiliate" }}
+    {{ partial "single/disclosures-affiliate" . }}
+  {{ end  }}
+  {{ if in . "free" }}
+    <p>
+      Disclosure of Material Connection: I received one or more of the products or services mentioned above for free in the hope that I would mention it on my blog. Regardless, I only recommend products or services I use personally and believe will be good for my readers. I am disclosing this in accordance with the Federal Trade Commission’s <a href="http://www.access.gpo.gov/nara/cfr/waisidx_03/16cfr255_03.html" target="_blank">16 CFR, Part 255</a>: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+    </p>
+  {{ end  }}
+  {{ if in . "sponsor" }}
+    <p>
+      Disclosure of Material Connection: This is a “sponsored post.” The company who sponsored it compensated me via a cash payment, gift, or something else of value to write it. Regardless, I only recommend products or services I use personally and believe will be good for my readers. I am disclosing this in accordance with the Federal Trade Commission’s <a href="http://www.access.gpo.gov/nara/cfr/waisidx_03/16cfr255_03.html" target="_blank">16 CFR, Part 255</a>: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+    </p>
+  {{ end  }}
+  {{ if in . "employee" }}
+    <p>
+      Disclosure of Material Connection: I am currently an employee of Pluralsight. Regardless, I only recommend books that I have personally read and believe will be good for my readers. I am disclosing this in accordance with the Federal Trade Commission’s <a href="http://www.access.gpo.gov/nara/cfr/waisidx_03/16cfr255_03.html" target="_blank">16 CFR, Part 255</a>: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+    </p>
+  {{ end }}
+</div>
