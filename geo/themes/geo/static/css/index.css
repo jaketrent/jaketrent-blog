@@ -373,6 +373,14 @@ textarea {
   width: 25vw;
   padding-left: 5vw;
 }
+.home-channel:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5vw;
+  width: 5vw;
+  transform-origin: bottom;
+}
 .home-channel:after {
   content: "";
   position: absolute;
@@ -380,33 +388,85 @@ textarea {
   left: 5vw;
   width: 5vw;
 }
+@keyframes home-channel--jitter {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.99);
+  }
+}
+@keyframes home-channel--glow {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+.home-channel--course:before,
+.home-channel--book:before,
+.home-channel--article:before,
+.home-channel--talk:before {
+  animation: home-channel--jitter 350ms ease-out infinite alternate;
+}
+.home-channel--course:after,
+.home-channel--book:after,
+.home-channel--course:after,
+.home-channel--talk:after {
+  animation: home-channel--glow 2500ms ease-in infinite alternate-reverse;
+}
 .home-channel--course {
   padding-bottom: 20vh;
 }
-.home-channel--course:after {
+.home-channel--course:before {
   height: 20vh;
   background: var(--colorBlue);
+  animation-delay: 50ms;
+}
+.home-channel--course:after {
+  height: 19vh;
+  background: linear-gradient(to top, var(--colorPurple), transparent);
+  box-shadow: 0 0 2vw var(--colorBlue);
 }
 .home-channel--book {
   padding-bottom: 45vh;
 }
-.home-channel--book:after {
+.home-channel--book:before {
   height: 45vh;
   background: var(--colorPurple);
+  animation-delay: 100ms;
+}
+.home-channel--book:after {
+  height: 44vh;
+  background: linear-gradient(to top, var(--colorBlue), transparent);
+  box-shadow: 0 0 2vw var(--colorPurple);
 }
 .home-channel--article {
   padding-bottom: 40vh;
 }
-.home-channel--article:after {
+.home-channel--article:before {
   height: 40vh;
   background: var(--colorPink);
+  animation-delay: 150ms;
+}
+.home-channel--article:after {
+  height: 39vh;
+  background: linear-gradient(to top, var(--colorBlue), transparent);
+  box-shadow: 0 0 2vw var(--colorPink);
 }
 .home-channel--talk {
   padding-bottom: 30vh;
 }
-.home-channel--talk:after {
+.home-channel--talk:before {
   height: 30vh;
   background: var(--colorTurquoise);
+  animation-delay: 200ms;
+}
+.home-channel--talk:after {
+  height: 29vh;
+  background: linear-gradient(to top, var(--colorPink), transparent);
+  box-shadow: 0 0 2vw var(--colorTurquoise);
 }
 .home-item__link {
   display: block;
