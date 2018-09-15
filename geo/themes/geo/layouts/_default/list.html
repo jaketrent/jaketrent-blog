@@ -1,0 +1,16 @@
+{{ partial "head.html" . }}
+
+<main class="meta-list">
+  <a class="meta-list__logo" href="/">
+    {{ partial "logo" . }}
+  </a>
+  <h1 class="meta-list__title">{{ .Section | pluralize | title }}</h1>
+  <div class="meta-list__links">
+    <div class="meta-list__count">{{ len .Data.Pages }} items</div>
+    {{ range .Data.Pages }}
+      <a href="{{ .URL }}">{{ .Title }}</a>
+    {{ end }}
+  </div>
+</main>
+
+{{ partial "foot.html" . }}

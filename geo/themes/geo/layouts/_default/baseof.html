@@ -22,9 +22,12 @@
             <div>
               By Jake Trent
             </div>
-            {{ if .Params.categories }}
-              <div>In {{ index .Params.categories 0 }}</div>
-            {{ end }}
+            <div>
+              In 
+              <a href="{{ .Site.BaseURL }}/{{ .Section | urlize }}">
+                {{ .Section | pluralize | title }}
+              </a>
+            </div>
             <div class="single-article__meta--tags">
               {{ if .Params.tags }}
                 <nav>
