@@ -626,6 +626,40 @@ textarea {
   }
 }
 
+/* component: btn */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: grey;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0.45em 0.85em;
+}
+.btn:hover {
+  background: darkgrey;
+}
+.btn__icon {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5em;
+  fill: white;
+}
+.btn__label {
+  color: white;
+}
+.btn--amazon {
+  background: #eda43a;
+}
+.btn--amazon:hover {
+  background: #ffba55;
+}
+.btn--twitter {
+  background: #1da1f2;
+}
+.btn--twitter:hover {
+  background: #4bcaff;
+}
+
 .centered-content {
   width: 100%;
   max-width: 1200px;
@@ -1102,6 +1136,7 @@ textarea {
   padding-left: calc(var(--singleTitleLeftMargin) - 2.5vw);
   height: 25vw;
   margin-top: calc(-25vw + var(--footerMarginTop));
+  pointer-events: none;
 }
 .single-footer__sky:after {
   content: "";

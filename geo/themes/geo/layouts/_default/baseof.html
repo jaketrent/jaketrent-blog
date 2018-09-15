@@ -53,9 +53,9 @@
 
         <div class="single-article__content markdown-content">
           {{ .Content }}
+          {{- block "content-footer" . -}} {{- end -}}
         </div>
 
-        {{- block "content-footer" . -}} {{- end -}}
       </div>
     </article>
 

@@ -1,0 +1,8 @@
+{{ if .Params.readUrl }}
+<a target="_blank" class="btn btn--read" href="{{ .Params.readUrl }}">
+  <svg class="btn__icon" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23 48.049a.996.996 0 0 1-.43-.097l-21-10a1 1 0 0 1-.57-.903v-31a1.002 1.002 0 0 1 1.43-.903L23 14.941l20.57-9.796a1 1 0 0 1 1.43.904v31a1 1 0 0 1-.57.903l-21 10a.996.996 0 0 1-.43.097zM3 36.417l20 9.524 20-9.524V7.633l-19.57 9.319a1.002 1.002 0 0 1-.859 0L3 7.633v28.784z"/><path d="M23 12.204L5.567 3.903a1 1 0 0 1 .86-1.807L23 9.989l16.573-7.893a1 1 0 0 1 .86 1.807L23 12.204zM22 16.049h2v31h-2z"/>
+  </svg>
+  <span class="btn__label">Read</span>
+</a>
+{{ end }}
