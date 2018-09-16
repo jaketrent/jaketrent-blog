@@ -1,7 +1,7 @@
 languageCode: "en-us"
 title: "Jake Trent"
 baseurl: "https://jaketrent.com"
-theme: "hugo-clear-theme"
+theme: "geo"
 MetaDataFormat: "yaml"
 enableemoji: true
 
