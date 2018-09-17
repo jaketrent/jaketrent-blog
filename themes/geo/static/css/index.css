@@ -430,41 +430,41 @@ textarea {
   box-shadow: 0 0 2vw var(--colorBlue);
 }
 .home-channel--second {
-  padding-bottom: 45vh;
+  padding-bottom: 35vh;
 }
 .home-channel--second:before {
-  height: 45vh;
+  height: 35vh;
   background: var(--colorPurple);
     animation-delay: 100ms;
 }
 .home-channel--second:after {
-  height: 44vh;
+  height: 34vh;
   background: linear-gradient(to top, var(--colorBlue), transparent);
   box-shadow: 0 0 2vw var(--colorPurple);
 }
 .home-channel--third {
-  padding-bottom: 40vh;
+  padding-bottom: 30vh;
 }
 .home-channel--third:before {
-  height: 40vh;
+  height: 30vh;
   background: var(--colorPink);
   animation-delay: 150ms;
 }
 .home-channel--third:after {
-  height: 39vh;
+  height: 29vh;
   background: linear-gradient(to top, var(--colorBlue), transparent);
   box-shadow: 0 0 2vw var(--colorPink);
 }
 .home-channel--fourth {
-  padding-bottom: 30vh;
+  padding-bottom: 15vh;
 }
 .home-channel--fourth:before {
-  height: 30vh;
+  height: 15vh;
   background: var(--colorTurquoise);
   animation-delay: 200ms;
 }
 .home-channel--fourth:after {
-  height: 29vh;
+  height: 14vh;
   background: linear-gradient(to top, var(--colorPink), transparent);
   box-shadow: 0 0 2vw var(--colorTurquoise);
 }
