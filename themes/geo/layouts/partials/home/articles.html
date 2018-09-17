@@ -1,3 +1,4 @@
+<h2 class="home-channel__title">Articles</h2>
 {{ range first 3 (where .Data.Pages "Section" "post") }}
 <a href="{{ .URL }}" class="home-item__link home-item__link--article">
   <span class="home-item__border">

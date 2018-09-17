@@ -468,6 +468,11 @@ textarea {
   background: linear-gradient(to top, var(--colorPink), transparent);
   box-shadow: 0 0 2vw var(--colorTurquoise);
 }
+.home-channel__title {
+  font-family: var(--fontHeader);
+  font-size: 1em;
+  color: var(--colorBgSubtle);
+}
 .home-item__link {
   display: block;
   margin-bottom: 2vh;
