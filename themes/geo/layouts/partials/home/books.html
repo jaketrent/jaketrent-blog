@@ -1,6 +1,6 @@
 <h2 class="home-channel__title">Reading</h2>
  {{ range first 3 (where .Data.Pages "Section" "book") }}
-<a href="{{ .URL }}" class="home-item__link home-item__link--book">
+<a href="{{ .URL }}" class="home-item__link">
   <span class="home-item__border">
     <img alt="{{ .Title }}" class="home-item__img" src="{{ .Params.image }}">
   </span>

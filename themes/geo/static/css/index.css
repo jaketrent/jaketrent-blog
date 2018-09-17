@@ -404,66 +404,66 @@ textarea {
     opacity: 0.8;
   }
 }
-.home-channel--course:before,
-.home-channel--book:before,
-.home-channel--article:before,
-.home-channel--talk:before {
+.home-channel--first:before,
+.home-channel--second:before,
+.home-channel--third:before,
+.home-channel--fourth:before {
   animation: home-channel--jitter 350ms ease-out infinite alternate;
 }
-.home-channel--course:after,
-.home-channel--book:after,
-.home-channel--course:after,
-.home-channel--talk:after {
+.home-channel--first:after,
+.home-channel--second:after,
+.home-channel--third:after,
+.home-channel--fourth:after {
   animation: home-channel--glow 2500ms ease-in infinite alternate-reverse;
 }
-.home-channel--course {
+.home-channel--first {
   padding-bottom: 20vh;
 }
-.home-channel--course:before {
+.home-channel--first:before {
   height: 20vh;
   background: var(--colorBlue);
   animation-delay: 50ms;
 }
-.home-channel--course:after {
+.home-channel--first:after {
   height: 19vh;
   background: linear-gradient(to top, var(--colorPurple), transparent);
   box-shadow: 0 0 2vw var(--colorBlue);
 }
-.home-channel--book {
+.home-channel--second {
   padding-bottom: 45vh;
 }
-.home-channel--book:before {
+.home-channel--second:before {
   height: 45vh;
   background: var(--colorPurple);
     animation-delay: 100ms;
 }
-.home-channel--book:after {
+.home-channel--second:after {
   height: 44vh;
   background: linear-gradient(to top, var(--colorBlue), transparent);
   box-shadow: 0 0 2vw var(--colorPurple);
 }
-.home-channel--article {
+.home-channel--third {
   padding-bottom: 40vh;
 }
-.home-channel--article:before {
+.home-channel--third:before {
   height: 40vh;
   background: var(--colorPink);
   animation-delay: 150ms;
 }
-.home-channel--article:after {
+.home-channel--third:after {
   height: 39vh;
   background: linear-gradient(to top, var(--colorBlue), transparent);
   box-shadow: 0 0 2vw var(--colorPink);
 }
-.home-channel--talk {
+.home-channel--fourth {
   padding-bottom: 30vh;
 }
-.home-channel--talk:before {
+.home-channel--fourth:before {
   height: 30vh;
   background: var(--colorTurquoise);
   animation-delay: 200ms;
 }
-.home-channel--talk:after {
+.home-channel--fourth:after {
   height: 29vh;
   background: linear-gradient(to top, var(--colorPink), transparent);
   box-shadow: 0 0 2vw var(--colorTurquoise);
@@ -507,8 +507,6 @@ textarea {
   .home-item__link {
     max-height: 8vh;
   }
-}
-.home-item__link--article {
 }
 .home-item__img {
   max-height: inherit;

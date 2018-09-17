@@ -2,17 +2,17 @@
 
 <main class="home-main">
   <div class="home-sky">
-    <div class="home-channel home-channel--course">
+    <div class="home-channel home-channel--first">
       {{ partial "home/courses" . }}
     </div>
-    <div class="home-channel home-channel--book">
-      {{ partial "home/books" . }}
-    </div>
-    <div class="home-channel home-channel--article">
+    <div class="home-channel home-channel--second">
       {{ partial "home/articles" . }}
     </div>
-    <div class="home-channel home-channel--talk">
+    <div class="home-channel home-channel--third">
       {{ partial "home/talks" . }}
+    </div>
+    <div class="home-channel home-channel--fourth">
+      {{ partial "home/books" . }}
     </div>
     <div class="home-logo">
       {{ partial "logo" . }}
