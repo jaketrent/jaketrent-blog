@@ -14,6 +14,8 @@ description: So Good They Can't Ignore You, a book by Cal Newport debunks for th
 metaKeywords: job choice, follow your passion, career capital, craftsman mentality
 draft: false
 image: https://i.imgur.com/VWjzM2c.jpg
+disclosures: 
+- "affiliate" 
 ---
 
 "[So Good They Can't Ignore You](http://www.amazon.com/gp/product/1455509124/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1455509124&linkCode=as2&tag=jaktre-20)" is written by Cal Newport.  He rejects the idea of following your passion in order to find the work you love.  Instead, he suggests the accumulation of career capital.
