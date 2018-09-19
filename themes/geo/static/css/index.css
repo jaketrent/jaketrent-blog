@@ -1,14 +1,13 @@
 /* config */
 @font-face {
-  font-family: "cyberpnuk2";
-  src: url("/type/cybrpnuk2-webfont.woff2") format("woff2"),
-    url("/type/cybrpnuk2-webfont.woff") format("woff");
+  font-family: "jost";
+  src: url("/type/Jost-400-Book.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "koliko";
-  src: url("/type/koliko-Bold.woff") format("woff");
+  font-family: "jost";
+  src: url("/type/Jost-700-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
@@ -21,8 +20,8 @@
   --colorPurple: rgb(200, 41, 224);
   --colorTurquoise: rgb(0, 237, 189);
   --colorWhite: #fff;
-  --fontHeader: "koliko", "cyberpnuk2", sans-serif;
-  --fontRegular: sans-serif;
+  --fontHeader: "jost", sans-serif;
+  --fontRegular: "jost", sans-serif;
   --spacingSmall: 8px;
 }
 
@@ -469,9 +468,19 @@ textarea {
   box-shadow: 0 0 2vw var(--colorTurquoise);
 }
 .home-channel__title {
-  font-family: var(--fontHeader);
-  font-size: 1em;
+  font-size: 0.75em;
+  font-weight: normal;
   color: var(--colorBgSubtle);
+}
+.home-channel__title a {
+  color: inherit;
+  text-decoration: none;
+}
+.home-channel__title a:hover,
+.home-channel__title a:focus {
+  outline: none;
+  color: var(--colorPink);
+  text-decoration: underline;
 }
 .home-item__link {
   display: block;
@@ -1214,7 +1223,6 @@ textarea {
   text-shadow: 0 0 12px var(--colorPink);
   font-size: 10px;
   line-height: 1.75em;
-  font-weight: 600;
 }
 @media (min-width: 320px) {
   .single-footer__list {

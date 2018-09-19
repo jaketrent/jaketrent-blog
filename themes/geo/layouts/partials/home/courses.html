@@ -1,4 +1,4 @@
-<h2 class="home-channel__title">Courses</h2>
+<h2 class="home-channel__title"><a href="/course">Courses</a></h2>
 {{ range first 3 (where .Data.Pages "Section" "course") }}
 <a href="{{ .Params.landingPage }}" class="home-item__link">
   <span class="home-item__border">
