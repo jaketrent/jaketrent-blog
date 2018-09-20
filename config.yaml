@@ -1,6 +1,6 @@
 languageCode: "en-us"
 title: "Jake Trent"
-baseurl: "https://jaketrent-blog.netlify.com"
+baseurl: "https://jaketrent.com"
 theme: "geo"
 MetaDataFormat: "yaml"
 enableemoji: true
