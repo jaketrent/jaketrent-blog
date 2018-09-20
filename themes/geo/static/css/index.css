@@ -717,14 +717,14 @@ textarea {
   width: var(--singleBorderWidth);
   background: var(--colorBlue);
 }
-.single__header svg {
+.single__header img {
   position: relative;
   left: var(--singleTitleLeftMargin);
   z-index: 1;
   height: 64px;
 }
 @media (min-width: 850px) {
-  .single__header svg {
+  .single__header img {
     height: calc(var(--singleBorderWidth) + var(--singleTitleLeftMargin) / 3);
     position: absolute;
     top: 0;
