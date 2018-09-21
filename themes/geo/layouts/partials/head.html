@@ -2,11 +2,17 @@
 <html lang="en-US" xmlns:xlink="http://www.w3.org/1999/xlink">
   <head>
     <meta charset="utf-8" />
-    {{ if eq .Title .Site.Title }}
-      <title>{{ .Title }}</title>
-    {{ else }}
-      <title>{{ .Title | default "Welcome" }} | {{ .Site.Title }}</title>
-    {{ end }}
+    {{ block "title" . }}
+      {{ if eq .Title .Site.Title }}
+        <title>{{ .Title }}</title>
+      {{ else if .Title }}
+        <title>{{ .Title | default "Welcome" }} | {{ .Site.Title }}</title>
+      {{ else if .Section }}
+        <title>{{ .Section | title | pluralize }} | {{ .Site.Title }}</title>
+      {{ else }}
+        <title>Welcome | {{- .Site.Title -}}</title>
+      {{ end }}
+    {{ end}}
     {{ if .IsPage }}
       <meta name="description" content="{{ .Description }}" />
     {{ else }}

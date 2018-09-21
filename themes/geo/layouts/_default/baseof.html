@@ -73,6 +73,7 @@
   {{- end -}}
 </main>
 
+{{- block "footer" . -}}
 <footer class="single-footer">
   <div class="single-footer__sky"></div>
   {{ partial "grid" . }}
@@ -89,5 +90,6 @@
     {{ partial "single/footer-meta" . }}
   </div>
 </footer>
+{{- end -}}
 
 {{- partial "foot.html" . -}}
