@@ -1337,6 +1337,7 @@ textarea {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  padding-top: 16px;
 }
 .meta-list__links a {
   display: block;
