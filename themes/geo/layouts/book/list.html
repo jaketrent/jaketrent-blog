@@ -6,10 +6,12 @@
   </a>
   <h1 class="meta-list__title">{{ .Section | pluralize | title }}</h1>
   <div class="meta-list__items">
-    <div class="meta-list__count">{{ len .Data.Pages }} items</div>
-    <div class="meta-list__links">
+    <div class="meta-list__count">{{ len .Data.Pages }} books</div>
+    <div class="meta-list__links meta-list__links--book">
       {{ range .Data.Pages }}
-        <a href="{{ .URL }}">{{ .Title }}</a>
+        <a href="{{ .URL }}">
+          <img src="{{ .Params.Image }}" alt="{{ .Title }}" />
+        </a>
       {{ end }}
     </div>
   </div>
