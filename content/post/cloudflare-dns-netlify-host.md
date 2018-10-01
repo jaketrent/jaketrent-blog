@@ -12,7 +12,7 @@ tags:
 description: How to get a site hosted on Netlify to use the DNS record on Cloudflare.
 metaKeywords: cloudflare, dns, cname, netlify, cdn, static site
 draft: false
-? image
+image: "https://i.imgur.com/3LUr94Y.jpg"
 ---
 
 Deploying a static site to [Netlify](https://www.netlify.com/) is slick and easy. But if you don't want to transfer your DNS there too, you can keep it on [Cloudflare](https://www.cloudflare.com/), which does DNS and a whole bunch more.
