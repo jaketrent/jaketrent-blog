@@ -54,7 +54,7 @@ A machine might be programmed to give certain outputs to certain inputs.  Humans
 
 Done.  
 
-We don't just quit the program after we get what we came for.  When the end of the conversation has come, we need to wrap it up.  This is an art in and of itself.  It has been neglected in the era of text messages and chat.  Writing "Sincerely, Jake" doesn't even feel right any more.  
+We don't just quit the conversation after we get what we came for.  When the end of the conversation has come, we need to wrap it up.  This is an art in and of itself.  It has been neglected in the era of text messages and chat.  Writing "Sincerely, Jake" doesn't even feel right any more.  
 
 When we're done talking to someone, we smile and say good bye.  Tell them it was good talking to them.  Don't just drop your eyes and turn away.  Express thanks.
 
