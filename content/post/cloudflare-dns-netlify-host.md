@@ -37,11 +37,7 @@ Set it up as a `CNAME` that points directly to the absolute URL of the Netlify s
 
 ![Root record](https://i.imgur.com/tvDGNOc.png)
 
-Also note that we've clicked the orange cloud to be gray on the right-hand side so that we're using Cloudflare for DNS only and not a CDN. Netlify will provide all the CDN support for this domain that we need.
-
-Whenever I start making new site changes like this, I go to the site Overview in Cloudflare and switch to "Development Mode" so that I'm sure to get all my site content cache busted. This may be optional depending on your previous setup.
-
-![Set to Development Mode](https://i.imgur.com/4i7JfSB.png)
+Also note that we've clicked the orange cloud, deactivating the Cloudflare HTTP proxy.  It is now grayed out to show that we're only using Cloudflare for DNS and not as a CDN. Netlify will provide all the CDN support for this domain that we need.
 
 In doing this for myself, I saw a bit of chatter that
 [SSL was not working with the Cloudflare/Netlify combo](https://stackoverflow.com/questions/51292068/cloudflare-dns-netlify-cdn-https-not-working). I did not run into this, but just in case, I set the SSL settings to flexible as was suggested (probably by some hooded hacker!):
