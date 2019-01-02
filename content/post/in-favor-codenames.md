@@ -41,7 +41,7 @@ Codenames are great for the usually-specialized teams that end up working togeth
 ## They Need Discoverability Help
 Codenames do not help with discoverability.  In the age of search, however, this point is lessened.  We often put important domain-related keywords next to content.  I'm all for including bylines next to codenames as a one-line explanation of what it is.  Using a combo like this when it makes sense will give you the best of both words: exact consistency via the codename and some discoverable verbiage via an accompanying byline.
 
-## They're New Words
+## Abstractions for Future Change
 A codename a variable name.  It's an abstraction.  It represents a project, team, codebase, or something else.  It hides the internals.  It will outlive your company's pivot from the original project scope and meaning so you can keep your codename even as your mission changes.  It usually doesn't leak the internal implementation details.
 
 Codenames are singletons within the universe of your company.  No one else will have the same team name, repo name, or slack channel.  Codenames are the keys in the dictionary of values.
