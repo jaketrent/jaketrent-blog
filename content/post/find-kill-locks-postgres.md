@@ -38,8 +38,8 @@ Postgres has a ton of great stat information in tables with metadata about how t
 select pid 
 from pg_locks l 
 join pg_class t on l.relation = t.oid 
-and t.relkind = 'r' 
-where t.relname = 'search_hit';
+where t.relkind = 'r'
+and t.relname = 'search_hit';
 ```
 
 And get: 
