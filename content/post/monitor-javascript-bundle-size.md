@@ -17,7 +17,7 @@ At some point, you may realize that all those packages you're conveniently npm i
 
 <!--more-->
 
-I recently discovered this tool called [https://github.com/ai/size-limit](Size Limit).  It's my favorite of its kind so far.  It will alert you once the size of your bundle gets over a certain threshold size (think CI integration).  It uses webpack.
+I recently discovered this tool called [Size Limit](https://github.com/ai/size-limit).  It's my favorite of its kind so far.  It will alert you once the size of your bundle gets over a certain threshold size (think CI integration).  It uses webpack.
 
 ## Install Size Limit
 
