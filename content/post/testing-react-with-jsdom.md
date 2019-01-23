@@ -40,7 +40,7 @@ As [Node and io.js merge in the future](http://thenextweb.com/dd/2015/06/16/node
 
 In my JavaScript tests, I prefer to use the [Mocha](http://mochajs.org/) test runner.  It's usable in Node or browser environments.  It has great async test support.  It has the familiar behavior-style syntax of `describe` and `it` and all the normal test setup hooks that you like.  Most importantly, it features the Nyan cat test reporter:
 
-![nyan cat test reporter](http://mochajs.org/images/reporter-nyan.png)
+![nyan cat test reporter](https://mochajs.org/static/reporter-nyan.withoutEnlargement-resize920,9999.b756f7e62a.png)
 
 Mocha lets you choose your own assertion library.  I like [should.js](http://shouldjs.github.io/).
 
