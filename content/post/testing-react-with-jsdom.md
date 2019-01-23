@@ -30,12 +30,6 @@ Because jsdom is implemented in JavaScript, we can have a DOM-like API to work w
 
 By not using real browsers, we're also essentially saying that we believe the problems in our client JavaScript will not be browser-dependent (again, because we're not capturing *real* browsers).
 
-## jsdom Requirements
-
-The [latest version of jsdom](https://github.com/tmpvar/jsdom), as of this writing, requires [io.js](https://iojs.org/en/index.html) instead of Node to run.  If you'd like to run in Node.js instead, the [3.x series of jsdom](https://github.com/tmpvar/jsdom/tree/3.x) is required.
-
-As [Node and io.js merge in the future](http://thenextweb.com/dd/2015/06/16/node-js-and-io-js-are-settling-their-differences-merging-back-together/), I expect the new versions of jsdom to support the one, unified platform.
-
 ## The Test Runner
 
 In my JavaScript tests, I prefer to use the [Mocha](http://mochajs.org/) test runner.  It's usable in Node or browser environments.  It has great async test support.  It has the familiar behavior-style syntax of `describe` and `it` and all the normal test setup hooks that you like.  Most importantly, it features the Nyan cat test reporter:
