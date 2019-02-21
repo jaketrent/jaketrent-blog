@@ -33,7 +33,7 @@ Then open `package.json` for the package you're wanting to test and define the t
 
 ```json
 {
-  "size-limit: [
+  "size-limit": [
     { 
       "path": "dist/index.js",
       "limit": "25 KB"
