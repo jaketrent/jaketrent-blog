@@ -9,7 +9,7 @@ draft: false
 image: "https://i.imgur.com/ZnlpWcj.jpg"
 layout: book
 metaKeywords: "c.s. lewis, screwtape, wormwood, book recommendation"
-rating: 3
+rating: 4
 tags:
   - "fantasy"
 fiction: true

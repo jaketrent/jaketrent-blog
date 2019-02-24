@@ -9,7 +9,7 @@ draft: false
 image: "https://i.imgur.com/tHmAtKJ.jpg"
 layout: book
 metaKeywords: "moon, moon base, revolution"
-rating: 3
+rating: 4
 tags:
   - "scifi"
 fiction: true
