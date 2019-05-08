@@ -13,7 +13,7 @@ tags:
 title: "Getting Into Frontend Dev Today"
 ---
 
-<div>
+<div class="video-container">
 <script async class="speakerdeck-embed" data-id="f7fcd7ad9ff6426991a063b9b8aa1f11" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 

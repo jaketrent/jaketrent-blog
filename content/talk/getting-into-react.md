@@ -14,7 +14,7 @@ tags:
 title: "Getting into React"
 ---
 
-<div>
+<div class="video-container">
 <script async class="speakerdeck-embed" data-id="de147ddcb5a247e39071ea97ae70ed5c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 

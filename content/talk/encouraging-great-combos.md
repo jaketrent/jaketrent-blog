@@ -13,7 +13,7 @@ tags:
 title: "Encouraging Great Combos"
 ---
 
-<div>
+<div class="video-container">
 <script async class="speakerdeck-embed" data-id="7f90d9681bd043f4b11057f372ab9590" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
