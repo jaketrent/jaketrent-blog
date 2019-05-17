@@ -1,5 +1,5 @@
 ---
-affiliateUrl: "https://amzn.to/2JhmPNP"
+affiliateUrl: "https://amzn.to/2Ee2Dt6"
 author: "Kevin Mitnick"
 date: "2019-05-01"
 categories:
