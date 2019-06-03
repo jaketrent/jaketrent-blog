@@ -155,4 +155,6 @@ What are some other observations that you've made when splitting your views into
 
 _Adapted from a meetup talk:_
 
+<div class="video-container">
 <script async class="speakerdeck-embed" data-id="26cce4743e5540b48188a35f49de3c4d" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
