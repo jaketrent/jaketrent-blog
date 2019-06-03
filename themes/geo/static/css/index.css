@@ -528,6 +528,7 @@ textarea {
   transform: translateX(-50%) translateY(0);
   width: 50vw;
   max-width: 800px;
+  pointer-events: none;
   animation-name: home-logo--flicker, home-logo--rise;
   animation-duration: 2s, 3s;
   animation-delay: 0.5s, 1s;
