@@ -80,3 +80,5 @@ Note the use of `whereRaw` instead of just `where` in the update.  This is requi
 :boom: 'Ya done been upserted!
 
 Is there another way that you've gotten Knex to do this?
+
+For a working example of this code, see the [jaketrent/demo-knex-upsert](https://github.com/jaketrent/demo-knex-upsert) repo.
