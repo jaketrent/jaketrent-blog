@@ -55,19 +55,21 @@ The example SQL above, written in code with Knex is something like:
 const util = require('util')
 const knex = // app's db instance
 
-const createUser = async ({ email, name }) => {
-  const insert = knex('users').insert({ email, name }).toString()
+async function createUser({ email, name }) {
+  const insert = knex('users')
+    .insert({ email, name })
+    .toString()
 
   const update = knex('users')
     .update({ name })
-    .whereRaw(`users.email = '${email}'`)
+    .whereRaw('users.email = ?', [email])
   const query = util.format(
     '%s ON CONFLICT (email) DO UPDATE SET %s',
     insert.toString(),
     update.toString().replace(/^update\s.*\sset\s/i, '')
   )
 
-  await db.raw(query)
+  await knex.raw(query)
 }
 ```
 
