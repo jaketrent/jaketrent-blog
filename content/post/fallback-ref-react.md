@@ -40,7 +40,7 @@ const Button = React.forwardRef((props, ref) => {
 
 That `ref` parameter will be available to apply to the inner DOM node of `<button />`.  Now, something like `ref.current.focus()` is available from the outside.
 
-## Connect Refs with useImperativeHAndle
+## Connect Refs with useImperativeHandle
 
 Then in addition, what if we wanted to make sure that the ref was *always* available internally to the custom component as well?  This could allow the button, for instance, to be autofocused.  This needs to be available independent of `React.forwardRef` forwarding anything while also being compatible with it when it does.  
 
@@ -110,3 +110,24 @@ If you're willing to guarantee that:
 Then you're safe.  Then the hooks will be called in the exact same order every render cycle.  And in practice, with the way refs are used, these guarantees will be normal to keep.  
 
 This seems to be a good enough solution for now.  I've got to think that better options will be baked into future React versions.  `React.useRef(forwardedRef)` is currently my favorite.  Let it handle the ref merging.  Or perhaps I'm look at this in the totally wrong way.  How do you, personally, solve this problem?
+
+## Update: An Even Simpler Solution?
+
+Perhaps there's an even simpler solution. If there is, this post can get simplified dramatically.
+
+
+How about this:
+
+```
+const Button = React.forwardRef((props, forwardedRef) => {
+  const ref = React.useRef()
+  React.useImperativeHandle(forwardedRef, () => ref.current)
+
+  // ...
+})
+```
+
+Is this a proper use of `React.useImperativeHandle`?  
+
+Does it do what I hope it does: Allow the internal ref to be exposed externally, forwarding all external references and operations?  (Because this'd be way nicer than having to map everything manually (as in the autofocus example above).
+
