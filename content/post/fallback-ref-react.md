@@ -12,6 +12,7 @@ tags:
   - "react"
 title: "Fallback Ref in React"
 date: "2019-05-22"
+lastmod: "2019-09-23"
 ---
 
 Sometimes you want a React component that can receive a ref from `React.forwardRef` and also is guaranteed to have a ref if it's not forwarded.
