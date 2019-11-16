@@ -2,6 +2,7 @@
 layout: post
 title: "Sinon Spies vs. Stubs"
 date: "2015-02-25"
+lastmod: "2019-11-16"
 comments: true
 categories:
   - "Code"
@@ -32,12 +33,12 @@ They don't change the functionality of your application.  They simply report wha
 I first setup that I want to spy on something.  Then I call my subject under test (src code).  Then I verify with the spy what was actually called and stop spying.  That might look like this in a test:
 
 ```js
-describe("#fight", function () {
-  it("calls prayForStrength for fight success", function () {
-    sinon.spy(subject.strengthDep, "prayForStrength");
-    subject.fight();
-    subject.strengthDep.called.should.be.true;
-    subject.strengthDep.restore();
+describe("#fight", () => {
+  it("calls prayForStrength for fight success", () => {
+    sinon.spy(subject.strengthDep, "prayForStrength")
+    subject.fight()
+    subject.strengthDep.called.should.be.true
+    subject.strengthDep.restore()
   });
 });
 ```
@@ -55,16 +56,16 @@ For instance, if you had a function that returned a boolean that your code used 
 To continue the `fight` example from above, let's assume that if `prayForStrength` returns true, we are guaranteed to win the fight for the orphans (ie, `fight()` should return `true`).  That might look like this:
 
 ```js
-describe("#fight", function () {
-  it("always wins when prayForStrength is true", function () {
-    sinon.stub(subject.strengthDep, "prayForStrength", function () { return true; });
-    subject.fight().should.be.true;
-    subject.strengthDep.restore();
+describe("#fight", () => {
+  it("always wins when prayForStrength is true", () => {
+    sinon.stub(subject.strengthDep, "prayForStrength").callsFake(() => true)
+    subject.fight().should.be.true
+    subject.strengthDep.restore()
   });
 });
 ```
 
-Notice that we use a different `sinon.stub` API.  For the 3rd parameter, we're supplying our own version of `prayForStrength`.  For our test, all we care about is the return value, so that's all we supply.  We're not testing this dependency.  We're instead testing how our subject `fight`s in a certain circumstance.  There are many ways you can use [sinon stubs](http://sinonjs.org/docs/#stubs) to control how functions are called.  Also note that you can still use the `called` verifications with stubs.  But if you do verify a stub was called, you may want to use a mock.
+Notice that we use a different `sinon.stub` API.  This call chains to an invocation of `callsFake` where we're supplying our own version of `prayForStrength`.  For our test, all we care about is the return value, so that's all we supply.  We're not testing this dependency.  We're instead testing how our subject `fight`s in a certain circumstance.  There are many ways you can use [sinon stubs](http://sinonjs.org/docs/#stubs) to control how functions are called.  Also note that you can still use the `called` verifications with stubs.  But if you do verify a stub was called, you may want to use a mock.
 
 ## Sinon Mocks
 
@@ -73,13 +74,13 @@ Notice that we use a different `sinon.stub` API.  For the 3rd parameter, we're s
 So the previous test could be rewritten to use a mock:
 
 ```js
-describe("#fight", function () {
-  it("always wins when prayForStrength is true", function () {
+describe("#fight", () => {
+  it("always wins when prayForStrength is true", () => {
     var mock = sinon.mock(subject.strengthDep)
-    mock.expects("prayForStrength").returns(true);
-    subject.fight().should.be.true;
-    mock.verify();
-    mock.restore();
+    mock.expects("prayForStrength").returns(true)
+    subject.fight().should.be.true
+    mock.verify()
+    mock.restore()
   });
 });
 ```
