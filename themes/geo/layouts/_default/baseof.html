@@ -13,8 +13,15 @@
         <h1 class="single-article__title">{{ .Title }}</h1>
         <div class="single-article__meta">
           {{- block "meta" . -}}
-            <time class="single-article__meta--date" pubdate datetime="{{ .Date }}">
+            <time
+              class="single-article__meta--date"
+              pubdate
+              datetime="{{ default .Date .Lastmod }}"
+            >
               {{- dateFormat "2 Jan 2006" .Date -}}
+              {{ if .Lastmod}}
+                | updated {{ dateFormat "2 Jan 2006" .Lastmod }}
+              {{ end }}
             </time>
             <div>
               {{ .ReadingTime }} min read
