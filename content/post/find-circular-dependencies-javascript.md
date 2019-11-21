@@ -61,7 +61,7 @@ $ npx madge --circular a.js
 npx: installed 149 in 7.135s                                                                                                                            
 Processed 2 files (75ms) (0 warnings)                                                                                                                
 
-✖ Found 3 circular dependencies!                                                                                                                        
+✖ Found 1 circular dependency!
 1) a.js > b.js 
 ```
 
