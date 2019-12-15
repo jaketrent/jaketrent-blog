@@ -73,13 +73,7 @@ The solution here is to detect the scrollbar presence with JavaScript and restyl
 
 ```  
 function handleFullWidthSizing() {
-  const arbitrarySizeDifferenceThatIndicatesScrollbar = 5
-  const hasScrollbar = window.innerWidth > 
-    document.body.clientWidth + arbitrarySizeDifferenceThatIndicatesScrollbar
-
-  const scrollbarWidth = hasScrollbar
-    ? window.innerWidth - document.body.clientWidth
-    : 0
+  const scrollbarWidth = window.innerWidth - document.body.clientWidth
 
   document.querySelector('myElementWith100vw').style.width = `calc(100vw - ${scrollbarWidth}px)`
 }
