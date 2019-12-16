@@ -4,3 +4,9 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.48"
+
+[[redirects]]
+  from = "/christmas"
+  to = "https://trentchristmas2019.netlify.com"
+  status = 200
+  force = true
