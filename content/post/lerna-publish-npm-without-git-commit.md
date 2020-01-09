@@ -40,5 +40,21 @@ Then Lerna will start chugging through its publish sequence.  It'll ask you ques
 
 When it gets through all the questions and starts the PUT requests to npm for the updated packages, the package that was missing in npm will be uploaded successfully.  However, the dependent packages, which may have (hopefully) already been published properly to npm will fail with 403, saying that you can't re-publish the same package version.  This is to be expected.
 
+## Fallback: Publish, Commit, Push
+
+I've had trouble with this in the case that Lerna decides to publish the dependent packages first.  In such a case, I've found that I can't get around bumping the version on the package and git committing, and run:
+
+```
+lerna publish --force-publish=myFullNpmPackageName --message "build: publish"
+```
+
+## Fallback: Publish it All
+
+Oh boy, and once you've cleaned up more than one of these packages, you may have had enough.  For the full smash, force publish everything:
+
+```
+lerna publish --force-publish=* --message "build: publish"
+```
+
 Anyone have alternate solutions for this scenario?
 
