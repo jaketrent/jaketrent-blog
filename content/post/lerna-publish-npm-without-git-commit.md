@@ -34,5 +34,11 @@ Without necessarily knowing why, it might happen again.  But, for now, I can res
 lerna publish --force-publish=myFullNpmPackageName --no-git-tag-version --no-push
 ```
 
+## Version to Publish
+
+Then Lerna will start chugging through its publish sequence.  It'll ask you questions about the package you're publishing as well as dependencies.  You don't want to bump the version (or at least I don't in this case), so I select "Custom Version" at the prompt and re-enter the current version.
+
+When it gets through all the questions and starts the PUT requests to npm for the updated packages, the package that was missing in npm will be uploaded successfully.  However, the dependent packages, which may have (hopefully) already been published properly to npm will fail with 403, saying that you can't re-publish the same package version.  This is to be expected.
+
 Anyone have alternate solutions for this scenario?
 
