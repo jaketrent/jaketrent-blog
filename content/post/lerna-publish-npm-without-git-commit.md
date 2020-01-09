@@ -30,7 +30,7 @@ But when it doesn't, builds break, I check npm and it doesn't have the version o
 
 Without necessarily knowing why, it might happen again.  But, for now, I can resolve the matter with a simple command:
 
-```bash
+```
 lerna publish --force-publish=myFullNpmPackageName --no-git-tag-version --no-push
 ```
 
