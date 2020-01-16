@@ -86,9 +86,9 @@ export class AppModule {}
 
 A few things are important here that weren't readily apparent from my naive reading of the docs:
 
-- The `type: 'postgres' as 'postgres' cast is important to specify [which polymorphic type of TypeOrmModuleOptions](https://github.com/nestjs/nest/issues/1119#issuecomment-424504139) you're returning from `useFactory`.
-- `import { ConfigService } from '@nestjs/config` is the class that you need to `inject` and is the type of the `useFactory` argument.  The docs were unclear on where this was imported from or possibly custom-implemented.
-- The typing of number for `configService.get<number>() and a number (5432) as fallback are important to get right as type for the `port` property, otherwise the TypeScript compiler is not happy with the `useFactory` implementation.
+- The `type: 'postgres' as 'postgres'` cast is important to specify [which polymorphic type of TypeOrmModuleOptions](https://github.com/nestjs/nest/issues/1119#issuecomment-424504139) you're returning from `useFactory`.
+- `import { ConfigService } from '@nestjs/config'` is the class that you need to `inject` and is the type of the `useFactory` argument.  The docs were unclear on where this was imported from or possibly custom-implemented.
+- The typing of number for `configService.get<number>()` and a number (5432) as fallback are important to get right as type for the `port` property, otherwise the TypeScript compiler is not happy with the `useFactory` implementation.
 
 There are so many other examples on the web of people having to create their own `ConfigService` implementations.  The above solution avoids that (even though we ended up going to a custom implementation later ourselves in order to share config with migrations).
 
