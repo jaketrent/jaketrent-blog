@@ -20,22 +20,31 @@ Macros are sequences of commands in Vim that can be recorded to build up more co
 
 ## Record a vim macro
 
+This will put you in a mode where you'll be recording your commands as they run until later, when you say to stop recording.
+
 `q` - start the recording.
 
 `a-z` - store the macro in a register (ie, any letter a to z) for later recall.
 
-Then you start typing commands in a way that's repeatable.  This might include:
+## Add commands to macro
 
-- `0` - start at the beginning of the line.
-- `fX` - move next instance of a certain character (eg, "X").
-- `r'` - replace some character with another (eg, "'").
-- `"bp" - paste from a register (eg, "b").
+Then you start typing commands in a way that's repeatable.  These can be any normal commands! They might include:
 
-- `j` - go the next line.
+`0` - start at the beginning of the line.
 
-- `q` - stop the recording.
+`fX` - move next instance of a certain character (eg, "X").
+
+`r'` - replace some character with another (eg, "'").
+
+`bp` - paste from a register (eg, "b").
+
+`j` - go the next line.
+
+`q` - stop the recording.
 
 ## Run a vim macro
+
+After you've recorded a macro, you can use it as long as it stays recorded. (Be careful not to overwrite any you want to keep.)
 
 `0-9` - (optional) the number of times you want to run the macro.
 
@@ -47,7 +56,11 @@ Then you start typing commands in a way that's repeatable.  This might include:
 
 `@@` - whichever was run last will be run again
 
+Convenient, eh!
+
 ## See what macros are in your registers
+
+If you ever forget what you have recorded, you can list them.  The hard part is reading what you've recorded. :)
 
 `:reg` - list contents of all registers
 
