@@ -14,7 +14,7 @@ rating: 4
 tags:
 - "food"
 - "nutrition"
-title: ""
+title: "The Dorito Effect"
 ---
 
 Natural food has been diluted over time.  Chickens taste less chickeny, tomatoes less tomatoey.  Packaged food has become more flavorful, with the ability to create flavors now well-advanced.  The result?  We end up preferring the wrong kind of food.
