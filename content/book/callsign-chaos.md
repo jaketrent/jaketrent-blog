@@ -4,7 +4,7 @@ author: "Jim Mattis"
 categories:
 - "Book"
 comments: true
-date: 2019-01-02T10:19:17-06:00
+date: 2020-01-02T10:19:17-06:00
 description: "Jim Mattis has been a great leader.  Here are some of his lessons."
 draft: false
 image: "https://i.imgur.com/pzCJMac.jpg"
