@@ -24,7 +24,7 @@ Of course, "junk" doesn't sound thrilling or particularly nice, and I guess that
 
 For instance, I might throw in a database, a messaging server, and a REST API.
 
-## Lots of "junks"
+## Lots of junks
 
 And once you have more than one junk, a tool called `docker-compose` is nice.  You get it when you install Docker Desktop.
 
