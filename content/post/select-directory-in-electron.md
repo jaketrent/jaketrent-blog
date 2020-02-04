@@ -2,6 +2,7 @@
 layout: post
 title: "Selecting a Directory in Electron"
 date: "2016-03-21"
+update: "2020-02-03"
 comments: true
 categories:
   - "Code"
@@ -14,82 +15,110 @@ draft: false
 image: https://i.imgur.com/Vp8Zuix.jpg
 ---
 
-Electron will help you make some sweet native desktop apps using web tech.  Now that you're on the desktop, one of the cool things you can do is access the filesystem.  There are a couple ways to access the filesystem via the file open dialog using user input events.
+Electron will give you a couple ways to open a directory from the filesystem.
 
 <!--more-->
 
-## From HTML
+**Note: This article has been substantially updated from Electron 0.37 to Electron 7 architecture and recommendations.**
 
-In Electron, you use HTML for your views.  Thus, if you want the user to select a directory from the UI, you can use a `<input type="file" />`, just like in a normal web app.
+## 1. Easy Street From HTML
 
-#### Select Only Directories
+In Electron, you use HTML for your views.  Thus, if you want the user to select a directory from the UI, you can use a `<input type="file" webkitdirectory />`, just like in a normal web app.
 
-To select only directories, there is an attribute you can add to the `input` tag:
-
-```html
-<input type="file"
-       webkitdirectory />
-```
+The `webkitdirectory` attribute is there to enforce selecting only directories.
 
 This wouldn't be reliable in a cross-browser environment.  But since, on Electron, you're only targeting Chrome, you're golden with whatever Chrome has available to you.
 
-#### Bonus: Programmatically click on `input[type="file"]`
+This method, however, won't work whenever non-standard HTML attributes are removed from the rendered DOM.  For instance, this will be stripped if you're using React for your view.
 
-As a bonus, Electron doesn't have the sandbox security restrictions that you would have in a standalone browser like Chrome.  In browsers, sometimes the file open dialog will fail if anything triggers the dialog besides the user clicking with their own mouse on the file input field.  Sometimes getting at the contents of the file will fail.  I'm too lazy to test which browsers do what at this point, but sad past experience has determined that this is unreliable.  
+## 2. More Complex by Reliable From Main Process
 
-But in Electron, you are again liberated.  For instance, `input[type="file"]` is ugly and sometimes hard to style into exactly what you want.  So, it's often that you'll want to create a custom widget, that when _it's_ clicked, the `input[type="file"]` is clicked and the file open dialog is popped.  
+For something that will work more reliably but with lots more to do, try this:
 
-Given:
+Electron ships two kinds of processes: Main and Renderer.  There is one Main process that kicks off and controls the app.  The Renderer process is available in the view of the app.  The Renderer process is closer to the `<input type="file" />` that we have setup to allow a user to select a directory.  But the Electron API that controls opening a file dialog is only available in the Main process.  Thus, we need to navigate our way through a couple layers to pass the proper information.
+
+#### #0 Set Up Secure Views
+
+In your Main process you setup a UI (ie, a `BrowserWindow`):
+
+```js
+let mainWindow = new BrowserWindow({
+  width: 800,
+  height: 600,
+  webPreferences: {
+    preload: path.join(__dirname, 'preload.js'),
+    nodeIntegration: false,
+    enableRemoteModule: false,
+    contextIsolation: true,
+    sandbox: true
+  }
+})
+```
+
+There are a bunch of `webPreferences` here.  `nodeIntegration` is false by default since Electron v5 and is the reason for several of the steps below.  This is considered a "secure" data flow setup.
+
+#### #1 Markup the File Input Normally
+
+`type="file"` will make it a file chooser.  Give it something that you can find in the DOM later, like `id="dirs"`.
 
 ```html
-<button id="party" class="very-sweet-looking">Open</button>
-<input id="business" type="file" style="display: none" />
+<input type="file" id="dirs" />
 ```
 
-This totally works:
+#### #2 Capture Click in Renderer
+
+Our view has a script that executes in the Renderer process.  Here, we capture the DOM click event.  We send a message via [Window.postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) saying that directories are going to be selected:
 
 ```js
-document.getElementById('party').addEventListener('click', _ => {
-  document.getElementById('business').click()
+document.getElementById('dirs').addEventListener('click', () => {
+  window.postMessage({
+    type: 'select-dirs'
+  })
 })
 ```
 
-## From Electron API
+This message is identifiable by the arbitrarily-named `type` field, with the value of "select-dirs". This message will be listened to in a special Renderer process script called the Preloader.  
 
-In the main process, you have access to an Electron API, `dialog`.  [`dialog#showOpenDialog`](http://electron.atom.io/docs/v0.37.2/api/dialog/#dialogshowopendialogbrowserwindow-options-callback) is a programmatic API that allows you to open the same open file dialog that you're used to in the browser.  What's even better is that here you can set that only directories should be openable rather easily:
+#### #3 Listen to the Message in Preloader
+
+Preloader is special because it's a bridge between the Rendererer processes and the Electron APIs.  (Remember that `preload` `webPreference` setup previously?)  This is the only place within a Renderer process that non-browser APIs like Electron are available.
+
+Here we will make the jump from the Renderer process to the Main process using IPC, or Inter-process Communication:
 
 ```js
-// mainWindow is your instance of BrowserWindow
-const electron = require('electron')
-const dialog = electrong.dialog
-function selectDirectory() {
-  dialog.showOpenDialog(mainWindow, {
+const { ipcRenderer } = require('electron')
+
+process.once('loaded', () => {
+  window.addEventListener('message', evt => {
+    if (evt.data.type === 'select-dirs') {
+      ipcRenderer.send('select-dirs')
+    }
+  })
+})
+```
+
+We listened for the `postMessage'.  Then we filter based on the `type="select-dirs"`.  Then we send our command from Renderer to Main.
+
+#### #4 Listen for the IPC message
+
+In the Main process, now we want to pick up that message:
+
+```js
+const { dialog, ipcMain } = require('electron')
+
+ipcMain.on('select-dirs', async (event, arg) => {
+  const result = await dialog.showOpenDialog(mainWindow, {
     properties: ['openDirectory']
   })
-}
-```
-
-In order to integrate this main process code with user interaction, we need to do a few things.
-
-First, export the code from your main process module:
-
-```js
-exports.selectDirectory = function () {
-  // dialog.showOpenDialog as before
-}
-```
-
-And then in the renderer process, capture user events as before and call the main process function, `selectDirectory`:
-
-```js
-const electron = require('electron')
-const remote = electron.remote
-const mainProcess = remote.require('./main')
-document.getElementById('party').addEventListener('click', _ => {
-  mainProcess.selectDirectory()
+  console.log('directories selected', result.filePaths)
 })
 ```
 
-Works pretty nicely, but feels weird that you have to go back to the main process to access a view-related API (as of Electron 0.37).
+The matching `ipcMain` module will receive the message listened for and then call `dialog.showOpenDialog()`.  This is the method that will finally OPEN THE FINDER dialog, and we can select a directory from there.  `openDirectory` used as a `properties` here allows selection of directories.
 
-So, if there are two ways to do this, there has to be another, right?  What are you doing to select a directory in Electron?
+This final strategy is pretty crazy.  But any Electron app of much size should probably see quite a bit of this kind of communication anyway.
+
+To see this code as a working example, check out [jaketrent/demo-electron-directory](https://github.com/jaketrent/demo-electron-directory).
+
+What about you?  How do you see the data flowing best?  Are there other ways to select a directory in Electron?
+
