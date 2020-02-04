@@ -31,7 +31,7 @@ This wouldn't be reliable in a cross-browser environment.  But since, on Electro
 
 This method, however, won't work whenever non-standard HTML attributes are removed from the rendered DOM.  For instance, this will be stripped if you're using React for your view.
 
-## 2. More Complex by Reliable From Main Process
+## 2. More Complex and Reliable From Main Process
 
 For something that will work more reliably but with lots more to do, try this:
 
