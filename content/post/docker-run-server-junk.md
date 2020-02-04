@@ -22,7 +22,7 @@ I ran Docker yesterday, and I thought to myself, "Docker is nice to run a bunch 
 
 Of course, "junk" doesn't sound thrilling or particularly nice, and I guess that's how I felt the other day.  That's what makes Docker nice.  You can throw something into a black box and now have to worry too much about it.
 
-For instance, I might throw in a database, as messaging server, and a REST API.
+For instance, I might throw in a database, a messaging server, and a REST API.
 
 ## Lots of "junks"
 
@@ -89,7 +89,7 @@ open http://localhost:3000
 
 ## Not mixing junk
 
-Note that once you start all these processes, resources like ports on localhost or tcp ports for postgres are going to be shared.  Make sure you stop any local junk instances so that there are no conflicts.  
+Note that once you start all these processes, resources like http ports on localhost or tcp ports for postgres are going to be shared.  Make sure you stop any local junk instances so that there are no conflicts.  
 
 You wouldn't run local junk anyway, right?
 
@@ -101,7 +101,7 @@ Once the junk is running, you might want to see what it's doing:
 docker-compose logs -f
 ```
 
-This will show a combined log of all processes. `-f` will show new logs continuously ("follow").
+This will show a combined log of all processes. `-f` will show new logs continuously (`-f` = "follow").
 
 If you're not sure things are running at all, you can run:
 
