@@ -2,7 +2,7 @@
 layout: post
 title: "Selecting a Directory in Electron"
 date: "2016-03-21"
-update: "2020-02-03"
+lastmod: "2020-02-03"
 comments: true
 categories:
   - "Code"
