@@ -8,10 +8,10 @@ categories:
 tags:
   - "js"
   - "handlebars"
-image: http://blog.teamtreehouse.com/wp-content/uploads/2011/03/handlebars.png
+image: https://blog.teamtreehouse.com/wp-content/uploads/2011/03/handlebars.png
 ---
 
-Have you ever wanted to do something special every nth time through a Handlebars loop?  The built-in `{{#each}}` will loop through your items just fine.  It lacks a few features.  For one, you don't have access to the loop index, though you can [find it](http://rockycode.com/blog/handlebars-loop-index/).  Without the index and simple comparisons like modulus, length of the array, and equals, you'll be creating your own Handlebars helpers.  Here's an example of one.
+Have you ever wanted to do something special every nth time through a Handlebars loop?  The built-in `{{#each}}` will loop through your items just fine.  It lacks a few features.  For one, you don't have access to the loop index, though you can [find it](https://rockycode.com/blog/handlebars-loop-index/).  Without the index and simple comparisons like modulus, length of the array, and equals, you'll be creating your own Handlebars helpers.  Here's an example of one.
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Handlebars.registerHelper('everyNth', function(context, every, options) {
 });
 ```
 
-Note: This implementation uses [underscore `_.extend()`](http://underscorejs.org/#extend).
+Note: This implementation uses [underscore `_.extend()`](https://underscorejs.org/#extend).
 
 ## Scenario: Print rows
 

@@ -10,21 +10,21 @@ tags:
   - "js"
   - "requirejs"
   - "handlebars"
-description: If you have to store your text strings for internationalization (i18n) on the server, that's <a href="http://rockycode.com/blog/i18n-strings-javascript/">on
+description: If you have to store your text strings for internationalization (i18n) on the server, that's <a href="https://jaketrent.com/post/i18n-strings-javascript/">on
 metaKeywords: i18n, javascript, requirejs, handlebarsjs
 draft: false
 ---
 
-If you have to store your text strings for internationalization (i18n) on the server, that's <a href="http://rockycode.com/blog/i18n-strings-javascript/">one thing</a>.  But, if you can store them in Javascript, you might think about using RequireJs and its i18n plugin, because it makes it nice and easy.
+If you have to store your text strings for internationalization (i18n) on the server, that's <a href="https://jaketrent.com/post/i18n-strings-javascript/">one thing</a>.  But, if you can store them in Javascript, you might think about using RequireJs and its i18n plugin, because it makes it nice and easy.
 
 <!--more-->
 
 Get the Plugin
 --------------
 
-RequireJs is a single [download](http://requirejs.org/docs/download.html).  It's an AMD-style module loader.  And it rocks.  Especially if you dig those little arrows ![arrow img](http://requirejs.org/i/arrow.png)!  
+RequireJs is a single [download](https://requirejs.org/docs/download.html).  It's an AMD-style module loader.  And it rocks.  Especially if you dig those little arrows ![arrow img](https://requirejs.org/i/arrow.png)!  
 
-The [i18n plugin](http://requirejs.org/docs/api.html#i18n) is another .js file to [download](http://requirejs.org/docs/download.html#i18n).
+The [i18n plugin](https://requirejs.org/docs/api.html#i18n) is another .js file to [download](https://requirejs.org/docs/download.html#i18n).
 
 
 Specify your Strings
@@ -109,7 +109,7 @@ Note that we require as a dependency the main/English `str.js`.  And because we 
 Bonus:  With Handlebars!
 ------------------------
 
-But you wouldn't normally just blast out strings via your Javascript code.  At least, if you love your sanity, you'll stop using string concatenation and a Javascript-based templating language.  There are many out there, but one that I have recent success with is [HandlebarsJs](http://handlebarsjs.com/).  It's a superset of mustache -- based on the same syntax but with built-in helpers and ability to extend with other custom helper functions.
+But you wouldn't normally just blast out strings via your Javascript code.  At least, if you love your sanity, you'll stop using string concatenation and a Javascript-based templating language.  There are many out there, but one that I have recent success with is [HandlebarsJs](https://handlebarsjs.com/).  It's a superset of mustache -- based on the same syntax but with built-in helpers and ability to extend with other custom helper functions.
 
 So, if we were using a Handlebars template to blast our i18n strings plus markup to the DOM, our handlebars template could look like this:
 
@@ -131,7 +131,7 @@ define(['i18n!nls/str', 'text!template'], function (str, myTmpl) {
 });
 ```
 
-Note that I'm making a couple leaps here:  Have the RequireJs [text plugin](http://requirejs.org/docs/api.html#text) available, and have handlebars.js available. 
+Note that I'm making a couple leaps here:  Have the RequireJs [text plugin](https://requirejs.org/docs/api.html#text) available, and have handlebars.js available. 
 
 Compile the template with handlebars and then pass in the `str` module as a property called `str` (or whatever) to the template and then just access it like the Javascript objec that it is within the template, using `str.welcome` or `str.eng_only_idiom` or whatever other strings you invent in that wild, internationalized mind of yours.
 

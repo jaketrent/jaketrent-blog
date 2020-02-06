@@ -3,7 +3,7 @@
   command = "hugo"
 
 [context.production.environment]
-  HUGO_VERSION = "0.63.2"
+  HUGO_VERSION = "0.48"
 
 [[redirects]]
   from = "/christmas"
