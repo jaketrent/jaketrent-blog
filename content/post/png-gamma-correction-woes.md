@@ -19,21 +19,21 @@ PNG was a file format that, among the original reasons for conception, was creat
 
 It seems improbable that such a disgusting problem would have been conceived in a fairly new image file format.  But, the story is well-known:
 
-* Chronicled in the [The Sad Story of PNG Gamma 'Correction'](http://hsivonen.iki.fi/png-gamma/)
-* Gamma channel vs. browser [comparison](http://morris-photographics.com/photoshop/articles/png-gamma.html)
-* Gamma correction [test page](http://www.libpng.org/pub/png/png-gammatest.html)
+* Chronicled in the [The Sad Story of PNG Gamma 'Correction'](https://hsivonen.iki.fi/png-gamma/)
+* Gamma channel vs. browser [comparison](https://morris-photographics.com/photoshop/articles/png-gamma.html)
+* Gamma correction [test page](https://www.libpng.org/pub/png/png-gammatest.html)
 
 In my personal experience, I have been bitten by this little bugger.  As I was creating new graphics for my blog, I created a couple different images and saved them as PNGs.  Like any good web developer, I dev'ed this in Firefox and look at nothing else.  :)  My dad, one of the 4 people who frequent my blog reported some oddities in the look and feel, and sure enough, there they were:
 
 Firefox 3.6
 
-![image](http://lh3.ggpht.com/_5XZCKcD6--c/TB-aAhshi0I/AAAAAAAAM1s/XCrVWdh1Gsw/s400/aj4-ff.jpg)
+![image](https://lh3.ggpht.com/_5XZCKcD6--c/TB-aAhshi0I/AAAAAAAAM1s/XCrVWdh1Gsw/s400/aj4-ff.jpg)
 
 Internet Explorer 8
 
-![image](http://lh3.ggpht.com/_5XZCKcD6--c/TB-aAiB55JI/AAAAAAAAM1w/dxNlbywz5m0/s400/aj4-ie8.jpg)
+![image](https://lh3.ggpht.com/_5XZCKcD6--c/TB-aAiB55JI/AAAAAAAAM1w/dxNlbywz5m0/s400/aj4-ie8.jpg)
 
-After stumbling across the above Morris Photographics link, I tried the referenced [pngcrush](http://pmt.sourceforge.net/pngcrush/) utility, which was easily available via aptitude:
+After stumbling across the above Morris Photographics link, I tried the referenced [pngcrush](https://pmt.sourceforge.net/pngcrush/) utility, which was easily available via aptitude:
 
 ```bash
 sudo apt-get install pngcrush

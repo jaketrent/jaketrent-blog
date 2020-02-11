@@ -23,9 +23,9 @@ In Linux, this change is much, much easier than the corresponding procedure on a
 Check out:
 System->Preferences->Keyboard->Layouts->Layout Options->Ctrl key behavior
 
-![Keyboard Prefs](http://lh5.ggpht.com/_5XZCKcD6--c/SpU8MJd7aAI/AAAAAAAAISY/-TbYr10RY80/s800/keyboard-preferences.png)
+![Keyboard Prefs](https://lh5.ggpht.com/_5XZCKcD6--c/SpU8MJd7aAI/AAAAAAAAISY/-TbYr10RY80/s800/keyboard-preferences.png)
 
-![Keyboard Layouts](http://lh3.ggpht.com/_5XZCKcD6--c/SpU8L_C2obI/AAAAAAAAISU/4jXwduIfBoQ/s800/keyboard-layout-options.png)
+![Keyboard Layouts](https://lh3.ggpht.com/_5XZCKcD6--c/SpU8L_C2obI/AAAAAAAAISU/4jXwduIfBoQ/s800/keyboard-layout-options.png)
 
 So, not only do you have ready-made options to switch caps lock and ctrl, but you can duplicate ctrl onto caps lock, etc.  Sweetness!
 
