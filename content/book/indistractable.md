@@ -5,7 +5,7 @@ categories:
 - "Book"
 comments: true
 date: 2020-02-21T10:19:17-06:00
-"description: "By mastering ourselves and our environment, we can gain traction toward our goals"
+description: "By mastering ourselves and our environment, we can gain traction toward our goals"
 draft: false
 image: "https://i.imgur.com/g1WwzbY.jpg"
 layout: book
