@@ -23,5 +23,8 @@ sitemap:
   filename: "sitemap.xml"
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight: 
     codeFences: false
