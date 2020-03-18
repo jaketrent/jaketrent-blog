@@ -33,7 +33,7 @@ There are many people and systems interacting with your project.  For instance, 
 
 You can make Git ignore files that appear on your system but are unrelated to the project.  
 
-Edit your top-level `~/.gitgnore`.  Add all your system-related things there.  It might end up look like:
+Edit your top-level `~/.gitignore`.  Add all your system-related things there.  It might end up look like:
 
 ```text
 .DS_Store
