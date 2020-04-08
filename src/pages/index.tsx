@@ -220,7 +220,7 @@ function TopThreeBooks(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link to="/book">Books</Link>
+        <Link to="/book">Reading</Link>
         {props.data.book.edges.map(({ node }) => (
           <Link to={node.fields.slug} className="home-item__link">
             <span className="home-item__border">

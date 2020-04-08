@@ -5,9 +5,9 @@ import Logo from "../../ui/logo"
 
 export const query = graphql`
   query {
-    course: allMarkdownRemark(
+    book: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { layout: { eq: "post" } } }
+      filter: { frontmatter: { layout: { eq: "book" } } }
     ) {
       totalCount
       edges {
@@ -27,18 +27,20 @@ export const query = graphql`
   }
 `
 
-export default function PostIndex(props) {
+export default function BookIndex(props) {
   return (
     <main class="meta-list">
       <Link class="meta-list__logo" to="/">
         <Logo />
       </Link>
-      <h1 class="meta-list__title">Posts</h1>
+      <h1 class="meta-list__title">Books</h1>
       <div class="meta-list__items">
-        <div class="meta-list__count">{props.data.course.totalCount} posts</div>
-        <div class="meta-list__links">
-          {props.data.course.edges.map(({ node }) => (
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+        <div class="meta-list__count">{props.data.book.totalCount} books</div>
+        <div class="meta-list__links meta-list__links--book">
+          {props.data.book.edges.map(({ node }) => (
+            <Link to={node.fields.slug}>
+              <img src={node.frontmatter.image} alt={node.frontmatter.title} />
+            </Link>
           ))}
         </div>
       </div>

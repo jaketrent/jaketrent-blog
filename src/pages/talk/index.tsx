@@ -30,9 +30,9 @@ export const query = graphql`
 export default function TalkIndex(props) {
   return (
     <main class="meta-list">
-      <a class="meta-list__logo" href="/">
+      <Link class="meta-list__logo" to="/">
         <Logo />
-      </a>
+      </Link>
       <h1 class="meta-list__title">Talks</h1>
       <div class="meta-list__items">
         <div class="meta-list__count">{props.data.talk.totalCount} talks</div>

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Logo from "../../ui/logo"
 
@@ -28,9 +28,9 @@ export const query = graphql`
 export default function CourseIndex(props) {
   return (
     <main class="meta-list">
-      <a class="meta-list__logo" href="/">
+      <Link class="meta-list__logo" to="/">
         <Logo />
-      </a>
+      </Link>
       <h1 class="meta-list__title">Courses</h1>
       <div class="meta-list__items">
         <div class="meta-list__count">
