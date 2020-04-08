@@ -29,16 +29,18 @@ export const query = graphql`
 
 export default function BookIndex(props) {
   return (
-    <main class="meta-list">
-      <Link class="meta-list__logo" to="/">
+    <main className="meta-list">
+      <Link className="meta-list__logo" to="/">
         <Logo />
       </Link>
-      <h1 class="meta-list__title">Books</h1>
-      <div class="meta-list__items">
-        <div class="meta-list__count">{props.data.book.totalCount} books</div>
-        <div class="meta-list__links meta-list__links--book">
+      <h1 className="meta-list__title">Books</h1>
+      <div className="meta-list__items">
+        <div className="meta-list__count">
+          {props.data.book.totalCount} books
+        </div>
+        <div className="meta-list__links meta-list__links--book">
           {props.data.book.edges.map(({ node }) => (
-            <Link to={node.fields.slug}>
+            <Link to={node.fields.slug} key={node.fields.slug}>
               <img src={node.frontmatter.image} alt={node.frontmatter.title} />
             </Link>
           ))}

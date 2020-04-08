@@ -29,16 +29,20 @@ export const query = graphql`
 
 export default function TalkIndex(props) {
   return (
-    <main class="meta-list">
-      <Link class="meta-list__logo" to="/">
+    <main className="meta-list">
+      <Link className="meta-list__logo" to="/">
         <Logo />
       </Link>
-      <h1 class="meta-list__title">Talks</h1>
-      <div class="meta-list__items">
-        <div class="meta-list__count">{props.data.talk.totalCount} talks</div>
-        <div class="meta-list__links">
+      <h1 className="meta-list__title">Talks</h1>
+      <div className="meta-list__items">
+        <div className="meta-list__count">
+          {props.data.talk.totalCount} talks
+        </div>
+        <div className="meta-list__links">
           {props.data.talk.edges.map(({ node }) => (
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+            <Link to={node.fields.slug} key={node.fields.slug}>
+              {node.frontmatter.title}
+            </Link>
           ))}
         </div>
       </div>
