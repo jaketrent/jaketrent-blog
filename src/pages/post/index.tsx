@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Logo from "../../ui/logo"
 
@@ -7,7 +7,7 @@ export const query = graphql`
   query {
     course: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "Course" } } }
+      filter: { frontmatter: { layout: { eq: "post" } } }
     ) {
       totalCount
       edges {
@@ -17,7 +17,9 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM YYYY")
             image
-            landingPage
+          }
+          fields {
+            slug
           }
         }
       }
@@ -25,20 +27,18 @@ export const query = graphql`
   }
 `
 
-export default function CourseIndex(props) {
+export default function PostIndex(props) {
   return (
     <main class="meta-list">
       <a class="meta-list__logo" href="/">
         <Logo />
       </a>
-      <h1 class="meta-list__title">Courses</h1>
+      <h1 class="meta-list__title">Posts</h1>
       <div class="meta-list__items">
-        <div class="meta-list__count">
-          {props.data.course.totalCount} courses
-        </div>
+        <div class="meta-list__count">{props.data.course.totalCount} posts</div>
         <div class="meta-list__links">
           {props.data.course.edges.map(({ node }) => (
-            <a href={node.frontmatter.landingPage}>{node.frontmatter.title}</a>
+            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
           ))}
         </div>
       </div>
