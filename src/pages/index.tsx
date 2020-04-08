@@ -1,5 +1,5 @@
 import { css } from "astroturf"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import React from "react"
 
@@ -153,29 +153,11 @@ export default function IndexPage(props) {
   )
 }
 
-function TopThree(props: TopThreeProps) {
-  return (
-    <div>
-      <h4>
-        {props.data[props.layout].totalCount} {props.layout}
-      </h4>
-      {props.data[props.layout].edges.map(({ node }) => (
-        <div key={node.id}>
-          <h3>
-            {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
-          </h3>
-          {node.frontmatter.image && <img src={node.frontmatter.image} />}
-        </div>
-      ))}
-    </div>
-  )
-}
-
 function TopThreeCourses(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <a href="/course">Courses</a>
+        <Link to="/course">Courses</Link>
         {props.data.course.edges.map(({ node }) => (
           <a href={node.frontmatter.landingPage} className="home-item__link">
             <span className="home-item__border">
@@ -196,9 +178,9 @@ function TopThreePosts(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <a href="/post">Posts</a>
+        <Link to="/post">Posts</Link>
         {props.data.post.edges.map(({ node }) => (
-          <a href={node.fields.slug} className="home-item__link">
+          <Link to={node.fields.slug} className="home-item__link">
             <span className="home-item__border">
               <img
                 alt={node.frontmatter.title}
@@ -206,7 +188,7 @@ function TopThreePosts(props) {
                 src={node.frontmatter.image}
               />
             </span>
-          </a>
+          </Link>
         ))}
       </h2>
     </>
@@ -217,9 +199,9 @@ function TopThreeTalks(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <a href="/talk">Talks</a>
+        <Link to="/talk">Talks</Link>
         {props.data.talk.edges.map(({ node }) => (
-          <a href={node.fields.slug} className="home-item__link">
+          <Link to={node.fields.slug} className="home-item__link">
             <span className="home-item__border">
               <img
                 alt={node.frontmatter.title}
@@ -227,7 +209,7 @@ function TopThreeTalks(props) {
                 src={node.frontmatter.image}
               />
             </span>
-          </a>
+          </Link>
         ))}
       </h2>
     </>
@@ -238,9 +220,9 @@ function TopThreeBooks(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <a href="/book">Books</a>
+        <Link to="/book">Books</Link>
         {props.data.book.edges.map(({ node }) => (
-          <a href={node.fields.slug} className="home-item__link">
+          <Link to={node.fields.slug} className="home-item__link">
             <span className="home-item__border">
               <img
                 alt={node.frontmatter.title}
@@ -248,7 +230,7 @@ function TopThreeBooks(props) {
                 src={node.frontmatter.image}
               />
             </span>
-          </a>
+          </Link>
         ))}
       </h2>
     </>
