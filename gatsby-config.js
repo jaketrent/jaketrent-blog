@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://jaketrent.com",
+  },
   plugins: [
     "gatsby-plugin-typescript",
     "gatsby-plugin-postcss",
