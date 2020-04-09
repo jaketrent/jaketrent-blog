@@ -83,6 +83,11 @@ export default function PostPage(props) {
         <link rel="preload" href="/type/gobold-regular.otf" as="font" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+        <script src="/js/disqusloader.js"></script>
+        <script>
+          {` disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) `}
+        </script>
       </Helmet>
       <h2 className="single__header">
         <Link to="/">
@@ -245,10 +250,6 @@ export default function PostPage(props) {
         </div>
         <div className="single-footer__content">
           <div id="disqus_thread"></div>
-          <script src="/js/disqusloader.js"></script>
-          <script>
-            {` disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) `}
-          </script>
 
           <div className="single-footer__disclosures">
             <Disclosures disclosures={post.frontmatter.disclosures} />
