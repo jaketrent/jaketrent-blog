@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
+import Layout from "../components/layout"
 import Logo from "../ui/logo"
 
 export default function PostPage(props) {
@@ -9,6 +10,71 @@ export default function PostPage(props) {
   const permalink = props.data.site.siteMetadata.siteUrl + post.fields.slug
   return (
     <>
+      <Helmet>
+        <meta charset="utf-8" />
+        <title>Jake Trent</title>
+        <meta name="description" content={post.frontmatter.description} />
+        <meta
+          name="keywords"
+          content={
+            !!post.frontmatter.metaKeywords
+              ? post.frontmatter.metaKeywords
+              : Array.isArray(post.frontmatter.tags)
+              ? post.frontmatter.tags.join(",")
+              : ""
+          }
+        />
+        <meta
+          name="author"
+          content="https://plus.google.com/115032056022257436849"
+        />
+        <meta
+          name="copyright"
+          content="http://creativecommons.org/licenses/by/3.0/us/"
+        />
+        <meta
+          name="google-site-verification"
+          content="uvx7BhaUTNz29nQgydsFPRsErfqYBhPEV_svnHvW7H0"
+        />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={permalink} />
+        <meta
+          property="og:description"
+          content={post.frontmatter.description}
+        />
+        {post.frontmatter.image && (
+          <meta property="og:image" content={post.frontmatter.image} />
+        )}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.frontmatter.title} />
+        <meta
+          name="twitter:description"
+          content={post.frontmatter.description}
+        />
+        <meta name="twitter:site" content="@jaketrent" />
+        <meta name="twitter:creator" content="@jaketrent" />
+        {post.frontmatter.image && (
+          <meta name="twitter:image" content={post.frontmatter.image} />
+        )}
+
+        <link
+          href="/index.xml"
+          rel="alternate"
+          title="Jake Trent"
+          type="application/rss+xml"
+        />
+
+        <link rel="preload" href="/type/gobold-regular.otf" as="font" />
+      </Helmet>
       <h2 className="single__header">
         <Link to="/">
           <Logo />
