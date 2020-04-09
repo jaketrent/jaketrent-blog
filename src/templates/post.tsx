@@ -8,6 +8,13 @@ import Logo from "../ui/logo"
 export default function PostPage(props) {
   const post = props.data.markdownRemark
   const permalink = props.data.site.siteMetadata.siteUrl + post.fields.slug
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      if (window && window.hljs) window.hljs.initHighlighting()
+    }, 55)
+  })
+
   return (
     <>
       <Helmet>
@@ -74,6 +81,8 @@ export default function PostPage(props) {
         />
 
         <link rel="preload" href="/type/gobold-regular.otf" as="font" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
       </Helmet>
       <h2 className="single__header">
         <Link to="/">
@@ -132,8 +141,11 @@ export default function PostPage(props) {
               )}
             </div>
 
-            <div className="single-article__content markdown-content">
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div
+              className="single-article__content markdown-content"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            ></div>
+            <div className="markdown-content">
               <div>
                 <a
                   rel="noopener noreferrer"
@@ -193,9 +205,6 @@ export default function PostPage(props) {
             </div>
           </div>
         </article>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
       </main>
 
       <footer className="single-footer">
