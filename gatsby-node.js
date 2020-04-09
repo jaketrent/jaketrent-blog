@@ -26,6 +26,11 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `)
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -36,6 +41,15 @@ exports.createPages = async ({ graphql, actions }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
+      },
+    })
+  })
+  result.data.tagsGroup.group.forEach(tag => {
+    createPage({
+      path: `/tags/${tag.fieldValue}`,
+      component: path.resolve("./src/templates/tag.tsx"),
+      context: {
+        tag: tag.fieldValue,
       },
     })
   })

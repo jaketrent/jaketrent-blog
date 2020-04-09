@@ -12,7 +12,7 @@ export default function PostPage(props) {
     <>
       <Helmet>
         <meta charset="utf-8" />
-        <title>Jake Trent</title>
+        <title>{post.frontmatter.title} | Jake Trent</title>
         <meta name="description" content={post.frontmatter.description} />
         <meta
           name="keywords"
