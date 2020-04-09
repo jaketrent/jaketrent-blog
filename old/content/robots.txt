@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /404.html
-
-Sitemap: https://jaketrent.com/sitemap.xml

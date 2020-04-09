@@ -1,8 +1,0 @@
-<h2 class="home-channel__title"><a href="/post">Posts</a></h2>
-{{ range first 3 (where site.RegularPages "Section" "post") }}
-<a href="{{ .URL }}" class="home-item__link">
-  <span class="home-item__border">
-    <img alt="{{ .Title }}" class="home-item__img" src="{{ .Params.image }}">
-  </span>
-</a>
-{{ end }}
