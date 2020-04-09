@@ -98,7 +98,10 @@ export default function PostPage(props) {
               <div>{post.timeToRead} min read</div>
               <div>By Jake Trent</div>
               <div>
-                In <Link to="/post">Posts</Link>
+                In{" "}
+                <Link to={"/" + post.frontmatter.layout}>
+                  {capitalize(pluralize(post.frontmatter.layout))}
+                </Link>
               </div>
               <div className="single-article__meta--tags">
                 {post.frontmatter.tags && (
@@ -303,6 +306,7 @@ export const query = graphql`
         affiliateUrl
         readUrl
         disclosures
+        layout
       }
       fields {
         slug
@@ -423,4 +427,12 @@ function Disclosures(props) {
       )}
     </div>
   )
+}
+
+function capitalize(str: string): string {
+  return str[0].toUpperCase() + str.slice(1)
+}
+
+function pluralize(str: string): string {
+  return str + "s"
 }
