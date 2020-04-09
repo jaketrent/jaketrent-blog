@@ -74,5 +74,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-no-javascript", // NOTE: must be last
   ],
 }
