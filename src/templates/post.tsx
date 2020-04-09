@@ -73,13 +73,6 @@ export default function PostPage(props) {
           <meta name="twitter:image" content={post.frontmatter.image} />
         )}
 
-        <link
-          href="/index.xml"
-          rel="alternate"
-          title="Jake Trent"
-          type="application/rss+xml"
-        />
-
         <link rel="preload" href="/type/gobold-regular.otf" as="font" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>

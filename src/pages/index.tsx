@@ -117,12 +117,6 @@ export default function IndexPage(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
-        <link
-          href="/index.xml"
-          rel="alternate"
-          title="Jake Trent"
-          type="application/rss+xml"
-        />
 
         <link rel="preload" href="/type/gobold-regular.otf" as="font" />
       </Helmet>
