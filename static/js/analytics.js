@@ -17,4 +17,4 @@ y.open("POST",z,!0),y.send(A)}};d.pushState=function(r){return"function"==typeof
 d.onpushstate({state:r}),setTimeout(n,c.delay||10),i.apply(d,arguments)},n(),
 a.ma={trackEvent:function o(r,s,t,u){return n("event",r,s,t,u)},
 trackException:function q(r,s){return n("exception",null,null,null,null,r,s)}}})
-(window,"{{ .Site.Params.googleAnalyticsTrackingId }}",{anonymizeIp:true,colorDepth:true,characterSet:true,screenSize:true,language:true});
+(window,"UA-16224416-4",{anonymizeIp:true,colorDepth:true,characterSet:true,screenSize:true,language:true});
