@@ -25,39 +25,62 @@ export default function PostPage(props) {
           ? post.frontmatter.tags.join(",")
           : ""
       }
-      head={
-        <>
-          <meta property="og:title" content={post.frontmatter.title} />
-          <meta property="og:type" content="article" />
-          <meta property="og:url" content={permalink} />
+      head={[
+        <meta
+          property="og:title"
+          content={post.frontmatter.title}
+          key="ogtitle"
+        />,
+        <meta property="og:type" content="article" key="ogtype" />,
+        <meta property="og:url" content={permalink} key="ogurl" />,
+        <meta
+          property="og:description"
+          content={post.frontmatter.description}
+          key="ogdesc"
+        />,
+        post.frontmatter.image && (
           <meta
-            property="og:description"
-            content={post.frontmatter.description}
+            property="og:image"
+            content={post.frontmatter.image}
+            key="ogimg"
           />
-          {post.frontmatter.image && (
-            <meta property="og:image" content={post.frontmatter.image} />
-          )}
+        ),
 
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={post.frontmatter.title} />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twitcard"
+        />,
+        <meta
+          name="twitter:title"
+          content={post.frontmatter.title}
+          key="twittitle"
+        />,
+        <meta
+          name="twitter:description"
+          content={post.frontmatter.description}
+          key="twitdesc"
+        />,
+        <meta name="twitter:site" content="@jaketrent" key="twitsite" />,
+        <meta name="twitter:creator" content="@jaketrent" key="twitcreator" />,
+        post.frontmatter.image && (
           <meta
-            name="twitter:description"
-            content={post.frontmatter.description}
+            name="twitter:image"
+            content={post.frontmatter.image}
+            key="twitimg"
           />
-          <meta name="twitter:site" content="@jaketrent" />
-          <meta name="twitter:creator" content="@jaketrent" />
-          {post.frontmatter.image && (
-            <meta name="twitter:image" content={post.frontmatter.image} />
-          )}
+        ),
 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"
+          key="hljs"
+        ></script>,
 
-          <script src="/js/disqusloader.js"></script>
-          <script>
-            {` disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) `}
-          </script>
-        </>
-      }
+        <script src="/js/disqusloader.js" key="discscript"></script>,
+        <script key="discstart">
+          {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
+        </script>,
+      ]}
     >
       <h2 className="single__header">
         <Link to="/">
