@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Helmet } from "react-helmet"
 
-import Layout from "../components/layout"
+import BlogLayout from "../ui/blog-layout"
 import Logo from "../ui/logo"
 
 export default function PostPage(props) {
@@ -16,72 +15,50 @@ export default function PostPage(props) {
   })
 
   return (
-    <>
-      <Helmet>
-        <meta charset="utf-8" />
-        <title>{post.frontmatter.title} | Jake Trent</title>
-        <meta name="description" content={post.frontmatter.description} />
-        <meta
-          name="keywords"
-          content={
-            !!post.frontmatter.metaKeywords
-              ? post.frontmatter.metaKeywords
-              : Array.isArray(post.frontmatter.tags)
-              ? post.frontmatter.tags.join(",")
-              : ""
-          }
-        />
-        <meta
-          name="author"
-          content="https://plus.google.com/115032056022257436849"
-        />
-        <meta
-          name="copyright"
-          content="http://creativecommons.org/licenses/by/3.0/us/"
-        />
-        <meta
-          name="google-site-verification"
-          content="uvx7BhaUTNz29nQgydsFPRsErfqYBhPEV_svnHvW7H0"
-        />
+    <BlogLayout
+      title={post.frontmatter.title + " | Jake Trent"}
+      desciption={post.frontmatter.description}
+      keywords={
+        !!post.frontmatter.metaKeywords
+          ? post.frontmatter.metaKeywords
+          : Array.isArray(post.frontmatter.tags)
+          ? post.frontmatter.tags.join(",")
+          : ""
+      }
+      head={
+        <>
+          <meta property="og:title" content={post.frontmatter.title} />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={permalink} />
+          <meta
+            property="og:description"
+            content={post.frontmatter.description}
+          />
+          {post.frontmatter.image && (
+            <meta property="og:image" content={post.frontmatter.image} />
+          )}
 
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={post.frontmatter.title} />
+          <meta
+            name="twitter:description"
+            content={post.frontmatter.description}
+          />
+          <meta name="twitter:site" content="@jaketrent" />
+          <meta name="twitter:creator" content="@jaketrent" />
+          {post.frontmatter.image && (
+            <meta name="twitter:image" content={post.frontmatter.image} />
+          )}
 
-        <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
-        <meta property="og:title" content={post.frontmatter.title} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={permalink} />
-        <meta
-          property="og:description"
-          content={post.frontmatter.description}
-        />
-        {post.frontmatter.image && (
-          <meta property="og:image" content={post.frontmatter.image} />
-        )}
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.frontmatter.title} />
-        <meta
-          name="twitter:description"
-          content={post.frontmatter.description}
-        />
-        <meta name="twitter:site" content="@jaketrent" />
-        <meta name="twitter:creator" content="@jaketrent" />
-        {post.frontmatter.image && (
-          <meta name="twitter:image" content={post.frontmatter.image} />
-        )}
-
-        <link rel="preload" href="/type/gobold-regular.otf" as="font" />
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-        <script src="/js/disqusloader.js"></script>
-        <script>
-          {` disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) `}
-        </script>
-      </Helmet>
+          <script src="/js/disqusloader.js"></script>
+          <script>
+            {` disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) `}
+          </script>
+        </>
+      }
+    >
       <h2 className="single__header">
         <Link to="/">
           <Logo />
@@ -290,7 +267,7 @@ export default function PostPage(props) {
           </ul>
         </div>
       </footer>
-    </>
+    </BlogLayout>
   )
 }
 
