@@ -104,7 +104,7 @@ export default function PostPage(props) {
 
           <div className="single-article__read">
             <div className="single-article__image">
-              {post.frontmatter.image ? (
+              {post.frontmatter.image && post.frontmatter.layout !== "talk" ? (
                 <div className="single-article__image__container">
                   <img
                     src={post.frontmatter.image}
