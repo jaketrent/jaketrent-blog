@@ -2,6 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import BlogLayout from "../ui/blog-layout"
+import MetaFacebook from "../ui/meta-facebook"
+import MetaTwitter from "../ui/meta-twitter"
 import Logo from "../ui/logo"
 
 export default function PostPage(props) {
@@ -26,50 +28,17 @@ export default function PostPage(props) {
           : ""
       }
       head={[
-        <meta
-          property="og:title"
-          content={post.frontmatter.title}
-          key="ogtitle"
-        />,
-        <meta property="og:type" content="article" key="ogtype" />,
-        <meta property="og:url" content={permalink} key="ogurl" />,
-        <meta
-          property="og:description"
-          content={post.frontmatter.description}
-          key="ogdesc"
-        />,
-        post.frontmatter.image && (
-          <meta
-            property="og:image"
-            content={post.frontmatter.image}
-            key="ogimg"
-          />
-        ),
-
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-          key="twitcard"
-        />,
-        <meta
-          name="twitter:title"
-          content={post.frontmatter.title}
-          key="twittitle"
-        />,
-        <meta
-          name="twitter:description"
-          content={post.frontmatter.description}
-          key="twitdesc"
-        />,
-        <meta name="twitter:site" content="@jaketrent" key="twitsite" />,
-        <meta name="twitter:creator" content="@jaketrent" key="twitcreator" />,
-        post.frontmatter.image && (
-          <meta
-            name="twitter:image"
-            content={post.frontmatter.image}
-            key="twitimg"
-          />
-        ),
+        ...MetaFacebook({
+          description: post.frontmatter.description,
+          image: post.frontmatter.image,
+          title: post.frontmatter.title,
+          url: permalink,
+        }),
+        ...MetaTwitter({
+          description: post.frontmatter.description,
+          image: post.frontmatter.image,
+          title: post.frontmatter.title,
+        }),
 
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"
