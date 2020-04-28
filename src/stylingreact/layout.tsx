@@ -38,7 +38,7 @@ export default function StylingReactLayout(props: Props) {
         <link
           rel="shortcut icon"
           type="image/png"
-          href="/img/TODOreplace.png"
+          href="/stylingreact/img/favicon.png"
         />
         <link
           href="https://fonts.googleapis.com/css?family=Libre+Franklin:400i,700"
