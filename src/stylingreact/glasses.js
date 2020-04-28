@@ -2,7 +2,11 @@ import React from "react"
 
 export default _ => (
   <div className="glasses">
-    <img className="glassesImg" src="/stylingreact/img/glasses.png" />
+    <img
+      alt="Cool glasses"
+      className="glassesImg"
+      src="/stylingreact/img/glasses.png"
+    />
     <style jsx>{`
       .glasses {
         position: absolute;

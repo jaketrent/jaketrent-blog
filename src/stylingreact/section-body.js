@@ -2,7 +2,9 @@ import React from "react"
 
 import Video from "./video"
 
-const PreviewVideo = props => <Video width="560" height="315" src={props.src} />
+const PreviewVideo = props => (
+  <Video width="560" height="315" src={props.src} title={props.title} />
+)
 
 export default props => (
   <div className="sectionBody">

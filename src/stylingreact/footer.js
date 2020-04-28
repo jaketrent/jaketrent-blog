@@ -43,6 +43,7 @@ export default _ => (
       <p className="tag">a course by</p>
       <a href="http://jaketrent.com">
         <img
+          alt="Jake Trent logo"
           className="logo"
           src="/stylingreact/img/jaketrent-logo-white.png"
         />

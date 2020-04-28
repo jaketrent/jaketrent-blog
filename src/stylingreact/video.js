@@ -3,6 +3,7 @@ import React from "react"
 export default props => (
   <div className="video">
     <iframe
+      title={props.title}
       className="frame"
       width={props.width}
       height={props.height}

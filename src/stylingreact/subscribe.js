@@ -12,7 +12,11 @@ export default _ => (
   >
     <h2 className="title">Get new courses</h2>
     <div className="glassesContainer">
-      <img className="glasses" src="/stylingreact/img/glasses.png" />
+      <img
+        alt="Cool glasses"
+        className="glasses"
+        src="/stylingreact/img/glasses.png"
+      />
     </div>
     <label htmlFor="mce-EMAIL" className="mail__label">
       Receive news about new courses I release!
