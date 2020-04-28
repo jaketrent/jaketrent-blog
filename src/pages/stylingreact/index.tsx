@@ -15,7 +15,6 @@ import Radium from "../../stylingreact/icons/radium"
 import Section from "../../stylingreact/section"
 import SectionBody from "../../stylingreact/section-body"
 import SectionHeader from "../../stylingreact/section-header"
-import Subscribe from "../../stylingreact/subscribe"
 import Table from "../../stylingreact/table"
 import Trial from "../../stylingreact/trial"
 import Video from "../../stylingreact/video"
@@ -120,8 +119,6 @@ export default function StylingReactIndexPage(props) {
           <SectionHeader>Contents</SectionHeader>
           <Table />
         </Section>
-
-        <Subscribe />
       </Main>
       <Footer />
     </Layout>
