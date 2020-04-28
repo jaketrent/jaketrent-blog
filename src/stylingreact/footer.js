@@ -41,7 +41,7 @@ export default _ => (
   <div className="footer">
     <div className="wrapper">
       <p className="tag">a course by</p>
-      <a href="http://jaketrent.com">
+      <a href="/">
         <img
           alt="Jake Trent logo"
           className="logo"
