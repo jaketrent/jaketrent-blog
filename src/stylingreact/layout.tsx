@@ -10,9 +10,11 @@ interface Props {
   head?: any
 }
 
+export const padding = "20px"
+
 export default function StylingReactLayout(props: Props) {
   return (
-    <>
+    <div className="content">
       <Helmet>
         {MetaCommon({
           copyright: `${now()} Jake Trent`,
@@ -38,12 +40,24 @@ export default function StylingReactLayout(props: Props) {
           type="image/png"
           href="/img/TODOreplace.png"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Libre+Franklin:400i,700"
+          rel="stylesheet"
+        />
+        <script src="/js/analytics.js" />
 
         {props.head}
       </Helmet>
 
       {props.children}
-    </>
+      <style jsx>{`
+        .content {
+          max-width: 1200px;
+          margin: auto;
+          padding: ${padding};
+        }
+      `}</style>
+    </div>
   )
 }
 
