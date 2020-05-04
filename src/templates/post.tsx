@@ -109,16 +109,32 @@ export default function PostPage(props) {
             </div>
             <div className="single-article__content markdown-content">
               <div className="single-article__ad">
-                <iframe
-                  id="$iradid"
-                  src="//a.impactradius-go.com/gen-ad-code/1200557/812547/7490/"
-                  width="201"
-                  height="201"
-                  scrolling="no"
-                  frameBorder="0"
-                  marginheight="0"
-                  marginwidth="0"
-                ></iframe>
+                <a
+                  href="https://pluralsight.pxf.io/c/1200557/812547/7490"
+                  id="812547"
+                >
+                  <img
+                    src="//a.impactradius-go.com/display-ad/7490-812547"
+                    border="0"
+                    alt=""
+                    width="201"
+                    height="201"
+                    style={{
+                      border: 0,
+                      borderRadius: 0,
+                    }}
+                  />
+                </a>
+                <img
+                  height="0"
+                  width="0"
+                  src="//pluralsight.pxf.io/i/1200557/812547/7490"
+                  style={{
+                    position: "absolute",
+                    visibility: "hidden",
+                  }}
+                  border="0"
+                />
               </div>
             </div>
 
