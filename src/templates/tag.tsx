@@ -24,6 +24,7 @@ export default function TagPage(props) {
               </Link>
             ))}
           </div>
+          <img src="https://cdn.jaketrent.com/supertest.jpg" />
         </div>
       </main>
     </BlogLayout>
