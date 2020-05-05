@@ -3,3 +3,7 @@
   to = "https://trentchristmas2019.netlify.com"
   status = 200
   force = true
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referer = "https://jaketrent.com"
