@@ -29,7 +29,7 @@ The downturn makes it a buyers market.  Anyone holding cash and willing to pay f
 
 Software product companies usually sell a standard product that is meant to fulfill the needs of the general customer base.  This is boxed software or software as a service.  The point is that it's general.  At least, that was the plan.
 
-Clients requests changes all the time, sometimes features just for them.  Per-customer customizations are expensive. But sometimes a company will fulfill the customization request because of the potential in coin.  
+Clients make requests changes all the time, sometimes features just for them.  Per-customer customizations are expensive. But sometimes a company will fulfill the customization request because of the potential in coin.  
 
 During an economic downturn, the amount of coin required to make a company cave to a customization request is lowered.
 
