@@ -1,4 +1,3 @@
-import { graphql, Link } from "gatsby"
 import React from "react"
 
 import Caption from "../../stylingreact/caption"
@@ -33,43 +32,34 @@ export default function StylingReactIndexPage(props) {
             src="https://www.youtube.com/embed/uG5qQ-X4LyY?rel=0"
             title="Inline styles video"
           >
-            In the traditional world of CSS, inline styles are a no-no. But in
-            the new world of components in UIs, inline styles have some
-            advantages. Christopher Chedeau gave his exposition on what problems
-            inline styles solve. We cover that talk and what it means for us in
-            this section. Demonstrated here is the most basic form of inline
-            styles possible.
+            Who said inline styles were a no-no? That's so 2010. A decade later,
+            what is old is new, what was wrong is right. Will this work? Try it!
+            You might be surprised.
           </SectionBody>
         </Section>
 
         <Section>
-          <SectionHeader icon={<Radium />}>Radium</SectionHeader>
+          <SectionHeader icon={<Radium />}>CSS-in-JS</SectionHeader>
           <SectionBody
             src="https://www.youtube.com/embed/b6VyUAwslZM?rel=0"
-            title="Radium video"
+            title="CSS-in-JS video"
           >
-            Radium provides a step up from vanilla inline styles. By using this
-            library you get extra features available for use that you didn't
-            have before. Radium is one of the pioneers in this enhanced inline
-            styles space that has given rise to a string of similar libraries
-            for CSS in JS.
+            Add a CSS-in-JS library to the mix, and you'll get extra styling
+            capabilities inside JavaScript. These superpowers used to be
+            available only inside your CSS stylesheets. A great option for
+            colocating styles while getting most of what CSS gives you.
           </SectionBody>
         </Section>
 
         <Section>
-          <SectionHeader icon={<ExternalCss />}>
-            External Stylesheet
-          </SectionHeader>
+          <SectionHeader icon={<ExternalCss />}>CSS Stylesheet</SectionHeader>
           <SectionBody
             src="https://www.youtube.com/embed/W5_g2t3F2DM?rel=0"
             title="CSS stylesheet video"
           >
-            If you're just getting into React and want to keep your CSS story as
-            it has been traditionally, regular CSS in an external stylesheet
-            will feel super familiar. This route will ensure you can use your
-            tried and true styling strategies that you've developed over time.
-            You'll also get a chance to play with some a new tool, Webpack, to
-            get those styles on the page.
+            Want to stick to what you know? It totally works. You've got some
+            pitfalls to navigate, but you can do it! Just throw a stylesheet up
+            on the page.
           </SectionBody>
         </Section>
 
@@ -91,16 +81,12 @@ export default function StylingReactIndexPage(props) {
         <Section>
           <SectionHeader>The Course</SectionHeader>
           <p>
-            This course takes a project-based approach in trying out several of
-            the most popular and promising approaches to styling React
-            components. We start with a small UI project that is fully
-            implemented in React and discover how it feels to try out each one
-            of these approaches to layer on some sweet styles.{" "}
-          </p>
-          <p>
-            You'll also get some great background on styling in web components.
-            And there's a short, gentle introduction to how to handle the basics
-            of CSS inside of Webpack.{" "}
+            Ever wondered which styling approach to take on your next project?
+            There are so many options in the React world. What's the "right"
+            way? There isn't one, but here you can try out a few great ways and
+            make your own decision. Learn how to accomplish the basic patterns
+            of styling in each tech. And then prepare to setup your own CSS
+            project config, if needed.
           </p>
         </Section>
         <Section>

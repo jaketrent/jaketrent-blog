@@ -2,7 +2,7 @@ import React from "react"
 
 export default _ => (
   <div className="caption">
-    <p>A comparison of CSS approaches in React</p>
+    <p>Decide How You'll Style Your React Project</p>
     <style jsx>{`
       .caption {
         text-align: center;
