@@ -10,7 +10,7 @@ import Header from "../../stylingreact/header"
 import InlineCss from "../../stylingreact/icons/inline-css"
 import Layout from "../../stylingreact/layout"
 import Main from "../../stylingreact/main"
-import Radium from "../../stylingreact/icons/radium"
+import StyledComponents from "../../stylingreact/icons/styledcomponents"
 import Section from "../../stylingreact/section"
 import SectionBody from "../../stylingreact/section-body"
 import SectionHeader from "../../stylingreact/section-header"
@@ -39,7 +39,7 @@ export default function StylingReactIndexPage(props) {
         </Section>
 
         <Section>
-          <SectionHeader icon={<Radium />}>CSS-in-JS</SectionHeader>
+          <SectionHeader icon={<StyledComponents />}>CSS-in-JS</SectionHeader>
           <SectionBody
             src="https://www.youtube.com/embed/b6VyUAwslZM?rel=0"
             title="CSS-in-JS video"
