@@ -5,38 +5,28 @@ import ListItem from "./list-item"
 export default _ => (
   <div className="table">
     <ListItem
-      name="UIs in React"
-      time="7:37"
+      name="What React Has Done for Styling"
+      time="8m"
       link="http://bit.ly/jaketrent-stylingreact-toc"
     />
     <ListItem
-      name="Inline Styles"
-      time="24:38"
+      name="A Catalogue of Styling Techniques"
+      time="12m"
       link="http://bit.ly/jaketrent-stylingreact-toc"
     />
     <ListItem
-      name="Radium"
-      time="13:13"
+      name="Comparing Styling with Examples"
+      time="30m"
       link="http://bit.ly/jaketrent-stylingreact-toc"
     />
     <ListItem
-      name="A Webpack Intro for CSS"
-      time="8:29"
-      link="http://bit.ly/jaketrent-stylingreact-toc"
-    />
-    <ListItem
-      name="CSS Stylesheet"
-      time="13:37"
-      link="http://bit.ly/jaketrent-stylingreact-toc"
-    />
-    <ListItem
-      name="CSS Modules"
-      time="20:26"
+      name="Potential Project Configurations for CSS in React"
+      time="16m"
       link="http://bit.ly/jaketrent-stylingreact-toc"
     />
     <div className="totalContainer">
       <p className="total">Total Time</p>
-      <p className="time">1h 29m</p>
+      <p className="time">66m</p>
     </div>
     <style jsx>{`
       .totalContainer {
