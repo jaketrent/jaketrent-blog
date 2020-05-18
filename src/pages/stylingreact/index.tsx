@@ -9,6 +9,7 @@ import GlobalStyles from "../../stylingreact/global-styles"
 import Header from "../../stylingreact/header"
 import InlineCss from "../../stylingreact/icons/inline-css"
 import Layout from "../../stylingreact/layout"
+import Link from "../../stylingreact/link"
 import Main from "../../stylingreact/main"
 import StyledComponents from "../../stylingreact/icons/styledcomponents"
 import Section from "../../stylingreact/section"
@@ -99,6 +100,24 @@ export default function StylingReactIndexPage(props) {
             width="560"
           />
         </Section>
+
+        <Section>
+          <SectionHeader>Course Materials</SectionHeader>
+          <p>
+            There are a some great examples that work through. We exercise
+            static, dynamic and override styling in a real-world scenario. Grab
+            the code. Follow along or take it to the next level!
+          </p>
+        </Section>
+        <Section>
+          <div style={{ marginTop: "3rem" }}>
+            <Link href="https://github.com/jaketrent/styling-react-components">
+              Download Examples
+            </Link>
+          </div>
+        </Section>
+
+        <Buffer />
 
         <Section>
           <Trial />

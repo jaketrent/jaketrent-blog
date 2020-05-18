@@ -8,7 +8,7 @@ export default _ => (
     </div>
     <style jsx>{`
       .caption {
-        padding: 40px 0 15px 0;
+        padding: 3rem 0 2rem 0;
         border-top: 1px solid #fff;
         text-transform: uppercase;
       }
