@@ -83,10 +83,13 @@ export default function StylingReactIndexPage(props) {
           <p>
             Ever wondered which styling approach to take on your next project?
             There are so many options in the React world. What's the "right"
-            way? There isn't one, but here you can try out a few great ways and
-            make your own decision. Learn how to accomplish the basic patterns
-            of styling in each tech. And then prepare to setup your own CSS
-            project config, if needed.
+            way? There isn't one. But through this quick course, you'll be able
+            to try out a few great methods and then have the context to make
+            your own decision.
+          </p>
+          <p>
+            Learn how to accomplish the basic patterns of styling in each tech.
+            And then prepare to setup your own CSS project config, if needed.
           </p>
         </Section>
         <Section>
