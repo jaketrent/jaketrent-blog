@@ -1,7 +1,6 @@
 import React from "react"
 
 import Glasses from "./glasses"
-import Light from "./light"
 
 const Logo = _ => (
   <svg
@@ -34,7 +33,6 @@ const Logo = _ => (
 
 export default _ => (
   <header className="header">
-    <Light />
     <div className="logoContainer">
       <Glasses />
       <Logo />
@@ -47,7 +45,6 @@ export default _ => (
     </h1>
     <style jsx>{`
       .header {
-        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
