@@ -7,22 +7,22 @@ export default _ => (
     <ListItem
       name="What React Has Done for Styling"
       time="8m"
-      link="http://bit.ly/jaketrent-stylingreact-toc"
+      link="https://bit.ly/jaketrent-react-styling-toc3"
     />
     <ListItem
       name="A Catalogue of Styling Techniques"
       time="12m"
-      link="http://bit.ly/jaketrent-stylingreact-toc"
+      link="https://bit.ly/jaketrent-react-styling-toc3"
     />
     <ListItem
       name="Comparing Styling with Examples"
       time="30m"
-      link="http://bit.ly/jaketrent-stylingreact-toc"
+      link="https://bit.ly/jaketrent-react-styling-toc3"
     />
     <ListItem
       name="Potential Project Configurations for CSS in React"
       time="16m"
-      link="http://bit.ly/jaketrent-stylingreact-toc"
+      link="https://bit.ly/jaketrent-react-styling-toc3"
     />
     <div className="totalContainer">
       <p className="total">Total Time</p>
