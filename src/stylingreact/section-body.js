@@ -9,7 +9,7 @@ const PreviewVideo = props => (
 export default props => (
   <div className="sectionBody">
     <p>{props.children}</p>
-    <PreviewVideo {...props} />
+    {props.src && <PreviewVideo {...props} />}
     <style jsx>{`
       .sectionPicture {
         width: 100%;

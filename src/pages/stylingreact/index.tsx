@@ -29,10 +29,7 @@ export default function StylingReactIndexPage(props) {
       <Main>
         <Section>
           <SectionHeader icon={<InlineCss />}>Inline Styles</SectionHeader>
-          <SectionBody
-            src="https://www.youtube.com/embed/uG5qQ-X4LyY?rel=0"
-            title="Inline styles video"
-          >
+          <SectionBody>
             Who said inline styles were a no-no? That's so 2010. A decade later,
             what is old is new, what was wrong is right. Will this work? Try it!
             You might be surprised.
@@ -41,10 +38,7 @@ export default function StylingReactIndexPage(props) {
 
         <Section>
           <SectionHeader icon={<StyledComponents />}>CSS-in-JS</SectionHeader>
-          <SectionBody
-            src="https://www.youtube.com/embed/b6VyUAwslZM?rel=0"
-            title="CSS-in-JS video"
-          >
+          <SectionBody>
             Add a CSS-in-JS library to the mix, and you'll get extra styling
             capabilities inside JavaScript. These superpowers used to be
             available only inside your CSS stylesheets. A great option for
@@ -54,10 +48,7 @@ export default function StylingReactIndexPage(props) {
 
         <Section>
           <SectionHeader icon={<ExternalCss />}>CSS Stylesheet</SectionHeader>
-          <SectionBody
-            src="https://www.youtube.com/embed/W5_g2t3F2DM?rel=0"
-            title="CSS stylesheet video"
-          >
+          <SectionBody>
             Want to stick to what you know? It totally works. You've got some
             pitfalls to navigate, but you can do it! Just throw a stylesheet up
             on the page.
@@ -66,10 +57,7 @@ export default function StylingReactIndexPage(props) {
 
         <Section>
           <SectionHeader icon={<CssModules />}>CSS Modules</SectionHeader>
-          <SectionBody
-            src="https://www.youtube.com/embed/bL_gMVMWSt8?rel=0"
-            title="CSS modules video"
-          >
+          <SectionBody>
             Once you taste CSS modules, there will be no going back. In a
             surprisingly-simple, genius way, CSS modules allow you to separate
             and compartmentalize your CSS. This allows you to make isolated
