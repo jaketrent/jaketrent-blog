@@ -83,7 +83,7 @@ export default function StylingReactIndexPage(props) {
         </Section>
         <Section>
           <Video
-            src="https://www.youtube.com/watch?v=UrK6GN4WVvw"
+            src="https://www.youtube.com/embed/UrK6GN4WVvw"
             height="315"
             width="560"
           />
