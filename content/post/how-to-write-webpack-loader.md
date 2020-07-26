@@ -78,7 +78,7 @@ module.exports = function parentScopeLoader(source) {
 
 A loader is simply a method that takes a string, the original source file contents (or output from the previous loader), and returns a new string (or other type), with the transform applied.  It can be more complicated than this, but this is the essence.
 
-There are other things we could or should do to make this loader better.  For instance, we could give it an option to take a dynamic parent selector that's not just `.parent` every time.  That would be more useful. The [official docs](https://webpack.js.org/development/how-to-write-a-loader/) have some great guidelines on other things to consider when implementing your loaoder.
+There are other things we could or should do to make this loader better.  For instance, we could give it an option to take a dynamic parent selector that's not just `.parent` every time.  That would be more useful. The [official docs](https://webpack.js.org/development/how-to-write-a-loader/) have some great guidelines on other things to consider when implementing your loader.
 
 Once you have your new loader in the chain, you're ready to run webpack in your project:
 
