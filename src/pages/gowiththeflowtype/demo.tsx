@@ -54,11 +54,8 @@ export default _ => (
           suits you!
         </p>
         <p>
-          To really{" "}
-          <a href="/jaketrent.com/post/lock-in-learning/">
-            lock in your learning
-          </a>
-          , hands-on application is key.
+          To really <a href="/post/lock-in-learning/">lock in your learning</a>,
+          hands-on application is key.
         </p>
       </Blurb>
       <Blurb title="Our Project">
