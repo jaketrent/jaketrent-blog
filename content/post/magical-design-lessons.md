@@ -3,7 +3,7 @@ categories:
 - "Design"
 comments: true
 date: 2020-07-29T06:29:40-06:00
-description: "Lessons in magical design from Peter Smarter"
+description: "Lessons in magical design from Peter Smart"
 draft: false
 image: "https://i.imgur.com/xwQIZFT.jpg"
 layout: post
@@ -13,7 +13,7 @@ tags:
 title: "Magical Design Lessons"
 ---
 
-Here are some lessons in creating magical designs from Peter Smarter from Fantasy Interactive.
+Here are some lessons in creating magical designs from Peter Smart from Fantasy Interactive.
 
 <!--more-->
 
