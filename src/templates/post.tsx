@@ -107,6 +107,12 @@ export default function PostPage(props) {
                 <div className="single-article__image__placeholder"></div>
               )}
             </div>
+            <div className="single-article__content markdown-content">
+              <div className="single-article__ad">
+                <iframe id="$iradid" src="//a.impactradius-go.com/gen-ad-code/1200557/871605/7490/" width="251" height="251" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+              </div>
+            </div>
+
 
             <div
               className="single-article__content markdown-content"
