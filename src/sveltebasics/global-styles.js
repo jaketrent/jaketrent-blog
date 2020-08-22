@@ -10,15 +10,13 @@ export default _ => (
       margin: 0;
       padding: 0;
       font-family: "Nunito Sans", sans-serif;
-      background: linear-gradient(120deg, #2c3038, #191b1f);
-      background-attachment: fixed;
+      background: #fff;
       color: #000;
       font-size: 16px;
     }
     h1,
     h2,
     h3 {
-      font-weight: 700;
       margin: 0;
     }
     a {

@@ -12,7 +12,7 @@ interface Props {
 
 export default function StylingReactLayout(props: Props) {
   return (
-    <div className="content">
+    <div>
       <Helmet>
         {MetaCommon({
           copyright: `${now()} Jake Trent`,
@@ -39,22 +39,16 @@ export default function StylingReactLayout(props: Props) {
           href="/sveltebasics/img/favicon.png"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;1,600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;1,900&display=swap"
           rel="stylesheet"
         />
-        <script src="/js/analytics.js" />
+        <script src="/js/analytics.js"></script>
 
         {props.head}
       </Helmet>
 
       {props.children}
-      <style jsx>{`
-        .content {
-          max-width: 1200px;
-          margin: auto;
-          padding: 24px;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </div>
   )
 }

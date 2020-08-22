@@ -26,11 +26,55 @@ function Title() {
         <span className="subject">SVELTE</span>
       </h1>
       <style jsx>{`
+        header {
+          padding-top: 2vw;
+        }
+        h1 {
+          font-weight: 900;
+          font-style: italic;
+        }
         .verb {
-          color: red;
+          position: relative;
+          display: inline-block;
+          padding: 0 0 0 calc(10vw + 2vw);
+          transform: rotate(-4deg) skewX(-4deg);
+        }
+        .verb:after {
+          display: block;
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 0.5vw;
+          width: 100%;
+          background: #000;
+          transform: skewX(-6deg);
+        }
+        .verb em {
+          text-transform: uppercase;
         }
         .subject {
-          color: blue;
+          position: relative;
+          padding: 0 10vw;
+          display: block;
+          color: #fff;
+          background: linear-gradient(
+            rgb(237, 199, 74) 0%,
+            rgb(247, 176, 3) 12%,
+            rgb(218, 107, 15) 52%,
+            rgb(255, 42, 0) 100%
+          );
+          font-size: 20vw;
+          transform: rotate(-4deg) skewX(-4deg);
+        }
+        .subject:after {
+          position: absolute;
+          top: 2vw;
+          left: calc(10vw + 2vw);
+          display: block;
+          content: "SVELTE";
+          color: #000;
+          z-index: -1;
         }
       `}</style>
     </header>
