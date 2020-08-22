@@ -10,38 +10,36 @@ interface Props {
   head?: any
 }
 
-export const padding = "20px"
-
 export default function StylingReactLayout(props: Props) {
   return (
     <div className="content">
       <Helmet>
         {MetaCommon({
           copyright: `${now()} Jake Trent`,
-          title: "Styling React Components | Jake Trent",
-          description: "Compare approaches to CSS in React.",
+          title: "Learn Svelte Basics | Jake Trent",
+          description: "Learn the Basics of Svelte, a JS UI framework",
           keywords:
-            "styling react components, react stylesheets, radium, react css modules, css in js, external stylesheet with react",
+            "svelte, ui framework, javascript framework, compiled ui, react alternative",
         })}
 
         {MetaFacebook({
-          title: "Styling React Components",
-          url: "https://jaketrent.com/stylingreact",
-          description: "Compare approaches to CSS in React.",
+          title: "Learn Svelte Basics",
+          url: "https://jaketrent.com/sveltebasics",
+          description: "Learn the Basics of Svelte, JS UI framework",
         })}
         {MetaTwitter({
-          title: "Styling React Components",
-          url: "https://jaketrent.com/stylingreact",
-          description: "Compare approaches to CSS in React.",
+          title: "Learn Svelte Basics",
+          url: "https://jaketrent.com/sveltebasics",
+          description: "Learn the Basics of Svelte, JS UI framework",
         })}
 
         <link
           rel="shortcut icon"
           type="image/png"
-          href="/stylingreact/img/favicon.png"
+          href="/sveltebasics/img/favicon.png"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Libre+Franklin:400i,700"
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;1,600&display=swap"
           rel="stylesheet"
         />
         <script src="/js/analytics.js" />
@@ -54,7 +52,7 @@ export default function StylingReactLayout(props: Props) {
         .content {
           max-width: 1200px;
           margin: auto;
-          padding: ${padding};
+          padding: 24px;
         }
       `}</style>
     </div>
