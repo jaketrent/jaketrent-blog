@@ -2,6 +2,7 @@ import React from "react"
 
 import GlobalStyles from "../../sveltebasics/global-styles"
 import Layout from "../../sveltebasics/layout"
+import Logo from "../../ui/logo"
 
 export default function SvelteBasicsIndexPage() {
   return (
@@ -9,9 +10,18 @@ export default function SvelteBasicsIndexPage() {
       <GlobalStyles />
 
       <Title />
-      <CourseCredit />
-      <Explanation />
+      <div className="grid">
+        <Explanation />
+        <CourseCredit />
+      </div>
       <Footer />
+      <style jsx>{`
+        .grid {
+          display: grid;
+          grid-template-areas: "a b";
+          padding: 0 10vw;
+        }
+      `}</style>
     </Layout>
   )
 }
@@ -28,6 +38,7 @@ function Title() {
       <style jsx>{`
         header {
           padding-top: 2vw;
+          padding-bottom: 8vw;
         }
         h1 {
           font-weight: 900;
@@ -86,9 +97,22 @@ function CourseCredit() {
     <div className="course">
       <span>A course by</span>
       <a href="/">
-        <img src="" alt="Jake Trent" />
+        <Logo />
       </a>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        .course {
+          grid-area: a;
+          color: rgba(0, 0, 0, 0.65);
+        }
+        span {
+          padding-left: 35px;
+        }
+        a {
+          display: block;
+          min-width: 200px;
+          max-width: 80%;
+        }
+      `}</style>
     </div>
   )
 }
@@ -99,7 +123,11 @@ function Explanation() {
       <p></p>
       <span className="invite">Try Pluralsight free for 10 days:</span>
       <a href="https://pluralsight.com">Watch</a>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        .explain {
+          grid-area: b;
+        }
+      `}</style>
     </div>
   )
 }

@@ -21,10 +21,7 @@ export default _ => (
     }
     a {
       display: inline-block;
-      color: #fff;
       text-decoration: none;
-      border-bottom: 1px solid #61dafb;
-      margin-bottom: 2px;
       cursor: pointer;
       transition: color 250ms;
     }
