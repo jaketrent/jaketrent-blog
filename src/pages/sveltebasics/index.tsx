@@ -136,7 +136,7 @@ function Explanation() {
         We'll hit all the fundamentals and create a fun library app that'll prep
         you to start your own first Svelte app.
       </p>
-      <a href="https://pluralsight.com">Watch the Course</a>
+      <a href="http://bit.ly/jaketrent-svelte-basics">Watch the Course</a>
       <style jsx>{`
         .explain {
           position: relative;
