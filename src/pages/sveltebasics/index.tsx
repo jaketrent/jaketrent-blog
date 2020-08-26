@@ -192,6 +192,7 @@ function Explanation() {
           left: -8px;
           content: " ";
           border: 4px solid #000;
+          transition: 300ms;
         }
         a:focus:after,
         a:hover:after {
