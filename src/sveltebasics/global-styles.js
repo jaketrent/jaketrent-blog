@@ -13,6 +13,7 @@ export default _ => (
       background: #fff;
       color: #000;
       font-size: 16px;
+      text-align: center;
     }
     h1,
     h2,
@@ -44,6 +45,7 @@ export default _ => (
       html,
       body {
         font-size: 22px;
+        text-align: left;
       }
     }
     @media screen and (min-width: 1441px) {

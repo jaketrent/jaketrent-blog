@@ -19,7 +19,7 @@ export default function SvelteBasicsIndexPage() {
         .grid {
           padding: 0 10vw;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
           .grid {
             display: grid;
             grid-template-areas: "a b";
@@ -112,12 +112,17 @@ function CourseCredit() {
           padding-top: calc(4px + 2em);
         }
         span {
-          padding-left: 35px;
+          display: block;
         }
         a {
-          display: block;
+          display: inline-block;
           min-width: 200px;
           max-width: 80%;
+        }
+        @media (min-width: 769px) {
+          a {
+            display: block;
+          }
         }
       `}</style>
     </div>
@@ -148,6 +153,7 @@ function Explanation() {
           border: 4px solid #000;
           padding: 1em 3vw;
           margin-bottom: 3em;
+          text-align: left;
         }
         a {
           position: absolute;
@@ -169,6 +175,8 @@ function Explanation() {
           font-weight: 900;
           font-style: italic;
           transition: 300ms;
+          white-space: nowrap;
+          text-overflow: clip;
         }
         a:focus,
         a:hover {
