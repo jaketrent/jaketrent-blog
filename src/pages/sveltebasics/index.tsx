@@ -17,11 +17,15 @@ export default function SvelteBasicsIndexPage() {
       <Footer />
       <style jsx>{`
         .grid {
-          display: grid;
-          grid-template-areas: "a b";
-          grid-template-columns: 1fr 2fr;
-          column-gap: 5vw;
           padding: 0 10vw;
+        }
+        @media (min-width: 768px) {
+          .grid {
+            display: grid;
+            grid-template-areas: "a b";
+            grid-template-columns: 1fr 2fr;
+            column-gap: 5vw;
+          }
         }
       `}</style>
     </Layout>
@@ -142,7 +146,8 @@ function Explanation() {
           position: relative;
           grid-area: b;
           border: 4px solid #000;
-          padding: 1em 1vw;
+          padding: 1em 3vw;
+          margin-bottom: 3em;
         }
         a {
           position: absolute;
