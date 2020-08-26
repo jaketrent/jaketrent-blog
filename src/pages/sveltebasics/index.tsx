@@ -183,6 +183,7 @@ function Explanation() {
         a:hover {
           color: #fff;
           text-shadow: 1px 1px 0 #000;
+          outline: none;
         }
         a:after {
           position: absolute;
