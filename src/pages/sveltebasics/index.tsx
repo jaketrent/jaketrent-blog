@@ -45,6 +45,7 @@ function Title() {
         header {
           padding-top: 2vw;
           padding-bottom: 8vw;
+          text-align: left;
         }
         h1 {
           font-weight: 900;
