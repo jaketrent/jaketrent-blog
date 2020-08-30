@@ -32,7 +32,7 @@ Generically, a line in the letter. Thickness of line.
 
 ![steam](https://i.imgur.com/DskIHYG.png)
 
-Vertical strotke.
+Vertical stroke.
 
 ## Ascender
 
@@ -69,6 +69,12 @@ The interior space inside a bowl.
 ![stroke](https://i.imgur.com/nM0ECly.png)
 
 Opening at bottom of letter openings.
+
+## Serif
+
+![stroke](https://i.imgur.com/SMwEiVq.png)
+
+Bar at the end of a stroke.
 
 ## Terminals
 
@@ -117,12 +123,6 @@ Angled form where 2 strokes meet.
 ![stroke](https://i.imgur.com/W7VWoRW.png)
 
 Tapered ending of some strokes.
-
-## Serif
-
-![stroke](https://i.imgur.com/SMwEiVq.png)
-
-Bar at the end of a stroke.
 
 And here's a [graphic of this anatomy](https://i.imgur.com/Qipb2vD.png), all together, that I put together.
 
