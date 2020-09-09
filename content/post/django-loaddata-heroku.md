@@ -23,7 +23,7 @@ Django's manage.py script comes with some great utilitarian commands.  Two of my
 First, get your data out of your existing Django app with manage.py's [dumpdata](https://docs.djangoproject.com/en/dev/ref/django-admin/#dumpdata-appname-appname-appname-model):
 
 ```bash
-python manage.py dumpddata --natural --indent 2 > data.json
+python manage.py dumpdata --natural --indent 2 > data.json
 ```
   
 By default it comes out as json, but you can [change that](https://docs.djangoproject.com/en/dev/ref/django-admin/#django-admin-option---format>).  The two options used above have now become common-place for me, providing:
