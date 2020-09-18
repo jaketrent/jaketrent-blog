@@ -44,7 +44,7 @@ button {
 
 ![children filling cell width](https://i.imgur.com/1zJTQKL.png)
 
-This is weird and undesirable because each of these buttons should only get as wide as they need to in order to fit their own button text. But they're all equally huge now.
+This is weird and undesirable because each of these buttons should only get as wide as they need to be in order to fit their own button text. But they're all equally huge now.
 
 ## Justify the items
 
