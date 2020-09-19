@@ -102,9 +102,9 @@ export default function IndexPage(props) {
           <div className="home-channel home-channel--fourth">
             <TopThreeBooks {...props} />
           </div>
-          <div className="home-logo">
-            <img src="/img/logo.svg" alt="Jake Trent" />
-          </div>
+        </div>
+        <div className="home-logo">
+          <img src="/img/logo.svg" alt="Jake Trent" />
         </div>
         <div className="home-grid">
           <GridAnimated />
