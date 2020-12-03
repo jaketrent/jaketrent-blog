@@ -1,7 +1,9 @@
 import React from "react"
+import ReactPlayer from "react-player"
 import { graphql, Link } from "gatsby"
 
 import { Head } from "./layout"
+import { styled } from "./styled"
 import MetaFacebook from "../ui/meta-facebook"
 import MetaTwitter from "../ui/meta-twitter"
 
@@ -53,7 +55,80 @@ export default function ChristmasDetailPage(props) {
         facebook={social}
         twitter={social}
       />
-      {JSON.stringify(detail)}
+
+      <Grid>
+        <Controls>
+          <header>
+            <h1>{detail.title}</h1>
+            {detail.artist}
+          </header>
+          <p>{detail.desc}</p>
+          <ReactPlayer url={detail.url} controls height={50} width="100%" />
+          <div>{detail.performance}</div>
+          <Link to="/christmas">Play another</Link>
+        </Controls>
+        <Phrase>{parsePhraseLines(detail.phrase)}</Phrase>
+      </Grid>
     </>
+  )
+}
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: minmax(320px, 30vw) 1fr;
+  gap: 24px;
+  height: 100vh;
+  overflow: hidden;
+`
+const Controls = styled.article`
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  h1 {
+    color: var(--colorsTeal);
+    font-size: 2em;
+  }
+
+  p {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 3em;
+  }
+
+  div {
+    margin-top: 12px;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    font-weight: 200;
+    font-style: italic;
+  }
+`
+const Phrase = styled.h2`
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding-right: 2vw;
+  overflow: hidden;
+  font-family: var(--typeBold);
+  font-size: 25vh;
+  line-height: 1em;
+  text-align: right;
+  font-weight: normal;
+  color: var(--colorsPink);
+`
+
+const parsePhraseLines = (phrase: string) => {
+  return /\//.test(phrase) ? (
+    <>
+      {phrase.split("/").map(bit => (
+        <div>{bit}</div>
+      ))}
+    </>
+  ) : (
+    phrase
   )
 }

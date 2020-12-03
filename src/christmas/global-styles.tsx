@@ -6,9 +6,22 @@ export default () => (
   <Global
     styles={css`
       @font-face {
-        font-family: "Artega SC Thin";
+        font-family: "Artega Sans Condensed SC Thin";
         src: url("/christmas/Artegra_Sans-Condensed-SC-100-Thin.woff")
           format("woff");
+      }
+      @font-face {
+        font-family: "Bourton Hand Drop Stripes B";
+        src: url("/christmas/Bourton-Hand-Drop-Stripes-B.woff") format("woff");
+      }
+      :root {
+        --colorsGreen: #77a047;
+        --colorsRed: #d42d2f;
+        --colorsPink: #c7375f;
+        --colorsTeal: #708f94;
+        --colorsBlue: #aed1d9;
+        --typeRegular: Artega Sans Condensed SC Thin;
+        --typeBold: Bourton Hand Drop Stripes B;
       }
       * {
         box-sizing: border-box;
@@ -17,7 +30,7 @@ export default () => (
       body {
         margin: 0;
         padding: 0;
-        font-family: "Artega SC Thin", sans-serif;
+        font-family: var(--typeRegular), sans-serif;
         background: #fff;
         color: #000;
         font-size: 16px;
@@ -51,7 +64,7 @@ export default () => (
       @media screen and (min-width: 769px) {
         html,
         body {
-          font-size: 22px;
+          font-size: 18px;
         }
       }
       @media screen and (min-width: 1441px) {
