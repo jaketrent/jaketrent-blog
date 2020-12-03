@@ -1,13 +1,16 @@
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React, { FC } from "react"
 
 import { Head } from "../../christmas/layout"
 
 interface Song {
+  year: number
+  date: number
   phrase: string
   title: string
   artist: string
+  performance: string
   desc: string
   img: string
   url: string
@@ -15,19 +18,44 @@ interface Song {
 
 const numDays = 25
 // TODO: move to files, load in gatsby config, setup urls for each.
-const songs: Song[] = [
-  {
-    phrase: "In solemn stillness lay",
-    title: "It Came Upon a Midnight Clear",
-    artist: "Jon Schmidt",
-    desc: "We love the stillness, quiet and reverence here.",
-    img: "https://via.placeholder.com/150",
-    url:
-      "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
-  },
-]
+// const songs: Song[] = [
+//   {
+//     phrase: "In solemn stillness lay",
+//     title: "It Came Upon a Midnight Clear",
+//     artist: "Jon Schmidt",
+//     performance: "Piano solo",
+//     desc: "We love the stillness, quiet and reverence here.",
+//     img: "https://via.placeholder.com/150",
+//     url:
+//       "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
+//   },
+// ]
 
-export default function ChristmasIndexPage() {
+export const query = graphql`
+  query {
+    allChristmas(sort: { fields: [date], order: ASC }) {
+      totalCount
+      edges {
+        node {
+          id
+          slug
+          year
+          date
+          phrase
+          title
+          artist
+          performance
+          desc
+          img
+          url
+        }
+      }
+    }
+  }
+`
+
+export default function ChristmasIndexPage(props) {
+  const songs = props.data.allChristmas.edges.map(edge => edge.node as Song)
   return (
     <>
       <Head />
@@ -42,7 +70,7 @@ export default function ChristmasIndexPage() {
             <CalendarDay date={i + 1} song={song} />
           ))}
           {Array.from(Array(numDays - songs.length)).map((_, i) => (
-            <CalendarDay date={songs.length + i + 1} song={undefined} />
+            <EmptyCalendarDay date={songs.length + i + 1} />
           ))}
         </Calendar>
         <Footer />
@@ -55,12 +83,13 @@ const CalendarDay: FC<{
   date: number
   song: Song
 }> = props => {
+  console.log("cal day", { song: props.song })
   return (
     <Day>
-      <Link to={`/christmas/2020/${props.date}`}>
+      <Link to={props.song.slug}>
         <header>
           <div>{props.date}</div>
-          <h2>{props.song?.phrase}</h2>
+          <h2>{props.song.phrase}</h2>
         </header>
       </Link>
     </Day>
