@@ -1,8 +1,8 @@
-import styled from "@emotion/styled"
 import { graphql, Link } from "gatsby"
 import React, { FC } from "react"
 
-import { Head } from "../../christmas/layout"
+import { styled, theme } from "../../christmas/styled"
+import { Head, Layout } from "../../christmas/layout"
 
 interface Song {
   year: number
@@ -17,19 +17,6 @@ interface Song {
 }
 
 const numDays = 25
-// TODO: move to files, load in gatsby config, setup urls for each.
-// const songs: Song[] = [
-//   {
-//     phrase: "In solemn stillness lay",
-//     title: "It Came Upon a Midnight Clear",
-//     artist: "Jon Schmidt",
-//     performance: "Piano solo",
-//     desc: "We love the stillness, quiet and reverence here.",
-//     img: "https://via.placeholder.com/150",
-//     url:
-//       "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
-//   },
-// ]
 
 export const query = graphql`
   query {
@@ -57,7 +44,7 @@ export const query = graphql`
 export default function ChristmasIndexPage(props) {
   const songs = props.data.allChristmas.edges.map(edge => edge.node as Song)
   return (
-    <>
+    <Layout>
       <Head />
       <Content>
         <Title>
@@ -67,15 +54,15 @@ export default function ChristmasIndexPage(props) {
         </Title>
         <Calendar>
           {songs.map((song, i) => (
-            <CalendarDay date={i + 1} song={song} />
+            <CalendarDay key={i} date={i + 1} song={song} />
           ))}
           {Array.from(Array(numDays - songs.length)).map((_, i) => (
-            <EmptyCalendarDay date={songs.length + i + 1} />
+            <EmptyCalendarDay key={i} date={songs.length + i + 1} />
           ))}
         </Calendar>
         <Footer />
       </Content>
-    </>
+    </Layout>
   )
 }
 
@@ -102,7 +89,7 @@ const EmptyCalendarDay: FC<{
   return (
     <Day empty>
       <header>
-        <span>{props.date}</span>
+        <div>{props.date}</div>
       </header>
     </Day>
   )
@@ -117,6 +104,7 @@ const Calendar = styled.div`
   grid-template-columns: repeat(5, calc(16vw - 0.8vw));
   grid-template-rows: repeat(5, calc(16vw - 0.8vw));
   gap: 1vw;
+  margin: 48px 0;
 `
 
 const Content = styled.div`
@@ -128,12 +116,15 @@ interface DayProps {
   empty?: boolean
 }
 const Day = styled.article<DayProps>`
-  outline: 1px solid green;
+  border: 2px solid ${theme.colors.border};
+  border-radius: 5px;
   height: 100%;
   width: 100%;
   display: flex;
   padding: ${props => props.empty && "0.5vw"};
   overflow: hidden;
+  position: relative;
+  background: ${props => (props.empty ? "#fff" : `${theme.colors.border}22`)};
 
   a {
     color: inherit;
@@ -143,12 +134,27 @@ const Day = styled.article<DayProps>`
   }
 
   div {
+    color: ${theme.colors.border};
+    color: ${theme.colors.border}22;
     text-align: left;
+    position: absolute;
+    top: 0;
+    left: 1vw;
+    font-size: 10vw;
+    font-weight: 800;
   }
 
   h2 {
+    opacity: 0;
     text-align: right;
     font-size: 2.5vw;
+    color: #000;
+    text-transform: uppercase;
+    transition: all 400ms;
+  }
+  &:hover h2,
+  &:focus h2 {
+    opacity: 1;
   }
 `
 

@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@emotion/react"
 import React, { FC } from "react"
 import { Helmet } from "react-helmet"
 
@@ -6,8 +7,27 @@ import GlobalStyles from "./global-styles"
 import MetaCommon from "../ui/meta-common"
 import MetaFacebook from "../ui/meta-facebook"
 import MetaTwitter from "../ui/meta-twitter"
+import { theme } from "./styled"
 
-export const Head: FC = props => {
+interface HeadProps {
+  common?: {
+    copyright?: string
+    title?: string
+    description?: string
+    keywords?: string
+  }
+  facebook?: {
+    title?: string
+    url?: string
+    description?: string
+  }
+  twitter?: {
+    title?: string
+    url?: string
+    description?: string
+  }
+}
+export const Head: FC<HeadProps> = props => {
   return (
     <>
       <Helmet>
@@ -16,17 +36,20 @@ export const Head: FC = props => {
           title: "Christmas | Jake Trent",
           description: "Celebrating digital Christmas",
           keywords: "christmas, music, messages",
+          ...props.common,
         })}
 
         {MetaFacebook({
           title: "Christmas with Jake Trent",
           url: "https://jaketrent.com/christmas",
           description: "Celebrating digital Christmas",
+          ...props.facebook,
         })}
         {MetaTwitter({
           title: "Christmas with Jake Trent",
           url: "https://jaketrent.com/christmas",
           description: "Celebrating digital Christmas",
+          ...props.twitter,
         })}
 
         <link
@@ -41,4 +64,13 @@ export const Head: FC = props => {
       <GlobalStyles />
     </>
   )
+}
+
+export const Layout: FC = props => {
+  console.log("layout", { theme })
+  // NOTE: this ThemeProvider is new, but the @emotion/styled components are old. The context doesn't match up, and theme doesn't pass through.
+  // emotion-theming won't work on this gatsby version
+  // @emotion/react won't work with this version either
+  // theming with emotion on gatsby is dead
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
 }

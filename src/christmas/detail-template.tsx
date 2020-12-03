@@ -36,11 +36,23 @@ export default function ChristmasDetailPage(props) {
   const detail = props.data.allChristmas.edges[0].node
   const permalink = props.data.site.siteMetadata.siteUrl + detail.slug
 
-  // TODO: meta override to head
+  console.log({ detail })
+  const title = detail.title + " |  Jake Trent"
+  const social = {
+    title,
+    url: permalink,
+    description: detail.desc,
+  }
   return (
     <>
-      <Head />
-      {permalink}
+      <Head
+        common={{
+          title,
+          description: detail.desc,
+        }}
+        facebook={social}
+        twitter={social}
+      />
       {JSON.stringify(detail)}
     </>
   )
