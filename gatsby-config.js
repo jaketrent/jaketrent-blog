@@ -70,6 +70,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-jsx",
-    "gatsby-plugin-no-javascript", // NOTE: must be last
+    // "gatsby-plugin-no-javascript", // NOTE: must be last
   ],
 }
