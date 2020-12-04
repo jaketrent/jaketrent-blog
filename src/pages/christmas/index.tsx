@@ -95,6 +95,7 @@ const EmptyCalendarDay: FC<{
 }
 
 const Title = styled.div`
+  margin-top: 5vh;
   color: red;
 `
 
@@ -119,18 +120,17 @@ const Day = styled.article<DayProps>`
   border-radius: 5px;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
   padding: ${props => props.empty && "0.5vw"};
   overflow: hidden;
   position: relative;
   background: ${props => (props.empty ? "#fff" : `${theme.colors.border}22`)};
 
   a {
-    color: inherit;
     display: block;
+    height: 100%;
     padding: 0.5vw;
     overflow: hidden;
+    color: inherit;
   }
 
   span {
@@ -152,8 +152,8 @@ const Day = styled.article<DayProps>`
     text-transform: uppercase;
     transition: all 400ms;
   }
-  &:hover h2,
-  &:focus h2 {
+  & a:hover h2,
+  & a:focus h2 {
     opacity: 1;
   }
 `
@@ -162,5 +162,12 @@ function Footer() {
   function now() {
     return new Date().getUTCFullYear()
   }
-  return <footer>&copy; {now()} Jake Trent &middot; Merry Christmas!</footer>
+  return (
+    <footer>
+      &copy; {now()} Jake Trent &middot; Merry Christmas! &middot;
+      <a href="https://www.comeuntochrist.org/light-the-world-2020">
+        #lighttheworld
+      </a>
+    </footer>
+  )
 }
