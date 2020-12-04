@@ -1,8 +1,9 @@
 import { graphql, Link } from "gatsby"
 import React, { FC } from "react"
 
-import { styled, theme } from "../../christmas/styled"
+import { parsePhraseLines } from "../../christmas/data"
 import { Head, Layout } from "../../christmas/layout"
+import { styled, theme } from "../../christmas/styled"
 
 interface Song {
   year: number
@@ -12,7 +13,6 @@ interface Song {
   artist: string
   performance: string
   desc: string
-  img: string
   url: string
 }
 
@@ -33,7 +33,6 @@ export const query = graphql`
           artist
           performance
           desc
-          img
           url
         }
       }
@@ -75,8 +74,8 @@ const CalendarDay: FC<{
     <Day>
       <Link to={props.song.slug}>
         <header>
-          <div>{props.date}</div>
-          <h2>{props.song.phrase}</h2>
+          <span>{props.date}</span>
+          <h2>{parsePhraseLines(props.song.phrase)}</h2>
         </header>
       </Link>
     </Day>
@@ -89,7 +88,7 @@ const EmptyCalendarDay: FC<{
   return (
     <Day empty>
       <header>
-        <div>{props.date}</div>
+        <span>{props.date}</span>
       </header>
     </Day>
   )
@@ -121,6 +120,7 @@ const Day = styled.article<DayProps>`
   height: 100%;
   width: 100%;
   display: flex;
+  justify-content: flex-end;
   padding: ${props => props.empty && "0.5vw"};
   overflow: hidden;
   position: relative;
@@ -133,7 +133,7 @@ const Day = styled.article<DayProps>`
     overflow: hidden;
   }
 
-  div {
+  span {
     color: ${theme.colors.border};
     color: ${theme.colors.border}22;
     text-align: left;

@@ -10,11 +10,14 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     const doc = yaml.safeLoad(
       fs.readFileSync("./content/christmas/2020/" + file, "utf-8")
     )
-    console.log("sourcing", { file, doc })
+    const year = 2020 // TODO: enhance for next time
+    const date = parseInt(file.replace(".yml", ""), 10)
     createNode({
       ...doc,
-      slug: "/christmas/2020/" + file.replace(".yml", ""),
-      id: createNodeId(`Christmas-${doc.year}-${doc.date}`),
+      year,
+      date,
+      slug: "/christmas/2020/" + date,
+      id: createNodeId(`Christmas-${year}-${date}`),
       parent: null,
       children: [],
       internal: {
@@ -69,7 +72,6 @@ exports.createPages = async ({ graphql, actions }) => {
             artist
             performance
             desc
-            img
             url
           }
         }

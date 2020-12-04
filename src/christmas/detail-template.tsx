@@ -2,6 +2,7 @@ import React from "react"
 import ReactPlayer from "react-player"
 import { graphql, Link } from "gatsby"
 
+import { parsePhraseLines } from "./data"
 import { Head } from "./layout"
 import { styled } from "./styled"
 import MetaFacebook from "../ui/meta-facebook"
@@ -21,7 +22,6 @@ export const query = graphql`
           artist
           performance
           desc
-          img
           url
         }
       }
@@ -120,15 +120,3 @@ const Phrase = styled.h2`
   font-weight: normal;
   color: var(--colorsPink);
 `
-
-const parsePhraseLines = (phrase: string) => {
-  return /\//.test(phrase) ? (
-    <>
-      {phrase.split("/").map(bit => (
-        <div>{bit}</div>
-      ))}
-    </>
-  ) : (
-    phrase
-  )
-}
