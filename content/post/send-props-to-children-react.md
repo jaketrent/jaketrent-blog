@@ -40,7 +40,7 @@ The generic example above shows simply how to render children, `props` untouched
 
 `props` are meant to be immutable.  But, in order for us to send `props` values to our children, we're going to essentially loop through our children and set props on them as a part of our parent `render` function.
 
-Deep breath.  It's ok.  The children that we'll loop through aren't mounted component instances.  They are, instead, [descriptors](http://facebook.github.io/react/blog/2014/07/17/react-v0.11.html#descriptors).  These descriptors have all the `props` attributes that we've declared should be put on the components, but they haven't been rendered yet.  Because of this, we can change props, and it's ok.  We're not mutating what has rendered.  The data still hasn't flowed to the children.  We're still effectively still riffing on the logic of what the children components should really be when they're eventually mounted.
+Deep breath.  It's ok.  The children that we'll loop through aren't mounted component instances.  They are, instead, [descriptors](https://facebook.github.io/react/blog/2014/07/17/react-v0.11.html#descriptors).  These descriptors have all the `props` attributes that we've declared should be put on the components, but they haven't been rendered yet.  Because of this, we can change props, and it's ok.  We're not mutating what has rendered.  The data still hasn't flowed to the children.  We're still effectively still riffing on the logic of what the children components should really be when they're eventually mounted.
 
 ## Looping on Children Components
 
@@ -101,7 +101,7 @@ function WhereImUsingRadioGroups() {
 }
 ```
 
-<a class="jsbin-embed" href="http://react.jsbin.com/jahekimigi/embed?js,output">Example on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script>
+<a class="jsbin-embed" href="https://react.jsbin.com/jahekimigi/embed?js,output">Example on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.35.12"></script>
 
 In this example, where the parent `RadioGroup` has the `name` prop, it will be given to each of the children so their `name` prop will match and the radio group will work as expected.  Thus, the hearts of the children are turned toward their fathers.
 

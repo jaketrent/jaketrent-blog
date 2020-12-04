@@ -84,9 +84,9 @@ d3.selectAll("bar")
   });
 ```
 
-Here's a [jsbin](http://jsbin.com/qeyawa/1/edit?html,js,output) that provides some toggle functionality.  Ees for fun.
+Here's a [jsbin](https://jsbin.com/qeyawa/1/edit?html,js,output) that provides some toggle functionality.  Ees for fun.
 
-<a class="jsbin-embed" href="http://jsbin.com/qeyawa/1/embed?output">d3 toggleClass</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="https://jsbin.com/qeyawa/1/embed?output">d3 toggleClass</a><script src="https://static.jsbin.com/js/embed.js"></script>
 
 ## Bonus: A note on single active classes
 

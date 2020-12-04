@@ -37,7 +37,7 @@ As imperfect as the solutions are, it seems to me that the current best solution
 
 Go to Settings > Compiler, and set "Deploy web applications to server after compilation" to "Never"
 
-<a href="http://picasaweb.google.com/lh/photo/qOoybG2F413C8IkbKljbug"><img src="http://lh5.ggpht.com/trent.jake/SNgOk1bJ1cI/AAAAAAAAENs/DTZhP4ZvYBk/s800/compileropt.png" /></a>
+<a href="https://picasaweb.google.com/lh/photo/qOoybG2F413C8IkbKljbug"><img src="https://lh5.ggpht.com/trent.jake/SNgOk1bJ1cI/AAAAAAAAENs/DTZhP4ZvYBk/s800/compileropt.png" /></a>
 
 Go to Settings > Debugger, and set "Reload classes after compilation" to "Always" and optionally check "Reload classes in background".
 
@@ -51,7 +51,7 @@ I'm a little unclear as to the essentialness, but as a general rule, I also set 
 
 Go to Settings > Project Settings > your web module > Java EE Build Settings and check "Build on frame deactivation" and check "Build Web resources only"
 
-<a href="http://picasaweb.google.com/lh/photo/hsw-VeKzduwMGCANP4p5xg"><img src="http://lh4.ggpht.com/trent.jake/SNgSOwB4qyI/AAAAAAAAEOI/d07_gHC89nI/s400/projsettings.png" /></a>
+<a href="https://picasaweb.google.com/lh/photo/hsw-VeKzduwMGCANP4p5xg"><img src="https://lh4.ggpht.com/trent.jake/SNgSOwB4qyI/AAAAAAAAEOI/d07_gHC89nI/s400/projsettings.png" /></a>
 
 I haven't tested the utter-most limits of this hotdeploy.  I'm not really sure at their limitations, but I would guess that changes to method signatures or changes to descriptor files would require a server restart.  I am, however, unsure.  How about you?
 

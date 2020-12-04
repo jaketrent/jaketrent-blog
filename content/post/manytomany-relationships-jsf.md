@@ -25,7 +25,7 @@ To the unseen challenges of this task, I was caught unawares.  Who would have th
 
 My task was to maintain a person<->citizenship many-to-many relationship.  After a couple funny exchanges with our designers over multiple dropdowns (selectOneMenu's), hehe, the design was switched to one dropdown, one select multiple list (hidden), and a list of (nicer-looking) text to represent the selection.
 
-<a href="http://picasaweb.google.com/lh/photo/N707BgyvgcUm1uxzGq1G1w"><img src="http://lh6.ggpht.com/trent.jake/SNf6P_v3CRI/AAAAAAAAENk/TPIYGn4KCpA/s800/selectmany.png" /></a>
+<a href="https://picasaweb.google.com/lh/photo/N707BgyvgcUm1uxzGq1G1w"><img src="https://lh6.ggpht.com/trent.jake/SNf6P_v3CRI/AAAAAAAAENk/TPIYGn4KCpA/s800/selectmany.png" /></a>
 
 Without going into too much detail on the pitfalls that I found myself stumbling into, I'll give the final solution (for me) here:
 
@@ -89,8 +89,8 @@ function removeCitz(poldiv) {
 
 <strong>Things to note:</strong>
 <ul>
-<li>I used <a href="http://jquery.com/">jquery</a> and the <a href="http://www.texotela.co.uk/code/jquery/select/">jquery.selectboxes.js</a> plugin.  I added the deselectOptions() function to the .js file (shown below).</li>
-<li>I used a <a href="http://aprilandjake.com/tech/article/12">jsf-safe id selector</a>.</li>
+<li>I used <a href="https://jquery.com/">jquery</a> and the <a href="https://www.texotela.co.uk/code/jquery/select/">jquery.selectboxes.js</a> plugin.  I added the deselectOptions() function to the .js file (shown below).</li>
+<li>I used a <a href="https://aprilandjake.com/tech/article/12">jsf-safe id selector</a>.</li>
 </ul>
 
 <h3>deselectOptions() Function Addition:</h3>

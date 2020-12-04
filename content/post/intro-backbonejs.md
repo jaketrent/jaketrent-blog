@@ -20,7 +20,7 @@ BackboneJs is a great resource for creating rich UIs.  Rich means interactive.  
 
 The background:
 
-<div style="width:510px" id="__ss_12224939"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/rockycode/rich-uis-with-backbonejs" title="Rich UIs with BackboneJs" target="_blank" rel="noopener noreferrer">Rich UIs with BackboneJs</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/12224939?rel=0" width="510" height="426" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank" rel="noopener noreferrer">presentations</a> from <a href="http://www.slideshare.net/rockycode" target="_blank" rel="noopener noreferrer">rockycode</a> </div> </div>
+<div style="width:510px" id="__ss_12224939"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/rockycode/rich-uis-with-backbonejs" title="Rich UIs with BackboneJs" target="_blank" rel="noopener noreferrer">Rich UIs with BackboneJs</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/12224939?rel=0" width="510" height="426" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank" rel="noopener noreferrer">presentations</a> from <a href="http://www.slideshare.net/rockycode" target="_blank" rel="noopener noreferrer">rockycode</a> </div> </div>
 
 The code:
 

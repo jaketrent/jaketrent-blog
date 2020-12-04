@@ -18,14 +18,14 @@ When a company has a platform or API that it wants outside developers to create 
 
 RIM developer relation needs being what they are, they've gone this far to promote their BlackBerry 10 SDK:
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/WlsahuZ_4oM" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WlsahuZ_4oM" frameborder="0" allowfullscreen></iframe>
 
 It's awesome. Maybe "desperate"? It shows a definite effort (high notes) to attract and accommodate developers.
 
 ## Essential vitamins and minerals
 Once developers are in a company, what are the elements of developer relations that are needful there. What does a company need to retain top coding talent? I offer:
 
-1. **Engaging Responsibilities** - Smart guys are not going to sit around in your company doing the same thing for 10 years. In tech, probably not even for a couple. This might also be stated as "Career Path". I think this requirement is similar to what [Business Insider observed young workers](http://www.businessinsider.com/why-young-employees-quit-their-jobs-2012-9) as needing: "Multiple studies find that today’s younger workers have absolutely no intention of sticking around if they don’t feel like they’re learning, growing and being valued in a job."
+1. **Engaging Responsibilities** - Smart guys are not going to sit around in your company doing the same thing for 10 years. In tech, probably not even for a couple. This might also be stated as "Career Path". I think this requirement is similar to what [Business Insider observed young workers](https://www.businessinsider.com/why-young-employees-quit-their-jobs-2012-9) as needing: "Multiple studies find that today’s younger workers have absolutely no intention of sticking around if they don’t feel like they’re learning, growing and being valued in a job."
 
 2. **Learning Opportunities** - Learning is an inherent part of every developer job description. It must be kosher to spend time to sharpen the saw. This is building capactiy. No one will ever propose solutions that they don't understand. If your company wants to broaden its offering, developers will need to broaden themselves.
 

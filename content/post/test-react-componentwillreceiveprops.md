@@ -101,8 +101,8 @@ There is definitely more setup here to make this happen.  I feel like usually te
 
 Here is a Component that uses `componentWillReceiveProps` to make a simple display change:
 
-<a class="jsbin-embed" href="http://jsbin.com/munaxuguta/12/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="https://jsbin.com/munaxuguta/12/embed?js,output">JS Bin</a><script src="https://static.jsbin.com/js/embed.js"></script>
 
-You can also check out this [slightly modified jsbin](http://jsbin.com/buwoqod/22/edit?js,output) which does the test assertion.
+You can also check out this [slightly modified jsbin](https://jsbin.com/buwoqod/22/edit?js,output) which does the test assertion.
 
 What methods have you used to test Components that use either `componentWillReceiveProps` or other interesting lifecycle methods?
