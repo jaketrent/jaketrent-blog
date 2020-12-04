@@ -55,7 +55,7 @@ export const Head: FC<HeadProps> = props => {
         <link
           rel="shortcut icon"
           type="image/png"
-          href="/christmas/img/favicon.png"
+          href="/christmas/favicon.png"
         />
         <script src="/js/analytics.js"></script>
 
