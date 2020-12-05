@@ -78,7 +78,7 @@ React.createClass({
 })
 ```
 
-In my model, I'm using the [superagent](https://github.com/visionmedia/superagent) library for network requests which provides an [abort](http://visionmedia.github.io/superagent/#aborting-requests) method.
+In my model, I'm using the [superagent](https://github.com/visionmedia/superagent) library for network requests which provides an [abort](https://visionmedia.github.io/superagent/#aborting-requests) method.
 
 ```js
 var request = require(‘superagent')
@@ -94,7 +94,7 @@ MyModel.prototype.find = function (done) {
 
 Also note that in my `end` function callback, I'm checking for the existence of data.  This is because when a request is aborted, data will come back as undefined.
 
-My favored method for solving the problem is the latter request abort method.  It feels cleaner that we're relying on the lifecycle functions of the component to deal with cleanup, much like we would for [events](http://facebook.github.io/react/tips/dom-event-listeners.html).  How have you dealt with this problem?
+My favored method for solving the problem is the latter request abort method.  It feels cleaner that we're relying on the lifecycle functions of the component to deal with cleanup, much like we would for [events](https://facebook.github.io/react/tips/dom-event-listeners.html).  How have you dealt with this problem?
 
 ## Update: "Using"
 
@@ -113,7 +113,7 @@ React.getDOMNode(this) // `this` would be my component
 
 It functions as before.
 
-In order to check `isMounted`, you're on your own.  My basic implementation can be seen in the following [jsbin](http://jsbin.com/telopegaya/2/edit?js,output).  Frankly, it feels dirty.  `React.findDOMNode` will throw an exception if the component isn't mounted, so we are using exceptions for flow control.  Egh:
+In order to check `isMounted`, you're on your own.  My basic implementation can be seen in the following [jsbin](https://jsbin.com/telopegaya/2/edit?js,output).  Frankly, it feels dirty.  `React.findDOMNode` will throw an exception if the component isn't mounted, so we are using exceptions for flow control.  Egh:
 
 ```js
 var isMounted = (component) => {
@@ -130,7 +130,7 @@ var isMounted = (component) => {
 
 How it might still be used:
 
-<a class="jsbin-embed" href="http://jsbin.com/telopegaya/2/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="https://jsbin.com/telopegaya/2/embed?js,output">JS Bin</a><script src="https://static.jsbin.com/js/embed.js"></script>
 
 This leaves me with the question of why `isMounted` was removed if it helps solve a potential problem.  Do we solve it in another way?  Does the core library do more for you?  You can verify for yourself in the jsbin above that if you remove the `isMounted` check, the old invariant error message is still logged.
 

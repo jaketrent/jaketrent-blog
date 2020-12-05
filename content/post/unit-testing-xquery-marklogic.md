@@ -28,7 +28,7 @@ With a few principles, skills, and tools for unit testing, you can go forward wi
 
 This slide deck is from a presentation at the MarkLogic Users Conference 2011.  
 
-<div style="width:510px" id="__ss_7778485"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/rockycode/unit-testing-xquery-on-marklogic" title="Unit Testing XQuery on MarkLogic">Unit Testing XQuery on MarkLogic</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/7778485" width="510" height="426" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/rockycode">rockycode</a> </div> </div>
+<div style="width:510px" id="__ss_7778485"> <strong style="display:block;margin:12px 0 4px"><a href="https://www.slideshare.net/rockycode/unit-testing-xquery-on-marklogic" title="Unit Testing XQuery on MarkLogic">Unit Testing XQuery on MarkLogic</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/7778485" width="510" height="426" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="https://www.slideshare.net/">presentations</a> from <a href="https://www.slideshare.net/rockycode">rockycode</a> </div> </div>
 
 More prose to follow and support these slides soon.  
 

@@ -1,5 +1,4 @@
 ---
-affiliateUrl: "\N"
 author: "Michael T. Nygard"
 date: "2009-08-18"
 categories:
@@ -30,6 +29,6 @@ Overall, it was a thoughtful book.  I particularly enjoyed the sections on capac
 
 I have included a short slide deck on the stability section with some highlights on what one might consider and what is explained in much clearer detail in the book.
 
-<iframe src="http://docs.google.com/present/embed?id=dcsq834g_58hp4kx2gx&size=m" frameborder="0" width="555" height="451"></iframe>
+<iframe src="https://docs.google.com/present/embed?id=dcsq834g_58hp4kx2gx&size=m" frameborder="0" width="555" height="451"></iframe>
 
   
