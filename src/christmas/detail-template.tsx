@@ -85,7 +85,7 @@ const Controls = styled.article`
   padding: 24px;
   background: rgba(255, 255, 255, 0.8);
   h1 {
-    color: var(--colorsTeal);
+    color: rgb(var(--colorsTeal));
     font-size: 2em;
     font-weight: 100;
   }
@@ -118,7 +118,7 @@ const Phrase = styled.h2`
   line-height: 1em;
   text-align: right;
   font-weight: normal;
-  color: var(--colorsPink);
+  color: rgb(var(--colorsPink));
 
   div {
     white-space: nowrap;
