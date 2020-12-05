@@ -123,15 +123,14 @@ const Day = styled.article<DayProps>`
   padding: ${props => props.empty && "0.5vw"};
   overflow: hidden;
   position: relative;
-  background: ${props =>
-    props.empty ? "#fff" : `rgba(var(--colorsRed), 0.25)`};
 
   a {
+    position: relative;
     display: block;
     height: 100%;
-    padding: 0.5vw;
     overflow: hidden;
     color: inherit;
+    background: rgba(var(--colorsRed), 0.25);
   }
 
   span {
@@ -144,13 +143,24 @@ const Day = styled.article<DayProps>`
     font-weight: 800;
   }
 
+  header {
+    height: 100%;
+  }
+
   h2 {
+    padding: 0.5vw;
+    height: 100%;
     opacity: 0;
     text-align: right;
     font-size: 2.5vw;
     color: #000;
     text-transform: uppercase;
     transition: all 400ms;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(var(--colorsPink), 0.25)
+    );
 
     div {
       white-space: nowrap;
