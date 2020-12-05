@@ -67,7 +67,6 @@ export const Head: FC<HeadProps> = props => {
 }
 
 export const Layout: FC = props => {
-  console.log("layout", { theme })
   // NOTE: this ThemeProvider is new, but the @emotion/styled components are old. The context doesn't match up, and theme doesn't pass through.
   // emotion-theming won't work on this gatsby version
   // @emotion/react won't work with this version either

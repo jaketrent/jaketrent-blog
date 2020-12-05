@@ -38,7 +38,6 @@ export default function ChristmasDetailPage(props) {
   const detail = props.data.allChristmas.edges[0].node
   const permalink = props.data.site.siteMetadata.siteUrl + detail.slug
 
-  console.log({ detail })
   const title = detail.title + " |  Jake Trent"
   const social = {
     title,

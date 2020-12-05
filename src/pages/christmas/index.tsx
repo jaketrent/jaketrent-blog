@@ -69,7 +69,6 @@ const CalendarDay: FC<{
   date: number
   song: Song
 }> = props => {
-  console.log("cal day", { song: props.song })
   return (
     <Day>
       <Link to={props.song.slug}>
