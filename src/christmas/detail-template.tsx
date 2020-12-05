@@ -118,9 +118,17 @@ const Phrase = styled.h2`
   line-height: 1em;
   text-align: right;
   font-weight: normal;
-  color: rgb(var(--colorsPink));
 
   div {
     white-space: nowrap;
+    -webkit-background-clip: text;
+    color: transparent !important;
+    color: rgb(var(--colorsPink));
+
+    background-image: linear-gradient(
+      to right,
+      rgb(var(--colorsPink)),
+      rgb(var(--colorsRed))
+    );
   }
 `
