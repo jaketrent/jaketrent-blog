@@ -119,4 +119,8 @@ const Phrase = styled.h2`
   text-align: right;
   font-weight: normal;
   color: var(--colorsPink);
+
+  div {
+    white-space: nowrap;
+  }
 `

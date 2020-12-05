@@ -151,6 +151,10 @@ const Day = styled.article<DayProps>`
     color: #000;
     text-transform: uppercase;
     transition: all 400ms;
+
+    div {
+      white-space: nowrap;
+    }
   }
   & a:hover h2,
   & a:focus h2 {
