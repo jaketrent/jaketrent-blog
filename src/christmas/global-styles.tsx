@@ -15,13 +15,13 @@ export default () => (
         src: url("/christmas/Bourton-Hand-Drop-Stripes-B.woff") format("woff");
       }
       :root {
-        --colorsGreen: #77a047;
-        --colorsRed: #d42d2f;
-        --colorsPink: #c7375f;
-        --colorsTeal: #708f94;
-        --colorsBlue: #aed1d9;
-        --typeRegular: Artega Sans Condensed SC Thin;
-        --typeBold: Bourton Hand Drop Stripes B;
+        --colorsGreen: 119, 160, 71;
+        --colorsRed: 212, 45, 47;
+        --colorsPink: 199, 55, 95;
+        --colorsTeal: 112, 143, 148;
+        --colorsBlue: 174, 209, 217;
+        --typeRegular: Artega Sans Condensed SC Thin, system-ui, sans-serif;
+        --typeBold: Bourton Hand Drop Stripes B, system-ui, sans-serif;
       }
       * {
         box-sizing: border-box;

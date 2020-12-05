@@ -1,9 +1,9 @@
+import styled from "@emotion/styled"
 import { graphql, Link } from "gatsby"
 import React, { FC } from "react"
 
 import { parsePhraseLines } from "../../christmas/data"
 import { Head, Layout } from "../../christmas/layout"
-import { styled, theme } from "../../christmas/styled"
 
 interface Song {
   year: number
@@ -96,6 +96,7 @@ const EmptyCalendarDay: FC<{
 const Title = styled.div`
   margin-top: 5vh;
   color: red;
+  font-weight: 100;
 `
 
 const Calendar = styled.div`
@@ -115,14 +116,15 @@ interface DayProps {
   empty?: boolean
 }
 const Day = styled.article<DayProps>`
-  border: 2px solid ${theme.colors.border};
+  border: 2px solid rgb(var(--colorsRed));
   border-radius: 5px;
   height: 100%;
   width: 100%;
   padding: ${props => props.empty && "0.5vw"};
   overflow: hidden;
   position: relative;
-  background: ${props => (props.empty ? "#fff" : `${theme.colors.border}22`)};
+  background: ${props =>
+    props.empty ? "#fff" : `rgba(var(--colorsRed), 0.25)`};
 
   a {
     display: block;
@@ -133,8 +135,7 @@ const Day = styled.article<DayProps>`
   }
 
   span {
-    color: ${theme.colors.border};
-    color: ${theme.colors.border}22;
+    color: rgba(var(--colorsRed), 0.25);
     text-align: left;
     position: absolute;
     top: 0;

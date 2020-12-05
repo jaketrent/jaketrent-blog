@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@emotion/react"
 import React, { FC } from "react"
 import { Helmet } from "react-helmet"
 
@@ -7,7 +6,6 @@ import GlobalStyles from "./global-styles"
 import MetaCommon from "../ui/meta-common"
 import MetaFacebook from "../ui/meta-facebook"
 import MetaTwitter from "../ui/meta-twitter"
-import { theme } from "./styled"
 
 interface HeadProps {
   common?: {
@@ -67,9 +65,5 @@ export const Head: FC<HeadProps> = props => {
 }
 
 export const Layout: FC = props => {
-  // NOTE: this ThemeProvider is new, but the @emotion/styled components are old. The context doesn't match up, and theme doesn't pass through.
-  // emotion-theming won't work on this gatsby version
-  // @emotion/react won't work with this version either
-  // theming with emotion on gatsby is dead
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+  return props.children
 }

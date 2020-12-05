@@ -1,10 +1,10 @@
+import styled from "@emotion/styled"
 import React from "react"
 import ReactPlayer from "react-player"
 import { graphql, Link } from "gatsby"
 
 import { parsePhraseLines } from "./data"
 import { Head } from "./layout"
-import { styled } from "./styled"
 import MetaFacebook from "../ui/meta-facebook"
 import MetaTwitter from "../ui/meta-twitter"
 
@@ -87,6 +87,7 @@ const Controls = styled.article`
   h1 {
     color: var(--colorsTeal);
     font-size: 2em;
+    font-weight: 100;
   }
 
   p {
