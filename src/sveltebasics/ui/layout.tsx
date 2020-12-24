@@ -1,21 +1,23 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import { FC } from "react"
 
-import MetaCommon from "../ui/meta-common"
-import MetaFacebook from "../ui/meta-facebook"
-import MetaTwitter from "../ui/meta-twitter"
+import {
+  Head,
+  MetaCommon,
+  MetaFacebook,
+  MetaTwitter,
+  currentYear,
+} from "../../common/ui"
 
-interface Props {
-  children?: node
+interface StylingReactLayoutProps {
   head?: any
 }
 
-export default function StylingReactLayout(props: Props) {
+export const SvelteBasicsLayout: FC<StylingReactLayoutProps> = props => {
   return (
     <div>
-      <Helmet>
+      <Head>
         {MetaCommon({
-          copyright: `${now()} Jake Trent`,
+          copyright: `${currentYear()} Jake Trent`,
           title: "Learn Svelte Basics | Jake Trent",
           description: "Learn the Basics of Svelte, a JS UI framework",
           keywords:
@@ -45,14 +47,10 @@ export default function StylingReactLayout(props: Props) {
         <script src="/js/analytics.js"></script>
 
         {props.head}
-      </Helmet>
+      </Head>
 
       {props.children}
       <style jsx>{``}</style>
     </div>
   )
-}
-
-function now() {
-  return new Date().getFullYear()
 }

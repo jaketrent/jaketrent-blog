@@ -1,6 +1,4 @@
-import React from "react"
-
-export default _ => (
+export const GlobalStyles = () => (
   <style global jsx>{`
     * {
       box-sizing: border-box;
