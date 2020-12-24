@@ -19,7 +19,7 @@ interface Talk {}
 interface Book {}
 
 export async function getStaticProps() {
-  const courses = fetchAllCourses()
+  const courses = fetchAllCourses({ limit: 3 })
   console.log("get static", courses)
   // const posts = fetchAllPosts()
   // const talks = fetchAllTalks()

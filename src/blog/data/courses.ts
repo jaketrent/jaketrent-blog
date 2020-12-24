@@ -26,11 +26,30 @@ const sortByDateDesc: SortFn<Course> = (a, b) => {
   else return 0
 }
 
-export const fetchAllCourses = (
-  filterBy = filterByNonDraft,
-  sortBy = sortByDateDesc
-) => {
-  return readAllMarkdown<Course>(getContentDir("course"))
-    .filter(filterBy)
-    .sort(sortBy)
+interface FetchAllOptions<T> {
+  filterBy?: FilterFn<T>
+  sortBy?: SortFn<T>
+  limit?: number
+}
+type FetchAllFn = <T>(options: FetchAllOptions<T>) => T[]
+export const fetchAllCourses: FetchAllFn<T> = options => {
+  const opts = applyOptionDefaults<T>(options)
+  let courses = readAllMarkdown<Course>(getContentDir("course"))
+
+  if (opts.filterBy) courses = courses.filter(opts.filterBy)
+
+  if (opts.sortBy) courses = courses.sort(opts.sortBy)
+
+  if (opts.limit) courses = courses.slice(0, opts.limit)
+
+  return courses
+}
+
+type DefaultFn = <T>(options: FetchAllOptions<T>) => FetchAllOptions<T>
+const applyOptionDefaults: DefaultFn<T> = opts => {
+  return {
+    filterBy: filterByNonDraft,
+    sortBy: sortByDateDesc,
+    ...opts,
+  }
 }
