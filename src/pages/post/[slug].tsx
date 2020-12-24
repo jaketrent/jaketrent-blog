@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 
+import { Grid } from "../../blog/ui/grid"
 import { BlogLayout } from "../../blog/ui/layout"
 import { fetchPost, fetchAllPosts } from "../../blog/data/posts"
 import {
@@ -12,11 +13,9 @@ import {
 } from "../../common/ui"
 
 // TODO: type
-export function getStaticProps(context) {
+export const getStaticProps = async context => {
   const slug = context.params.slug
-  const post = fetchPost(slug)
-  // TODO: mdx render
-  console.log("static props", { slug, post })
+  const post = await fetchPost(slug)
 
   return {
     props: {
@@ -25,7 +24,7 @@ export function getStaticProps(context) {
   }
 }
 
-export function getStaticPaths() {
+export const getStaticPaths = () => {
   let posts = fetchAllPosts()
   return {
     paths: posts.map(post => ({ params: { slug: post.slug } })),
@@ -33,7 +32,7 @@ export function getStaticPaths() {
   }
 }
 
-export default function PostPage({ post }) {
+const PostPage: FC = ({ post }) => {
   // TODO: fix
   // const permalink = props.data.site.siteMetadata.siteUrl + post.fields.slug
   const permalink = "jakepermalink"
@@ -223,40 +222,7 @@ export default function PostPage({ post }) {
 
       <footer className="single-footer">
         <div className="single-footer__sky"></div>
-        <div className="grid" aria-hidden="true">
-          <div className="grid__horizon"></div>
-          <div className="grid__deck">
-            <div className="grid__grid-plane">
-              <div className="grid__grid">
-                <div className="grid__grid--vertical">
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                </div>
-                <div className="grid__grid--horizontal">
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                  <div className="grid__grid__line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Grid />
         <div className="single-footer__content">
           <div id="disqus_thread"></div>
 
@@ -409,3 +375,5 @@ function Disclosures(props) {
     </div>
   )
 }
+
+export default PostPage

@@ -15,7 +15,7 @@ import {
   CourseLink,
   InternalLink,
 } from "../blog/ui"
-import { GridAnimated } from "../blog/ui/grid"
+import { Grid } from "../blog/ui/grid"
 
 export async function getStaticProps() {
   const topOptions = { limit: 3 }
@@ -79,7 +79,7 @@ const IndexPage: FC<IndexPageProps> = props => {
         </Sky>
         <Logo />
         <GridContainer>
-          <GridAnimated />
+          <Grid animated />
         </GridContainer>
       </Main>
     </BlogLayout>

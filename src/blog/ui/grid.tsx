@@ -1,6 +1,11 @@
+import { FC } from "react"
+
 import css from "./grid.module.css"
 
-export function GridAnimated() {
+interface GridProps {
+  animated?: boolean
+}
+export const Grid: FC<GridProps> = props => {
   return (
     <div className={css.grid} aria-hidden="true">
       <div className={css.horizon}></div>
@@ -20,15 +25,17 @@ export function GridAnimated() {
               <div className={css.line}></div>
               <div className={css.line}></div>
             </div>
-            <div>
-              <div className={css.dot}></div>
-              <div className={css.dot}></div>
-              <div className={css.dot}></div>
-              <div className={css.dot}></div>
-              <div className={css.dot}></div>
-              <div className={css.dot}></div>
-              <div className={css.dot}></div>
-            </div>
+            {props.animated && (
+              <div>
+                <div className={css.dot}></div>
+                <div className={css.dot}></div>
+                <div className={css.dot}></div>
+                <div className={css.dot}></div>
+                <div className={css.dot}></div>
+                <div className={css.dot}></div>
+                <div className={css.dot}></div>
+              </div>
+            )}
             <div className={css.linesHorizontal}>
               <div className={css.line}></div>
               <div className={css.line}></div>

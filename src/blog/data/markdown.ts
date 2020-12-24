@@ -2,6 +2,8 @@ import { parseISO, format } from "date-fns"
 import matter from "gray-matter"
 import fs from "fs"
 import { join, resolve } from "path"
+import remark from "remark"
+import html from "remark-html"
 
 export interface FrontMatter {
   comments: boolean
@@ -65,4 +67,11 @@ export const parseDate = (date: string | Date): Date => {
     const [yyyy, mm, dd] = date.split("-").map(str => parseInt(str, 10))
     return new Date(yyyy, mm - 1, dd)
   } else return new Date(date)
+}
+
+export async function renderHtml(markdown) {
+  const result = await remark()
+    .use(html)
+    .process(markdown)
+  return result.toString()
 }
