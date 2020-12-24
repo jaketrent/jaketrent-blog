@@ -1,27 +1,27 @@
-import React from "react"
+import { FC } from "react"
 
-import Caption from "../../stylingreact/caption"
-import Buffer from "../../stylingreact/buffer"
-import CssModules from "../../stylingreact/icons/css-modules"
-import ExternalCss from "../../stylingreact/icons/external-css"
-import Footer from "../../stylingreact/footer"
-import GlobalStyles from "../../stylingreact/global-styles"
-import Header from "../../stylingreact/header"
-import InlineCss from "../../stylingreact/icons/inline-css"
-import Layout from "../../stylingreact/layout"
-import Link from "../../stylingreact/link"
-import Main from "../../stylingreact/main"
-import StyledComponents from "../../stylingreact/icons/styledcomponents"
-import Section from "../../stylingreact/section"
-import SectionBody from "../../stylingreact/section-body"
-import SectionHeader from "../../stylingreact/section-header"
-import Table from "../../stylingreact/table"
-import Trial from "../../stylingreact/trial"
-import Video from "../../stylingreact/video"
+import Caption from "../../stylingreact/ui/caption"
+import Buffer from "../../stylingreact/ui/buffer"
+import CssModules from "../../stylingreact/ui/icons/css-modules"
+import ExternalCss from "../../stylingreact/ui/icons/external-css"
+import Footer from "../../stylingreact/ui/footer"
+import GlobalStyles from "../../stylingreact/ui/global-styles"
+import Header from "../../stylingreact/ui/header"
+import InlineCss from "../../stylingreact/ui/icons/inline-css"
+import { StylingReactLayout } from "../../stylingreact/ui/layout"
+import Link from "../../stylingreact/ui/link"
+import Main from "../../stylingreact/ui/main"
+import StyledComponents from "../../stylingreact/ui/icons/styledcomponents"
+import Section from "../../stylingreact/ui/section"
+import SectionBody from "../../stylingreact/ui/section-body"
+import SectionHeader from "../../stylingreact/ui/section-header"
+import Table from "../../stylingreact/ui/table"
+import Trial from "../../stylingreact/ui/trial"
+import Video from "../../stylingreact/ui/video"
 
-export default function StylingReactIndexPage(props) {
+const StylingReactIndexPage: FC = () => {
   return (
-    <Layout>
+    <StylingReactLayout>
       <GlobalStyles />
       <Header />
       <Caption />
@@ -117,6 +117,8 @@ export default function StylingReactIndexPage(props) {
         </Section>
       </Main>
       <Footer />
-    </Layout>
+    </StylingReactLayout>
   )
 }
+
+export default StylingReactIndexPage

@@ -1,23 +1,23 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import { FC } from "react"
 
-import MetaCommon from "../ui/meta-common"
-import MetaFacebook from "../ui/meta-facebook"
-import MetaTwitter from "../ui/meta-twitter"
+import {
+  Head,
+  MetaCommon,
+  MetaFacebook,
+  MetaTwitter,
+  currentYear,
+} from "../../common/ui"
 
-interface Props {
-  children?: node
+interface StylingReactLayoutProps {
   head?: any
 }
 
-export const padding = "20px"
-
-export default function StylingReactLayout(props: Props) {
+export const StylingReactLayout: FC<StylingReactLayoutProps> = props => {
   return (
     <div className="content">
-      <Helmet>
+      <Head>
         {MetaCommon({
-          copyright: `${now()} Jake Trent`,
+          copyright: `${currentYear()} Jake Trent`,
           title: "Styling React Components | Jake Trent",
           description: "Compare approaches to CSS in React.",
           keywords:
@@ -47,20 +47,16 @@ export default function StylingReactLayout(props: Props) {
         <script src="/js/analytics.js" />
 
         {props.head}
-      </Helmet>
+      </Head>
 
       {props.children}
       <style jsx>{`
         .content {
           max-width: 1200px;
           margin: auto;
-          padding: ${padding};
+          padding: 20px;
         }
       `}</style>
     </div>
   )
-}
-
-function now() {
-  return new Date().getFullYear()
 }
