@@ -3,6 +3,14 @@ import matter from "gray-matter"
 import fs from "fs"
 import { join, resolve } from "path"
 
+export interface Content {
+  slug: string
+  frontmatter: {
+    date: string
+  }
+  content: string
+}
+
 export const getContentDir = (subpath?: string): string =>
   resolve(join(process.cwd(), "content", subpath))
 // resolve(join(__dirname, "..", "..", "..", "content", subpath))

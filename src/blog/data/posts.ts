@@ -1,5 +1,7 @@
-import { getContentDir, readAllMarkdown } from "./markdown"
+import { Content, getContentDir, readAllMarkdown } from "./markdown"
+
+export interface Post extends Content {}
 
 export const fetchAllPosts = () => {
-  return readAllMarkdown(getContentDir("post"))
+  return readAllMarkdown<Post>(getContentDir("post"))
 }

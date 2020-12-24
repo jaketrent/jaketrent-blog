@@ -2,19 +2,18 @@ import Link from "next/link"
 import React, { FC } from "react"
 
 import { Course, fetchAllCourses } from "../blog/data/courses"
-import { fetchAllPosts } from "../blog/data/posts"
+import { Post, fetchAllPosts } from "../blog/data/posts"
 import { fetchAllTalks } from "../blog/data/talks"
 import { fetchAllBooks } from "../blog/data/books"
 import BlogLayout from "../ui/blog-layout"
 
 interface IndexProps {
   courses: Course[]
-  // posts: Post[]
+  posts: Post[]
   // talks: Talk[]
   // books: Book[]
 }
 
-interface Post {}
 interface Talk {}
 interface Book {}
 
