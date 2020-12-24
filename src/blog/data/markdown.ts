@@ -10,6 +10,7 @@ export interface FrontMatter {
 
 export interface Content {
   slug: string
+  path: string
   frontmatter: FrontMatter
   content: string
 }
@@ -22,11 +23,16 @@ export const readMarkdown = <T>(dir: string, fileName: string): T => {
   try {
     const fileContents = fs.readFileSync(join(dir, fileName), "utf8")
     const slug = fileName.replace(/\.md$/, "")
+    const path = join(dir, fileName)
+      .split("content")
+      .pop()
+      .replace(/\.md$/, "")
     const { data, content } = matter(fileContents)
     const date = formatDate(parseDate(data.date))
 
     return {
       slug,
+      path,
       frontmatter: { ...data, date },
       content,
     }
