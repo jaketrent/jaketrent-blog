@@ -18,15 +18,15 @@ interface Talk {}
 interface Book {}
 
 export async function getStaticProps() {
-  const courses = fetchAllCourses({ limit: 3 })
-  console.log("get static", courses)
-  // const posts = fetchAllPosts()
+  const topOptions = { limit: 3 }
+  const courses = fetchAllCourses(topOptions)
+  const posts = fetchAllPosts(topOptions)
   // const talks = fetchAllTalks()
   // const books = fetchAllBooks()
   return {
     props: {
       courses,
-      // posts,
+      posts,
       // talks,
       // books,
     },
@@ -41,10 +41,10 @@ const IndexPage: FC<IndexProps> = props => {
           <div className="home-channel home-channel--first">
             <TopThreeCourses {...props} />
           </div>
-          {/*
-            <div className="home-channel home-channel--second">
+          <div className="home-channel home-channel--second">
             <TopThreePosts {...props} />
-            </div>
+          </div>
+          {/*
             <div className="home-channel home-channel--third">
             <TopThreeTalks {...props} />
             </div>
@@ -69,7 +69,9 @@ function TopThreeCourses(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link href="/course">Courses</Link>
+        <Link href="/course">
+          <a>Courses</a>
+        </Link>
       </h2>
       {props.courses.map(course => (
         <a
@@ -94,21 +96,21 @@ function TopThreePosts(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link href="/post">Posts</Link>
+        <Link href="/post">
+          <a>Posts</a>
+        </Link>
       </h2>
       {props.posts.map(post => (
-        <Link
-          to={node.fields.slug}
-          className="home-item__link"
-          key={node.fields.slug}
-        >
-          <span className="home-item__border">
-            <img
-              alt={node.frontmatter.title}
-              className="home-item__img"
-              src={node.frontmatter.image}
-            />
-          </span>
+        <Link href={post.slug} key={post.slug}>
+          <a>
+            <span className="home-item__border" className="home-item__link">
+              <img
+                alt={post.frontmatter.title}
+                className="home-item__img"
+                src={post.frontmatter.image}
+              />
+            </span>
+          </a>
         </Link>
       ))}
     </>

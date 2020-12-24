@@ -1,7 +1,13 @@
-import { Content, getContentDir, readAllMarkdown } from "./markdown"
+import { Content } from "./markdown"
+import { FetchAllOptions, fetchAll } from "./request"
 
-export interface Post extends Content {}
-
-export const fetchAllPosts = () => {
-  return readAllMarkdown<Post>(getContentDir("post"))
+interface PostFrontMatter extends FrontMatter {
+  image: string
 }
+
+export interface Post extends Content {
+  frontmatter: PostFrontMatter
+}
+
+export const fetchAllPosts = (opts: Omit<FetchAllOptions, "contentPath">) =>
+  fetchAll({ ...opts, contentPath: "post" })

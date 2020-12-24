@@ -5,9 +5,7 @@ import { Content, getContentDir, parseDate, readAllMarkdown } from "./markdown"
 // TODO: type to extend one of content types
 type FilterFn<T = Content> = (value: T) => boolean
 const filterByNonDraft: FilterFn<T> = (content: T) => {
-  const ret = !content.frontmatter.draft
-  console.log("filter", { ret })
-  return ret
+  return !content?.frontmatter?.draft
 }
 
 type SortFn = <T = Content>(a: T, b: T) => boolean
