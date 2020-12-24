@@ -23,7 +23,6 @@ export interface FetchAllOptions<T = Content> {
   sortBy?: SortFn<T>
   limit?: number
 }
-
 type FetchAllFn = <T = Content>(options: FetchAllOptions<T>) => T[]
 export const fetchAll: FetchAllFn<T> = options => {
   const opts = applyOptionDefaults<T>(options)

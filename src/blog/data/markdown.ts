@@ -4,7 +4,14 @@ import fs from "fs"
 import { join, resolve } from "path"
 
 export interface FrontMatter {
+  comments: boolean
   date: string
+  description: string
+  draft: boolean
+  layout: "post" // TODO: enum the others
+  lastmod?: string
+  metaKeywords: string
+  tags: string[]
   title: string
 }
 

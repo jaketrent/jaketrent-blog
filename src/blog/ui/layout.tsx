@@ -1,3 +1,5 @@
+import { FC } from "react"
+
 import { Head, MetaCommon } from "../../common/ui"
 
 interface BlogLayoutProps {
