@@ -1,7 +1,7 @@
 import Head from "next/head"
 import React from "react"
 
-import MetaCommon from "../ui/meta-common"
+import MetaCommon from "../../common/ui/meta-common"
 
 interface Props {
   description?: string
