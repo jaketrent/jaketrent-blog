@@ -9,7 +9,7 @@ interface Props {
 
 export default function MetaCommon(props: Props) {
   return [
-    <meta charset="utf-8" key="char" />,
+    <meta charSet="utf-8" key="char" />,
     <title key="title">{props.title || "Jake Trent"}</title>,
     <meta
       key="desc"

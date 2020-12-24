@@ -1,5 +1,5 @@
+import Head from "next/head"
 import React from "react"
-import { Helmet } from "react-helmet"
 
 import MetaCommon from "../ui/meta-common"
 
@@ -13,7 +13,7 @@ interface Props {
 export default function BlogLayout(props: Props) {
   return (
     <>
-      <Helmet>
+      <Head>
         {MetaCommon({
           title: props.title,
           description: props.description,
@@ -25,7 +25,7 @@ export default function BlogLayout(props: Props) {
         <link rel="stylesheet" type="text/css" href="/css/index.css" />
         {props.head}
         <script src="/js/analytics.js" />
-      </Helmet>
+      </Head>
 
       {props.children}
     </>

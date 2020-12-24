@@ -1,91 +1,40 @@
-import { graphql, Link } from "gatsby"
-import React from "react"
+import Link from "next/link"
+import React, { FC } from "react"
 
+import { Course, fetchAllCourses } from "../blog/data/courses"
+import { fetchAllPosts } from "../blog/data/posts"
+import { fetchAllTalks } from "../blog/data/talks"
+import { fetchAllBooks } from "../blog/data/books"
 import BlogLayout from "../ui/blog-layout"
 
-export const query = graphql`
-  query {
-    course: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "Course" } } }
-      limit: 3
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-            landingPage
-          }
-        }
-      }
-    }
-    post: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { layout: { eq: "post" } } }
-      limit: 3
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-    talk: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "Talk" } } }
-      limit: 3
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-    book: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "Book" } } }
-      limit: 3
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
+interface IndexProps {
+  courses: Course[]
+  // posts: Post[]
+  // talks: Talk[]
+  // books: Book[]
+}
+
+interface Post {}
+interface Talk {}
+interface Book {}
+
+export async function getStaticProps() {
+  const courses = fetchAllCourses()
+  console.log("get static", courses)
+  // const posts = fetchAllPosts()
+  // const talks = fetchAllTalks()
+  // const books = fetchAllBooks()
+  return {
+    props: {
+      courses,
+      // posts,
+      // talks,
+      // books,
+    },
   }
-`
-export default function IndexPage(props) {
+}
+
+const IndexPage: FC<IndexProps> = props => {
   return (
     <BlogLayout>
       <main className="home-main">
@@ -93,15 +42,17 @@ export default function IndexPage(props) {
           <div className="home-channel home-channel--first">
             <TopThreeCourses {...props} />
           </div>
-          <div className="home-channel home-channel--second">
+          {/*
+            <div className="home-channel home-channel--second">
             <TopThreePosts {...props} />
-          </div>
-          <div className="home-channel home-channel--third">
+            </div>
+            <div className="home-channel home-channel--third">
             <TopThreeTalks {...props} />
-          </div>
-          <div className="home-channel home-channel--fourth">
+            </div>
+            <div className="home-channel home-channel--fourth">
             <TopThreeBooks {...props} />
-          </div>
+            </div>
+          */}
         </div>
         <div className="home-logo">
           <img src="/img/logo.svg" alt="Jake Trent" />
@@ -113,28 +64,29 @@ export default function IndexPage(props) {
     </BlogLayout>
   )
 }
+export default IndexPage
 
 function TopThreeCourses(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link to="/course">Courses</Link>
-        {props.data.course.edges.map(({ node }) => (
-          <a
-            href={node.frontmatter.landingPage}
-            className="home-item__link"
-            key={node.frontmatter.landingPage}
-          >
-            <span className="home-item__border">
-              <img
-                alt={node.frontmatter.title}
-                className="home-item__img"
-                src={node.frontmatter.image}
-              />
-            </span>
-          </a>
-        ))}
+        <Link href="/course">Courses</Link>
       </h2>
+      {props.courses.map(course => (
+        <a
+          href={course.frontmatter.landingPage}
+          className="home-item__link"
+          key={course.frontmatter.landingPage}
+        >
+          <span className="home-item__border">
+            <img
+              alt={course.frontmatter.title}
+              className="home-item__img"
+              src={course.frontmatter.image}
+            />
+          </span>
+        </a>
+      ))}
     </>
   )
 }
@@ -143,23 +95,23 @@ function TopThreePosts(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link to="/post">Posts</Link>
-        {props.data.post.edges.map(({ node }) => (
-          <Link
-            to={node.fields.slug}
-            className="home-item__link"
-            key={node.fields.slug}
-          >
-            <span className="home-item__border">
-              <img
-                alt={node.frontmatter.title}
-                className="home-item__img"
-                src={node.frontmatter.image}
-              />
-            </span>
-          </Link>
-        ))}
+        <Link href="/post">Posts</Link>
       </h2>
+      {props.posts.map(post => (
+        <Link
+          to={node.fields.slug}
+          className="home-item__link"
+          key={node.fields.slug}
+        >
+          <span className="home-item__border">
+            <img
+              alt={node.frontmatter.title}
+              className="home-item__img"
+              src={node.frontmatter.image}
+            />
+          </span>
+        </Link>
+      ))}
     </>
   )
 }
@@ -168,23 +120,23 @@ function TopThreeTalks(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link to="/talk">Talks</Link>
-        {props.data.talk.edges.map(({ node }) => (
-          <Link
-            to={node.fields.slug}
-            className="home-item__link"
-            key={node.fields.slug}
-          >
-            <span className="home-item__border">
-              <img
-                alt={node.frontmatter.title}
-                className="home-item__img"
-                src={node.frontmatter.image}
-              />
-            </span>
-          </Link>
-        ))}
+        <Link href="/talk">Talks</Link>
       </h2>
+      {props.data.talk.edges.map(({ node }) => (
+        <Link
+          to={node.fields.slug}
+          className="home-item__link"
+          key={node.fields.slug}
+        >
+          <span className="home-item__border">
+            <img
+              alt={node.frontmatter.title}
+              className="home-item__img"
+              src={node.frontmatter.image}
+            />
+          </span>
+        </Link>
+      ))}
     </>
   )
 }
@@ -193,23 +145,23 @@ function TopThreeBooks(props) {
   return (
     <>
       <h2 className="home-channel__title">
-        <Link to="/book">Reading</Link>
-        {props.data.book.edges.map(({ node }) => (
-          <Link
-            to={node.fields.slug}
-            className="home-item__link"
-            key={node.fields.slug}
-          >
-            <span className="home-item__border">
-              <img
-                alt={node.frontmatter.title}
-                className="home-item__img"
-                src={node.frontmatter.image}
-              />
-            </span>
-          </Link>
-        ))}
+        <Link href="/book">Reading</Link>
       </h2>
+      {props.data.book.edges.map(({ node }) => (
+        <Link
+          to={node.fields.slug}
+          className="home-item__link"
+          key={node.fields.slug}
+        >
+          <span className="home-item__border">
+            <img
+              alt={node.frontmatter.title}
+              className="home-item__img"
+              src={node.frontmatter.image}
+            />
+          </span>
+        </Link>
+      ))}
     </>
   )
 }
