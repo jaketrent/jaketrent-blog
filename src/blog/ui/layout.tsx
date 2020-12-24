@@ -22,7 +22,6 @@ export default function BlogLayout(props: Props) {
 
         <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="/css/index.css" />
         {props.head}
         <script src="/js/analytics.js" />
       </Head>
