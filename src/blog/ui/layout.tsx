@@ -1,16 +1,13 @@
-import Head from "next/head"
-import React from "react"
+import { Head, MetaCommon } from "../../common/ui"
 
-import MetaCommon from "../../common/ui/meta-common"
-
-interface Props {
+interface BlogLayoutProps {
   description?: string
   head?: any
   keywords?: string
   title?: string
 }
 
-export default function BlogLayout(props: Props) {
+export const BlogLayout: FC<BlogLayoutProps> = props => {
   return (
     <>
       <Head>

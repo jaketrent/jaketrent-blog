@@ -4,7 +4,7 @@ import { Course, fetchAllCourses } from "../blog/data/courses"
 import { Post, fetchAllPosts } from "../blog/data/posts"
 import { Talk, fetchAllTalks } from "../blog/data/talks"
 import { Book, fetchAllBooks } from "../blog/data/books"
-import BlogLayout from "../blog/ui/layout"
+import { BlogLayout } from "../blog/ui/layout"
 import {
   Main,
   Sky,
