@@ -1,17 +1,9 @@
 import { useEffect } from "react"
 
-import { ButtonLink } from "../../blog/ui/button"
 import { BlogLayout } from "../../blog/ui/layout"
 import { fetchPost, fetchAllPosts } from "../../blog/data/posts"
-import { Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
-import {
-  Link,
-  Logo,
-  MetaFacebook,
-  MetaTwitter,
-  capitalize,
-  pluralize,
-} from "../../common/ui"
+import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
+import { MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
 
 // TODO: type
@@ -117,29 +109,7 @@ const PostPage: FC = ({ post }) => {
               dangerouslySetInnerHTML={{ __html: post.content }}
             ></div>
 
-            <div className={css.markdownContainer}>
-              <div>
-                <ButtonLink
-                  vendor="twitter"
-                  href={`http://twitter.com/home?status=${post.frontmatter.title}%20${permalink}%20via%20@jaketrent`}
-                >
-                  Share
-                </ButtonLink>
-
-                {post.frontmatter.affiliateUrl && (
-                  <ButtonLink
-                    vendor="amazon"
-                    href={post.frontmatter.affiliateUrl}
-                  >
-                    Buy
-                  </ButtonLink>
-                )}
-
-                {post.frontmatter.readUrl && (
-                  <ButtonLink href={post.frontmatter.readUrl}>Read</ButtonLink>
-                )}
-              </div>
-            </div>
+            <Buttons content={post} />
           </div>
         </article>
       </main>

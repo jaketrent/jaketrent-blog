@@ -361,3 +361,114 @@
     padding-right: 48px;
   }
 }
+
+.footer {
+  width: 100%;
+}
+.footerSky {
+  position: relative;
+  padding-left: calc(var(--singleTitleLeftMargin) - 2.5vw);
+  height: 25vw;
+  margin-top: calc(-25vw + var(--footerMarginTop));
+  pointer-events: none;
+}
+.footerSky:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  bottom: -150%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 75vw;
+  width: 100vw;
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.9),
+    #ee9617 15%,
+    #fe5858,
+    transparent 60%
+  );
+  opacity: 0.7;
+}
+.footerSky:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: calc(75vw / -2);
+  left: 0;
+  height: calc(75vw / 2);
+  width: 100vw;
+  background: var(--colorBg);
+}
+.footerSun {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+.footerSun:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 2.5vw;
+  width: var(--singleBorderWidth);
+  height: 20%;
+  background: linear-gradient(to bottom, var(--colorPurple), transparent);
+}
+.footerSunImg {
+  width: calc(var(--singleBorderWidth) + 5vw);
+}
+.footerContent {
+  padding: 5vw 16px;
+}
+@media screen and (min-width: 621px) {
+  .footerContent {
+    max-width: calc(
+      620px + var(--singleTitleLeftMargin) + 2 * var(--singleBorderWidth)
+    );
+  }
+}
+@media screen and (min-width: 701px) {
+  .footerContent {
+    margin: 0 auto;
+    padding: 5vw 32px;
+  }
+}
+@media screen and (min-width: 1130px) {
+  .footerContent {
+    padding: 5vw 48px;
+  }
+}
+.footerList {
+  list-style: none;
+  margin: 48px 0 0 0;
+  padding-left: 0;
+  color: var(--colorBgSubtle);
+  text-shadow: 0 0 12px var(--colorPink);
+  font-size: 10px;
+  line-height: 1.75em;
+}
+@media (min-width: 320px) {
+  .footerList {
+    font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1200 - 320)));
+  }
+}
+@media (min-width: 1200px) {
+  .footerList {
+    font-size: 18px;
+  }
+}
+.footerList span {
+  animation: blink linear infinite 2s;
+}
+.footerList a {
+  color: inherit;
+}
+.footerGrid {
+  overflow: hidden;
+}
+.footerDisclosures {
+  color: var(--colorBgSubtle);
+  font-size: 0.75em;
+}
+.footerDisclosures a {
+  color: var(--colorBgSubtle);
+}
