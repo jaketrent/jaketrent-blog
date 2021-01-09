@@ -8,6 +8,7 @@ import css from "../../blog/ui/post.module.css"
 export const getStaticProps = async context => {
   const slug = context.params.slug
   const book = await fetchBook(slug)
+  delete book.frontmatter.tags
 
   return {
     props: {
