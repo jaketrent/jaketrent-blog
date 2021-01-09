@@ -2,6 +2,7 @@ import { FC } from "react"
 import { Logo, Link, capitalize, pluralize } from "../../common/ui"
 
 import { ButtonLink } from "./button"
+import { formatHumanDate } from "../../common/ui/date"
 import { Book } from "../data/books"
 import { Content } from "../data/markdown"
 import { Grid } from "./grid"
@@ -27,9 +28,9 @@ export const Meta: FC = ({ content }) => (
       pubdate="pubdate"
       dateTime={content.frontmatter.lastmod || content.frontmatter.date}
     >
-      {content.frontmatter.date}
+      {formatHumanDate(content.frontmatter.date)}
       {content.frontmatter.lastmod &&
-        ` | updated ${content.frontmatter.lastmod}`}
+        ` | updated ${formatHumanDate(content.frontmatter.lastmod)}`}
     </time>
     <div>Read it, it'll be good</div>
     <div>By Jake Trent</div>
