@@ -79,12 +79,12 @@ export const Buttons: FC = ({ content }) => {
   return (
     <div className={css.markdownContainer}>
       <div>
-        <ButtonLink
+        {/* TODO: replace with copy link/share invite - <ButtonLink
           vendor="twitter"
           href={`http://twitter.com/home?status=${content.frontmatter.title}%20${permalink}%20via%20@jaketrent`}
         >
           Share
-        </ButtonLink>
+        </ButtonLink>*/}
 
         {content.frontmatter.affiliateUrl && (
           <ButtonLink vendor="amazon" href={content.frontmatter.affiliateUrl}>
