@@ -29,7 +29,7 @@ export const getStaticPaths = () => {
 const PostPage: FC = ({ post }) => {
   // TODO: fix
   // const permalink = props.data.site.siteMetadata.siteUrl + post.fields.slug
-  const permalink = "jakepermalink"
+  const permalink = "https://jaketrent.com/post/" + post.slug
 
   useEffect(() => {
     setTimeout(() => {

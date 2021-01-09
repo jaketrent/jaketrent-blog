@@ -28,7 +28,7 @@ export const getStaticPaths = () => {
 const BookPage: FC = ({ book }) => {
   // TODO: fix
   // const permalink = props.data.site.siteMetadata.siteUrl + book.fields.slug
-  const permalink = "jakepermalink"
+  const permalink = "https://jaketrent.com/book/" + book.slug
 
   return (
     <BlogLayout
