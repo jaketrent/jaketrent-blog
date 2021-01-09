@@ -1,49 +1,37 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import * as React from "react"
 
-import BlogLayout from "../../ui/blog-layout"
-import Logo from "../../ui/logo"
+import { fetchAllPosts } from "../../blog/data/posts"
+import { BlogLayout } from "../../blog/ui/layout"
+import { Link, Logo } from "../../common/ui"
 
-export const query = graphql`
-  query {
-    course: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { layout: { eq: "post" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
+import * as css from "../../blog/ui/content-list.module.css"
+
+export async function getStaticProps() {
+  const posts = fetchAllPosts()
+  return {
+    props: {
+      posts,
+    },
   }
-`
+}
 
-export default function PostIndex(props) {
+export default function PostIndexPage(props) {
+  const totalCount = props.posts.length
   return (
     <BlogLayout title="Posts | Jake Trent">
-      <main className="meta-list">
-        <Link className="meta-list__logo" to="/">
-          <Logo />
+      <main className={css.contentList}>
+        <Link href="/">
+          <a className={css.logo}>
+            <Logo />
+          </a>
         </Link>
-        <h1 className="meta-list__title">Posts</h1>
-        <div className="meta-list__items">
-          <div className="meta-list__count">
-            {props.data.course.totalCount} posts
-          </div>
-          <div className="meta-list__links">
-            {props.data.course.edges.map(({ node }) => (
-              <Link to={node.fields.slug} key={node.frontmatter.title}>
-                {node.frontmatter.title}
+        <h1 className={css.title}>Posts</h1>
+        <div className={css.items}>
+          <div className={css.count}>{totalCount} posts</div>
+          <div className={css.links}>
+            {props.posts.map(post => (
+              <Link href={post.slug} key={post.slug}>
+                <a>{post.frontmatter.title}</a>
               </Link>
             ))}
           </div>
