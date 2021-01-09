@@ -1,4 +1,10 @@
-import { Content, FrontMatter } from "./markdown"
+import {
+  Content,
+  FrontMatter,
+  getContentDir,
+  readMarkdown,
+  renderHtml,
+} from "./markdown"
 import { FetchAllOptions, fetchAll } from "./request"
 
 type Disclosure =
@@ -22,3 +28,9 @@ export interface Book extends Content {
 
 export const fetchAllBooks = (opts: Omit<FetchAllOptions, "contentPath">) =>
   fetchAll({ ...opts, contentPath: "book" })
+
+export const fetchBook = async (slug: string) => {
+  const post = readMarkdown<Book>(getContentDir("book"), slug + ".md")
+  post.content = await renderHtml(post.content)
+  return post
+}
