@@ -1,19 +1,20 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import { FC, ReactNode } from "react"
 
-import MetaCommon from "../ui/meta-common"
-import MetaFacebook from "../ui/meta-facebook"
-import MetaTwitter from "../ui/meta-twitter"
+import {
+  Head as CommonHead,
+  MetaCommon,
+  MetaFacebook,
+  MetaTwitter,
+} from "../common/ui"
 
 const now = _ => new Date().getFullYear()
 
-interface Props {
-  children?: node
-  head?: any
+interface HeadProps {
+  head?: ReactNode
 }
 
-export default (props: Props) => (
-  <Helmet>
+const Head: FC<HeadProps> = props => (
+  <CommonHead>
     {MetaCommon({
       copyright: `${now()} Jake Trent`,
       title: "Go With the Flow Type | Jake Trent",
@@ -52,5 +53,7 @@ export default (props: Props) => (
     />
     <script src="/js/analytics.js" />
     {props.head}
-  </Helmet>
+  </CommonHead>
 )
+
+export default Head
