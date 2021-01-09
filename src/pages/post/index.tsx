@@ -30,7 +30,7 @@ export default function PostIndexPage(props) {
           <div className={css.count}>{totalCount} posts</div>
           <div className={css.links}>
             {props.posts.map(post => (
-              <Link href={post.slug} key={post.slug}>
+              <Link href={`/post/${post.slug}`} key={post.slug}>
                 <a>{post.frontmatter.title}</a>
               </Link>
             ))}
