@@ -28,7 +28,7 @@ export const getContentDir = (subpath?: string): string =>
   resolve(join(process.cwd(), "content", subpath))
 // resolve(join(__dirname, "..", "..", "..", "content", subpath))
 
-export const readMarkdown = <T>(dir: string, fileName: string): T => {
+export const readMarkdown = (dir: string, fileName: string): Content => {
   try {
     const fileContents = fs.readFileSync(join(dir, fileName), "utf8")
     const slug = fileName.replace(/\.md$/, "")
@@ -44,15 +44,15 @@ export const readMarkdown = <T>(dir: string, fileName: string): T => {
       path,
       frontmatter: { ...data, date },
       content,
-    }
+    } as Content
   } catch (err) {
     console.error("markdown read failed", { fileName, err })
   }
 }
 
-export const readAllMarkdown = <T>(dir: string): T[] => {
+export const readAllMarkdown = (dir: string): Content[] => {
   const fileNames = fs.readdirSync(dir)
-  return fileNames.map(fileName => readMarkdown<T>(dir, fileName))
+  return fileNames.map(fileName => readMarkdown(dir, fileName))
 }
 
 export const formatDate = (date: Date): string => {

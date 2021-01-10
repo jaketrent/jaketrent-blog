@@ -19,7 +19,7 @@ export const fetchAllTalks = (opts: Omit<FetchAllOptions, "contentPath">) =>
   fetchAll({ ...opts, contentPath: "talk" })
 
 export const fetchTalk = async (slug: string) => {
-  const post = readMarkdown<Talk>(getContentDir("talk"), slug + ".md")
-  post.content = await renderHtml(post.content)
-  return post
+  const talk = readMarkdown(getContentDir("talk"), slug + ".md") as Talk
+  talk.content = await renderHtml(talk.content)
+  return talk
 }

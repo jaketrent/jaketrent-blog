@@ -30,7 +30,7 @@ export const fetchAllBooks = (opts: Omit<FetchAllOptions, "contentPath">) =>
   fetchAll({ ...opts, contentPath: "book" })
 
 export const fetchBook = async (slug: string) => {
-  const post = readMarkdown<Book>(getContentDir("book"), slug + ".md")
-  post.content = await renderHtml(post.content)
-  return post
+  const book = readMarkdown(getContentDir("book"), slug + ".md") as Book
+  book.content = await renderHtml(book.content)
+  return book
 }

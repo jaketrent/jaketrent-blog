@@ -16,10 +16,10 @@ export interface Post extends Content {
 }
 
 export const fetchAllPosts = (opts?: Omit<FetchAllOptions, "contentPath">) =>
-  fetchAll<Post>({ ...opts, contentPath: "post" })
+  fetchAll({ ...opts, contentPath: "post" })
 
 export const fetchPost = async (slug: string) => {
-  const post = readMarkdown<Post>(getContentDir("post"), slug + ".md")
+  const post = readMarkdown(getContentDir("post"), slug + ".md") as Post
   post.content = await renderHtml(post.content)
   return post
 }

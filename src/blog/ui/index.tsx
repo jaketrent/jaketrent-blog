@@ -1,7 +1,7 @@
 import { FC } from "react"
 
-import { Content } from "../blog/data/markdown"
-import { Course } from "../blog/data/course"
+import { Content } from "../../blog/data/markdown"
+import { Course } from "../../blog/data/course"
 import { Link } from "../../common/ui"
 import css from "./index.module.css"
 

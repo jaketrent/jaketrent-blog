@@ -2,14 +2,11 @@ import { parseISO } from "date-fns"
 
 import { Content, getContentDir, parseDate, readAllMarkdown } from "./markdown"
 
-// TODO: type to extend one of content types
-type FilterFn<T = Content> = (value: T) => boolean
-const filterByNonDraft: FilterFn<T> = (content: T) => {
+const filterByNonDraft = (content: Content): boolean => {
   return !content?.frontmatter?.draft
 }
 
-type SortFn = <T = Content>(a: T, b: T) => boolean
-const sortByDateDesc: SortFn<T> = (a, b) => {
+const sortByDateDesc = (a: Content, b: Content): number => {
   const aDate = parseDate(a.frontmatter.date)
   const bDate = parseDate(b.frontmatter.date)
   const isBefore = aDate > bDate
@@ -17,16 +14,16 @@ const sortByDateDesc: SortFn<T> = (a, b) => {
   else return 0
 }
 
-export interface FetchAllOptions<T = Content> {
+export interface FetchAllOptions {
   contentPath: string
-  filterBy?: FilterFn<T>
-  sortBy?: SortFn<T>
+  filterBy?: (content: Content) => boolean
+  sortBy?: (a: Content, b: Content) => number
   limit?: number
 }
-type FetchAllFn = <T = Content>(options: FetchAllOptions<T>) => T[]
-export const fetchAll: FetchAllFn<T> = options => {
-  const opts = applyOptionDefaults<T>(options)
-  let contents = readAllMarkdown<T>(getContentDir(opts.contentPath))
+type FetchAllFn = (options: FetchAllOptions) => Content[]
+export const fetchAll: FetchAllFn = options => {
+  const opts = applyOptionDefaults(options)
+  let contents = readAllMarkdown(getContentDir(opts.contentPath))
 
   if (opts.filterBy) contents = contents.filter(opts.filterBy)
 
@@ -37,10 +34,7 @@ export const fetchAll: FetchAllFn<T> = options => {
   return contents
 }
 
-type DefaultFn = <T = Content>(
-  options: FetchAllOptions<T>
-) => FetchAllOptions<T>
-export const applyOptionDefaults: DefaultFn<T> = opts => {
+export const applyOptionDefaults = (opts: FetchAllOptions): FetchAllOptions => {
   return {
     filterBy: filterByNonDraft,
     sortBy: sortByDateDesc,
