@@ -5,13 +5,21 @@ import { join, resolve } from "path"
 import remark from "remark"
 import html from "remark-html"
 
+type Disclosure =
+  | "no-connection"
+  | "affiliate"
+  | "free"
+  | "sponsor"
+  | "employee"
+
 export interface FrontMatter {
   comments: boolean
   date: string
   description: string
+  disclosures?: Disclosure[]
   draft: boolean
-  layout: "post" // TODO: enum the others
   lastmod?: string
+  layout: string
   metaKeywords: string
   tags: string[]
   title: string

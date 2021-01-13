@@ -10,14 +10,15 @@ interface BlogLayoutProps {
 }
 
 export const BlogLayout: FC<BlogLayoutProps> = props => {
+  console.log("layout title", { title: props.title })
   return (
     <>
       <Head>
-        {MetaCommon({
-          title: props.title,
-          description: props.description,
-          keywords: props.keywords,
-        })}
+        <MetaCommon
+          title={props.title}
+          description={props.description}
+          keywords={props.keywords}
+        />
 
         <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
 

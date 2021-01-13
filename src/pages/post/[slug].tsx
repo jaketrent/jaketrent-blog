@@ -1,7 +1,7 @@
-import { useEffect } from "react"
+import { FC, useEffect } from "react"
 
 import { BlogLayout } from "../../blog/ui/layout"
-import { fetchPost, fetchAllPosts } from "../../blog/data/posts"
+import { Post, fetchPost, fetchAllPosts } from "../../blog/data"
 import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
 import { MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
@@ -26,14 +26,18 @@ export const getStaticPaths = () => {
   }
 }
 
-const PostPage: FC = ({ post }) => {
+interface PostPageProps {
+  post: Post
+}
+const PostPage: FC<PostPageProps> = ({ post }) => {
   // TODO: fix
   // const permalink = props.data.site.siteMetadata.siteUrl + post.fields.slug
   const permalink = "https://jaketrent.com/post/" + post.slug
 
   useEffect(() => {
     setTimeout(() => {
-      if (window && window.hljs) window.hljs.initHighlighting()
+      if (window && (window as any).hljs)
+        (window as any).hljs.initHighlighting()
     }, 55)
   })
 
@@ -53,10 +57,11 @@ const PostPage: FC = ({ post }) => {
   // </div>
   // )
 
+  console.log("slug title", { title: post.frontmatter.title })
   return (
     <BlogLayout
       title={post.frontmatter.title + " | Jake Trent"}
-      desciption={post.frontmatter.description}
+      description={post.frontmatter.description}
       keywords={
         !!post.frontmatter.metaKeywords
           ? post.frontmatter.metaKeywords
@@ -64,29 +69,31 @@ const PostPage: FC = ({ post }) => {
           ? post.frontmatter.tags.join(",")
           : ""
       }
-      head={[
-        ...MetaFacebook({
-          description: post.frontmatter.description,
-          image: post.frontmatter.image,
-          title: post.frontmatter.title,
-          url: permalink,
-        }),
-        ...MetaTwitter({
-          description: post.frontmatter.description,
-          image: post.frontmatter.image,
-          title: post.frontmatter.title,
-        }),
+      head={
+        <>
+          <MetaFacebook
+            description={post.frontmatter.description}
+            image={post.frontmatter.image}
+            title={post.frontmatter.title}
+            url={permalink}
+          />
+          <MetaTwitter
+            description={post.frontmatter.description}
+            image={post.frontmatter.image}
+            title={post.frontmatter.title}
+          />
 
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"
-          key="hljs"
-        ></script>,
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"
+            key="hljs"
+          ></script>
 
-        <script src="/js/disqusloader.js" key="discscript"></script>,
-        <script key="discstart">
-          {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
-        </script>,
-      ]}
+          <script src="/js/disqusloader.js" key="discscript"></script>
+          <script key="discstart">
+            {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
+          </script>
+        </>
+      }
     >
       <SiteTitle />
 
@@ -98,7 +105,7 @@ const PostPage: FC = ({ post }) => {
           </header>
 
           <div className={css.striped}>
-            <Image post={post} />
+            <Image content={post} />
 
             <div className={`${css.contentContainer} ${css.markdownContainer}`}>
               {ad}

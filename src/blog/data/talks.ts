@@ -9,13 +9,14 @@ import { FetchAllOptions, fetchAll } from "./request"
 
 interface TalkFrontMatter extends FrontMatter {
   image: string
+  layout: "talk"
 }
 
 export interface Talk extends Content {
   frontmatter: TalkFrontMatter
 }
 
-export const fetchAllTalks = (opts: Omit<FetchAllOptions, "contentPath">) =>
+export const fetchAllTalks = (opts?: Omit<FetchAllOptions, "contentPath">) =>
   fetchAll({ ...opts, contentPath: "talk" })
 
 export const fetchTalk = async (slug: string) => {

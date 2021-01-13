@@ -3,10 +3,8 @@ import { Logo, Link, capitalize, pluralize } from "../../common/ui"
 
 import { ButtonLink } from "./button"
 import { formatHumanDate } from "../../common/ui/date"
-import { Book } from "../data/books"
-import { Content } from "../data/markdown"
+import { Content, Post, Talk, Course, Book } from "../data"
 import { Grid } from "./grid"
-import { Post } from "../data/posts"
 import css from "./post.module.css"
 
 export const SiteTitle: FC = () => (
@@ -22,12 +20,9 @@ export const SiteTitle: FC = () => (
 interface MetaProps {
   content: Content
 }
-export const Meta: FC = ({ content }) => (
+export const Meta: FC<MetaProps> = ({ content }) => (
   <div className={css.meta}>
-    <time
-      pubdate="pubdate"
-      dateTime={content.frontmatter.lastmod || content.frontmatter.date}
-    >
+    <time dateTime={content.frontmatter.lastmod || content.frontmatter.date}>
       {formatHumanDate(content.frontmatter.date)}
       {content.frontmatter.lastmod &&
         ` | updated ${formatHumanDate(content.frontmatter.lastmod)}`}
@@ -56,13 +51,13 @@ export const Meta: FC = ({ content }) => (
 )
 
 interface ImageProps {
-  post: Post
+  content: Post | Talk | Book | Course
 }
-export const Image: FC = ({ post }) => (
+export const Image: FC<ImageProps> = ({ content }) => (
   <div className={css.image}>
-    {post.frontmatter.image && post.frontmatter.layout !== "talk" ? (
+    {content.frontmatter.layout !== "talk" ? (
       <div className={css.imageContainer}>
-        <img src={post.frontmatter.image} className={css.imageImg} />
+        <img src={content.frontmatter.image} className={css.imageImg} />
       </div>
     ) : (
       <div className={css.imagePlaceholder}></div>
@@ -71,9 +66,9 @@ export const Image: FC = ({ post }) => (
 )
 
 interface ButtonsProps {
-  content: Content
+  content: Post | Talk | Course | Book
 }
-export const Buttons: FC = ({ content }) => {
+export const Buttons: FC<ButtonsProps> = ({ content }) => {
   // TODO: permalink - attach to fetched Content
   const permalink = "https://jaketrent.com"
   return (
@@ -86,15 +81,16 @@ export const Buttons: FC = ({ content }) => {
           Share
         </ButtonLink>*/}
 
-        {content.frontmatter.affiliateUrl && (
+        {/*content.frontmatter.affiliateUrl && (
           <ButtonLink vendor="amazon" href={content.frontmatter.affiliateUrl}>
             Buy
           </ButtonLink>
-        )}
+        )*/}
 
-        {content.frontmatter.readUrl && (
-          <ButtonLink href={content.frontmatter.readUrl}>Read</ButtonLink>
-        )}
+        {content.frontmatter.layout === "book" &&
+          content.frontmatter.readUrl && (
+            <ButtonLink href={content.frontmatter.readUrl}>Read</ButtonLink>
+          )}
       </div>
     </div>
   )
@@ -111,7 +107,7 @@ export const Footer: FC<FooterProps> = props => (
       <div id="disqus_thread"></div>
 
       <div className={css.footerDisclosures}>
-        <Disclosures book={props.content} />
+        <Disclosures content={props.content} />
       </div>
 
       <ul className={css.footerList}>
@@ -159,14 +155,16 @@ export const Footer: FC<FooterProps> = props => (
 )
 
 interface DisclosuresProps {
-  book: Book
+  content: Content
 }
 const Disclosures: FC<DisclosuresProps> = props => {
-  if (!Array.isArray(props.book.frontmatter.disclosures)) return null
+  if (!Array.isArray(props.content.frontmatter.disclosures)) return null
 
   return (
     <div className={css.footerDisclosures}>
-      {props.disclosures.some(d => d === "no-connection") && (
+      {props.content.frontmatter.disclosures.some(
+        d => d === "no-connection"
+      ) && (
         <p>
           Disclosure of Material Connection: I have not received any
           compensation for writing this post. I have no material connection to
@@ -183,7 +181,7 @@ const Disclosures: FC<DisclosuresProps> = props => {
           Advertising.”
         </p>
       )}
-      {props.disclosures.some(d => d === "affiliate") && (
+      {props.content.frontmatter.disclosures.some(d => d === "affiliate") && (
         <p>
           Disclosure of Material Connection: Some of the links in the post above
           are “affiliate links.” This means if you click on the link and
@@ -202,7 +200,7 @@ const Disclosures: FC<DisclosuresProps> = props => {
           Advertising.”
         </p>
       )}
-      {props.disclosures.some(d => d === "free") && (
+      {props.content.frontmatter.disclosures.some(d => d === "free") && (
         <p>
           Disclosure of Material Connection: I received one or more of the
           products or services mentioned above for free in the hope that I would
@@ -220,7 +218,7 @@ const Disclosures: FC<DisclosuresProps> = props => {
           Advertising.”
         </p>
       )}
-      {props.disclosures.some(d => d === "sponsor") && (
+      {props.content.frontmatter.disclosures.some(d => d === "sponsor") && (
         <p>
           Disclosure of Material Connection: This is a “sponsored post.” The
           company who sponsored it compensated me via a cash payment, gift, or
@@ -239,7 +237,7 @@ const Disclosures: FC<DisclosuresProps> = props => {
           Advertising.”
         </p>
       )}
-      {props.disclosures.some(d => d === "employee") && (
+      {props.content.frontmatter.disclosures.some(d => d === "employee") && (
         <p>
           Disclosure of Material Connection: I am currently an employee of
           Pluralsight. Regardless, I only recommend books that I have personally

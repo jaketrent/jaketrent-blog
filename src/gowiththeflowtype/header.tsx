@@ -85,7 +85,7 @@ const Trial = _ => (
         border-radius: 4px;
         background: ${vars.colors.blue};
         color: ${vars.colors.white}
-        text-shadow: 1px 1px 0 ${vars.colors.darkGray};
+        text-shadow: 1px 1px 0 ${vars.colors.grayDark};
         text-decoration: none;
         line-height: ${vars.type.lineHeightStandard};
         white-space: nowrap;

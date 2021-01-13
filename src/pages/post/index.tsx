@@ -2,7 +2,7 @@ import { fetchAllPosts } from "../../blog/data/posts"
 import { BlogLayout } from "../../blog/ui/layout"
 import { Link, Logo } from "../../common/ui"
 
-import * as css from "../../blog/ui/content-list.module.css"
+import css from "../../blog/ui/content-list.module.css"
 
 export async function getStaticProps() {
   const posts = fetchAllPosts()

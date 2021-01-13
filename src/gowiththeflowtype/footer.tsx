@@ -1,8 +1,7 @@
 import React from "react"
 
+import { currentYear } from "../common/ui/date"
 import vars from "./vars"
-
-const now = _ => new Date().getFullYear()
 
 const Bubbles = _ => (
   <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
@@ -78,8 +77,8 @@ export default _ => (
         </div>
         <div>
           <div className="copyright">
-            Course &copy; {now()} Pluralsight; this page &copy; {now()} Jake
-            Trent <br />
+            Course &copy; {currentYear()} Pluralsight; this page &copy;{" "}
+            {currentYear()} Jake Trent <br />
             This content uses affiliate links.
           </div>
         </div>

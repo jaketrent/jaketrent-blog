@@ -16,24 +16,21 @@ export const StylingReactLayout: FC<StylingReactLayoutProps> = props => {
   return (
     <div className="content">
       <Head>
-        {MetaCommon({
-          copyright: `${currentYear()} Jake Trent`,
-          title: "Styling React Components | Jake Trent",
-          description: "Compare approaches to CSS in React.",
-          keywords:
-            "styling react components, react stylesheets, radium, react css modules, css in js, external stylesheet with react",
-        })}
-
-        {MetaFacebook({
-          title: "Styling React Components",
-          url: "https://jaketrent.com/stylingreact",
-          description: "Compare approaches to CSS in React.",
-        })}
-        {MetaTwitter({
-          title: "Styling React Components",
-          url: "https://jaketrent.com/stylingreact",
-          description: "Compare approaches to CSS in React.",
-        })}
+        <MetaCommon
+          copyright={`${currentYear()} Jake Trent`}
+          description="Compare approaches to CSS in React."
+          title="Styling React Components | Jake Trent"
+          keywords="styling react components, react stylesheets, radium, react css modules, css in js, external stylesheet with react"
+        />
+        <MetaFacebook
+          description="Styling React Components"
+          url="https://jaketrent.com/stylingreact"
+          title="Compare approaches to CSS in React."
+        />
+        <MetaTwitter
+          description="Styling React Components"
+          title="Compare approaches to CSS in React."
+        />
 
         <link
           rel="shortcut icon"

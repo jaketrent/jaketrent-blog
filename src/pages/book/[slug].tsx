@@ -1,5 +1,7 @@
+import { FC } from "react"
+
 import { BlogLayout } from "../../blog/ui/layout"
-import { fetchBook, fetchAllBooks } from "../../blog/data/books"
+import { Book, fetchBook, fetchAllBooks } from "../../blog/data"
 import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
 import { MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
@@ -25,7 +27,10 @@ export const getStaticPaths = () => {
   }
 }
 
-const BookPage: FC = ({ book }) => {
+interface BookPageProps {
+  book: Book
+}
+const BookPage: FC<BookPageProps> = ({ book }) => {
   // TODO: fix
   // const permalink = props.data.site.siteMetadata.siteUrl + book.fields.slug
   const permalink = "https://jaketrent.com/book/" + book.slug
@@ -33,7 +38,7 @@ const BookPage: FC = ({ book }) => {
   return (
     <BlogLayout
       title={book.frontmatter.title + " | Jake Trent"}
-      desciption={book.frontmatter.description}
+      description={book.frontmatter.description}
       keywords={
         !!book.frontmatter.metaKeywords
           ? book.frontmatter.metaKeywords
@@ -41,24 +46,25 @@ const BookPage: FC = ({ book }) => {
           ? book.frontmatter.tags.join(",")
           : ""
       }
-      head={[
-        ...MetaFacebook({
-          description: book.frontmatter.description,
-          image: book.frontmatter.image,
-          title: book.frontmatter.title,
-          url: permalink,
-        }),
-        ...MetaTwitter({
-          description: book.frontmatter.description,
-          image: book.frontmatter.image,
-          title: book.frontmatter.title,
-        }),
-
-        <script src="/js/disqusloader.js" key="discscript"></script>,
-        <script key="discstart">
-          {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
-        </script>,
-      ]}
+      head={
+        <>
+          <MetaFacebook
+            description={book.frontmatter.description}
+            image={book.frontmatter.image}
+            title={book.frontmatter.title}
+            url={permalink}
+          />
+          <MetaTwitter
+            description={book.frontmatter.description}
+            image={book.frontmatter.image}
+            title={book.frontmatter.title}
+          />
+          <script src="/js/disqusloader.js"></script>
+          <script>
+            {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
+          </script>
+        </>
+      }
     >
       <SiteTitle />
 
@@ -70,7 +76,7 @@ const BookPage: FC = ({ book }) => {
           </header>
 
           <div className={css.striped}>
-            <Image post={book} />
+            <Image content={book} />
 
             <div
               className={`${css.contentContainer} ${css.markdownContainer}`}

@@ -8,6 +8,7 @@ import {
 import { FetchAllOptions, fetchAll } from "./request"
 
 interface PostFrontMatter extends FrontMatter {
+  layout: "post"
   image: string
 }
 

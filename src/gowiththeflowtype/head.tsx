@@ -1,13 +1,12 @@
 import { FC, ReactNode } from "react"
 
 import {
+  currentYear,
   Head as CommonHead,
   MetaCommon,
   MetaFacebook,
   MetaTwitter,
 } from "../common/ui"
-
-const now = _ => new Date().getFullYear()
 
 interface HeadProps {
   head?: ReactNode
@@ -15,27 +14,22 @@ interface HeadProps {
 
 const Head: FC<HeadProps> = props => (
   <CommonHead>
-    {MetaCommon({
-      copyright: `${now()} Jake Trent`,
-      title: "Go With the Flow Type | Jake Trent",
-      description:
-        "Learn to add strong static typing to your JavaScript with Flow.",
-      keywords:
-        "javascript, static typing, strong static types, flow, flowtype, typescript, learn flow",
-    })}
+    <MetaCommon
+      copyright={`${currentYear()} Jake Trent`}
+      title="Go With the Flow Type | Jake Trent"
+      description="Learn to add strong static typing to your JavaScript with Flow."
+      keywords="javascript, static typing, strong static types, flow, flowtype, typescript, learn flow"
+    />
 
-    {MetaFacebook({
-      title: "Go With the FlowType",
-      url: "https://gowiththeflowtype.com",
-      description:
-        "Learn to add strong static typing to your JavaScript with Flow.",
-    })}
-    {MetaTwitter({
-      title: "Go With the FlowType",
-      url: "https://stylingreact.com",
-      description:
-        "Learn to add strong static typing to your JavaScript with Flow.",
-    })}
+    <MetaFacebook
+      title="Go With the FlowType"
+      url="https://gowiththeflowtype.com"
+      description="Learn to add strong static typing to your JavaScript with Flow."
+    />
+    <MetaTwitter
+      title="Go With the FlowType"
+      description="Learn to add strong static typing to your JavaScript with Flow."
+    />
 
     <link
       rel="shortcut icon"

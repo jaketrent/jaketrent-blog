@@ -2,8 +2,8 @@ import { fetchAllBooks } from "../../blog/data/books"
 import { BlogLayout } from "../../blog/ui/layout"
 import { Link, Logo } from "../../common/ui"
 
-import * as css from "../../blog/ui/content-list.module.css"
-import * as bookCss from "../../blog/ui/book-list.module.css"
+import css from "../../blog/ui/content-list.module.css"
+import bookCss from "../../blog/ui/book-list.module.css"
 
 export async function getStaticProps() {
   const books = fetchAllBooks()

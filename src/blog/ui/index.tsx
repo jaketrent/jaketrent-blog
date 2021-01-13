@@ -1,7 +1,6 @@
 import { FC } from "react"
 
-import { Content } from "../../blog/data/markdown"
-import { Course } from "../../blog/data/course"
+import { Content, Course, Post, Talk, Book } from "../data"
 import { Link } from "../../common/ui"
 import css from "./index.module.css"
 
@@ -42,7 +41,7 @@ export const GridContainer: FC = props => (
 )
 
 interface ItemProps {
-  content: Content
+  content: Course | Post | Talk | Book
 }
 // TODO: use optimized image
 export const Item: FC<ItemProps> = props => (
@@ -58,7 +57,7 @@ export const Item: FC<ItemProps> = props => (
 interface CourseLinkProps {
   course: Course
 }
-export const CourseLink: FC<ItemProps> = props => (
+export const CourseLink: FC<CourseLinkProps> = props => (
   <a href={props.course.frontmatter.landingPage} className={css.itemLink}>
     {props.children}
   </a>

@@ -1,5 +1,7 @@
+import { FC } from "react"
+
 import { BlogLayout } from "../../blog/ui/layout"
-import { fetchTalk, fetchAllTalks } from "../../blog/data/talks"
+import { Talk, fetchTalk, fetchAllTalks } from "../../blog/data"
 import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
 import { MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
@@ -25,15 +27,16 @@ export const getStaticPaths = () => {
   }
 }
 
-const TalkPage: FC = ({ talk }) => {
-  // TODO: fix
-  // const permalink = props.data.site.siteMetadata.siteUrl + talk.fields.slug
+interface TalkPageProps {
+  talk: Talk
+}
+const TalkPage: FC<TalkPageProps> = ({ talk }) => {
   const permalink = "https://jaketrent.com/talk/" + talk.slug
 
   return (
     <BlogLayout
       title={talk.frontmatter.title + " | Jake Trent"}
-      desciption={talk.frontmatter.description}
+      description={talk.frontmatter.description}
       keywords={
         !!talk.frontmatter.metaKeywords
           ? talk.frontmatter.metaKeywords
@@ -41,24 +44,26 @@ const TalkPage: FC = ({ talk }) => {
           ? talk.frontmatter.tags.join(",")
           : ""
       }
-      head={[
-        ...MetaFacebook({
-          description: talk.frontmatter.description,
-          image: talk.frontmatter.image,
-          title: talk.frontmatter.title,
-          url: permalink,
-        }),
-        ...MetaTwitter({
-          description: talk.frontmatter.description,
-          image: talk.frontmatter.image,
-          title: talk.frontmatter.title,
-        }),
+      head={
+        <>
+          <MetaFacebook
+            description={talk.frontmatter.description}
+            image={talk.frontmatter.image}
+            title={talk.frontmatter.title}
+            url={permalink}
+          />
+          <MetaTwitter
+            description={talk.frontmatter.description}
+            image={talk.frontmatter.image}
+            title={talk.frontmatter.title}
+          />
 
-        <script src="/js/disqusloader.js" key="discscript"></script>,
-        <script key="discstart">
-          {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
-        </script>,
-      ]}
+          <script src="/js/disqusloader.js" key="discscript"></script>
+          <script key="discstart">
+            {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
+          </script>
+        </>
+      }
     >
       <SiteTitle />
 
@@ -70,7 +75,7 @@ const TalkPage: FC = ({ talk }) => {
           </header>
 
           <div className={css.striped}>
-            <Image post={talk} />
+            <Image content={talk} />
 
             <div
               className={`${css.contentContainer} ${css.markdownContainer}`}
