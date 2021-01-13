@@ -1,6 +1,4 @@
 ---
-categories:
-- "Design"
 comments: true
 date: 2020-07-29T06:29:40-06:00
 description: "Lessons in magical design from Peter Smart"

@@ -3,10 +3,8 @@ layout: post
 title: "Paper by FiftyThree"
 date: "2012-10-14"
 comments: true
-categories:
-  - "Review"
 tags:
-  - "Design"
+  - "design"
   - "ios"
   - "art"
 image: https://i.imgur.com/M0kYA.jpg

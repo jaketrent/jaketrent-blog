@@ -1,0 +1,33 @@
+/* component: btn */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: grey;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0.45em 0.85em;
+}
+.btn:hover {
+  background: darkgrey;
+}
+.icon {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5em;
+  fill: white;
+}
+.label {
+  color: white;
+}
+.btnAmazon {
+  background: #eda43a;
+}
+.btnAmazon:hover {
+  background: #ffba55;
+}
+.btnTwitter {
+  background: #1da1f2;
+}
+.btnTwitter:hover {
+  background: #4bcaff;
+}

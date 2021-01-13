@@ -1,49 +1,35 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import { fetchAllTalks } from "../../blog/data/talks"
+import { BlogLayout } from "../../blog/ui/layout"
+import { Link, Logo } from "../../common/ui"
 
-import BlogLayout from "../../ui/blog-layout"
-import Logo from "../../ui/logo"
+import css from "../../blog/ui/content-list.module.css"
 
-export const query = graphql`
-  query {
-    talk: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "Talk" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
+export async function getStaticProps() {
+  const talks = fetchAllTalks()
+  return {
+    props: {
+      talks,
+    },
   }
-`
+}
 
-export default function TalkIndex(props) {
+export default function PostIndexPage(props) {
+  const totalCount = props.talks.length
   return (
     <BlogLayout title="Talks | Jake Trent">
-      <main className="meta-list">
-        <Link className="meta-list__logo" to="/">
-          <Logo />
+      <main className={css.contentList}>
+        <Link href="/">
+          <a className={css.logo}>
+            <Logo />
+          </a>
         </Link>
-        <h1 className="meta-list__title">Talks</h1>
-        <div className="meta-list__items">
-          <div className="meta-list__count">
-            {props.data.talk.totalCount} talks
-          </div>
-          <div className="meta-list__links">
-            {props.data.talk.edges.map(({ node }) => (
-              <Link to={node.fields.slug} key={node.fields.slug}>
-                {node.frontmatter.title}
+        <h1 className={css.title}>Talks</h1>
+        <div className={css.items}>
+          <div className={css.count}>{totalCount} talks</div>
+          <div className={css.links}>
+            {props.talks.map(talk => (
+              <Link href={`/talk/${talk.slug}`} key={talk.slug}>
+                <a>{talk.frontmatter.title}</a>
               </Link>
             ))}
           </div>

@@ -1,51 +1,36 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import { fetchAllCourses } from "../../blog/data/courses"
+import { BlogLayout } from "../../blog/ui/layout"
+import { Link, Logo } from "../../common/ui"
 
-import BlogLayout from "../../ui/blog-layout"
-import Logo from "../../ui/logo"
+import css from "../../blog/ui/content-list.module.css"
 
-export const query = graphql`
-  query {
-    course: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "Course" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-            landingPage
-          }
-        }
-      }
-    }
+export async function getStaticProps() {
+  const courses = fetchAllCourses()
+  return {
+    props: {
+      courses,
+    },
   }
-`
+}
 
-export default function CourseIndex(props) {
+export default function PostIndexPage(props) {
+  const totalCount = props.courses.length
   return (
     <BlogLayout title="Courses | Jake Trent">
-      <main className="meta-list">
-        <Link className="meta-list__logo" to="/">
-          <Logo />
+      <main className={css.contentList}>
+        <Link href="/">
+          <a className={css.logo}>
+            <Logo />
+          </a>
         </Link>
-        <h1 className="meta-list__title">Courses</h1>
-        <div className="meta-list__items">
-          <div className="meta-list__count">
-            {props.data.course.totalCount} courses
-          </div>
-          <div className="meta-list__links">
-            {props.data.course.edges.map(({ node }) => (
-              <a
-                href={node.frontmatter.landingPage}
-                key={node.frontmatter.landingPage}
-              >
-                {node.frontmatter.title}
-              </a>
+        <h1 className={css.title}>Courses</h1>
+        <div className={css.items}>
+          <div className={css.count}>{totalCount} courses</div>
+          <div className={css.links}>
+            {props.courses.map(course => (
+              <Link href={course.frontmatter.landingPage} key={course.slug}>
+                <a>{course.frontmatter.title}</a>
+              </Link>
             ))}
           </div>
         </div>

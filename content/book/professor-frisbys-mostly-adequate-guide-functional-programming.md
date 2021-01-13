@@ -1,5 +1,4 @@
 ---
-readUrl: "https://mostly-adequate.gitbooks.io/mostly-adequate-guide/"
 author: "Professor Frisby"
 categories:
 - "Book"
@@ -14,6 +13,7 @@ rating: 4
 tags:
 - "functional-programming"
 title: "Professor Frisbys Mostly Adequate Guide to Functional Programming"
+readUrl: "https://mostly-adequate.gitbooks.io/mostly-adequate-guide/"
 ---
 
 I read this in a book club with other programmers.  We had a great time learning from this book.  There were good introductions to functional progrmamming basics.  The book is light-hearted and funny at times.  Whenever we didn't understand something, we could fall back on, "Well, the book's *mostly* adequate, after all."

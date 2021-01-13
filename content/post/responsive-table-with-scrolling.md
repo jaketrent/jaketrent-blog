@@ -6,7 +6,7 @@ comments: true
 categories:
   - "Code"
 tags:
-  - "Design"
+  - "design"
   - "rwd"
   - "css"
 image: https://i.imgur.com/GeuZe.png

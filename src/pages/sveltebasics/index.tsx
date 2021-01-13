@@ -1,12 +1,12 @@
-import React from "react"
+import { FC } from "react"
 
-import GlobalStyles from "../../sveltebasics/global-styles"
-import Layout from "../../sveltebasics/layout"
-import { LogoBw } from "../../ui/logo"
+import { GlobalStyles } from "../../sveltebasics/ui/global-styles"
+import { SvelteBasicsLayout } from "../../sveltebasics/ui/layout"
+import { LogoBw } from "../../common/ui"
 
 export default function SvelteBasicsIndexPage() {
   return (
-    <Layout>
+    <SvelteBasicsLayout>
       <GlobalStyles />
 
       <Title />
@@ -28,7 +28,7 @@ export default function SvelteBasicsIndexPage() {
           }
         }
       `}</style>
-    </Layout>
+    </SvelteBasicsLayout>
   )
 }
 

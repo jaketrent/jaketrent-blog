@@ -8,9 +8,9 @@ layout: post
 metaKeywords: "ideas, action, act on thoughts"
 draft: false
 tags:
-  - ""
+  - "productivity"
 title: "Prefer Action"
-date: "2020-11-30"
+date: "2020-11-28"
 ---
 
 Ideas come and go. Act on them now or (quite possibly) never.

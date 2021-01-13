@@ -1,52 +1,41 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import { fetchAllBooks } from "../../blog/data/books"
+import { BlogLayout } from "../../blog/ui/layout"
+import { Link, Logo } from "../../common/ui"
 
-import BlogLayout from "../../ui/blog-layout"
-import Logo from "../../ui/logo"
+import css from "../../blog/ui/content-list.module.css"
+import bookCss from "../../blog/ui/book-list.module.css"
 
-export const query = graphql`
-  query {
-    book: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { layout: { eq: "book" } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            image
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
+export async function getStaticProps() {
+  const books = fetchAllBooks()
+  return {
+    props: {
+      books,
+    },
   }
-`
+}
 
-export default function BookIndex(props) {
+export default function BookIndexPage(props) {
+  const totalCount = props.books.length
   return (
     <BlogLayout title="Books | Jake Trent">
-      <main className="meta-list">
-        <Link className="meta-list__logo" to="/">
-          <Logo />
+      <main className={css.contentList}>
+        <Link href="/">
+          <a className={css.logo}>
+            <Logo />
+          </a>
         </Link>
-        <h1 className="meta-list__title">Books</h1>
-        <div className="meta-list__items">
-          <div className="meta-list__count">
-            {props.data.book.totalCount} books
-          </div>
-          <div className="meta-list__links meta-list__links--book">
-            {props.data.book.edges.map(({ node }) => (
-              <Link to={node.fields.slug} key={node.fields.slug}>
-                <img
-                  src={node.frontmatter.image}
-                  alt={node.frontmatter.title}
-                />
+        <h1 className={css.title}>Books</h1>
+        <div className={css.items}>
+          <div className={css.count}>{totalCount} books</div>
+          <div className={bookCss.links}>
+            {props.books.map(book => (
+              <Link href={`/book/${book.slug}`} key={book.slug}>
+                <a>
+                  <img
+                    src={book.frontmatter.image}
+                    alt={book.frontmatter.title}
+                  />
+                </a>
               </Link>
             ))}
           </div>
