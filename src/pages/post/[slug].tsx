@@ -56,8 +56,6 @@ const PostPage: FC<PostPageProps> = ({ post }) => {
   //   ></iframe>
   // </div>
   // )
-
-  console.log("slug title", { title: post.frontmatter.title })
   return (
     <BlogLayout
       title={post.frontmatter.title + " | Jake Trent"}
@@ -83,15 +81,14 @@ const PostPage: FC<PostPageProps> = ({ post }) => {
             title={post.frontmatter.title}
           />
 
-          <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"
-            key="hljs"
-          ></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
-          <script src="/js/disqusloader.js" key="discscript"></script>
-          <script key="discstart">
-            {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
-          </script>
+          <script src="/js/disqusloader.js"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `,
+            }}
+          ></script>
         </>
       }
     >

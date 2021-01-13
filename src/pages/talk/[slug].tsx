@@ -57,11 +57,6 @@ const TalkPage: FC<TalkPageProps> = ({ talk }) => {
             image={talk.frontmatter.image}
             title={talk.frontmatter.title}
           />
-
-          <script src="/js/disqusloader.js" key="discscript"></script>
-          <script key="discstart">
-            {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
-          </script>
         </>
       }
     >

@@ -10,7 +10,6 @@ interface BlogLayoutProps {
 }
 
 export const BlogLayout: FC<BlogLayoutProps> = props => {
-  console.log("layout title", { title: props.title })
   return (
     <>
       <Head>

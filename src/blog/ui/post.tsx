@@ -87,10 +87,9 @@ export const Buttons: FC<ButtonsProps> = ({ content }) => {
           </ButtonLink>
         )*/}
 
-        {content.frontmatter.layout === "book" &&
-          content.frontmatter.readUrl && (
-            <ButtonLink href={content.frontmatter.readUrl}>Read</ButtonLink>
-          )}
+        {/* TODO: fix? next build problem: "readUrl" in content.frontmatter && (
+          <ButtonLink href={content.frontmatter.readUrl}>Read</ButtonLink>
+        )*/}
       </div>
     </div>
   )

@@ -59,10 +59,6 @@ const BookPage: FC<BookPageProps> = ({ book }) => {
             image={book.frontmatter.image}
             title={book.frontmatter.title}
           />
-          <script src="/js/disqusloader.js"></script>
-          <script>
-            {`setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `}
-          </script>
         </>
       }
     >

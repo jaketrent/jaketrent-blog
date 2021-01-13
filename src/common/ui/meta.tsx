@@ -8,8 +8,6 @@ interface MetaCommonProps {
 }
 
 export const MetaCommon: FC<MetaCommonProps> = props => {
-  console.log("meta title", { title: props.title })
-
   return (
     <>
       <meta charSet="utf-8" />
