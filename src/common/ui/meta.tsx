@@ -1,5 +1,7 @@
 import { FC } from "react"
 
+import { Head } from "./index"
+
 interface MetaCommonProps {
   copyright?: string
   description?: string
@@ -9,7 +11,7 @@ interface MetaCommonProps {
 
 export const MetaCommon: FC<MetaCommonProps> = props => {
   return (
-    <>
+    <Head>
       <meta charSet="utf-8" />
       <title>{props.title || "Jake Trent"}</title>
       <meta
@@ -43,7 +45,7 @@ export const MetaCommon: FC<MetaCommonProps> = props => {
       <meta name="HandheldFriendly" content="True" />
       <meta name="MobileOptimized" content="320" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </>
+    </Head>
   )
 }
 
@@ -55,14 +57,14 @@ interface MetaTwitterProps {
 
 export const MetaTwitter: FC<MetaTwitterProps> = (props: MetaTwitterProps) => {
   return (
-    <>
+    <Head>
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={props.title} />
       <meta name="twitter:description" content={props.description} />
       <meta name="twitter:site" content="@jaketrent" />
       <meta name="twitter:creator" content="@jaketrent" />
       {props.image && <meta name="twitter:image" content={props.image} />}
-    </>
+    </Head>
   )
 }
 
@@ -75,12 +77,12 @@ interface MetaFacebookProps {
 
 export const MetaFacebook: FC<MetaFacebookProps> = props => {
   return (
-    <>
+    <Head>
       <meta property="og:title" content={props.title} />
       <meta property="og:type" content="article" />
       <meta property="og:url" content={props.url} />
       <meta property="og:description" content={props.description} />
       {props.image && <meta property="og:image" content={props.image} />}
-    </>
+    </Head>
   )
 }

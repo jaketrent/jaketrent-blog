@@ -3,7 +3,7 @@ import { FC } from "react"
 import { BlogLayout } from "../../blog/ui/layout"
 import { Book, fetchBook, fetchAllBooks } from "../../blog/data"
 import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
-import { MetaFacebook, MetaTwitter } from "../../common/ui"
+import { Head, MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
 
 // TODO: type
@@ -46,22 +46,19 @@ const BookPage: FC<BookPageProps> = ({ book }) => {
           ? book.frontmatter.tags.join(",")
           : ""
       }
-      head={
-        <>
-          <MetaFacebook
-            description={book.frontmatter.description}
-            image={book.frontmatter.image}
-            title={book.frontmatter.title}
-            url={permalink}
-          />
-          <MetaTwitter
-            description={book.frontmatter.description}
-            image={book.frontmatter.image}
-            title={book.frontmatter.title}
-          />
-        </>
-      }
     >
+      <MetaFacebook
+        description={book.frontmatter.description}
+        image={book.frontmatter.image}
+        title={book.frontmatter.title}
+        url={permalink}
+      />
+      <MetaTwitter
+        description={book.frontmatter.description}
+        image={book.frontmatter.image}
+        title={book.frontmatter.title}
+      />
+
       <SiteTitle />
 
       <main>

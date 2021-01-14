@@ -4,7 +4,6 @@ import { Head, MetaCommon } from "../../common/ui"
 
 interface BlogLayoutProps {
   description?: string
-  head?: any
   keywords?: string
   title?: string
 }
@@ -12,16 +11,14 @@ interface BlogLayoutProps {
 export const BlogLayout: FC<BlogLayoutProps> = props => {
   return (
     <>
+      <MetaCommon
+        title={props.title}
+        description={props.description}
+        keywords={props.keywords}
+      />
+
       <Head>
-        <MetaCommon
-          title={props.title}
-          description={props.description}
-          keywords={props.keywords}
-        />
-
         <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
-
-        {props.head}
         <script src="/js/analytics.js" />
       </Head>
 

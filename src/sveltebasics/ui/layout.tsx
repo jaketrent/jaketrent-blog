@@ -15,23 +15,23 @@ interface StylingReactLayoutProps {
 export const SvelteBasicsLayout: FC<StylingReactLayoutProps> = props => {
   return (
     <div>
-      <Head>
-        <MetaCommon
-          copyright={`${currentYear()} Jake Trent`}
-          description="Learn the Basics of Svelte, a JS UI framework"
-          title="Learn Svelte Basics | Jake Trent"
-          keywords="svelte, ui framework, javascript framework, compiled ui, react alternative"
-        />
-        <MetaFacebook
-          description="Learn the Basics of Svelte, JS UI framework"
-          url="https://jaketrent.com/sveltebasics"
-          title="Learn Svelte Basics"
-        />
-        <MetaTwitter
-          description="Learn the Basics of Svelte, JS UI framework"
-          title="Learn Svelte Basics"
-        />
+      <MetaCommon
+        copyright={`${currentYear()} Jake Trent`}
+        description="Learn the Basics of Svelte, a JS UI framework"
+        title="Learn Svelte Basics | Jake Trent"
+        keywords="svelte, ui framework, javascript framework, compiled ui, react alternative"
+      />
+      <MetaFacebook
+        description="Learn the Basics of Svelte, JS UI framework"
+        url="https://jaketrent.com/sveltebasics"
+        title="Learn Svelte Basics"
+      />
+      <MetaTwitter
+        description="Learn the Basics of Svelte, JS UI framework"
+        title="Learn Svelte Basics"
+      />
 
+      <Head>
         <link
           rel="shortcut icon"
           type="image/png"

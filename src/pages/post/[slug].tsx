@@ -3,7 +3,7 @@ import { FC, useEffect } from "react"
 import { BlogLayout } from "../../blog/ui/layout"
 import { Post, fetchPost, fetchAllPosts } from "../../blog/data"
 import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
-import { MetaFacebook, MetaTwitter } from "../../common/ui"
+import { Head, MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
 
 // TODO: type
@@ -67,31 +67,29 @@ const PostPage: FC<PostPageProps> = ({ post }) => {
           ? post.frontmatter.tags.join(",")
           : ""
       }
-      head={
-        <>
-          <MetaFacebook
-            description={post.frontmatter.description}
-            image={post.frontmatter.image}
-            title={post.frontmatter.title}
-            url={permalink}
-          />
-          <MetaTwitter
-            description={post.frontmatter.description}
-            image={post.frontmatter.image}
-            title={post.frontmatter.title}
-          />
-
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-          <script src="/js/disqusloader.js"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `,
-            }}
-          ></script>
-        </>
-      }
     >
+      <MetaFacebook
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
+        title={post.frontmatter.title}
+        url={permalink}
+      />
+      <MetaTwitter
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
+        title={post.frontmatter.title}
+      />
+
+      <Head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+        <script src="/js/disqusloader.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `,
+          }}
+        ></script>
+      </Head>
       <SiteTitle />
 
       <main>

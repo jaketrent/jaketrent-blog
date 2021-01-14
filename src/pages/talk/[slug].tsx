@@ -3,7 +3,7 @@ import { FC } from "react"
 import { BlogLayout } from "../../blog/ui/layout"
 import { Talk, fetchTalk, fetchAllTalks } from "../../blog/data"
 import { Buttons, Footer, Image, Meta, SiteTitle } from "../../blog/ui/post"
-import { MetaFacebook, MetaTwitter } from "../../common/ui"
+import { Head, MetaFacebook, MetaTwitter } from "../../common/ui"
 import css from "../../blog/ui/post.module.css"
 
 // TODO: type
@@ -44,22 +44,19 @@ const TalkPage: FC<TalkPageProps> = ({ talk }) => {
           ? talk.frontmatter.tags.join(",")
           : ""
       }
-      head={
-        <>
-          <MetaFacebook
-            description={talk.frontmatter.description}
-            image={talk.frontmatter.image}
-            title={talk.frontmatter.title}
-            url={permalink}
-          />
-          <MetaTwitter
-            description={talk.frontmatter.description}
-            image={talk.frontmatter.image}
-            title={talk.frontmatter.title}
-          />
-        </>
-      }
     >
+      <MetaFacebook
+        description={talk.frontmatter.description}
+        image={talk.frontmatter.image}
+        title={talk.frontmatter.title}
+        url={permalink}
+      />
+      <MetaTwitter
+        description={talk.frontmatter.description}
+        image={talk.frontmatter.image}
+        title={talk.frontmatter.title}
+      />
+
       <SiteTitle />
 
       <main>
