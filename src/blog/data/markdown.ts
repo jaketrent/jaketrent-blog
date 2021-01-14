@@ -1,8 +1,10 @@
+import { createElement } from "react"
+import ReactDOMServer from "react-dom/server"
 import * as fs from "fs"
 import matter from "gray-matter"
 import { join, resolve } from "path"
-import remark from "remark"
-import html from "remark-html"
+import Prism from "prismjs"
+import marksy from "marksy"
 
 type Disclosure =
   | "no-connection"
@@ -33,7 +35,6 @@ export interface Content {
 
 export const getContentDir = (subpath?: string): string =>
   resolve(join(process.cwd(), "content", subpath))
-// resolve(join(__dirname, "..", "..", "..", "content", subpath))
 
 export const readMarkdown = (dir: string, fileName: string): Content => {
   try {
@@ -76,9 +77,20 @@ export const parseDate = (date: string | Date): Date => {
   } else return new Date(date)
 }
 
-export async function renderHtml(markdown) {
-  const result = await remark()
-    .use(html)
-    .process(markdown)
-  return result.toString()
+interface MarksyResult {
+  string: string
+  tree: any
+  toc: any
+}
+
+export async function compileMarkdown(markdown: string): Promise<MarksyResult> {
+  const compile = marksy({
+    createElement,
+    highlight(language, code) {
+      return Prism.highlight(code, Prism.languages.javascript, language)
+    },
+  })
+  const result = compile(markdown, {})
+  result.string = ReactDOMServer.renderToStaticMarkup(result.tree)
+  return result
 }

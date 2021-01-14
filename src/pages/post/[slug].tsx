@@ -34,13 +34,6 @@ const PostPage: FC<PostPageProps> = ({ post }) => {
   // const permalink = props.data.site.siteMetadata.siteUrl + post.fields.slug
   const permalink = "https://jaketrent.com/post/" + post.slug
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (window && (window as any).hljs)
-        (window as any).hljs.initHighlighting()
-    }, 55)
-  })
-
   const ad = null
   // (
   // <div className="single-article__ad">
@@ -81,8 +74,6 @@ const PostPage: FC<PostPageProps> = ({ post }) => {
       />
 
       <Head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
         <script src="/js/disqusloader.js"></script>
         <script
           dangerouslySetInnerHTML={{

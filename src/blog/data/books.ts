@@ -3,7 +3,7 @@ import {
   FrontMatter,
   getContentDir,
   readMarkdown,
-  renderHtml,
+  compileMarkdown,
 } from "./markdown"
 import { FetchAllOptions, fetchAll } from "./request"
 
@@ -23,6 +23,7 @@ export const fetchAllBooks = (opts?: Omit<FetchAllOptions, "contentPath">) =>
 
 export const fetchBook = async (slug: string) => {
   const book = readMarkdown(getContentDir("book"), slug + ".md") as Book
-  book.content = await renderHtml(book.content)
+  const rendered = await compileMarkdown(book.content)
+  book.content = rendered.string
   return book
 }
