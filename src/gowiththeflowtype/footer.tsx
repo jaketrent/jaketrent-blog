@@ -54,7 +54,7 @@ const Bubbles = _ => (
     `}</style>
   </svg>
 )
-export default _ => (
+const Footer = () => (
   <div>
     <svg
       className="curve"
@@ -147,3 +147,4 @@ export default _ => (
     `}</style>
   </div>
 )
+export default Footer

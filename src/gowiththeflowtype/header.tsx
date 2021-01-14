@@ -110,7 +110,7 @@ const Trial = _ => (
   </div>
 )
 
-export default _ => (
+const Header = () => (
   <header>
     <div className="grid">
       <Trial />
@@ -166,3 +166,4 @@ export default _ => (
     `}</style>
   </header>
 )
+export default Header
