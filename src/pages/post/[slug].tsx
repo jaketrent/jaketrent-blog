@@ -86,7 +86,7 @@ const PostPage: FC<PostPageProps> = ({ post }) => {
         <script src="/js/disqusloader.js"></script>
         <script
           dangerouslySetInnerHTML={{
-            __html: `setTimeout(() => { disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `,
+            __html: `setTimeout(() => { if (typeof disqusLoader === 'function') disqusLoader('#disqus_thread', { scriptUrl: '//jaketrent.disqus.com/embed.js' }) }, 55) `,
           }}
         ></script>
       </Head>
