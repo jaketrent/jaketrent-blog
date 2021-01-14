@@ -629,6 +629,7 @@ textarea {
   text-decoration: underline;
 }
 
+/* TODO: remove unused */
 :root {
   --footerMarginTop: 4vw;
 }
@@ -1284,7 +1285,7 @@ textarea {
 }
 .hljs-comment,
 .hljs-quote {
-  color: #5c6370;
+  color: #a5b1c7;
   font-style: italic;
 }
 .hljs-doctag,

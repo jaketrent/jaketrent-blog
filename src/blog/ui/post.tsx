@@ -57,7 +57,7 @@ export const Image: FC<ImageProps> = ({ content }) => (
   <div className={css.image}>
     {content.frontmatter.layout !== "talk" ? (
       <div className={css.imageContainer}>
-        <img src={content.frontmatter.image} className={css.imageImg} />
+        <img src={content.frontmatter.image} className={css.imageImg} alt="" />
       </div>
     ) : (
       <div className={css.imagePlaceholder}></div>
