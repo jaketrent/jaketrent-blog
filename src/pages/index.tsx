@@ -5,16 +5,7 @@ import { Post, fetchAllPosts } from "../blog/data/posts"
 import { Talk, fetchAllTalks } from "../blog/data/talks"
 import { Book, fetchAllBooks } from "../blog/data/books"
 import { BlogLayout } from "../blog/ui/layout"
-import {
-  Main,
-  Sky,
-  Channel,
-  Logo,
-  GridContainer,
-  Item,
-  CourseLink,
-  InternalLink,
-} from "../blog/ui"
+import { Channel, GridContainer, Header, Logo, Sky, Tagline } from "../blog/ui"
 import { Grid } from "../blog/ui/grid"
 
 export async function getStaticProps() {
@@ -42,46 +33,21 @@ interface IndexPageProps {
 const IndexPage: FC<IndexPageProps> = props => {
   return (
     <BlogLayout>
-      <Main>
-        <Sky>
-          <Channel>
-            <Channel.Title href="/course">Courses</Channel.Title>
-            {props.courses.map(course => (
-              <CourseLink course={course} key={course.slug}>
-                <Item content={course} />
-              </CourseLink>
-            ))}
-          </Channel>
-          <Channel>
-            <Channel.Title href="/post">Posts</Channel.Title>
-            {props.posts.map(post => (
-              <InternalLink content={post} key={post.slug}>
-                <Item content={post} />
-              </InternalLink>
-            ))}
-          </Channel>
-          <Channel>
-            <Channel.Title href="/talk">Talks</Channel.Title>
-            {props.talks.map(talk => (
-              <InternalLink content={talk} key={talk.slug}>
-                <Item content={talk} />
-              </InternalLink>
-            ))}
-          </Channel>
-          <Channel>
-            <Channel.Title href="/book">Reading</Channel.Title>
-            {props.books.map(book => (
-              <InternalLink content={book} key={book.slug}>
-                <Item content={book} />
-              </InternalLink>
-            ))}
-          </Channel>
-        </Sky>
-        <Logo />
-        <GridContainer>
-          <Grid animated />
-        </GridContainer>
-      </Main>
+      <main>
+        <Header>
+          <Tagline />
+          <Sky>
+            <Channel></Channel>
+            <Channel></Channel>
+            <Channel></Channel>
+            <Channel></Channel>
+          </Sky>
+          <Logo />
+          <GridContainer>
+            <Grid animated />
+          </GridContainer>
+        </Header>
+      </main>
     </BlogLayout>
   )
 }

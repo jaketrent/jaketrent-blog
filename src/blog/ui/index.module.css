@@ -1,13 +1,18 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+}
 .sky {
   position: relative;
   display: flex;
-  height: 75vh;
+  height: 75%;
   overflow: hidden;
 }
 .grid {
   position: relative;
   background: var(--colorBg);
-  height: 25vh;
+  height: 25%;
 }
 .channel {
   position: relative;
@@ -60,129 +65,105 @@
 .channel:nth-of-type(4):after {
   animation: channelGlow 2500ms ease-in infinite alternate-reverse;
 }
-.channel:nth-of-type(1) {
-  padding-bottom: 20vh;
-}
 .channel:nth-of-type(1):before {
-  height: 20vh;
+  height: 50%;
   background: var(--colorBlue);
   animation-delay: 50ms;
 }
 .channel:nth-of-type(1):after {
-  height: 19vh;
+  height: 49%;
   background: linear-gradient(to top, var(--colorPurple), transparent);
   box-shadow: 0 0 2vw var(--colorBlue);
 }
-.channel:nth-of-type(2) {
-  padding-bottom: 35vh;
-}
 .channel:nth-of-type(2):before {
-  height: 35vh;
+  height: 80%;
   background: var(--colorPurple);
   animation-delay: 100ms;
 }
 .channel:nth-of-type(2):after {
-  height: 34vh;
+  height: 79%;
   background: linear-gradient(to top, var(--colorBlue), transparent);
   box-shadow: 0 0 2vw var(--colorPurple);
 }
-.channel:nth-of-type(3) {
-  padding-bottom: 30vh;
-}
 .channel:nth-of-type(3):before {
-  height: 30vh;
+  height: 40%;
   background: var(--colorPink);
   animation-delay: 150ms;
 }
 .channel:nth-of-type(3):after {
-  height: 29vh;
+  height: 39%;
   background: linear-gradient(to top, var(--colorBlue), transparent);
   box-shadow: 0 0 2vw var(--colorPink);
 }
-.channel:nth-of-type(4) {
-  padding-bottom: 15vh;
-}
 .channel:nth-of-type(4):before {
-  height: 15vh;
+  height: 60%;
   background: var(--colorTurquoise);
   animation-delay: 200ms;
 }
 .channel:nth-of-type(4):after {
-  height: 14vh;
+  height: 59%;
   background: linear-gradient(to top, var(--colorPink), transparent);
   box-shadow: 0 0 2vw var(--colorTurquoise);
 }
-.channelTitle {
-  font-size: 0.75em;
-  font-weight: normal;
-  color: var(--colorBgSubtle);
-}
-.channelTitle a {
-  color: inherit;
-  text-decoration: none;
-}
-.channelTitle a:hover,
-.channelTitle a:focus {
-  outline: none;
-  color: var(--colorPink);
-  text-decoration: underline;
-}
-.itemLink {
-  display: block;
-  margin-bottom: 2vh;
-  max-width: 100%;
-  max-height: 8vh;
-  transition: all 200ms linear;
-}
-.itemLink:hover,
-.itemLink:focus {
-  outline: none;
-  transform: scale(1.1);
-}
-.itemBorder {
-  max-height: inherit;
-  max-width: inherit;
-  position: relative;
-  display: inline-block;
-  line-height: 0;
-}
-.itemLink:hover .itemBorder:after,
-.itemLink:focus .itemBorder:after {
-  content: "";
+.tagline {
   position: absolute;
-  top: -0.5vh;
-  left: -0.5vh;
-  height: calc(100% + 1vh);
-  width: calc(100% + 1vh);
-  background: var(--colorWhite);
-  z-index: -1;
+  top: 3%;
+  left: 50%;
+  font-family: var(--fontHeader);
+  transform: translateX(-50%);
+  font-size: 2vw;
+  white-space: nowrap;
+  text-align: center;
+
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: calc(18px + (54 - 18) * ((100vw - 320px) / (1200 - 320)));
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  opacity: 0;
+  animation-name: taglineFade;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
 }
-@media (min-width: 500px) {
-  .itemLink {
-    max-height: 8vh;
+@media (min-width: 1200px) {
+  .tagline {
+    font-size: 54px;
   }
 }
-.itemImg {
-  max-height: inherit;
-  max-width: inherit;
+.taglineWith {
+  opacity: 0;
+  animation-name: taglineFade;
+  animation-duration: 1.25s;
+  animation-delay: 1.25s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+@keyframes taglineFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .logo {
   position: absolute;
-  bottom: 25vh;
+  bottom: 25%;
   left: 50%;
   transform: translateX(-50%) translateY(0);
   width: 50vw;
-  max-width: 800px;
+  max-width: 600px;
   pointer-events: none;
   animation-name: logoFlicker, logoRise;
-  animation-duration: 2s, 5s;
-  animation-delay: 0.5s, 1s;
+  animation-duration: 3s, 5s;
+  animation-delay: 1.25s, 2.25s;
   animation-fill-mode: both, both;
   animation-timing-function: linear, ease-out;
 }
 @keyframes logoRise {
   0% {
-    transform: translateX(-50%) translateY(100%) scale(1);
+    transform: translateX(-50%) translateY(150%) scale(0.9);
     z-index: 0;
   }
   30% {
@@ -194,7 +175,7 @@
     z-index: 2;
   }
   100% {
-    transform: translateX(-50%) translateY(20%) scale(1.2);
+    transform: translateX(-50%) translateY(50%) scale(1.2);
     z-index: 2;
   }
 }
