@@ -27,9 +27,9 @@ Then, I made and ran this script:
 
 ```bash
 for FILE in $(git diff --name-only); do
-  PACKAGE=`echo $FILE | sed "s|packages/\(.*\)/package.json|\1|"`
-  git add $FILE
-  git commit -m "build($PACKAGE): update to react@17" --message "BREAKING CHANGE: react@17 peerDependency upgrade"
+  PACKAGE=`echo $FILE | sed "s|packages/\(.*\)/src.*|\1|"`
+  git add "packages/$PACKAGE"
+  git commit -m "refactor($PACKAGE): message about the thing done to all packages"
 done
 ```
 
