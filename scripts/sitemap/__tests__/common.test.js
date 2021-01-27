@@ -16,11 +16,13 @@ describe("#fileFromRoot", () => {
 
 describe("#parseUrlFromFilePath", () => {
   it("removes dir path and extension", () => {
-    expect(parseUrlFromFilePath("pages/posts/page.tsx")).toEqual("/posts/page")
+    expect(parseUrlFromFilePath("src/pages/posts/page.tsx")).toEqual(
+      "/posts/page"
+    )
   })
 
   it("removes index subpath", () => {
-    expect(parseUrlFromFilePath("pages/posts/index.tsx")).toEqual("/posts")
+    expect(parseUrlFromFilePath("src/pages/posts/index.tsx")).toEqual("/posts")
   })
 })
 

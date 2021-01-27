@@ -3,7 +3,7 @@
 exports[`#formatUrl renders 1`] = `
 "
   <url>
-    <loc>https://jaketrent.com//post/test-post</loc>
+    <loc>https://jaketrent.com/post/test-post</loc>
     <lastmod>mockISODateString</lastmod>
   </url>
 "
