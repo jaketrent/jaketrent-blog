@@ -67,3 +67,5 @@ yarn-error.log
 .next
 
 out
+
+public/sitemap*

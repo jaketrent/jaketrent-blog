@@ -6,7 +6,8 @@
   "version": "9.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "next build && next export",
+    "build": "npm run build:sitemap && next build && next export",
+    "build:sitemap": "sh scripts/sitemap/build.sh",
     "dev": "next dev",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "next start",
