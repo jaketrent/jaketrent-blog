@@ -25,13 +25,9 @@ export const getCurrentDateStr = (date = new Date()) => date.toISOString()
 
 export const prettify = html => prettier.format(html, { parser: "html" })
 
-export const parseUrlFromFilePath = (subPath, filePath) => {
-  const url = filePath
-    .replace(fileFromRoot(subPath), "")
-    .replace(".tsx", "")
-    .replace(/\/index/g, "")
-  const routePath = url === "index" ? "" : url
-  return routePath
+export const parseUrlFromContentPath = filePath => {
+  const url = filePath.replace(fileFromRoot("content"), "").replace(".md", "")
+  return url
 }
 
 export const formatUrl = (lastmod, loc) => `
@@ -54,3 +50,20 @@ export const formatUrlset = urls => `
 
 export const writeSitemap = (path, sitemap) =>
   fs.writeFileSync(fileFromRoot(path), sitemap, "utf8")
+
+export const generateSitemap = async ({
+  globs,
+  parseUrl = parseUrlFromContentPath,
+}) => {
+  const pages = await searchFilePaths(globs)
+
+  const formatUrlForToday = formatUrl.bind(null, getCurrentDateStr())
+  const urls = `
+    ${pages
+      .map(parseUrl)
+      .map(formatUrlForToday)
+      .join("")}
+  `
+
+  return prettify(formatUrlset(urls))
+}

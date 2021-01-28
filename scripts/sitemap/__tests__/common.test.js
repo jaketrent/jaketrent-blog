@@ -2,7 +2,7 @@ import {
   fileFromRoot,
   formatUrl,
   formatUrlset,
-  parseUrlFromFilePath,
+  parseUrlFromContentPath,
 } from "../common"
 
 describe("#fileFromRoot", () => {
@@ -14,17 +14,11 @@ describe("#fileFromRoot", () => {
   })
 })
 
-describe("#parseUrlFromFilePath", () => {
+describe("#parseUrlFromContentPath", () => {
   it("removes dir path and extension", () => {
-    expect(
-      parseUrlFromFilePath("src/pages", "src/pages/posts/page.tsx")
-    ).toEqual("/posts/page")
-  })
-
-  it("removes index subpath", () => {
-    expect(
-      parseUrlFromFilePath("src/pages", "src/pages/posts/index.tsx")
-    ).toEqual("/posts")
+    expect(parseUrlFromContentPath("content/post/page.md")).toEqual(
+      "/post/page"
+    )
   })
 })
 

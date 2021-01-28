@@ -59,3 +59,63 @@ exports[`#generatedSitemap renders all static .tsx pages 1`] = `
 </urlset>
 "
 `;
+
+exports[`#generatedStaticSitemap renders all static .tsx pages 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<urlset
+  xmlns=\\"http://www.sitemaps.org/schemas/sitemap/0.9\\"
+  xmlns:xsi=\\"http://www.w3.org/2001/XMLSchema-instance\\"
+  xsi:schemaLocation=\\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\\"
+>
+  <url>
+    <loc>https://jaketrent.com/book</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/course</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/gowiththeflowtype/demo</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/gowiththeflowtype/editors</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/gowiththeflowtype</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/post</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/stylingreact</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/sveltebasics</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/talk</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+</urlset>
+"
+`;

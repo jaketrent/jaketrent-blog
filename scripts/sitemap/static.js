@@ -1,34 +1,29 @@
 import {
   exclude,
   fileFromRoot,
-  formatUrl,
-  formatUrlset,
-  getCurrentDateStr,
-  parseUrlFromFilePath,
-  prettify,
-  searchFilePaths,
+  generateSitemap,
   writeSitemap,
 } from "./common.js"
 
-export const generateSitemap = async () => {
-  const pages = await searchFilePaths([
-    fileFromRoot("src/pages/**/*.tsx"),
-    fileFromRoot("src/pages/*.tsx"),
-    exclude(fileFromRoot("src/pages/_*.tsx")),
-    exclude(fileFromRoot("src/pages/**/[*.tsx")),
-  ])
+export const generateStaticSitemap = async () =>
+  generateSitemap({
+    globs: [
+      fileFromRoot("src/pages/**/*.tsx"),
+      fileFromRoot("src/pages/*.tsx"),
+      exclude(fileFromRoot("src/pages/_*.tsx")),
+      exclude(fileFromRoot("src/pages/**/[*.tsx")),
+    ],
+    parseUrl: parseUrlFromSrcPath,
+  })
 
-  const formatUrlForToday = formatUrl.bind(null, getCurrentDateStr())
-  const parseUrlFromSrc = parseUrlFromFilePath.bind(null, "src/pages/")
-  const urls = `
-    ${pages
-      .map(parseUrlFromSrc)
-      .map(formatUrlForToday)
-      .join("")}
-  `
-
-  return prettify(formatUrlset(urls))
+export const parseUrlFromSrcPath = filePath => {
+  const url = filePath
+    .replace(fileFromRoot("src/pages"), "")
+    .replace(".tsx", "")
+    .replace(/\/index/g, "")
+  const path = url === "index" ? "" : url
+  return path
 }
 
-const sitemap = await generateSitemap()
+const sitemap = await generateStaticSitemap()
 writeSitemap("public/sitemap-static.xml", sitemap)
