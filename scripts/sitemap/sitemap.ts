@@ -5,7 +5,7 @@ import {
   prettify,
   searchFilePaths,
   writeSitemap,
-} from "./common.js"
+} from "./common"
 
 export const generateSitemapIndex = async () => {
   const sitemapPaths = await searchFilePaths([fileFromRoot("public/*.gz")])
@@ -35,6 +35,7 @@ const formatSitemapIndex = sitemaps => `
     ${sitemaps}
   </sitemapindex>
 `
-
-const formattedSitemapIndex = await generateSitemapIndex()
-writeSitemap("public/sitemap.xml", formattedSitemapIndex)
+;(async () => {
+  const formattedSitemapIndex = await generateSitemapIndex()
+  writeSitemap("public/sitemap.xml", formattedSitemapIndex)
+})()

@@ -1,15 +1,11 @@
-import { jest } from "@jest/globals"
-
-import { generateStaticSitemap, parseUrlFromSrcPath } from "../static.js"
+import { generateStaticSitemap, parseUrlFromSrcPath } from "../static"
+import { stabilizeDate } from "../../../test/util/date"
 
 describe("#generatedStaticSitemap", () => {
-  beforeAll(() => {
-    const stableDate = new Date("2018-01-01")
-    jest.spyOn(window, "Date").mockImplementation(() => stableDate)
-  })
+  const teardownStabilizeDate = stabilizeDate(new Date("2018-01-01"))
 
   afterAll(() => {
-    window.Date.mockRestore()
+    teardownStabilizeDate()
   })
 
   it("renders all static .tsx pages", async () => {

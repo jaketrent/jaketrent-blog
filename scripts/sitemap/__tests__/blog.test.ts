@@ -1,14 +1,10 @@
-import { jest } from "@jest/globals"
-
 import { generatePostsSitemap } from "../blog"
+import { stabilizeDate } from "../../../test/util/date"
 
-beforeAll(() => {
-  const stableDate = new Date("2018-01-01")
-  jest.spyOn(window, "Date").mockImplementation(() => stableDate)
-})
+const teardownStabilizeDate = stabilizeDate(new Date("2018-01-01"))
 
 afterAll(() => {
-  window.Date.mockRestore()
+  teardownStabilizeDate()
 })
 
 it("renders all book, course, post, talk .md pages", async () => {

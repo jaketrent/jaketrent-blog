@@ -1,9 +1,4 @@
-import {
-  exclude,
-  fileFromRoot,
-  generateSitemap,
-  writeSitemap,
-} from "./common.js"
+import { exclude, fileFromRoot, generateSitemap, writeSitemap } from "./common"
 
 export const generateStaticSitemap = async () =>
   generateSitemap({
@@ -24,6 +19,7 @@ export const parseUrlFromSrcPath = filePath => {
   const path = url === "index" ? "" : url
   return path
 }
-
-const sitemap = await generateStaticSitemap()
-writeSitemap("public/sitemap-static.xml", sitemap)
+;(async () => {
+  const sitemap = await generateStaticSitemap()
+  writeSitemap("public/sitemap-static.xml", sitemap)
+})()
