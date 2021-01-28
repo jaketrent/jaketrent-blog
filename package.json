@@ -10,7 +10,7 @@
     "dev": "next dev",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "next start",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "test": "jest",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {

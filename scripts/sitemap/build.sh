@@ -1,6 +1,6 @@
-npx ts-node ./scripts/sitemap/static.js
-npx ts-node ./scripts/sitemap/blog.js
-npx ts-node ./scripts/sitemap/compress.js
-npx ts-node ./scripts/sitemap/sitemap.js
+npx ts-node -O '{"module":"commonjs"}' ./scripts/sitemap/static.ts
+npx ts-node -O '{"module":"commonjs"}' ./scripts/sitemap/blog.ts
+npx ts-node -O '{"module":"commonjs"}' ./scripts/sitemap/compress.ts
+npx ts-node -O '{"module":"commonjs"}' ./scripts/sitemap/sitemap.ts
 #curl http://google.com/ping?sitemap=https://jaketrent.com/sitemap.xml
 
