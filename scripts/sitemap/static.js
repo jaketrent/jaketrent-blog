@@ -1,5 +1,3 @@
-import globby from "globby"
-
 import {
   exclude,
   fileFromRoot,
@@ -8,11 +6,12 @@ import {
   getCurrentDateStr,
   parseUrlFromFilePath,
   prettify,
+  searchFilePaths,
   writeSitemap,
 } from "./common.js"
 
 export const generateSitemap = async () => {
-  const pages = await globby([
+  const pages = await searchFilePaths([
     fileFromRoot("src/pages/**/*.tsx"),
     fileFromRoot("src/pages/*.tsx"),
     exclude(fileFromRoot("src/pages/_*.tsx")),
@@ -20,9 +19,10 @@ export const generateSitemap = async () => {
   ])
 
   const formatUrlForToday = formatUrl.bind(null, getCurrentDateStr())
+  const parseUrlFromSrc = parseUrlFromFilePath.bind(null, "src/pages/")
   const urls = `
     ${pages
-      .map(parseUrlFromFilePath)
+      .map(parseUrlFromSrc)
       .map(formatUrlForToday)
       .join("")}
   `

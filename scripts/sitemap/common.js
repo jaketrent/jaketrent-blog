@@ -1,8 +1,14 @@
 import * as fs from "fs"
+import globby from "globby"
 import { join } from "path"
 import prettier from "prettier"
 
 export const DOMAIN = "https://jaketrent.com"
+
+export const searchFilePaths = async globs => {
+  const paths = await globby(globs)
+  return paths.sort()
+}
 
 export const fileFromRoot = path => {
   const root = [] // globby works from cwd. This is unneeded ['..', '..']
@@ -19,9 +25,9 @@ export const getCurrentDateStr = (date = new Date()) => date.toISOString()
 
 export const prettify = html => prettier.format(html, { parser: "html" })
 
-export const parseUrlFromFilePath = filePath => {
+export const parseUrlFromFilePath = (subPath, filePath) => {
   const url = filePath
-    .replace(fileFromRoot("src/pages/"), "")
+    .replace(fileFromRoot(subPath), "")
     .replace(".tsx", "")
     .replace(/\/index/g, "")
   const routePath = url === "index" ? "" : url

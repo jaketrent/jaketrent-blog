@@ -8,11 +8,6 @@ exports[`#generatedSitemap renders all static .tsx pages 1`] = `
   xsi:schemaLocation=\\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\\"
 >
   <url>
-    <loc>https://jaketrent.com</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
     <loc>https://jaketrent.com/book</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
@@ -34,6 +29,11 @@ exports[`#generatedSitemap renders all static .tsx pages 1`] = `
 
   <url>
     <loc>https://jaketrent.com/gowiththeflowtype</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 
