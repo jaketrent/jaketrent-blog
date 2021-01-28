@@ -1,6 +1,6 @@
 import { jest } from "@jest/globals"
 
-import { generatePostsSitemap } from "../posts"
+import { generatePostsSitemap } from "../blog"
 
 beforeAll(() => {
   const stableDate = new Date("2018-01-01")
@@ -11,7 +11,7 @@ afterAll(() => {
   window.Date.mockRestore()
 })
 
-it("renders all post .md pages", async () => {
+it("renders all book, course, post, talk .md pages", async () => {
   const sitemap = await generatePostsSitemap()
   expect(sitemap).toMatchSnapshot()
 })

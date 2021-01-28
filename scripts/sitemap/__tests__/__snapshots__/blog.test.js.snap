@@ -1,12 +1,917 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#generatedSitemap renders all post .md pages 1`] = `
+exports[`renders all book, course, post, talk .md pages 1`] = `
 "<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
 <urlset
   xmlns=\\"http://www.sitemaps.org/schemas/sitemap/0.9\\"
   xmlns:xsi=\\"http://www.w3.org/2001/XMLSchema-instance\\"
   xsi:schemaLocation=\\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\\"
 >
+  <url>
+    <loc>https://jaketrent.com/book/12-rules-for-life-antidote-chaos</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/1984</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/a-short-history-of-nearly-everything</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/a-whole-new-mind:-why-right-brainers-will-rule-the-future</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/about-my-mother</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/accomplishing-impossible</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/agile-experience-design-a-digital-designers-guide-to-agile-lean-and-continuous</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/alices-adventures-wonderland</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/art-invisibility</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/art-of-possibility</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/as-you-wish</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/beauty-beast</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/being-george-washington</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/benjamin-franklin-autobiography</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/bill-peet-autobiography</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/blink</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/bonhoeffer:-pastor,-martyr,-prophet,-spy</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/boy-crisis</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/callsign-chaos</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/communist-manifesto</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/conquering-fear</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/creativity,-inc.:-overcoming-the-unseen-forces-that-stand-in-the-way-of-true-inspiration</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/crucial-conversations:-tools-for-talking-when-stakes-are-high</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/dad-is-fat</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/david-and-goliath</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/decisive:-how-to-make-better-choices-in-life-and-work</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/developing-a-react-edge</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/developing-an-ember-edge</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/digital-minimalism</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/disrupted</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/do-fathers-matter-what-science-is-telling-us-about-the-parent-weve-overlooked</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/do-over:-rescue-monday,-reinvent-your-work,-and-never-get-stuck</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/dorito-effect</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/drive</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/effective-java</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/ego-is-enemy</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/entreleadership:-20-years-of-practical-business-wisdom-from-the-trenches</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/essentialism-disciplined-pursuit-less</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/everyday-millionaires</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/explore-create</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/faith-scientist</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/focus:-achieving-your-highest-priorities</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/getting-things-done</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/go-put-your-strengths-to-work:-6-powerful-steps-to-achieve-outstanding-performance</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/hamlet's-blackberry:-a-practical-philosophy-for-building-a-good-life-in-the-digital-age</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/hatchet</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/hero:-the-life-and-legend-of-lawrence-of-arabia</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/hit-refresh</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/how-fail-almost-everything-still-win-big</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/i'll-mature-when-i'm-dead:-dave-barry's-amazing-tales-of-adulthood</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/icarus-deception</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/if-you-want-to-write</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/im-happy-for-you</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/in-thick-of-it</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/indistractable</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/infinite-game</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/infj-writer</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/insights-prophets-life-russell-m-nelson</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/iwoz</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/jesus-the-christ</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/knight</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/launch!:-the-critical-90-days-from-idea-to-market</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/leaders-eat-last:-why-some-teams-pull-together-and-others-don't</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/leadership-and-self-deception</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/leadership-and-the-art-of-struggle</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/leadership-vertigo:-why-even-the-best-leaders-go-off-course-and-how-they-can-get-back-on-track</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/lectures-on-faith</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/let-her-fly</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/lights-out</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/linchpin-are-you-indispensable</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/little-go-book</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/lord-flies</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/made-to-stick:-why-some-ideas-survive-and-others-die</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/mans-search-meaning</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/maverick:-the-success-story-behind-the-world's-most-unusual-workplace</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/melchizedek-priesthood</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/mere-christianity</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/moon-harsh-mistress</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/mormon-scientist</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/my-lucky-life-in-out-show-business</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/naked-communist</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/nature-fix</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/never-eat-alone:-and-other-secrets-to-success,-one-relationship-at-a-time</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/no-apology</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/on-faith-lessons-american-believer</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/one-thing-you-need-know</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/outliers:-the-story-of-success</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/peopleware:-productive-projects-and-teams,-2nd-ed.-</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/perfect-weapon</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/phantom-opera</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/pitch-perfect</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/platform:-get-noticed-in-a-noisy-world</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/polish-your-poise-with-madame-chic</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/pollyanna</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/power-of-everyday-missionaries</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/power-of-full-engagement</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/princess-glass-hill</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/problem-pain</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/professor-frisbys-mostly-adequate-guide-functional-programming</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/quiet-power-introverts-world-cant-stop-talking</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/quitter</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/raising-family-unto-lord</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/real-artists-dont-starve</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/rediscovering-god-america</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/release-it!:-design-and-deploy-production-ready-software</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/retire-inspired</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/rework</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/richest-man-babylon</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/right-side-history</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/rookie-smarts:-why-learning-beats-knowing-in-the-new-game-of-work</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/saints-standard-truth</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/screwtape-letters</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/ship-fools</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/show-tell</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/small-acts-of-leadership</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/smashing-node</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/so-good-they-can’t-ignore-you</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/start-with-why</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/start:-punch-fear-in-the-face,-escape-average-and-do-work-that-matters</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/steve-jobs</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/stop-acting-rich</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/switch-how-to-change-things-when-change-is-hard</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/talent-is-overrated</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-5000-year-leap</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-7-habits-of-highly-effective-people</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-accidental-creative:-how-to-brilliant-at-a-moment's-notice</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-autobiography-of-parley-p.-pratt</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-greatest-generation-speaks</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-house-of-the-lord</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-innovator's-dna:-mastering-the-five-skills-of-disruptive-innovators</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-innovator’s-dilemma</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-lean-startup</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-mythical-man-month:-essays-on-software-engineering</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-narnian:-the-life-and-imagination-of-c.s.-lewis</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-one-minute-negotiator-simple-steps-to-reach-better-agreements</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-prince</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-rails-4-way</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-real-crash</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-thank-you-economy</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-total-money-makeover</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/the-way-we're-workin</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/the-world-is-flat:-a-brief-history-of-the-twenty-first-century</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/this-is-lean</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/to-sell-is-human</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/to-the-rescue</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/treasure-island</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/turing's-cathedral</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/understanding-symbols-covenants-ordinances-temple</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/understanding-variation:-the-key-to-managing-chaos</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/wanting-more:-the-challenge-of-enjoyment-in-the-age-of-addiction</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/warren-buffet’s-management-secrets</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/well-being-2.0</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/whatever-you-choose-to-be</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/who-moved-my-cheese</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/why-we-sleep</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc
+      >https://jaketrent.com/book/willpower:-rediscovering-the-greatest-human-strength</loc
+    >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/wizard</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/wonderful-wizard-oz</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/world-according-star-wars</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/worth-wrestle</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/book/you-inc-art-selling-yourself</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/course/electron-fundamentals-course</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/course/go-with-flowtype-course</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/course/styling-react-components</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/course/svelte-basics</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
   <url>
     <loc>https://jaketrent.com/post/100vw-not-scrollbar-aware</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
@@ -2587,2595 +3492,36 @@ exports[`#generatedSitemap renders all post .md pages 1`] = `
     <loc>https://jaketrent.com/post/youre-more-engaged-in-work-you-like</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
-</urlset>
-"
-`;
-
-exports[`renders all post .md pages 1`] = `
-"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
-<urlset
-  xmlns=\\"http://www.sitemaps.org/schemas/sitemap/0.9\\"
-  xmlns:xsi=\\"http://www.w3.org/2001/XMLSchema-instance\\"
-  xsi:schemaLocation=\\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\\"
->
-  <url>
-    <loc>https://jaketrent.com/post/100vw-not-scrollbar-aware</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/12-factor-app-summary</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/a-grab-bag-of-backbone-tips</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/access-js-object-fields</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/access-model-in-ember-view</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/access-route-params-react-router-v4</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/accessibility-audit-chrome</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
 
   <url>
     <loc
-      >https://jaketrent.com/post/accessibility-potential-tab-index-values</loc
+      >https://jaketrent.com/talk/accessibility-pluralsight-design-system</loc
     >
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>https://jaketrent.com/post/accessibility-skip-to-main-content</loc>
+    <loc>https://jaketrent.com/talk/design-system-support-beyond-react</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>https://jaketrent.com/post/add-zerigo-dns-to-heroku</loc>
+    <loc>https://jaketrent.com/talk/encouraging-great-combos</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>https://jaketrent.com/post/addremove-classes-raw-javascript</loc>
+    <loc>https://jaketrent.com/talk/getting-into-frontend-dev</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>https://jaketrent.com/post/aes-encryption-java-bouncy-castle</loc>
+    <loc>https://jaketrent.com/talk/getting-into-react</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 
   <url>
-    <loc>https://jaketrent.com/post/agile-designers</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/an-environment-specific-grunt-build</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/anatomy-letterforms</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/anatomy-of-a-blog-post</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/and-spring-secured-roles</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/angularjs-find-element-in-context</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/animating-d3-line</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/application-audio-control-ubuntu</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/arraysaslist-returns-immutable-list</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/audit-history-hibernate-interceptor</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/authenticated-supertest-tests</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/automate-separate-commits</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/backbone-and-jax-rs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/backbone-inheritance</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/backbone-views-dynamic-dom</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/be-true-to-your-heart</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/behavior-of-coffeescript-fat-arrow</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/blog-topics</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/bower-resolutions</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/breaking-down-knowledge-silos</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/bring-your-listeners-with-you</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/broccoli-ember-emblem</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/busterjs-requirejsbackbone</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/caching-ajax-requests-ie</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/calling-webservices-java</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/change-default-npm-license</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/change-hostname-ubuntu</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/change-maven-jdk</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/change-page-title-angular-route</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/change-page-title-in-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/change-parent-on-child-focus-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/change-webpack-config-create-react-app-without-ejecting</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/change-your-node-script-without-restarting</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/client-side-code-highlighting-blog</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/close-your-laptop</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/cloudflare-dns-netlify-host</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/code-highlighting-in-keynote</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/code-snippets-spacemacs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/coding-on-vacation</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/colorful-vocabulary</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/concurrentmodificationexception-within-one-thread</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/configure-typeorm-inject-nestjs-config</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/cons-css-preprocessors</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/console-log-deep-objects</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/constraint-of-new-ideas</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/context-assists-appreciation</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/context-processors-put-content-multiple-pages</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/continuous-delivery-of-static-site</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/continuously-not-delivering</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/controlling-pointer-events</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/conversations-without-computers</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/conversion-from-octopress-to-hugo</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/convert-app-from-emberfire-to-fireplace</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/convert-database-to-markdown</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/copy-iso-bootable-usb-stick</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/count-javascript-object-attributes</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/count-number-characters-w-sql</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/create-bezier-curve-clip-path</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/create-custom-facelets-component</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/create-intellij-launcher-ubuntu</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/cross-domain-requirejs-text</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/crystal-reports-ubuntu-linux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/css-animation-timing-function-per-keyframe-segment</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/css-module-selectors-pileup-with-postcss-import</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/css-text-vertical-height</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/cssnext-variable-fallback</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/custom-exception-handling-accessdeniedexception</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/cut-the-chatter</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/d3-class-operations</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/datetime-in-fsharp</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/deadlines-constrain-solution-space</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/debug-locally-elm</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/debug-log-in-elm-pipes</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/debug-node-with-built-in-tools</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/debug-ruby-rails</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/debugging-remote-tomcat-intellij</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/decrease-line-spacing-keynote</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/deeper-focus</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/defaulting-functional-react-components</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/define-dynamic-methods-ruby</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/define-limits-for-greater-productivity</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/depending-on-shared-lib</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/deploy-create-react-app-heroku-node</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/deploy-lerna-packages-heroku</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/deploy-nextjs-github-pages</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/destroy-duplicate-tests</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/determine-health-of-culture</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/developer-relations-for-internal-developers</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/devops-asks-a-lot-of-devs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/devs-talk-about-product</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/directness-brings-results</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/disable-ng-click</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/django-intro-presentation</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/django-jython-intro</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/django-loaddata-heroku</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/django-pagination</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/django_content_type_app_label_key-constraint-herok</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/docker-run-server-junk</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/document-viewer-shell</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/does-leaving-slack-channel-make-you-sad</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/dont-announce-why-people-shouldnt-listen</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/dont-publish-babelrc-npm</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/downgrade-previously-installed-brew-formula</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/dynamically-require-optimized-modules-requirejs</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/easymock-cause-effect-exception-mapping</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/economic-downturn-tech-debt</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/edit-github-wiki-vim</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/elm-first-taste-of-syntax</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ember-dynamic-classes</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ember-parent-templates</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ember-window-beforeunload</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/encrypt-your-ims-pidgin</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/enforce-git-commit-message-format</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/engineering-engineerings-sake</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ensure-addons-version-storybook-addon</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/environment-based-dependency-injection</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/environment-variables-in-nextjs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/environment-variables-in-node</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/every-nth-item-in-handlebars-loop</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/execution-context-marklogic</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/exercism-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/explore-unhelpful</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/expose-enum-props-in-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/expose-fields-java-reflection</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/expose-http-headers-in-cors</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/facelets-template-includes-and-params</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/fallback-ref-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/family-can-enable-creativity</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/feature-flag-frontend-code</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/feeling-productive-means-learning</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/find-and-kill-process-port</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/find-circular-dependencies-javascript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/find-django-adminpy</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/find-kill-locks-postgres</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/find-network-hosts-nmap</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/first-rebels-then-visionaries</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/flowtype-analyzes-all-code-paths</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/flowtype-nodejs-backend</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/flowtype-process-env</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/flowtype-props-passed-children-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/fluent-conf-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/forgotten-requirements</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/format-javascript-with-prettier</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/forward-x11-thru-ssh</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/fullstack-dreams</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/generate-snapshot-tests-storybook</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/generic-interfaces-arabian-magic</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/get-ref-glamorous-component</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/gitignore-system-files</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/global-styles-in-storybook</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/grace-of-gratitude</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/gratitude-changes-our-attitude</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/greater-flexibility-with-responsive-design</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/grunt-and-testacular</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/grunt-init-exercism-io</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/gruntjs-access-to-package-dot-json</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/handle-errors-node-app</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/handlebars-loop-index</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/handling-touch-click-browser</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/have-more-fun</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/hearing-bad-ideas</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/hello-styled-components-primitives</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/hibernate-bind-variable-orderby-clause</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/hibernate-boolean-conversion</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/hibernates-enumerated-annotation-brittle</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/host-webapp-free</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/hotdeploy-intellij-8</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-i-organize-javascript-module</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-jsx-transform-works</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/how-marklogic-made-me-better-programmer</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-to-choose-key-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-to-create-a-bower-package</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-to-make-pinterest-webservice</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-to-make-postcss-plugin</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-to-organize-nodejs-routes</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/how-to-write-webpack-loader</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/howto-use-webpack-externals-property</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/http-request-body-spring</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/https-redirect-node-heroku</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/i-dont-want-to-learn-that</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/i-love-css-modules</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/i18n-strings-javascript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/i18n-strings-requirejs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ideal-tech-conferences</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ids-jsf-used-jquery</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ignore-dependency-types-typescript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/import-erb-into-karma</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/import-js-module-without-dot-dot-slash</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/import-parts-node-packages-slash</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/important-part-learning-outcomes</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/impressions-of-grunt</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/in-favor-codenames</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/inner-joins-jpql-delete-statements</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/installcert-java-security-certificate</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/intellij-12-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/intellij-maven-source-downloads</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/interteam-tech-conslidation-not-worth-it</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/intro-backbonejs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/invisible-leader</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/isolate-jest-integration-test-shared-database</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/iteration-planning</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/its-already-been-done</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jasmine-unit-testing-requirejs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/java-encryption-illegal-key-size</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/java-reflection-methods-primitive-params</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/javascript-arrow-function-no-params</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/javascript-arrow-function-return-rules</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/javascript-mixins</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jest-on-lerna-repo</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/joy-simplicity</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jquery-ajax-json-django</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jquery-mobile-selector-context</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jquery-plugin-readmore</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jquery-plugin-safesubmit</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jsf-modal-goodness</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jsf-validationerror-custom-converters</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jsf-wont-submit-null-uirepeat</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jsonapi-errors-serializer-in-rails</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/jumpstartlab-ruby-training-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/junior-programmer-resume-enthusiastic-learner</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/keyboard-access-buttons-testing-library</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/learn-to-procrastinate</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/learning-thresholds-quotas</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/learning-tune-out</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/lerna-publish-npm-without-git-commit</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/limits-create-choices</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/link-broccoli-assets-on-webpage</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/list-npm-scripts</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/livereload-for-nodejs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/load-both-css-and-css-modules-webpack</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/local-auth-koa-api</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/lock-in-learning</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/loop-index-uirepeat</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/lots-of-node-dependencies</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/magical-design-lessons</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/make-impression-little-more</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/make-it-work-first</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/make-jsonp-requests-with-angularjs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/make-non-objective-choice</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/make-software-in-the-estuary</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/make-your-project-fun</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/making-more-important-than-how</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/manage-vim-plugins-without-plugin-manager</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/manytomany-relationships-jsf</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mark-logic-4-ubuntu-904</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/marklogic-users-conference-2011-impressions</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/match-ember-handlebars-version</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/matching-up-the-whys</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/minimized-angularjs-dependency-injection</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mixing-module-exports-exports</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mobile-first-media-query</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/mocha-testing-angularjs-dependency-injection</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mock-fetch-jest-test</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/modern-frontend-dev-browser-capabilities</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/modern-frontend-dev-language-advances</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/modern-frontend-dev-user-expectations</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/modern-frontend-dev-writing-javascript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mongoose-population</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/monitor-javascript-bundle-size</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/monitor-network-traffic-etherape</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/more-code-not-english-spec-descriptions</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/most-seamless-iframe</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/motivation-in-yourself-to-act</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mount-samba-fs-linux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mountain-west-ruby-conf-2013-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/mtnwest-javascript-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/multiple-yields-in-erb-template</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/namespace-redux-action-types</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/namespacing-angular-controller-attributes</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/naming-anonymous-javascript-functions</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/naming-event-handlers-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/naming-related-components-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/narrow-interface-type-typescript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/need-to-do-it-all</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/never-miss-one-on-one</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/nextjs-getinitialprops-components</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ng-conf-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ngstyle-background</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/node-skills-explore</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/nodejs-app-on-xipio</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/not-done-in-a-corner</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/not-vs-outer-join-performance</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/notify-error-to-newrelic-on-uncaughtexception</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/npm-install-local-files</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/null-selectitem-option</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/octopress-vs-wordpress</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/open-source-inspiration</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/options-vs-possibilities</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/override-css-modules-react-styleable</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/package-json-style-attribute</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pagination-headers-with-kaminari</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/paper-by-fiftythree</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/parameterized-states-webflow</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pass-parameters-javascript-callback</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pass-parameters-jquery-event-functions</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pass-values-from-page-to-angular</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/paths-in-node</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pause-in-redux-saga</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/people-will-remember-your-kindness</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/permission-paradox</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/permit-array-rails-strong-parameters</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/personal-performance-management</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pipe-stdout-socketio</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/png-gamma-correction-woes</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/power-team-combinations</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/precompile-ember-templates</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/prefer-action</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/preload-route-data-angular</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/preprocess-svelte-components-with-postcss</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/prettier-on-spacemacs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/prevent-children-filling-css-grid-cell</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/programmer-struggle</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/progressive-conservative-tech-adoption</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/projects-in-spacemacs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/pushstate-webpack-dev-server</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/quick-bookmarks</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/react-componentdidmount-not-called-server-render</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-dnd-text-drag-preview</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-error-boundaries-event-handlers</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-oneof-vs-oneoftype</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-rally-2017-takeaways</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-rally-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-router-with-flux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-routing-static-site-browser</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/react-stateless-components-missing</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/reading-needed-code</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/record-screen-as-gif-mac</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/record-vim-macros</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/recreate-the-library</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/remapping-ctrl-key-ubuntu</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/remove-app-from-cmd-tab-menu</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/remove-array-element-without-mutating</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/remove-mobile-safari-click-delay</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/remove-whitespace-html-javascript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/rename-files-in-asset-pipeline</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/render-codemirror-on-server</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/render-current-route-active-links-server</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/repainting-my-mind-with-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/repeating-yourself</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/replace-text-css-defined-image</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/requirejs-paths-in-prod-test-build</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/rerender-defaultvalue-value-change</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/reroute-restart</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/respect-os-dark-mode-javascript</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/responsive-proportional-video</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/responsive-table-with-scrolling</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/rest-is-good</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/result-type-in-flow</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/return-array-graphql</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/rhythm-rest</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/rotate-gauge-needle-in-d3</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ruby-call-dynamic-method</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ruby-cli-options-parsing</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/run-elm-in-terminal</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/run-pow-server-on-vm</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/run-requirejs-with-gruntjs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/run-shell-script-nodejs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/run-single-mocha-test</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/running-php-apache-linux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/sad-cyclops-appears-in-wild</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/save-gem-to-gemfile-from-terminal</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/screenreader-support</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/search-replace-multiple-files-macos</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/select-directory-in-electron</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/send-email-aws-sdk-node-example</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/send-props-to-children-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/separating-react-components-into-modules</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/serve-coffeescript-with-sinatra</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/serve-directory</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/serve-json-from-sinatra</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/serve-markdown-nextjs-server</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/set-colors-vim</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/set-cookie-on-rack-mock-request</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/set-state-in-callbacks-in-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/setbacks-are-temporary</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/setup-email-address-custom-domain</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/setup-publicprivate-key</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/setup-slim-on-sinatra</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/sharing-folders-virtual-box</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/sharing-hope-create-future-together</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/sharing-praise-brings-admiration</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/show-full-sql-developer-timestamp</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/simplest-async-await-function</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/simplify-babel-setup-with-babel-preset-env</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/single-glamor-instance</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/sinon-spies-vs-stubs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/slack-survival-guide</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/smart-dumb-components-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/so-good-they-cant-ignore-you</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/software-change-funnel</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/software-dev-hard-dont-be-negative-about-it</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/some-helpful-packages-npm-scripts</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/sort-conf-2012</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/spacemacs-flowtype-integration</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/spacing-between-multiline-flexbox-child-elements</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/speed-small-solutions</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/spies-sinon-chai</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/split-text-open-office-spreadsheet</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/spread-operator-destructuring</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/start-job-you-want</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/start-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/stay-with-problems</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/store-local-user-password-bcrypt</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/stored-procedure-spring-jdbc</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/strange-loop-elm-conf-2016-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/stub-dependencies-node-without-proxyquire</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/stub-json-api</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/style-children-styled-jsx</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/style-file-input</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/svn-comment-editor</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/svn-ignore</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/synergy-ubuntu</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/tab-like-mouse</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/take-chance-yourself</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/tdd-reasonml-function</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/test-angular-directive-isolate-scope</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/test-apis-failing-from-client</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/test-driven-development-marklogic</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/test-react-componentwillreceiveprops</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/test-react-router-params-component-update</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/test-requirejs-testacular</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/test-settimeout-with-jasmine</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/testing-es2015-riot-tags</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/testing-express-validator</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/testing-pyramid-shows-roi</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/testing-react-with-jsdom</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/tests-that-really-test</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/the-jaketrent-dot-com-logo</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/the-power-of-liking</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/these-arent-tables-youre-looking</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/this-isnt-your-magnum-opus</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/thoughts-customization-and-convention</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/unexpected-call-method-or-property-access</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/unexpected-results-marklogic-xquery-type-coercion</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/unit-testing-in-reasonml</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/unit-testing-xquery-marklogic</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/update-alternatives</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/update-body-class-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/upgrade-incompatible-postgres-data-directory-docker</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/upsert-knexjs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/use-d3-rangebands</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/use-java-reflection-get-field-w-accessor</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/use-node-api-promises</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/use-slack-channel-broadcast</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/using-javascript-function-bind</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/utahjs-conf-2013-review</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/value-integrity</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/variable-declaration-performance</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/verbal-value-statements</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/virtual-box-ubuntu-linux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/vision-questing</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/vpn-ubuntu-linux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/ways-to-compose-react-components</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/we-all-come-from-humble-places</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/webdav-windows-7</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/what-does-mount-mean-in-react</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/what-hackday-brings</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/what-is-cssnext</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/what-is-generator</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/what-is-nextjs</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/what-level-log-at</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/what-we-could-do-without-internet-explorer</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/when-to-use-curlies-in-angular-directives</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/why-engineers-get-taken-advantage-of</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/why-i-chose-a-wordpress-blog</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/why-interview-lunch</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/why-log-you-issues</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc
-      >https://jaketrent.com/post/why-whitelist-props-on-shared-react-components</loc
-    >
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/will-captcha-block-spam</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/windows-7-dev-environment</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/words-thank-you</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/work-more-might-not-help</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/working-in-open-space</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/write-middleware-redux</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/writing-jquery-plugins</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/xdmp-login-love</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/xquery-browser-language-detection</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/xquery-dynamic-order</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/xquery-imports-marklogic</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/xquery-optimization-tips</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/xsd-validation-marklogic</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/yeoman-app-on-heroku</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/you-find-what-you-look-for</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/you-might-be-inspiring-someone</loc>
-    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
-  </url>
-
-  <url>
-    <loc>https://jaketrent.com/post/youre-more-engaged-in-work-you-like</loc>
+    <loc>https://jaketrent.com/talk/how-we-make-design-system</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 </urlset>
