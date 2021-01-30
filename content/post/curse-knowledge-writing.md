@@ -33,7 +33,7 @@ Make a judgement call between verbosity and terseness, focused on readability to
 
 ## Not leaving anything out
 
-When there are lots of steps or related concepts, it can be easy to leave something out. Our reader will jump into the text and think, "Wow, where did that come from?" or "What does that mean? I've never heard of that before." Mentioning things in out of order will have the same effect.
+When there are lots of steps or related concepts, it can be easy to leave something out. Our reader will jump into the text and think, "Wow, where did that come from?" or "What does that mean? I've never heard of that before." Mentioning things out of order will have the same effect.
 
 Re-read and look for logical jumps where we may need to fill in steps or facts that are foundational to next steps.
 
