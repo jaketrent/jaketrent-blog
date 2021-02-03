@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateSitemapIndex renders all static .tsx pages 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<sitemapindex xmlns=\\"http://www.sitemaps.org/schemas/sitemap/0.9\\">
+  <sitemap>
+    <loc>https://jaketrent.com/sitemap-blog.xml.gz</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://jaketrent.com/sitemap-static.xml.gz</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </sitemap>
+</sitemapindex>
+"
+`;
