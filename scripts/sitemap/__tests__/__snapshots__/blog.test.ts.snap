@@ -1319,6 +1319,11 @@ exports[`renders all book, course, post, talk .md pages 1`] = `
   </url>
 
   <url>
+    <loc>https://jaketrent.com/post/curse-knowledge-writing</loc>
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
     <loc
       >https://jaketrent.com/post/custom-exception-handling-accessdeniedexception</loc
     >
@@ -2334,6 +2339,11 @@ exports[`renders all book, course, post, talk .md pages 1`] = `
     <loc
       >https://jaketrent.com/post/more-code-not-english-spec-descriptions</loc
     >
+    <lastmod>2018-01-01T00:00:00.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://jaketrent.com/post/more-managers-more-priorities</loc>
     <lastmod>2018-01-01T00:00:00.000Z</lastmod>
   </url>
 

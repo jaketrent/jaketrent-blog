@@ -1,4 +1,5 @@
-import { exclude, fileFromRoot, generateSitemap, writeSitemap } from "./common"
+import { generateSitemap } from "./common"
+import { exclude, fileFromRoot, writeSitemap } from "../common/file"
 
 export const generateStaticSitemap = async () =>
   generateSitemap({

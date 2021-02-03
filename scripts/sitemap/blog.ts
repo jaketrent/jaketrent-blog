@@ -1,4 +1,5 @@
-import { fileFromRoot, generateSitemap, writeSitemap } from "./common"
+import { fileFromRoot, writeSitemap } from "../common/file"
+import { generateSitemap } from "./common"
 
 export const generatePostsSitemap = () =>
   generateSitemap({

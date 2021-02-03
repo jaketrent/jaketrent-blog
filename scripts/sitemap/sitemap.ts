@@ -1,11 +1,11 @@
+import { getCurrentDateStr } from "../common/date"
+import { DOMAIN } from "../common/domain"
 import {
-  DOMAIN,
   fileFromRoot,
-  getCurrentDateStr,
   prettify,
   searchFilePaths,
   writeSitemap,
-} from "./common"
+} from "../common/file"
 
 export const generateSitemapIndex = async () => {
   const sitemapPaths = await searchFilePaths([fileFromRoot("public/*.gz")])
