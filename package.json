@@ -5,7 +5,7 @@
   "version": "9.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build:sitemap && next build && next export",
+    "build": "npm run build:sitemap && npm run build:rss && next build && next export",
     "build:sitemap": "sh scripts/sitemap/build.sh",
     "build:rss": "sh scripts/rss/build.sh",
     "dev": "next dev",
