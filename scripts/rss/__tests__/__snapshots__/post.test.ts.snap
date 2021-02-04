@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders all book, course, post, talk .md pages 1`] = `
+exports[`renders latest 10 posts 1`] = `
 "
   <?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
   <rss version=\\"2.0\\" xmlns:atom=\\"http://www.w3.org/2005/Atom\\">
