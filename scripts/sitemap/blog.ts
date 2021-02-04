@@ -1,4 +1,4 @@
-import { fileFromRoot, writeSitemap } from "../common/file"
+import { fileFromRoot, writeFile } from "../common/file"
 import { generateSitemap } from "./common"
 
 export const generatePostsSitemap = () =>
@@ -12,5 +12,5 @@ export const generatePostsSitemap = () =>
   })
 ;(async () => {
   const sitemap = await generatePostsSitemap()
-  writeSitemap("public/sitemap-blog.xml", sitemap)
+  writeFile("public/sitemap-blog.xml", sitemap)
 })()

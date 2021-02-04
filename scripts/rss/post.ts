@@ -2,7 +2,7 @@ import { basename } from "path"
 
 import { DOMAIN } from "../common/domain"
 import {
-  writeSitemap,
+  writeFile,
   parseUrlFromContentPath,
   searchFilePaths,
   fileFromRoot,
@@ -90,7 +90,7 @@ export const generatePostsRss = () =>
     globs: [fileFromRoot("content/post/*")],
   })
 ;(async () => {
-  const sitemap = await generatePostsRss()
+  const rss = await generatePostsRss()
   mkdir("public/post")
-  writeSitemap("public/post/rss.xml", sitemap)
+  writeFile("public/post/rss.xml", rss)
 })()
