@@ -19,6 +19,12 @@ export const BlogLayout: FC<BlogLayoutProps> = props => {
 
       <Head>
         <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Jake Trent articles"
+          href="/post/rss.xml"
+        />
         <script src="/js/analytics.js" />
       </Head>
 
