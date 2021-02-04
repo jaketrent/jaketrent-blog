@@ -69,3 +69,5 @@ yarn-error.log
 out
 
 public/sitemap*
+public/post
+public/**/rss.xml

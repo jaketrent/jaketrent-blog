@@ -27,5 +27,10 @@ export const parseUrlFromContentPath = filePath => {
 }
 
 // TODO: rename
-export const writeSitemap = (path, sitemap) =>
+export const writeSitemap = (path: string, sitemap: string) =>
   fs.writeFileSync(fileFromRoot(path), sitemap, "utf8")
+
+export const mkdir = (path: string) => {
+  const normalizedPath = fileFromRoot(path)
+  if (!fs.existsSync(normalizedPath)) fs.mkdirSync(normalizedPath)
+}

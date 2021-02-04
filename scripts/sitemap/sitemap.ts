@@ -1,6 +1,7 @@
 import { getCurrentDateStr } from "../common/date"
 import { DOMAIN } from "../common/domain"
 import {
+  exclude,
   fileFromRoot,
   prettify,
   searchFilePaths,
@@ -8,7 +9,10 @@ import {
 } from "../common/file"
 
 export const generateSitemapIndex = async () => {
-  const sitemapPaths = await searchFilePaths([fileFromRoot("public/*.gz")])
+  const sitemapPaths = await searchFilePaths([
+    fileFromRoot("public/*.gz"),
+    exclude(fileFromRoot("public/sitemap.xml.gz")),
+  ])
 
   const formatSitemapForToday = formatSitemap.bind(null, getCurrentDateStr())
   const sitemaps = `
