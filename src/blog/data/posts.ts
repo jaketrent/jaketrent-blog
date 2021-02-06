@@ -16,6 +16,9 @@ export interface Post extends Content {
   frontmatter: PostFrontMatter
 }
 
+export const isPost = (content: Content): content is Post =>
+  (content as Post).frontmatter.layout === "post"
+
 export const fetchAllPosts = (opts?: Omit<FetchAllOptions, "contentPath">) =>
   fetchAll({ ...opts, contentPath: "post" })
 

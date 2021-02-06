@@ -9,7 +9,7 @@ import {
 } from "../common"
 import { fileFromRoot } from "../../common/file"
 import { Content } from "../../../src/blog/data/markdown"
-import { Post } from "../../../src/blog/data/post"
+import { Post } from "../../../src/blog/data/posts"
 import { stabilizeDate } from "../../../test/util/date"
 
 const stubDate = "2018-01-01"
@@ -31,33 +31,39 @@ const contentMockDefaults: Content = {
     title: "Mock Title",
   },
 }
-const createMockContent = (
+type RecursivePartial<T> = {
+  [P in keyof T]?: RecursivePartial<T[P]>
+}
+const createMockContent = <T extends Content>(
   defaults: Content,
-  overrides: Partial<Content>
-): Content => {
-  return {
+  overrides: RecursivePartial<T>
+): T =>
+  ({
     ...defaults,
     ...overrides,
     frontmatter: {
       ...defaults.frontmatter,
       ...overrides.frontmatter,
     },
-  }
-}
-const createMockPost: (o: Partial<Post> | undefined) => Post = (
-  overrides: Partial<Post> | undefined
+  } as T)
+
+const createMockPost: (o?: RecursivePartial<Post>) => Post = (
+  overrides?: RecursivePartial<Post>
 ) =>
-  createMockContent(contentMockDefaults, {
+  createMockContent<Post>(contentMockDefaults, {
     ...overrides,
     frontmatter: {
       image: "https://mock/image.jpg",
       ...(overrides || {}).frontmatter,
     },
   })
-const createMockEntryInfo = (overrides: Partial<EntryInfo> | undefined) => ({
+
+const createMockEntryInfo = <T extends Content>(
+  overrides?: RecursivePartial<EntryInfo>
+) => ({
   url: "/mock/url",
   ...overrides,
-  content: createMockContent(contentMockDefaults, overrides.content),
+  content: createMockContent<T>(contentMockDefaults, overrides.content),
 })
 
 describe("#formatFeed", () => {
@@ -74,7 +80,7 @@ describe("#formatEntry", () => {
   it("renders entry data", () => {
     const entryInfo = {
       url: "https://mock.com/path",
-      content: createMockContent(contentMockDefaults, {
+      content: createMockPost({
         content: "<h1>Already compiled</h1>",
       }),
     }
@@ -88,7 +94,7 @@ describe("#readEntryInfos", () => {
     const pages = ["/post/mock.md"]
     const deps = {
       ..._readEntryInfos.deps,
-      read: (d: string, f: string): Content => createMockPost(),
+      read: (d: string, f: string): Post => createMockPost(),
     }
     const readEntryInfos = _readEntryInfos.bind(null, deps)
 
@@ -99,9 +105,15 @@ describe("#readEntryInfos", () => {
 describe("#limitLatest", () => {
   it("creates a limited array of entries", () => {
     const entries = [
-      createMockEntryInfo({ content: { frontmatter: { date: "2020-01-05" } } }),
-      createMockEntryInfo({ content: { frontmatter: { date: "2020-01-01" } } }),
-      createMockEntryInfo({ content: { frontmatter: { date: "2020-01-03" } } }),
+      createMockEntryInfo<Post>({
+        content: { frontmatter: { date: "2020-01-05" } },
+      }),
+      createMockEntryInfo<Post>({
+        content: { frontmatter: { date: "2020-01-01" } },
+      }),
+      createMockEntryInfo<Post>({
+        content: { frontmatter: { date: "2020-01-03" } },
+      }),
     ]
     const opts = { limit: 2 }
 
@@ -120,13 +132,13 @@ describe("#formatEntries", () => {
     const entryInfos = [
       {
         url: "https://mock.com/path/1",
-        content: createMockContent(contentMockDefaults, {
+        content: createMockPost({
           content: "<h1>Entry 1</h1>",
         }),
       },
       {
         url: "https://mock.com/path/2",
-        content: createMockContent(contentMockDefaults, {
+        content: createMockPost({
           content: "<h1>Entry 2</h1>",
         }),
       },

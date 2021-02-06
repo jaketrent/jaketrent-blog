@@ -8,6 +8,7 @@ import {
   prettify,
 } from "../common/file"
 import { Content } from "../../src/blog/data/markdown"
+import { isPost } from "../../src/blog/data/posts"
 import { sortByDateDesc } from "../../src/blog/data/request"
 import { compileMarkdown, readMarkdown } from "../../src/blog/data"
 
@@ -53,9 +54,9 @@ export const formatEntry = (entryInfo: EntryInfo) => `
   )}
   <summary type="html">${entryInfo.content.frontmatter.title}</summary>
   ${
-    entryInfo.content.frontmatter.image
+    isPost(entryInfo.content)
       ? `<media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="${entryInfo.content.frontmatter.image}" />
-    <media:content medium="image" url="${entryInfo.content.frontmatter.image}" xmlns:media="http://search.yahoo.com/mrss/" />`
+  <media:content medium="image" url="${entryInfo.content.frontmatter.image}" xmlns:media="http://search.yahoo.com/mrss/" />`
       : ""
   }
   </entry>

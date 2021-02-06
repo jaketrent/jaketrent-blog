@@ -14,7 +14,8 @@ exports[`#formatEntries renders all entries together 1`] = `
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
   <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
   <summary type=\\"html\\">Mock Title</summary>
-  
+  <media:thumbnail xmlns:media=\\"http://search.yahoo.com/mrss/\\" url=\\"https://mock/image.jpg\\" />
+  <media:content medium=\\"image\\" url=\\"https://mock/image.jpg\\" xmlns:media=\\"http://search.yahoo.com/mrss/\\" />
   </entry>
 
   <entry>
@@ -29,7 +30,8 @@ exports[`#formatEntries renders all entries together 1`] = `
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
   <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
   <summary type=\\"html\\">Mock Title</summary>
-  
+  <media:thumbnail xmlns:media=\\"http://search.yahoo.com/mrss/\\" url=\\"https://mock/image.jpg\\" />
+  <media:content medium=\\"image\\" url=\\"https://mock/image.jpg\\" xmlns:media=\\"http://search.yahoo.com/mrss/\\" />
   </entry>
 "
 `;
@@ -48,7 +50,8 @@ exports[`#formatEntry renders entry data 1`] = `
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
   <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
   <summary type=\\"html\\">Mock Title</summary>
-  
+  <media:thumbnail xmlns:media=\\"http://search.yahoo.com/mrss/\\" url=\\"https://mock/image.jpg\\" />
+  <media:content medium=\\"image\\" url=\\"https://mock/image.jpg\\" xmlns:media=\\"http://search.yahoo.com/mrss/\\" />
   </entry>
 "
 `;
