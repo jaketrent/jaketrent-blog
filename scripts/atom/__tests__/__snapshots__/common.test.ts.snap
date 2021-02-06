@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#formatEntries renders all entries together 1`] = `
+"
+  <entry>
+  <title type=\\"html\\">Mock Title</title>
+  <link href=\\"https://mock.com/path/1\\" rel=\\"alternate\\" type=\\"text/html\\" title=\\"Mock Title\\" />
+  <published>2018-01-01</published>
+  <updated>2020-02-02</updated>
+  <id>https://mock.com/path/1</id>
+  <content type=\\"html\\" xml:base=\\"https://mock.com/path/1\\">
+    &lt;div&gt;&lt;h1&gt;Entry 1&lt;/h1&gt;&lt;/div&gt;
+  </content>
+  <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
+  <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
+  <summary type=\\"html\\">Mock Title</summary>
+  
+  </entry>
+
+  <entry>
+  <title type=\\"html\\">Mock Title</title>
+  <link href=\\"https://mock.com/path/2\\" rel=\\"alternate\\" type=\\"text/html\\" title=\\"Mock Title\\" />
+  <published>2018-01-01</published>
+  <updated>2020-02-02</updated>
+  <id>https://mock.com/path/2</id>
+  <content type=\\"html\\" xml:base=\\"https://mock.com/path/2\\">
+    &lt;div&gt;&lt;h1&gt;Entry 2&lt;/h1&gt;&lt;/div&gt;
+  </content>
+  <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
+  <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
+  <summary type=\\"html\\">Mock Title</summary>
+  
+  </entry>
+"
+`;
+
+exports[`#formatEntry renders entry data 1`] = `
+"
+  <entry>
+  <title type=\\"html\\">Mock Title</title>
+  <link href=\\"https://mock.com/path\\" rel=\\"alternate\\" type=\\"text/html\\" title=\\"Mock Title\\" />
+  <published>2018-01-01</published>
+  <updated>2020-02-02</updated>
+  <id>https://mock.com/path</id>
+  <content type=\\"html\\" xml:base=\\"https://mock.com/path\\">
+    &lt;h1&gt;Already compiled&lt;/h1&gt;
+  </content>
+  <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
+  <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
+  <summary type=\\"html\\">Mock Title</summary>
+  
+  </entry>
+"
+`;
+
+exports[`#formatFeed renders feed meta 1`] = `
+"
+  <?xml version=\\"1.0\\" encoding=\\"utf-8\\"?>
+  <feed xmlns=\\"http://www.w3.org/2005/Atom\\">
+    <link href=\\"https://jaketrent.com/post/feed.xml\\" rel=\\"self\\" type=\\"application/atom+xml\\" />
+    <link href=\\"https://jaketrent.com\\" rel=\\"alternate\\" type=\\"text/html\\" />
+    <updated>2018-01-01T00:00:00.000Z</updated>
+    <id>https://jaketrent.com/post/feed.xml</id>
+    <title type=\\"html\\">Jake Trent articles</title>
+    <subtitle>Development, design... art</subtitle>
+    <author>
+      <name>Jake Trent</name>
+      <email>hi@jaketrent.com</email>
+      <uri>https://jaketrent.com</uri>
+    </author>
+    stubEntries
+  </feed>
+"
+`;
+
+exports[`#generateAtomFeed renders content specified up to limit 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\"?>
+<feed xmlns=\\"http://www.w3.org/2005/Atom\\">
+  <link
+    href=\\"https://jaketrent.com/post/feed.xml\\"
+    rel=\\"self\\"
+    type=\\"application/atom+xml\\"
+  />
+  <link href=\\"https://jaketrent.com\\" rel=\\"alternate\\" type=\\"text/html\\" />
+  <updated>2018-01-01T00:00:00.000Z</updated>
+  <id>https://jaketrent.com/post/feed.xml</id>
+  <title type=\\"html\\">Jake Trent articles</title>
+  <subtitle>Development, design... art</subtitle>
+  <author>
+    <name>Jake Trent</name>
+    <email>hi@jaketrent.com</email>
+    <uri>https://jaketrent.com</uri>
+  </author>
+
+  <entry>
+    <title type=\\"html\\">Automate Separate Commits in Bash</title>
+    <link
+      href=\\"https://jaketrent.comscripts/common/__mocks__/post/automate-separate-commits\\"
+      rel=\\"alternate\\"
+      type=\\"text/html\\"
+      title=\\"Automate Separate Commits in Bash\\"
+    />
+    <published>2018-1-1</published>
+    <updated>2018-1-1</updated>
+    <id
+      >https://jaketrent.comscripts/common/__mocks__/post/automate-separate-commits</id
+    >
+    <content
+      type=\\"html\\"
+      xml:base=\\"https://jaketrent.comscripts/common/__mocks__/post/automate-separate-commits\\"
+    >
+      &lt;p&gt;Here’s a bash script for running a lot of separate git
+      commits.&lt;/p&gt;&lt;div&gt;&lt;!--more--&gt; &lt;/div&gt;&lt;p&gt;Don’t
+      you feel like a 10th level terminal mage whenever you get any sort of bash
+      script to run? Bash is nice because it’ll usually just work in the
+      terminal. You don’t need another runtime to get it to work. But wow, is it
+      not a skill that I use often, and it has sharp edges I get myself caught
+      on every time.&lt;/p&gt;&lt;p&gt;In this example, I had a monorepo that
+      relies on conventional commit using commitlint to generate change logs.
+      Thus, changes for every package had to be committed separately.
+      &lt;/p&gt;&lt;p&gt;First, I made &lt;a
+      href=&quot;/post/search-replace-multiple-files-macos&quot;&gt;changes over
+      multiple files&lt;/a&gt; using a method similar to one I’ve written about
+      before.&lt;/p&gt;&lt;p&gt;Then, I made and ran this
+      script:&lt;/p&gt;&lt;pre&gt;&lt;code
+      class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token
+      keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token
+      constant&quot;&gt;FILE&lt;/span&gt; &lt;span class=&quot;token
+      keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token
+      function&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;token
+      punctuation&quot;&gt;(&lt;/span&gt;git diff &lt;span class=&quot;token
+      operator&quot;&gt;--&lt;/span&gt;name&lt;span class=&quot;token
+      operator&quot;&gt;-&lt;/span&gt;only&lt;span class=&quot;token
+      punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token
+      punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token
+      keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;token
+      constant&quot;&gt;PACKAGE&lt;/span&gt;&lt;span class=&quot;token
+      operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token
+      template-string&quot;&gt;&lt;span class=&quot;token template-punctuation
+      string&quot;&gt;\`&lt;/span&gt;&lt;span class=&quot;token
+      string&quot;&gt;echo $FILE | sed
+      &quot;s|packages/\\\\(.*\\\\)/src.*|\\\\1|&quot;&lt;/span&gt;&lt;span
+      class=&quot;token template-punctuation
+      string&quot;&gt;\`&lt;/span&gt;&lt;/span&gt; git add &lt;span
+      class=&quot;token
+      string&quot;&gt;&quot;packages/$PACKAGE&quot;&lt;/span&gt; git commit
+      &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;m &lt;span
+      class=&quot;token string&quot;&gt;&quot;refactor($PACKAGE): message about
+      the thing done to all packages&quot;&lt;/span&gt;
+      done&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So, what’s
+      here?&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The for loop should look pretty
+      familiar. Be careful to include that semicolon. The body can be
+      multi-line, no problem.&lt;/li&gt;&lt;li&gt;The thing being looped over is
+      a list of files that have changed. Using the
+      &lt;code&gt;--name-only&lt;/code&gt; flag, only the file names are listed,
+      not the other instructional text from
+      git.&lt;/li&gt;&lt;li&gt;&lt;code&gt;PACKAGE&lt;/code&gt; is being defined
+      here as another variable. Don’t try to put spaces around that assignment
+      operator. &lt;/li&gt;&lt;li&gt;The backticks for the command in the
+      variable declaration are one way of surrounding a command. The dollar
+      parenthesis in the for loop is another.&lt;/li&gt;&lt;li&gt;When you use a
+      variable previously declared and want the value of it, you prepend the
+      dollar sign, as in &lt;code&gt;$FILE&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;In
+      the &lt;code&gt;sed&lt;/code&gt; command, I’m using
+      &lt;code&gt;|&lt;/code&gt; pipes instead of the traditional forward slash.
+      &lt;code&gt;sed&lt;/code&gt; doesn’t care what you use for delimiters, and
+      in this case pipes require fewer escapes on the forward slashes in the
+      pattern.&lt;/li&gt;&lt;li&gt;The parenthesis in the pattern have to be
+      escaped. This is odd, since this is the standard syntax for capture
+      groups. Later, &lt;code&gt;\\\\1&lt;/code&gt; represents the
+      group.&lt;/li&gt;&lt;li&gt;And did you know that a &lt;code&gt;git
+      commit&lt;/code&gt; can have 2 messages? One for the subject line:
+      &lt;code&gt;-m&lt;/code&gt;, and one for the body:
+      &lt;code&gt;--message&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Amazing.
+      See, 10th level terminal mage.&lt;/p&gt;
+    </content>
+    <author
+      ><name>Jake Trent</name><email>hi@jaketrent.com</email
+      ><uri>https://jaketrent.com</uri></author
+    >
+    <category term=\\"bash\\" />,<category term=\\"git\\" />,<category term=\\"lerna\\" />
+    <summary type=\\"html\\">Automate Separate Commits in Bash</summary>
+    <media:thumbnail
+      xmlns:media=\\"http://search.yahoo.com/mrss/\\"
+      url=\\"https://i.imgur.com/7BlT0az.jpg\\"
+    />
+    <media:content
+      medium=\\"image\\"
+      url=\\"https://i.imgur.com/7BlT0az.jpg\\"
+      xmlns:media=\\"http://search.yahoo.com/mrss/\\"
+    />
+  </entry>
+
+  <entry>
+    <title type=\\"html\\">Writing with the Curse of Knowledge</title>
+    <link
+      href=\\"https://jaketrent.comscripts/common/__mocks__/post/curse-knowledge-writing\\"
+      rel=\\"alternate\\"
+      type=\\"text/html\\"
+      title=\\"Writing with the Curse of Knowledge\\"
+    />
+    <published>2018-1-1</published>
+    <updated>2018-1-1</updated>
+    <id
+      >https://jaketrent.comscripts/common/__mocks__/post/curse-knowledge-writing</id
+    >
+    <content
+      type=\\"html\\"
+      xml:base=\\"https://jaketrent.comscripts/common/__mocks__/post/curse-knowledge-writing\\"
+    >
+      &lt;p&gt;The curse of knowledge may create obstacles to us writing
+      something useful for our reader. We may assume that others know exactly
+      what we know and that they still need to learn certain things. This might
+      be mismatched with their real needs.&lt;/p&gt;&lt;h2
+      id=&quot;knowing-where-to-start&quot;&gt;Knowing where to
+      start&lt;/h2&gt;&lt;p&gt;In technical writing, we try to guide someone
+      from the beginning to the end, with proficiency in some task as the end
+      goal. &lt;/p&gt;&lt;p&gt;Perhaps we don’t start precisely at zero,
+      assuming our reader knows nothing. But we start at some lower-level
+      starting point. But where do we start? People start from different points
+      of knowledge. And it’s hard to hedge all our bets or give enough
+      caveats.&lt;/p&gt;&lt;p&gt;Prefer restating a few things at the risk of
+      being obvious. People like a review. It’s good to create the context and
+      foundation for the more essential points we’re about to
+      make.&lt;/p&gt;&lt;h2
+      id=&quot;knowing-where-to-start-knowing-where-to-end&quot;&gt;Knowing
+      where to end&lt;/h2&gt;&lt;p&gt;Ending can be difficult, but should be
+      less so. After all, when we set out to write, the thing we’re trying to
+      accomplish should be well-understood by us. It’s the reason we’re
+      writing.&lt;/p&gt;&lt;p&gt;Precisely point out what we will be able to do
+      by the end if we follow the steps to conclusion. Point out what we will
+      not be able to do because of limitations. We might also point to
+      continuing or alternate paths that we don’t pursue in the present writing.
+      We could point to assistive resources for continued
+      learning.&lt;/p&gt;&lt;h2
+      id=&quot;knowing-where-to-start-knowing-the-level-of-detail&quot;&gt;Knowing
+      the level of detail&lt;/h2&gt;&lt;p&gt;Like knowing where to start, it can
+      be difficult to know how much hand holding through each step someone
+      needs. It might be hard to know how specific to get on each step and how
+      much to skip between each step.&lt;/p&gt;&lt;p&gt;Make a judgement call
+      between verbosity and terseness, focused on readability toward the end
+      goal. Only favor adding detail when essential complexity seems to require
+      it. Once we decide on a resolution, stick with it from beginning to
+      end.&lt;/p&gt;&lt;h2
+      id=&quot;knowing-where-to-start-not-leaving-anything-out&quot;&gt;Not
+      leaving anything out&lt;/h2&gt;&lt;p&gt;When there are lots of steps or
+      related concepts, it can be easy to leave something out. Our reader will
+      jump into the text and think, “Wow, where did that come from?” or “What
+      does that mean? I’ve never heard of that before.” Mentioning things out of
+      order will have the same effect.&lt;/p&gt;&lt;p&gt;Re-read and look for
+      logical jumps where we may need to fill in steps or facts that are
+      foundational to next steps.&lt;/p&gt;&lt;p&gt;And so in this curse of
+      knowledge article, did I start in the wrong place? Did I stop before I got
+      to the point of usefulness? Did I leave stuff out? Definitely.&lt;/p&gt;
+    </content>
+    <author
+      ><name>Jake Trent</name><email>hi@jaketrent.com</email
+      ><uri>https://jaketrent.com</uri></author
+    >
+    <category term=\\"writing\\" />
+    <summary type=\\"html\\">Writing with the Curse of Knowledge</summary>
+    <media:thumbnail
+      xmlns:media=\\"http://search.yahoo.com/mrss/\\"
+      url=\\"https://i.imgur.com/sVchF0j.jpg\\"
+    />
+    <media:content
+      medium=\\"image\\"
+      url=\\"https://i.imgur.com/sVchF0j.jpg\\"
+      xmlns:media=\\"http://search.yahoo.com/mrss/\\"
+    />
+  </entry>
+
+  <entry>
+    <title type=\\"html\\">Prefer Action</title>
+    <link
+      href=\\"https://jaketrent.comscripts/common/__mocks__/post/prefer-action\\"
+      rel=\\"alternate\\"
+      type=\\"text/html\\"
+      title=\\"Prefer Action\\"
+    />
+    <published>2018-1-1</published>
+    <updated>2018-1-1</updated>
+    <id>https://jaketrent.comscripts/common/__mocks__/post/prefer-action</id>
+    <content
+      type=\\"html\\"
+      xml:base=\\"https://jaketrent.comscripts/common/__mocks__/post/prefer-action\\"
+    >
+      &lt;p&gt;Ideas come and go. Act on them now or (quite possibly)
+      never.&lt;/p&gt;&lt;div&gt;&lt;!--more--&gt; &lt;/div&gt;&lt;p&gt;Advice
+      to self:&lt;/p&gt;&lt;p&gt;Strike while the idea is hot. (That’s a good
+      Jim Rohn’ism I picked up.) When it comes to you in a flash, you might
+      remark to yourself how great the idea is. But it will leave just as
+      quickly if you do nothing about it.&lt;/p&gt;&lt;p&gt;Our emotions can be
+      helpful to us. We can encourage positive emotion, which will encourage
+      positive thoughts, which we can translate to positive
+      action.&lt;/p&gt;&lt;p&gt;I love the empowering idea that we are agents in
+      our own lives. We get to decide what we will do and be. We can do many
+      things of our own free will.&lt;/p&gt;&lt;p&gt;Let reality be the dream
+      killer. Better than wasting your time killing your own ideas. Act to bring
+      them to fruition. Some won’t work out, but some will. It takes so little
+      to kill an idea. We can easily convince ourselves it’s not worth it,
+      doable, easy, or whatever. Be a builder, and believe in some ideas, and
+      get them off the ground.&lt;/p&gt;&lt;p&gt;Worry less about the future and
+      whether you’re making the right decision. If you’re going forward trying
+      to make good decisions, that’s exactly what will happen. Your good desires
+      will lead to good actions and then good outcomes.&lt;/p&gt;
+    </content>
+    <author
+      ><name>Jake Trent</name><email>hi@jaketrent.com</email
+      ><uri>https://jaketrent.com</uri></author
+    >
+    <category term=\\"productivity\\" />
+    <summary type=\\"html\\">Prefer Action</summary>
+    <media:thumbnail
+      xmlns:media=\\"http://search.yahoo.com/mrss/\\"
+      url=\\"https://i.imgur.com/il9YAnv.jpg\\"
+    />
+    <media:content
+      medium=\\"image\\"
+      url=\\"https://i.imgur.com/il9YAnv.jpg\\"
+      xmlns:media=\\"http://search.yahoo.com/mrss/\\"
+    />
+  </entry>
+</feed>
+"
+`;
+
+exports[`#readEntryInfos reads markdown and combines with url 1`] = `
+Array [
+  Object {
+    "content": Object {
+      "content": "# Mock Markdown H1",
+      "frontmatter": Object {
+        "comments": true,
+        "date": "2018-01-01",
+        "description": "Mock description",
+        "draft": false,
+        "image": "https://mock/image.jpg",
+        "lastmod": "2020-02-02",
+        "layout": "post",
+        "metaKeywords": "mock keyword, another mock keyword",
+        "tags": Array [
+          "mock-tag-1",
+          "mock-tag-2",
+        ],
+        "title": "Mock Title",
+      },
+      "path": "/path/mock-slug",
+      "slug": "mock-slug",
+    },
+    "url": "https://jaketrent.com/post/mock",
+  },
+]
+`;

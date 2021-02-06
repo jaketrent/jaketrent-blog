@@ -6,7 +6,7 @@ const filterByNonDraft = (content: Content): boolean => {
   return !content?.frontmatter?.draft
 }
 
-const sortByDateDesc = (a: Content, b: Content): number => {
+export const sortByDateDesc = (a: Content, b: Content): number => {
   const aDate = parseDate(a.frontmatter.date)
   const bDate = parseDate(b.frontmatter.date)
   const isBefore = aDate > bDate
