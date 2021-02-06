@@ -22,7 +22,7 @@ export const formatFeed = (entries: string) => `
   <feed xmlns="http://www.w3.org/2005/Atom">
     <link href="${DOMAIN}/post/feed.xml" rel="self" type="application/atom+xml" />
     <link href="${DOMAIN}" rel="alternate" type="text/html" />
-    <updated>${new Date().toISOString()}</updated>
+    <updated>${formatDateRFC3339(new Date())}</updated>
     <id>${DOMAIN}/post/feed.xml</id>
     <title type="html">Jake Trent articles</title>
     <subtitle>Development, design... art</subtitle>
@@ -41,17 +41,24 @@ export const formatEntry = (entryInfo: EntryInfo) => `
   <link href="${entryInfo.url}" rel="alternate" type="text/html" title="${
   entryInfo.content.frontmatter.title
 }" />
-  <published>${entryInfo.content.frontmatter.date}</published>
-  <updated>${entryInfo.content.frontmatter.lastmod ||
-    entryInfo.content.frontmatter.date}</updated>
+  <published>${formatDateRFC3339(
+    entryInfo.content.frontmatter.date
+  )}</published>
+  ${
+    "lastmod" in entryInfo.content.frontmatter
+      ? `<updated>${formatDateRFC3339(
+          entryInfo.content.frontmatter.lastmod
+        )}</updated>`
+      : ""
+  }
   <id>${entryInfo.url}</id>
   <content type="html" xml:base="${entryInfo.url}">
     ${escapeHtml(entryInfo.content.content)}
   </content>
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>${DOMAIN}</uri></author>
-  ${(entryInfo.content.frontmatter.tags || []).map(
-    tag => `<category term="${tag}" />`
-  )}
+  ${(entryInfo.content.frontmatter.tags || [])
+    .map(tag => `<category term="${tag}" />`)
+    .join("")}
   <summary type="html">${entryInfo.content.frontmatter.title}</summary>
   ${
     isPost(entryInfo.content)
@@ -61,6 +68,11 @@ export const formatEntry = (entryInfo: EntryInfo) => `
   }
   </entry>
 `
+
+const formatDateRFC3339 = (date: string | Date) => {
+  const wrapped = new Date(date)
+  return wrapped.toISOString()
+}
 
 export const _readEntryInfos = (
   deps: typeof readEntryInfos.deps,

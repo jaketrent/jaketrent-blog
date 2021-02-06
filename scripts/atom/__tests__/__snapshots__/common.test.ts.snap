@@ -5,14 +5,14 @@ exports[`#formatEntries renders all entries together 1`] = `
   <entry>
   <title type=\\"html\\">Mock Title</title>
   <link href=\\"https://mock.com/path/1\\" rel=\\"alternate\\" type=\\"text/html\\" title=\\"Mock Title\\" />
-  <published>2018-01-01</published>
-  <updated>2020-02-02</updated>
+  <published>2018-01-01T00:00:00.000Z</published>
+  <updated>2020-02-02T00:00:00.000Z</updated>
   <id>https://mock.com/path/1</id>
   <content type=\\"html\\" xml:base=\\"https://mock.com/path/1\\">
     &lt;div&gt;&lt;h1&gt;Entry 1&lt;/h1&gt;&lt;/div&gt;
   </content>
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
-  <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
+  <category term=\\"mock-tag-1\\" /><category term=\\"mock-tag-2\\" />
   <summary type=\\"html\\">Mock Title</summary>
   <media:thumbnail xmlns:media=\\"http://search.yahoo.com/mrss/\\" url=\\"https://mock/image.jpg\\" />
   <media:content medium=\\"image\\" url=\\"https://mock/image.jpg\\" xmlns:media=\\"http://search.yahoo.com/mrss/\\" />
@@ -21,14 +21,14 @@ exports[`#formatEntries renders all entries together 1`] = `
   <entry>
   <title type=\\"html\\">Mock Title</title>
   <link href=\\"https://mock.com/path/2\\" rel=\\"alternate\\" type=\\"text/html\\" title=\\"Mock Title\\" />
-  <published>2018-01-01</published>
-  <updated>2020-02-02</updated>
+  <published>2018-01-01T00:00:00.000Z</published>
+  <updated>2020-02-02T00:00:00.000Z</updated>
   <id>https://mock.com/path/2</id>
   <content type=\\"html\\" xml:base=\\"https://mock.com/path/2\\">
     &lt;div&gt;&lt;h1&gt;Entry 2&lt;/h1&gt;&lt;/div&gt;
   </content>
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
-  <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
+  <category term=\\"mock-tag-1\\" /><category term=\\"mock-tag-2\\" />
   <summary type=\\"html\\">Mock Title</summary>
   <media:thumbnail xmlns:media=\\"http://search.yahoo.com/mrss/\\" url=\\"https://mock/image.jpg\\" />
   <media:content medium=\\"image\\" url=\\"https://mock/image.jpg\\" xmlns:media=\\"http://search.yahoo.com/mrss/\\" />
@@ -41,14 +41,14 @@ exports[`#formatEntry renders entry data 1`] = `
   <entry>
   <title type=\\"html\\">Mock Title</title>
   <link href=\\"https://mock.com/path\\" rel=\\"alternate\\" type=\\"text/html\\" title=\\"Mock Title\\" />
-  <published>2018-01-01</published>
-  <updated>2020-02-02</updated>
+  <published>2018-01-01T00:00:00.000Z</published>
+  <updated>2020-02-02T00:00:00.000Z</updated>
   <id>https://mock.com/path</id>
   <content type=\\"html\\" xml:base=\\"https://mock.com/path\\">
     &lt;h1&gt;Already compiled&lt;/h1&gt;
   </content>
   <author><name>Jake Trent</name><email>hi@jaketrent.com</email><uri>https://jaketrent.com</uri></author>
-  <category term=\\"mock-tag-1\\" />,<category term=\\"mock-tag-2\\" />
+  <category term=\\"mock-tag-1\\" /><category term=\\"mock-tag-2\\" />
   <summary type=\\"html\\">Mock Title</summary>
   <media:thumbnail xmlns:media=\\"http://search.yahoo.com/mrss/\\" url=\\"https://mock/image.jpg\\" />
   <media:content medium=\\"image\\" url=\\"https://mock/image.jpg\\" xmlns:media=\\"http://search.yahoo.com/mrss/\\" />
@@ -103,8 +103,8 @@ exports[`#generateAtomFeed renders content specified up to limit 1`] = `
       type=\\"text/html\\"
       title=\\"Automate Separate Commits in Bash\\"
     />
-    <published>2018-1-1</published>
-    <updated>2018-1-1</updated>
+    <published>2018-01-01T00:00:00.000Z</published>
+
     <id
       >https://jaketrent.comscripts/common/__mocks__/post/automate-separate-commits</id
     >
@@ -181,7 +181,7 @@ exports[`#generateAtomFeed renders content specified up to limit 1`] = `
       ><name>Jake Trent</name><email>hi@jaketrent.com</email
       ><uri>https://jaketrent.com</uri></author
     >
-    <category term=\\"bash\\" />,<category term=\\"git\\" />,<category term=\\"lerna\\" />
+    <category term=\\"bash\\" /><category term=\\"git\\" /><category term=\\"lerna\\" />
     <summary type=\\"html\\">Automate Separate Commits in Bash</summary>
     <media:thumbnail
       xmlns:media=\\"http://search.yahoo.com/mrss/\\"
@@ -202,8 +202,8 @@ exports[`#generateAtomFeed renders content specified up to limit 1`] = `
       type=\\"text/html\\"
       title=\\"Writing with the Curse of Knowledge\\"
     />
-    <published>2018-1-1</published>
-    <updated>2018-1-1</updated>
+    <published>2018-01-01T00:00:00.000Z</published>
+
     <id
       >https://jaketrent.comscripts/common/__mocks__/post/curse-knowledge-writing</id
     >
@@ -281,8 +281,8 @@ exports[`#generateAtomFeed renders content specified up to limit 1`] = `
       type=\\"text/html\\"
       title=\\"Prefer Action\\"
     />
-    <published>2018-1-1</published>
-    <updated>2018-1-1</updated>
+    <published>2018-01-01T00:00:00.000Z</published>
+
     <id>https://jaketrent.comscripts/common/__mocks__/post/prefer-action</id>
     <content
       type=\\"html\\"
