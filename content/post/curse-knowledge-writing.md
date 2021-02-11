@@ -11,6 +11,8 @@ tags:
 
 The curse of knowledge may create obstacles to us writing something useful for our reader. We may assume that others know exactly what we know and that they still need to learn certain things. This might be mismatched with their real needs.
 
+<!--more-->
+
 ## Knowing where to start
 
 In technical writing, we try to guide someone from the beginning to the end, with proficiency in some task as the end goal. 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "More Manager, More Priorities"
+title: "More Managers, More Priorities"
 date: "2021-01-29"
 image: "https://i.imgur.com/uaqnCj7.jpg"
 description: "The number of priorities is directly proporational to the number of managers."
