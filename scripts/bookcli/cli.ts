@@ -14,7 +14,7 @@ interface BookResultWithCover extends BookResult {
   cover: string
 }
 
-// https://openlibrary.org/dev/docs/api/search
+// schema from https://openlibrary.org/dev/docs/api/search
 const parseBookResults = (json: any): BookResult[] =>
   json.docs.map((doc: any) => {
     return {
@@ -24,20 +24,19 @@ const parseBookResults = (json: any): BookResult[] =>
     }
   })
 
-// TODO: deps pattern
 const searchBooks = async (title: string): Promise<BookResult[]> => {
+  const formatTitle = title =>
+    title
+      .toLowerCase()
+      .split(" ")
+      .join("+")
+
   const result = await got(
-    `http://openlibrary.org/search.json?title=${formatInputTitle(title)}`
+    `http://openlibrary.org/search.json?title=${formatTitle(title)}`
   ).json()
   const books = parseBookResults(result)
   return books.filter(filterHelpfulBooks).slice(0, 3)
 }
-
-const formatInputTitle = title =>
-  title
-    .toLowerCase()
-    .split(" ")
-    .join("+")
 
 const augmentBookCover = async (
   book: BookResult
@@ -132,6 +131,9 @@ const filterHelpfulBooks = (book: BookResult) =>
 const getSelectedCoverId = (books: BookResultWithCover[], index: string) =>
   books[parseInt(index, 10)].coverId
 
+const formatBookPath = (title: string) =>
+  `content/book/${slugify(title, { lower: true })}.md`
+
 interface BookMeta {
   title: string
   author: string
@@ -150,10 +152,7 @@ title: "${meta.title}"
 ---
 
 <!--more-->`
-  writeFile(
-    fileFromRoot(`content/book/${slugify(meta.title, { lower: true })}.md`),
-    md
-  )
+  writeFile(fileFromRoot(formatBookPath(meta.title)), md)
 }
 ;(async () => {
   const { title } = await promptInfo<TitlePrompts>({
@@ -167,7 +166,7 @@ title: "${meta.title}"
   renderBooks(booksWithCovers)
   const { cover, author, date, rating } = await promptInfo<MetaPrompts>({
     cover: {
-      message: "Which cover? (1, 2 or 3)",
+      message: "Which cover? (0-2)",
       required: true,
     },
     author: {
