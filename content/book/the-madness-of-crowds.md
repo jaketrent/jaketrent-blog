@@ -2,7 +2,7 @@
 layout: book
 author: "Douglas Murray"
 date: 2021-01-06
-image: "http://covers.openlibrary.org/b/id/9587938-L.jpg"
+image: "https://covers.openlibrary.org/b/id/9587938-L.jpg"
 rating: 3
 title: "The Madness of Crowds"
 ---
