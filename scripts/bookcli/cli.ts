@@ -35,20 +35,28 @@ const searchBooks = async (title: string): Promise<BookResult[]> => {
     `http://openlibrary.org/search.json?title=${formatTitle(title)}`
   ).json()
   const books = parseBookResults(result)
-  return books.filter(filterHelpfulBooks).slice(0, 3)
+  const helpful = books.filter(filterHelpfulBooks)
+  log(`Found ${books.length} books (${helpful.length} helpful)`)
+  return helpful.slice(0, 3)
 }
 
 const augmentBookCover = async (
   book: BookResult
 ): Promise<BookResultWithCover> => {
-  const requestBuffer = await got(formatCoverUrl(book.coverId)).buffer()
-  const imageBuffer = await terminalImage.buffer(requestBuffer, {
-    width: "25%",
-    height: "25%",
-  })
-  return {
-    ...book,
-    cover: imageBuffer,
+  const coverUrl = formatCoverUrl(book.coverId)
+  try {
+    const requestBuffer = await got(coverUrl).buffer()
+    const imageBuffer = await terminalImage.buffer(requestBuffer, {
+      width: "25%",
+      height: "25%",
+    })
+    return {
+      ...book,
+      cover: imageBuffer,
+    }
+  } catch (err) {
+    log(`Failed to render cover url: ${coverUrl}`)
+    return { ...book, cover: coverUrl }
   }
 }
 
@@ -66,6 +74,7 @@ const augmentBooks = async (
   return augmented
 }
 
+const log = console.debug
 const print = console.log
 const println = (content: any) => console.log(content + "\n")
 
