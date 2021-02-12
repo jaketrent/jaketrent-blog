@@ -141,8 +141,8 @@ interface BookMeta {
   date: string
   rating: string
 }
-const writeBook = (meta: BookMeta) => {
-  const md = ` ---
+const formatMarkdown = (meta: BookMeta) =>
+  `---
 layout: book
 author: "${meta.author}"
 date: ${meta.date}
@@ -152,7 +152,9 @@ title: "${meta.title}"
 ---
 
 <!--more-->`
-  writeFile(fileFromRoot(formatBookPath(meta.title)), md)
+
+const writeBook = (meta: BookMeta) => {
+  writeFile(fileFromRoot(formatBookPath(meta.title)), formatMarkdown(meta))
 }
 ;(async () => {
   const { title } = await promptInfo<TitlePrompts>({

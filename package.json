@@ -10,6 +10,7 @@
     "build:atom": "sh scripts/atom/build.sh",
     "dev": "next dev",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "gen:book": "sh scripts/bookcli/run.sh",
     "start": "next start",
     "test": "jest",
     "test:watch": "npm test -- --watch"
