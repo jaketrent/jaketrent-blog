@@ -2,7 +2,7 @@
 layout: book
 author: "Mark Twain"
 date: 2021-02-17
-image: "https://covers.openlibrary.org/b/id/9168732-L.jpg"
+image: "https://i.imgur.com/b0C7R3E.jpg"
 rating: 3
 title: "A Connecticut Yankee in King Arthur's Court"
 ---
