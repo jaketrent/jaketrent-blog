@@ -32,7 +32,7 @@ const searchBooks = async (title: string): Promise<BookResult[]> => {
       .join("+")
 
   const result = await got(
-    `http://openlibrary.org/search.json?title=${formatTitle(title)}`
+    `https://openlibrary.org/search.json?title=${formatTitle(title)}`
   ).json()
   const books = parseBookResults(result)
   const helpful = books.filter(filterHelpfulBooks)
@@ -61,7 +61,7 @@ const augmentBookCover = async (
 }
 
 const formatCoverUrl = (coverId: string) =>
-  `http://covers.openlibrary.org/b/id/${coverId}-L.jpg`
+  `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
 
 const augmentBooks = async (
   books: BookResult[]
