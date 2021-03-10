@@ -92,13 +92,13 @@ export async function compileMarkdown(markdown: string): Promise<MarksyResult> {
     createElement,
     elements: {
       code({ language, code }) {
-        return (
-          <pre>
-            <code
-              dangerouslySetInnerHTML={{ __html: highlight(language, code) }}
-              tabIndex="0"
-            ></code>
-          </pre>
+        return createElement(
+          "pre",
+          {},
+          createElement("code", {
+            dangerouslySetInnerHTML: { __html: highlight(language, code) },
+            tabIndex: 0,
+          })
         )
       },
     },
