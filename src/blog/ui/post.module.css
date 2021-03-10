@@ -288,6 +288,9 @@
   color: var(--colorWhite);
   box-shadow: rgba(0, 0, 0, 0.45) 0 1px 4px;
 }
+.markdownContainer pre code:focus {
+  outline: 3px solid var(--colorTurquoise);
+}
 .markdownContainer pre code::-webkit-scrollbar {
   width: 13px;
   height: 13px;

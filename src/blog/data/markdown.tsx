@@ -83,12 +83,26 @@ interface MarksyResult {
   toc: any
 }
 
+const highlight = (language, code) => {
+  return Prism.highlight(code, Prism.languages.javascript, language)
+}
+
 export async function compileMarkdown(markdown: string): Promise<MarksyResult> {
   const compile = marksy({
     createElement,
-    highlight(language, code) {
-      return Prism.highlight(code, Prism.languages.javascript, language)
+    elements: {
+      code({ language, code }) {
+        return (
+          <pre>
+            <code
+              dangerouslySetInnerHTML={{ __html: highlight(language, code) }}
+              tabIndex="0"
+            ></code>
+          </pre>
+        )
+      },
     },
+    highlight,
   })
   const result = compile(markdown, {})
   result.string = ReactDOMServer.renderToStaticMarkup(result.tree)
