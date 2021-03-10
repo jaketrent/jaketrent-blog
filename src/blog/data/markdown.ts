@@ -1,5 +1,5 @@
 import { createElement } from "react"
-import ReactDOMServer from "react-dom/server"
+import { renderToStaticMarkup } from "react-dom/server"
 import * as fs from "fs"
 import matter from "gray-matter"
 import { join, resolve } from "path"
@@ -105,6 +105,6 @@ export async function compileMarkdown(markdown: string): Promise<MarksyResult> {
     highlight,
   })
   const result = compile(markdown, {})
-  result.string = ReactDOMServer.renderToStaticMarkup(result.tree)
+  result.string = renderToStaticMarkup(result.tree)
   return result
 }
